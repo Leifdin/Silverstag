@@ -1,0 +1,20 @@
+
+Sprinting Notes:
+
+Standard Usage per Tick:
+-2 stamina per sec of running.
+
+Stamina Recovery:
+8 seconds of non-sprinting triggers stamina recovery.
+ENDURANCE lowers this by 3 seconds.
+
+Stamina Recovery Rate: (done)
+0.25 stamina / tick
+0.05 stamina / tick per rank of athletics
+
+Maximum Stamina:
+20 base
++2 / STR         (+8 - 60)
++4 / Athletics   (+16 - 120)
++40 / ENDURANCE
++20 / BOUNDLESS

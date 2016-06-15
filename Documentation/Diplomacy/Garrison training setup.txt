@@ -1,0 +1,27 @@
+
+SCRIPTS NEEDED:
+* A script to determine the "tier" of a soldier.
+* A script to take a given troop, determine which upgrade path will be used and upgrade them.
+
+SLOTS NEEDED:
+* Troop - The % upgrade chance for upgrade path 1.
+* Troop - The % upgrade chance for upgrade path 2.
+* Center - Track if garrison upgrading is occurring or not.
+
+Basis:
+The captain of the Guard should give the option to list out all troops of that faction's type in a list to see which you want to look at.  When a troop is selected it should show the following options:
+* (Upgrade Path 1) (% chance) -> Make this switch to this troop's info.
+   * If next tier cannot be upgrade display "Unable to train beyond this point.".
+* (Upgrade Path 2) (% chance) -> Make this switch to this troop's info.
+* Adjust this troop's upgrade allocations. -> Setup the % chances for both paths.
+* Return to troop list. -> Go back to the main list.
+
+Limitations:
+The captain of the guard's leadership & training skills should have a direct limiting impact on what tiers you can train upwards to.  This shouldn't be too harsh or people won't be able to make much use of the feature since we're talking about a CHA & INT based skill.
+
+Tier Limit based on combination of Leadership & Training.
+Tier 1 - No limit.
+Tier 2 - Combo 2
+Tier 3 - Combo 5 
+Tier 4 - Combo 10
+Tier 5 - Combo 15 

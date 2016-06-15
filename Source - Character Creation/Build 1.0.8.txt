@@ -1,0 +1,33 @@
+CHANGELOG
+
+1.0.3 - 11/29/11
+ * Removed noble in training later life bonus of 2 acres of land.
+ * Added combination bonus of 2 acres of land for father (impoverished noble) and later life (noble in training) choices.
+ * Removed debug messages.
+ * Added loops to clean out ccp_objects (trp_tpe_presobj) & ccp_data (trp_tpe_xp_table) once the presentation is finished.
+ * Added starting region to the list of factors that can be randomized.
+
+1.0.4 - Beta Update 1
+ * Bugfix: reduced renown for father background "hunter" from 100 to 0.
+ * Bugfix: Background text for "sense of duty" and "religious fervor" were not showing up.
+ * Bugfix: Added a power draw filter for the vaegir & khergit starting bows.  They default down to the nord hunting bow now.
+ * Added a sword to the same spawn as spear.  This was by player request.
+ * Replaced vaegir starting sword from "Military Sickle" (Difficulty 9) with "Sickle" (Difficulty 0)
+ * Added filters for numerous starting weapons to downgrade to lesser versions if prerequisites aren't met.
+
+1.0.5 - 12/20/11 (Beta Update 2)
+ * Bugfix: Added an initialization script for fog of war to prevent villages from disappearing when you move away from them.
+   while fog of war is enabled.
+ * Added "gladiator" background for adult life.  Credit: eastpaw.
+ * Added "bandit" background for adult life.  Credit: eastpaw.
+ * Added "slave-trader" background for adult life.  Credit: eastpaw.
+
+1.0.6 - 12/22/11 (Beta update 3)
+ * Added Caba'drins trade ledger item as a bonus for the backgrounds of "merchant" (father) or "peddler" (later life).
+
+1.0.7 - 1/17/12 (2.5)
+ * Bugfix: Removed a double line for the gladiator, slaver & bandit background description.
+
+1.0.8 - 4/30/12 (Floris 2.53 Release)
+ * Moved the banner selection from being during the character creation process to after entering the game due to the game
+   constantly hanging up at this screen ever since the Warband 1.150 update.

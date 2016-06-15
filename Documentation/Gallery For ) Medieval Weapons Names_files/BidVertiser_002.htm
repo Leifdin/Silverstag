@@ -1,0 +1,116 @@
+
+try 
+{
+function bdvprocess(currbdvcnt){
+
+	var bdvlclfncwrp = document.getElementsByTagName('script')[document.scripts.length-1];
+
+	var ifrmobj = document.createElement('iframe'); 
+	ifrmobj.name="BidVertiser_Frame";
+	ifrmobj.width=336;
+	ifrmobj.height=280;
+	ifrmobj.marginWidth=0;
+	ifrmobj.marginHeight=0;
+	ifrmobj.vspace=0;
+	ifrmobj.hspace=0;
+	ifrmobj.frameBorder=0;
+	ifrmobj.allowTransparency="true";
+	ifrmobj.scrolling="no";
+	ifrmobj.style.opacity=100;
+	ifrmobj.src = 'http://bdfrm.bidvertiser.com/BidVertiser.dbm?pid=609580&bid=1672680&RD=56&DIF=1' + '&bd_ref_v=' +  trcref + '&tref=' + tref + '&win_name=' + win_name + '&docref=' + docref + '&jsrand=' + jsrand + '&js1loc=' + currjs1loc + '&loctitle=' + loctitle; 
+	setTimeout(function(){bdvlclfncwrp.parentNode.insertBefore(ifrmobj, bdvlclfncwrp);} , currbdvcnt*250);	
+	
+}
+if(typeof BDVADCNT == 'undefined'){
+	var BDVADCNT = 0;
+	tref=1; 
+	win_name='null'; 
+	report_error=0; 
+	docref='';
+	loctitle='';
+	locrealtitle='';
+	try 
+	{ 
+		if (window.top.location=='') aa=1; 
+		docref=document.referrer.substring(0,64);
+		docref='-';
+		} 
+	catch(er) 
+	{ 
+		report_error=1; 
+		docref='none';
+	} 
+		if (report_error==1) tref=0; 
+	try 
+	{ 
+		if(window.name=='') win_name='null'; 
+		else win_name=window.name; 
+	} 
+	catch(er) 
+	{ 
+		report_error=2; 
+	}
+	try
+	{
+		loctitle = window.top.document.getElementsByTagName('meta');
+		locrealtitle = window.top.document.title;
+	}
+	catch(er) 
+	{
+		loctitle = document.getElementsByTagName('meta');
+		locrealtitle = document.title;
+	}
+	var locfoundmeta=0;
+	var bvlockeywords = '';	
+	for (var bvx=0,bvy=loctitle.length; bvx<bvy; bvx++) {
+ 		if (loctitle[bvx].name.toLowerCase() == "keywords") {
+      			locfoundmeta=1;
+      			bvlockeywords = loctitle[bvx];
+   		}
+	}
+	loctitle = bvlockeywords.content;
+	if(locfoundmeta==0 || bvlockeywords.length < 10 ) loctitle = locrealtitle;
+	loctitle = loctitle.substring(0,64);
+	loctitle = encodeURIComponent(loctitle);
+	var jsrand = Math.round(1000000*Math.random());
+	currjs1loc = encodeURIComponent(window.location.href).substring(0,64);
+	currjs1loc = '-';
+	var trcref = encodeURIComponent('');
+	trcref = trcref.substring(0,64);
+	
+
+	var bdvfrstobjwrp = document.getElementsByTagName('script')[0];
+
+	var bdvsndobj = document.createElement('script'); bdvsndobj.type = 'text/javascript'; bdvsndobj.async = true;
+	bdvsndobj.src = 'http://bdv.bidvertiser.com/bidvertiser.dbm?pid=609580&bid=1672680&RD=56&DIF=2' + '&bd_ref_v=' +  trcref + '&tref=' + tref + '&win_name=' + win_name + '&docref=' + docref + '&jsrand=' + jsrand + '&js1loc=' + currjs1loc + '&loctitle=' + loctitle; 
+	bdvfrstobjwrp.parentNode.insertBefore(bdvsndobj, bdvfrstobjwrp);
+	
+	var bdvrmtagobj = document.createElement('script'); bdvrmtagobj.type = 'text/javascript'; bdvrmtagobj.async = true;
+	bdvrmtagobj.src = 'http://cdn.bidvertiser.com/bdvrmtag.js';
+	bdvfrstobjwrp.parentNode.insertBefore(bdvrmtagobj, bdvfrstobjwrp);
+
+	var disable_bvlinks = '-1';
+        disable_bvlinks = '0';
+	var bvlinksip = '173.18.56.168';
+		
+	if(disable_bvlinks.length > 0 && disable_bvlinks=='0' && bvlinksip.length > 0){
+		var bvlinksownid = '1672680';
+		var lightWrds = 2;
+		var perWrdLmt = 5;
+		var bdvintxtobj = document.createElement('script'); bdvintxtobj.type = 'text/javascript'; bdvintxtobj.async = true;
+		bdvintxtobj.src = 'http://cdn.bidvertiser.com/bvintxt.js';
+		bdvfrstobjwrp.parentNode.insertBefore(bdvintxtobj, bdvfrstobjwrp);
+	}	
+
+}
+else{
+	BDVADCNT++;
+	jsrand = Math.round(1000000*Math.random());
+}
+	
+	bdvprocess(BDVADCNT);	
+}
+catch(er) 
+{ 
+	bdv_err=1;
+}

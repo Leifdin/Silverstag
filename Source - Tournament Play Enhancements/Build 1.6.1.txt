@@ -1,0 +1,149 @@
+CHANGELOG
+
+1.4.0 - 11/29/11
+ * Designed new tournament design panel for custom tournaments.
+    * Allows custom choice of different weapon types.
+    * Allows custom setting of what weapons will be used and at what frequency in tournaments 
+      specific to a town.
+ * Added "Tournament Staff" as a polearm option.
+ * Added "Tournament Scimitar" as a one handed option.
+ * Added "Tournament Axe" as a one handed option.
+ * Added "Tournament Greataxe" as a two handed option.
+ * Added "Tournament Throwing Axes" as a thrown weapon option.
+ * Reduced javelin ranged attack speed from 100 to 85 (normal) and 100 to 90 (enhanced).
+ * Reduced javelin inventory from 50 to 12.
+ * Reduced javelin damage from 27 to 24 (normal) and 40 to 36 (enhanced).
+ * Reduced bow damage from 24 to 21 (normal) and 36 to 32 (enhanced).
+
+1.4.1 - 12/30/11
+ * Fixed a bug where "Grand Principality" wasn't being shortened for lords in script_tpe_update_ranking_box.
+ * Moved item definitions back into constants for easier mod editing.
+ * Added new menu system "Tournament System Settings" to go into the camp menu.
+    * Allows enabling / disabling of TPE.
+    * Allows enabling / disabling & setting the reaction level of tournament quests.
+    * Allows non-tournament access to the Tournament Options Panel.
+    * Allows non-tournament access to the Tournament Design Panel.
+
+1.4.2 - 12/31/11
+ * Adjusted "script_tpe_score_non_participants" to sort by total tournament points vs. odds worth.
+ * Reduced all enhanced weapons in damage by 10%.
+ * Added "Tournament Throwing Daggers" as a thrown weapon option.
+ * Added a damage reduction factor (2*difficulty) to "champion" troops.
+
+1.4.3 - 1/1/12
+ * Added "credits & Information" menu option to the tournament system
+   settings menu.  Leads to a presentation listing the credits for the mod
+   as well as a table of contents for viewing help information on various
+   settings.
+ * Moved all loot table item definitions to tournament_constants.py.
+ * Altered the mnu_tournament_join source code hook so that it is a script now.
+
+1.4.4 - 1/7/12
+ * Bugfix for new non-participant scoring method.  Prevents player from earning these points by default.
+ * Updated strings relevant to the credits.
+ * Fixed a tournament quest issue to prevent receiving success benefits repeatedly while in the TPE menu.
+
+1.4.5 - 1/10/12 (Floris 2.5 release)
+ * Bugfix to more accurately handle which faction owns a center.
+ * Bugfix to automatically fail the tournament invitation quest if the hosting center becomes hostile.
+ * Added ability to manually end the tournament invitation quest by disabling quests in the settings menu.
+
+1.4.6 - 2/1/12 (OSP Release)
+ * Moved "tournament quest" from module_quests into tournament_quests.
+ * Moved "mnu_tpe_town_tournament" call into tournament_game_menus.
+ * Bugfix to tournament_items modmerger code to insert items above "itm_items_end".
+ * Moved initialization script from module_scripts to tournament_scripts modmerger code.
+ * Bugfix to remove "naked images" from the ranking screen.
+ * Cleaned up a few global variables no longer needed.
+ * Bugfix to remove 33rd participant from the tournament ranking screen.
+ * Bugfix to correct the "apply to all centers" in the tournament design panel not applying changes to all centers.
+
+1.5 - 3/24/12
+ * Bugfix to prevent players, that own a town, from inviting themselves to a tournament.
+ * Bugfix to prevent script errors from occurring during a match when the 'escape' menu is used.
+ * Betting system completely overhauled to use the wager & bid setup.
+ * Extended the cooldown period on tournament invitation quests to 10 days.
+ * Refined the tournament loot table to give a more even distribution of items.
+ * Added a difficulty score system that influences final tournament reward values.  The difficulty is comprised of:
+    * +0-24% based on the game's damage to player settings.
+    * +1-36% based on the difficulty slider's settings.
+    * +0-20% based on using the level scaling feature.
+    * +0-10% based on using randomized equipment.
+    * +0-5%  based on using the overhauled or native scenes.
+    * +0-5%  based on using a random team.
+ * Added the ability to choose between native tournament arena or arena overhaul mod's arenas on a town by town basis.
+
+1.5.1 - 4/13/12 (Floris 2.52 release)
+ * Bugfix to allow the tournament invitation quest grant a relation bonus with the hosting lord if you were invited.
+
+1.5.2 - 5/27/12 (Floris 2.53 release)
+ * Bugfix to prevent people who fought in a round and didn't survive from gaining survivor points.
+ * Reordered the difficulty slider team combinations to ramp up based on hostile participants vs. total participants.
+   This should smooth out betting values.
+ * Raised the minimum number of participants required in a match to earn the +2 survivor points to 4 participants.
+ * Adjusted the bet calculation script to reduce the profitability per round.
+ * The tournament invitation quest should now be able to turn in at the city's arena master if the lord is not present.
+ * Crossbow damage increased from 30 normal (44 enhanced) to 40 normal (56 enhanced).
+ * Companions & lords now gain a damage reduction and damage improvement factor that scales to 0% based on their level.
+ * Reduced cash prize cap from 7500 to 3000 denars.
+ * Final prizes from the loot table are determined by your average difficulty score & level.
+ * Item prizes will now come with increased quality modifiers.
+ * Added ability to award native items to the OSP version.
+
+1.5.3 - 6/29/12 (Floris 2.54 release)
+ * Refined AI decision making on weapon usage to incorporate current speed and switch away from lances when not moving
+   fast enough to use them effectively.
+ * Adjusted cash & xp awards to use the global difficulty score created in TPE 1.5.
+ * Player health is now set to 100% upon entry into a tournament.
+ * Default level of tournament participants reduced from 24 to 21.
+ * Level bonus for special troops reduced from +9 to +6.
+ * Companion & Lord damage soak & boost reduced by 40% previous value.
+ * Bugfix to ensure lords attending a tournament you won receive the relation boost, if applicable, they should get.
+ * Players now receive a +1 relation boost with any lord currently at a tournament they are hosting.
+ * Added limitation to how much relation you could gain per tournament with noblemen/noblewomen during a feast. (+/- 1)
+ * When you are married you will no longer gain a courtship bonus with ladies for winning a tournament.
+ * Town relation gain for winning a tournament now caps at +3 per win.
+
+1.6 - 7/15/12 (Floris Workshop v0.05)
+ * ### Moved to WSE dependancy ###
+ * Level scaling code made more efficient using WSE operations.
+ * Level scaling no longer alters the level of troops.  Now can be switched on and off and troops will adjust on a
+   round by round basis.  This should prevent crashes related to troops trying to exceed the game's maximum level.
+ * Refined tournament invitation quest city selection to give consideration for towns within your faction & hosts whom
+   you already have a good reputation with.
+ * A new "Hall of Records" can be accessed from the tournament menu that shows your past performance in all tournaments for this game.
+ * A new "Elimination Mode" has been added to the system.  This closely resembles the native tournament design.
+    * You can't select how many teams or the size of the teams.
+    * Participants picked for the next round go in order of: survivors, the remaining members of the surviving team, the members
+      the highest scoring team and then the rest of the slots go to the highest scoring participants not currently selected.
+    * AI troops in elimination mode are a fair bit weaker than those found in "Performance Mode".
+    * This new mode can be set in the camp menu "tournament system settings" menu.
+ * Renown gain from winning a tournament is now capped at 20 during feasts.
+ * Total wins in a town that contribute to relation gains are now based on consecutive wins.  Losing resets this value to 0.
+
+1.6.1 - 3/2/13 (Floris Workshop v0.13)
+ * Renaming algorithm moved to use the Quest Utilities script.
+
+1.6.2 - 3/26/13 (Silverstag v0.15)
+ * Final cash prizes for tournaments during a feast have been reduced by 50%.
+ * During a feast only 3 tournaments may be entered.
+ * Added chance to gain 1-2 noble recruits in a town where a tournament is won if you're a vassal or ruler.
+ * Reduced maximum bet value from 200 to 150.
+ * Reduced maximum renown earned from a tournament from 50 to 30.
+ * Reduced total rounds from 6 to 3.
+ * Tier 5 loot minimum performance requirement has been increased from 75 to 85.
+ * The penalty for falling in a round now cuts your difficulty score down to 33% from 50%.
+ * Added a testing option to force tournaments to start in a town.
+ * Added a cumulative point advantage equal to 4% per round+total points a troop has.  Improves damage or reduces it.
+ * Companions and lords have been removed from the performance enhancer from 1.5.2.
+
+PLANS YET TO IMPLEMENT:
+ * Applying the tournament design settings of one town to the rest of its faction. (new option to existing feature)
+ * QUEST: "A Score To Settle" - You get knocked out by a lord that you have a negative relation (-10) with.  This quest will 
+   trigger with a success criteria to knock him out in a future tournament.
+ * Implement the knockout log.
+ * QUEST: "Keeping Up Appearances" - Letting the king win.  While quest is active the king is invulnerable to any damage except 
+   from the player to ensure that he makes it to the final round.  Quest is given by the hosting lord (of your faction).
+ * QUEST: ""
+ * Add in option to disable ranged weapons.
+ * Explore option to allow player to watch tournaments instead of fight in them "$tpe_player_is_fighting".
