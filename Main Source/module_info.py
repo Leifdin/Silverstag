@@ -2,5 +2,5 @@
 # Point export_dir to the folder you will be keeping your module
 # Make sure you use forward slashes (/) and NOT backward slashes (\)
 
-export_dir = "D:/Mount&Blade Warband/Modules/Silverstag (Dev)/"
+export_dir = "/home/pavol/PlayOnLinux's virtual drives/silverstag_new_items/drive_c/Program Files/Mount&Blade Warband/Modules/silverstag-x.01/"
 #export_dir = "C:/Program Files/Mount&Blade/Modules/Native/"
