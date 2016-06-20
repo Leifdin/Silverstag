@@ -591,5 +591,3 @@ mesh_button_up = 589
 mesh_button_down = 590
 mesh_hub_golden_coins = 591
 mesh_artisan_blacksmith = 592
-
-

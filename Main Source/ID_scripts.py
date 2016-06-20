@@ -1176,5 +1176,3 @@ script_cci_convert_xp_to_level = 1174
 script_cci_check_for_repair_upgrade = 1175
 script_cf_cci_add_event_log_entry = 1176
 script_cci_convert_entry_to_string = 1177
-
-

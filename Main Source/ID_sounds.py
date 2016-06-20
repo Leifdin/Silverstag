@@ -178,5 +178,3 @@ snd_team_scored_a_point = 176
 snd_enemy_scored_a_point = 177
 snd_dedal_tavern_lute = 178
 snd_dedal_tavern_lyre = 179
-
-

@@ -1486,7 +1486,7 @@ scripts = [
       (item_set_slot, "itm_light_throwing_axes", slot_item_multiplayer_item_class, multi_item_class_type_throwing_axe),
       (item_set_slot, "itm_heavy_throwing_axes", slot_item_multiplayer_item_class, multi_item_class_type_throwing_axe),
        #armors
-      (item_set_slot, "itm_red_shirt", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
+      (item_set_slot, "itm_linen_tunic", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
       (item_set_slot, "itm_red_tunic", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
       (item_set_slot, "itm_aketon_green", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
       (item_set_slot, "itm_padded_cloth", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
@@ -1515,7 +1515,7 @@ scripts = [
 	  
       (item_set_slot, "itm_banded_armor", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
       (item_set_slot, "itm_cuir_bouilli", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
-      (item_set_slot, "itm_scale_armor", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
+      (item_set_slot, "itm_lamellar_scale_blue", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
 	  
       (item_set_slot, "itm_padded_leather", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
       (item_set_slot, "itm_green_tunic", slot_item_multiplayer_item_class, multi_item_class_type_light_armor),
@@ -1660,7 +1660,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_heater_b", "trp_swadian_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_heater_c", "trp_swadian_crossbowman_multiplayer"),
 
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_red_shirt", "trp_swadian_crossbowman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_linen_tunic", "trp_swadian_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_padded_cloth", "trp_swadian_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_leather_armor", "trp_swadian_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_haubergeon", "trp_swadian_crossbowman_multiplayer"),
@@ -1765,7 +1765,7 @@ scripts = [
       # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_heater_cav_a", "trp_swadian_mounted_crossbowman_multiplayer"),
       # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_heater_cav_b", "trp_swadian_mounted_crossbowman_multiplayer"),
       # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_bastard_sword_a", "trp_swadian_mounted_crossbowman_multiplayer"),
-      # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_red_shirt", "trp_swadian_mounted_crossbowman_multiplayer"),
+      # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_linen_tunic", "trp_swadian_mounted_crossbowman_multiplayer"),
       # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_padded_cloth", "trp_swadian_mounted_crossbowman_multiplayer"),
       # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_leather_armor", "trp_swadian_mounted_crossbowman_multiplayer"),
       # (call_script, "script_multiplayer_set_item_available_for_troop", "itm_mail_with_surcoat", "trp_swadian_mounted_crossbowman_multiplayer"),
@@ -35437,7 +35437,7 @@ scripts = [
       (assign, ":animation", "anim_pose_3"),
     (else_try),
       (eq, ":type", 5),
-      (cur_tableau_add_override_item, "itm_red_shirt"),
+      (cur_tableau_add_override_item, "itm_linen_tunic"),
       (cur_tableau_add_override_item, "itm_woolen_hose"),
       (cur_tableau_add_override_item, "itm_fur_hat"),
       (assign, ":animation", "anim_pose_3"),
