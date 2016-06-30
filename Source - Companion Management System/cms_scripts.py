@@ -2087,7 +2087,7 @@ scripts = [
 		
 		## NATIVE DEFINITIONS ##
 		# Armor
-		(this_or_next|is_between, ":item_no", "itm_heraldic_mail_with_surcoat", "itm_turret_hat_ruby"),
+		(this_or_next|is_between, ":item_no", "itm_heraldic_mail_with_surcoat", "itm_white_highlander_shirt"),
 		# Shields
 		(is_between, ":item_no", "itm_tab_shield_round_a", "itm_darts"),
 		

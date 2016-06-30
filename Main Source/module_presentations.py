@@ -13450,7 +13450,7 @@ presentations = [
 				(eq, ":item_no", "itm_keys"), # Ring of Keys
 				(assign, ":continue", 0),
 			(else_try),
-				(eq, ":item_no", "itm_black_armor"),
+				(eq, ":item_no", "itm_milanese_armour"),
 				(eq, ":type", itp_type_one_handed_wpn),
 				(assign, ":continue", 0),
 			(try_end),

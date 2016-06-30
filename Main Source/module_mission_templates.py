@@ -11346,8 +11346,8 @@ mission_templates = [
            (player_get_item_id, ":item_id", ":player_no", ek_horse),
            (try_begin),
              (this_or_next|is_between, ":item_id", horses_begin, horses_end),
-             (this_or_next|eq, ":item_id", "itm_warhorse_sarranid"),
-             (eq, ":item_id", "itm_warhorse_steppe"),
+             (this_or_next|eq, ":item_id", "itm_war_horse_d"),
+             (eq, ":item_id", "itm_war_horse_c"),
              (assign, ":player_is_horseman", 1),
            (try_end),
 
