@@ -1157,7 +1157,7 @@ items = [
 ##### TIER 5 - 38 ARMOR ####
 ##### TIER 6 - 45 ARMOR ####
 ##### TIER 7 - 52 ARMOR ####
-##### TIER 8 - 55 ARMOR ####
+##### TIER 8 - 59 ARMOR ####
 
 ########## Northern - light ##########
 
@@ -1242,6 +1242,14 @@ items = [
 ["sarranid_horseman_helmet", "Horseman Helmet", [("sar_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 180 , weight(2.75)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
 ["turban_with_mail_coif", "Turban With Mail Coif", [("turban_mail_a",0)], itp_merchandise|itp_type_head_armor, 0, 225, weight(2.5)|abundance(80)|head_armor(28)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
 
+
+##### TIER 2 - 17 ARMOR ####
+##### TIER 3 - 24 ARMOR ####
+##### TIER 4 - 31 ARMOR ####
+##### TIER 5 - 38 ARMOR ####
+##### TIER 6 - 45 ARMOR ####
+##### TIER 7 - 52 ARMOR ####
+##### TIER 8 - 59 ARMOR ####
 
 ########## Eastern - medium ##########
 
