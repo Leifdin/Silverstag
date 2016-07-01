@@ -807,13 +807,15 @@ items = [
 ["light_coat_of_plates",	"Light Coat of Plates",		[("armor_medium_tyrk_d",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 750, weight(17)|abundance(100)|head_armor(0)|body_armor(40)|leg_armor(8)|difficulty(0), imodbits_armor ],
 
 ##### TIER 5 - 44 BODY ARMOUR, 12 LEG ARMOUR #####
-["heavy_coat_of_plates",	"Heavy Coat of Plates",		[("lamellar_armor_d",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1000, weight(18)|abundance(100)|head_armor(0)|body_armor(44)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
-["heavy_chainmail_armor",	"Heavy Chianmail Armor",	[("armor_medium_tyrk_e",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1000, weight(17)|abundance(100)|head_armor(0)|body_armor(12)|leg_armor(13)|difficulty(0), imodbits_armor ],
-["banded_armor",			"Banded Armor",				[("banded_armor_a",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1100, weight(21)|abundance(100)|head_armor(0)|body_armor(46)|leg_armor(13)|difficulty(0) ,imodbits_armor ],
-["heavy_lamellar_vest_a",	"Heavy Lamellar Vest",		[("khergit_mail_b",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
-["heavy_lamellar_vest_b",	"Heavy Lamellar Vest",		[("khergit_mail_c",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
-["heavy_lamellar_vest_c",	"Heavy Lamellar Vest",		[("khergit_mail_d",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
-["heavy_lamellar_vest_d", 	"Heavy Lamellar Vest",		[("khergit_mail_a",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs,0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
+["heavy_coat_of_plates",	"Heavy Coat of Plates",		[("lamellar_armor_d",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1000, weight(18)|abundance(100)|head_armor(0)|body_armor(44)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
+["heavy_chainmail_armor",	"Heavy Chianmail Armor",	[("armor_medium_tyrk_e",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1000, weight(17)|abundance(100)|head_armor(0)|body_armor(12)|leg_armor(13)|difficulty(0), imodbits_armor ],
+["banded_armor",			"Banded Armor",				[("banded_armor_a",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1100, weight(21)|abundance(100)|head_armor(0)|body_armor(46)|leg_armor(13)|difficulty(0) ,imodbits_armor ],
+["heavy_lamellar_vest_a",	"Heavy Lamellar Vest",		[("khergit_mail_b",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
+["heavy_lamellar_vest_b",	"Heavy Lamellar Vest",		[("khergit_mail_c",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
+["heavy_lamellar_vest_c",	"Heavy Lamellar Vest",		[("khergit_mail_d",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
+["heavy_lamellar_vest_d", 	"Heavy Lamellar Vest",		[("khergit_mail_a",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
+["kuyak_a",					"Kuyak",					[("kuyak_a",0)],				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1250, weight(22)|abundance(100)|head_armor(0)|body_armor(46)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
+["kuyak_b",					"Kuyak",					[("kuyak_b",0)],				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1250, weight(22)|abundance(100)|head_armor(0)|body_armor(46)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
 
 ##### TIER 6 - 49 BODY ARMOUR, 13 LEG ARMOUR #####
 ["heavy_lamellar_armor_a",	"Heavy Lamellar Armor",		[("armor_medium_tyrk_b",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1750, weight(25)|abundance(100)|head_armor(0)|body_armor(49)|leg_armor(10)|difficulty(0), imodbits_armor ],
@@ -1022,9 +1024,6 @@ items = [
 ["headcloth", 			"Headcloth", [("headcloth_a_new",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 1 , weight(0.5)|abundance(100)|head_armor(4)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
 ["woolen_hood", 		"Woolen Hood", [("woolen_hood",0)], itp_merchandise| itp_type_head_armor |itp_civilian  ,0, 4 , weight(1)|abundance(100)|head_armor(8)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
 ["black_hood", 			"Black Hood", [("hood_black",0)], itp_type_head_armor|itp_merchandise   ,0, 193 , weight(2)|abundance(100)|head_armor(18)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["cloth_cap_yellow",	"Cloth Cap", [("chionite_hat_b",0)],itp_merchandise|itp_type_head_armor,0,59, weight(1)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth],
-["cloth_cap_blue",		"Cloth Cap", [("chionite_hat_d",0)],itp_merchandise|itp_type_head_armor,0,59, weight(1)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth],
-["cloth_cap_red",		"Cloth Cap", [("chionite_hat_f",0)],itp_merchandise|itp_type_head_armor,0,57, weight(1)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth],
 ["straw_hat_a", 		"Straw Hat", [("strawhat1",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 12, weight(0.2)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
 ["straw_hat_b",			"Straw Hat", [("strawhat2",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 12, weight(0.2)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
 ["brown_hat", 			"Brown Hat", [("officerhatbrown",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 50, weight(0.2)|abundance(100)|head_armor(12)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
@@ -1032,28 +1031,28 @@ items = [
 
 #tier breakdown: 59, 52, 45, 38, 31, 24, 17, 10
 ##### TIER 1 - 10 ARMOR #####
-["arming_cap_a",		"Arming Cap",		[("arming_cap_a_new",0)],	itp_merchandise|itp_type_head_armor, 0, 50, weight(1)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["arming_cap_b", 		"Arming Cap",		[("arming_cap_new",0)],		itp_merchandise|itp_type_head_armor, 0, 75, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth],
-["felt_hat",			"Felt Hat",			[("felt_hat_b_new",0)],		itp_merchandise|itp_type_head_armor, 0, 80, weight(1)|abundance(100)|head_armor(11)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["hood_a", 				"Hood",				[("hood_new_b",0)],			itp_merchandise|itp_type_head_armor, 0, 58, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth],
-["hood_b", 				"Hood",				[("hood_new_c",0)],			itp_merchandise|itp_type_head_armor, 0, 59, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth],
+["arming_cap_a",		"Arming Cap",		[("arming_cap_a_new",0)],	itp_merchandise|itp_type_head_armor, 0, 50, weight(1)|abundance(100)|head_armor(9)|body_armor(0)|leg_armor(0)|difficulty(0) , imodbits_cloth ],
+["arming_cap_b", 		"Arming Cap",		[("arming_cap_new",0)],		itp_merchandise|itp_type_head_armor, 0, 75, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["felt_hat",			"Felt Hat",			[("felt_hat_b_new",0)],		itp_merchandise|itp_type_head_armor, 0, 80, weight(1)|abundance(100)|head_armor(11)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["hood_a", 				"Hood",				[("hood_new_b",0)],			itp_merchandise|itp_type_head_armor, 0, 58, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["hood_b", 				"Hood",				[("hood_new_c",0)],			itp_merchandise|itp_type_head_armor, 0, 59, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
 
-##### TIER 2 - 17 ARMOR ####
+##### TIER 2 - 17 ARMOR #####
 ["padded_coif",			"Padded Coif",		[("padded_coif_a_new",0)],	itp_merchandise|itp_type_head_armor, 0, 110, weight(1.25)|abundance(100)|head_armor(17)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
 ["leather_cap",			"Leather Cap",		[("leather_cap_a_new",0)],	itp_merchandise|itp_type_head_armor, 0, 95, weight(1.25)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
 
-##### TIER 3 - 24 ARMOR ####
+##### TIER 3 - 24 ARMOR #####
 ["mail_coif",			"Mail Coif",		[("mail_coif_new",0)],		itp_merchandise|itp_type_head_armor, 0, 250, weight(1.5)|abundance(100)|head_armor(23)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_armor ],
 ["chainmail_coif",		"Chainmail Coif",	[("crusader_koif_a",0)],	itp_merchandise|itp_type_head_armor, 0, 275, weight(1.8)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["coif",				"Coif",				[("coif",0)],				itp_merchandise|itp_type_head_armor, 0, 290, weight(2)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, ],
+["coif",				"Coif",				[("coif",0)],				itp_merchandise|itp_type_head_armor, 0, 290, weight(2)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, ],
 
-##### TIER 4 - 31 ARMOR ####
+##### TIER 4 - 31 ARMOR #####
 ["simple_iberian_helmet",	"Simple Iberian Helmet",	[("simple_iberian_helmet",0)],	itp_merchandise|itp_type_head_armor, 0, 400, weight(2.5)|abundance(100)|head_armor(30)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate,],
 ["kettle_helm_a",			"Kettle Helm",				[("kettlehat",0)],				itp_merchandise|itp_type_head_armor, 0, 415, weight(2.2)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["carlingian_helm",			"Carlolingian Helm",		[("carolingian_helmet_b",0)],	itp_merchandise|itp_type_head_armor, 0, 450, weight(2.4)|abundance(100)|head_armor(30)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["chapel_de_fer_a",			"Chapel-de-Fer",			[("chapel-de-fer_cloth1",0),("inv_chapel-de-fer_cloth1",ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature, 0, 600, weight(2.6)|abundance(80)|head_armor(33)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 
-##### TIER 5 - 38 ARMOR ####
+##### TIER 5 - 38 ARMOR #####
 ["flat_top_helmet",				"Flat Top Helmet",			[("crusader_helm_7",0)],		itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 550, weight(3.2)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["kettle_helm_b",				"Kettle Hat",				[("kettle_hat_new",0)],			itp_merchandise|itp_type_head_armor,					0, 700, weight(3.3)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["capelina_with_chainmail",		"Capelina with Chainmail",	[("capelina_crusader_a",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 700, weight(3.1)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
@@ -1061,7 +1060,7 @@ items = [
 ["bascinet", 					"Bascinet",					[("bascinet_avt_new",0)],		itp_merchandise|itp_type_head_armor,					0, 600, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["open_sallet",					"Open Sallet",				[("open_salet",0)],				itp_merchandise|itp_type_head_armor,					0, 600, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 
-##### TIER 6 - 45 ARMOR ####
+##### TIER 6 - 45 ARMOR #####
 ["chapel_de_fer_b",				"Chapel-de-Fer",			[("chapel-de-fer",0)],			itp_merchandise|itp_type_head_armor, 0, 825, weight(3.5)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 ["high_helmet",					"High Helmet",				[("high_helmet",0)],			itp_merchandise|itp_type_head_armor, 0, 950, weight(3.6)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 ["combed_morion",				"Combed Morion",			[("combed_morion",0)],			itp_merchandise|itp_type_head_armor, 0, 715, weight(3.4)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_plate ],
@@ -1071,7 +1070,7 @@ items = [
 ["guard_helmet",				"Guard Helmet",				[("reinf_helmet_new",0)],		itp_merchandise|itp_type_head_armor, 0, 725, weight(3.3)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_plate ],
 ["open_sallet_with_coif", 		"Open Sallet with Coif", 	[("open_salet_coif",0)], 		itp_merchandise|itp_type_head_armor, 0, 950, weight(3.1)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 
-##### TIER 7 - 52 ARMOR ####
+##### TIER 7 - 52 ARMOR #####
 ["norman_helmet_with_coif_b",		"Norman Helmet with Coif",		[("crusader_helm_2",0)],			itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 1500, weight(3.9)|abundance(100)|head_armor(53)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["marching_helmet",					"Marching Helmet",				[("marching_helmet_crusader_a",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 1750, weight(4.1)|abundance(100)|head_armor(54)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["flat_top_pepperpot_a",			"Flat Top Pepperpot",			[("crusader_knight_helm_d",0)],		itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 1325, weight(3.8)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
@@ -1080,7 +1079,7 @@ items = [
 ["chapel_de_fer_c",					"Chapel-de-Fer",				[("chapel-de-fer_mail1",0), ("inv_chapel-de-fer_mail1",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 1925 , weight(4.2)|abundance(100)|head_armor(53)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["chapel_de_fer_d",					"Chapel-de-Fer",				[("chapel-de-fer_mail2",0), ("inv_chapel-de-fer_mail2",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 2215 , weight(4.2)|abundance(100)|head_armor(54)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 
-##### TIER 8 - 59 ARMOR ####
+##### TIER 8 - 59 ARMOR #####
 ["full_helm",						"Full Helm",						[("great_helmet_new_b",0)],			itp_merchandise|itp_type_head_armor|itp_covers_head,					0, 5500, weight(5.1)|abundance(100)|head_armor(58)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["visored_sallet_with_coif",		"Visored Sallet with Coif",			[("visored_salet_coif",0)],			itp_merchandise|itp_type_head_armor,									0, 8000, weight(3.9)|abundance(100)|head_armor(58)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["armet",							"Armet", 							[("armet2",0)],						itp_merchandise|itp_type_head_armor|itp_fit_to_head,					0, 4000, weight(4.3)|abundance(100)|head_armor(56)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
@@ -1151,72 +1150,73 @@ items = [
 #rm--
 
 
-##### TIER 2 - 17 ARMOR ####
-##### TIER 3 - 24 ARMOR ####
-##### TIER 4 - 31 ARMOR ####
-##### TIER 5 - 38 ARMOR ####
-##### TIER 6 - 45 ARMOR ####
-##### TIER 7 - 52 ARMOR ####
-##### TIER 8 - 59 ARMOR ####
+##### TIER 1 - 10 ARMOR #####
+["cloth_cap_a",			"Cloth Cap",		[("chionite_hat_b",0)],	itp_merchandise|itp_type_head_armor, 0, 50, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth ],
+["cloth_cap_b",			"Cloth Cap",		[("chionite_hat_d",0)],	itp_merchandise|itp_type_head_armor, 0, 50, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth ],
+["cloth_cap_c",			"Cloth Cap",		[("chionite_hat_f",0)],	itp_merchandise|itp_type_head_armor, 0, 50, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0),imodbits_cloth ],
+["woolen_cap",			"Woolen Cap",		[("woolen_cap_new",0)],	itp_merchandise|itp_type_head_armor, 0, 79, weight(1)|abundance(100)|head_armor(11)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["pointed_felt_hat",	"Pointed Felt Hat",	[("felt_hat_a_new",0)],	itp_merchandise|itp_type_head_armor, 0, 85, weight(1)|abundance(100)|head_armor(11)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
 
-########## Northern - light ##########
+##### TIER 2 - 17 ARMOR #####
+["fur_hat",					"Fur Hat",				[("fur_hat_a_new",0)],		itp_merchandise|itp_type_head_armor, 0, 90, weight(1.25)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
+["leather_helmet",			"Leather Helmet",		[("Helmet_A_vs2",0)],		itp_merchandise|itp_type_head_armor, 0, 100, weight(1.25)|abundance(100)|head_armor(17)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["leather_warrior_cap",		"Leather Warrior Cap",	[("skull_cap_new_b",0)],	itp_merchandise|itp_type_head_armor, 0, 125, weight(1.25)|abundance(100)|head_armor(18)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
 
-["woolen_cap", "Woolen Cap", [("woolen_cap_new",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 2 , weight(1)|abundance(100)|head_armor(6)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["pointed_felt_hat", "Pointed Felt Hat", [("felt_hat_a_new",0)], itp_merchandise| itp_type_head_armor |itp_civilian,0, 4 , weight(1)|abundance(100)|head_armor(8)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["fur_hat", "Fur Hat", [("fur_hat_a_new",0)], itp_merchandise| itp_type_head_armor |itp_civilian  ,0, 4 , weight(0.5)|abundance(100)|head_armor(8)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["nomad_cap", "Nomad Cap", [("nomad_cap_a_new",0)], itp_merchandise| itp_type_head_armor |itp_civilian  ,0, 6 , weight(0.75)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["nordic_archer_helmet", "Nordic Leather Helmet", [("Helmet_A_vs2",0)], itp_merchandise| itp_type_head_armor    ,0, 40 , weight(1.25)|abundance(100)|head_armor(14)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["vaegir_fur_cap", "Cap with Fur", [("vaeg_helmet3",0)], itp_merchandise| itp_type_head_armor   ,0, 50 , weight(1)|abundance(100)|head_armor(15)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["leather_warrior_cap", "Leather Warrior Cap", [("skull_cap_new_b",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 14 , weight(1)|abundance(100)|head_armor(18)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["skullcap", "Skullcap", [("skull_cap_new_a",0)], itp_merchandise| itp_type_head_armor   ,0, 60 , weight(1.0)|abundance(100)|head_armor(20)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
-["nordic_veteran_archer_helmet", "Nordic Leather Helmet", [("Helmet_A",0)], itp_merchandise| itp_type_head_armor,0, 70 , weight(1.5)|abundance(100)|head_armor(20)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
+##### TIER 3 - 24 ARMOR #####
+["cap_with_fur",			"Cap with Fur",					[("vaeg_helmet3",0)],		itp_merchandise|itp_type_head_armor, 0, 185, weight(1.5)|abundance(100)|head_armor(21)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["skullcap",				"Skullcap",						[("skull_cap_new_a",0)],	itp_merchandise|itp_type_head_armor, 0, 190, weight(1.6)|abundance(100)|head_armor(22)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["heavy_leather_helmet",	"Heavy Leather Helmet",			[("Helmet_A",0)],			itp_merchandise|itp_type_head_armor, 0, 215, weight(1.5)|abundance(100)|head_armor(23)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["nomad_cap",				"Nomad Cap",					[("nomad_cap_a_new",0)],	itp_merchandise|itp_type_head_armor, 0, 245, weight(1.8)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
+
+##### TIER 4 - 31 ARMOR #####
+["helmet_with_cap",				"Helmet with Cap",				[("norman_helmet_a",0)],							itp_merchandise|itp_type_head_armor|itp_fit_to_head,		0, 345 , weight(2.1)|abundance(100)|head_armor(30)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["vaegir_spiked_helmet",		"Spiked Cap",					[("vaeg_helmet1",0)],								itp_merchandise|itp_type_head_armor,						0, 390 , weight(2.2)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["northern_helmet",				"Northern Helmet",				[("Helmet_B_vs2",0)],								itp_merchandise|itp_type_head_armor|itp_fit_to_head,		0, 450 , weight(2.1)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["helmet_with_lamellar_guard",	"Helmet with Lamellar Guard",	[("vaeg_helmet4",0)],								itp_merchandise|itp_type_head_armor,						0, 495 , weight(2.3)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["steppe_helmet_a",				"Steppe Helmet",				[("rus_helm",0), ("inv_rus_helm",ixmesh_inventory)],itp_merchandise|itp_type_head_armor|itp_attach_armature,	0, 515 , weight(2.1)|abundance(100)|head_armor(33)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["steppe_helmet_b",				"Steppe Helmet",				[("vaeg_helmet2",0)],								itp_merchandise|itp_type_head_armor,						0, 530 , weight(2.5)|abundance(100)|head_armor(34)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+
+##### TIER 5 - 38 ARMOR #####
+["spiked_helmet",			"Spiked Helmet",			[("spiked_helmet_new",0)],		itp_merchandise| itp_type_head_armor,					0, 278, weight(2.4)|abundance(100)|head_armor(35)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["nordic_helmet",			"Nordic Helmet",			[("helmet_w_eyeguard_new",0)],	itp_merchandise| itp_type_head_armor,					0, 340, weight(2.6)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["norsk_decorated",			"Norsk Decorated",			[("norskspangendecorated",0)],	itp_merchandise| itp_type_head_armor,					0, 754, weight(2.7)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["nordic_fighter_helmet",	"Nordic Fighter Helmet",	[("Helmet_B",0)], 				itp_merchandise| itp_type_head_armor|itp_fit_to_head,	0, 240, weight(2.5)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["pointed_helmet",			"Pointed Helmet",			[("tagancha_helm_b",0),	("inv_tagancha_helm_b",ixmesh_inventory)],	itp_merchandise|itp_type_head_armor|itp_attach_armature,	0, 820 , weight(2.7)|abundance(100)|head_armor(40)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["reyvadin_helm_a",			"Reyvadin Helm",			[("gnezdovo_helm_a",0),	("inv_gnezdovo_helm_a",ixmesh_inventory)],	itp_merchandise|itp_type_head_armor|itp_attach_armature,	0, 640 , weight(3.1)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["reyvadin_helm_b",			"Reyvadin Helm",			[("gnezdovo_helm_b",0),	("inv_gnezdovo_helm_b",ixmesh_inventory)],	itp_merchandise|itp_type_head_armor|itp_attach_armature,	0, 640 , weight(3.1)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+
+##### TIER 6 - 45 ARMOR #####
+["heavy_pointed_helmet",	"Heavy Pointed Helmet",		[("tagancha_helm_a",0),		("inv_tagancha_helm_a",ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature, 0, 950, weight(3.3)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["war_helmet",				"War Helmet",				[("vaeg_helmet6",0)],		itp_merchandise|itp_type_head_armor, 0, 1250 , weight(3.4)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["coifed_nordic_helm",		"Coifed Nordic Helm",		[("coifedpointyhelm",0)],	itp_merchandise|itp_type_head_armor, 0, 1500 , weight(3.3)|abundance(90)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["nordic_huscarl_helmet",	"Nordic Huscarl's Helmet",	[("Helmet_C_vs2",0)],		itp_merchandise|itp_type_head_armor, 0, 1750 , weight(3.6)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["nordic_helm_a",			"Nordic Helm",				[("normanhelmet",0)],		itp_merchandise|itp_type_head_armor, 0, 1500 , weight(3.4)|abundance(90)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["nordic_helm_b",			"Nordic Helm",				[("pointedhelmet",0)],		itp_merchandise|itp_type_head_armor, 0, 2250 , weight(3.5)|abundance(90)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+
+##### TIER 7 - 52 ARMOR #####
+["nasal_helmet",			"Nasal Helmet",				[("nasal_helmet_b",0)],		itp_merchandise|itp_type_head_armor,	0, 2750 , weight(3.8)|abundance(100)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["noblevikinghelm",			"Noble Nordic Helm",		[("noble_vikinghelm",0)],	itp_merchandise|itp_type_head_armor,	0, 3000 , weight(3.9)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["nordic_warlord_helmet",	"Nordic Warlord Helmet",	[("Helmet_C",0)],			itp_merchandise|itp_type_head_armor,	0, 3250 , weight(4.0)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["face_mask",				"Face Mask",				[("litchina_helm",0), ("inv_litchina_helm",ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature, 0, 3500 , weight(3.9)|abundance(100)|head_armor(53)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["heavy_war_helm",			"Heavy War Helm",			[("novogrod_helm",0), ("inv_novogrod_helm",ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature, 0, 3750 , weight(4.1)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+
+
+
+
+
+
+##rm++
 ["rus_helmet_a", "Vaegiran Helmet", [("rus_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(20)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_2]],
-["vaegir_fur_helmet", "Vaegiran Helmet", [("vaeg_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 110 , weight(2)|abundance(100)|head_armor(21)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
 ["footman_helmet", "Footman's Helmet", [("skull_cap_new",0)], itp_merchandise| itp_type_head_armor   ,0, 95 , weight(1.5)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1, fac_kingdom_5]],
-["nasal_helmet", "Nasal Helmet", [("nasal_helmet_b",0)], itp_merchandise| itp_type_head_armor   ,0, 121 , weight(1.25)|abundance(100)|head_armor(26)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1, fac_kingdom_4]],
-["norman_helmet", "Helmet with Cap", [("norman_helmet_a",0)], itp_merchandise| itp_type_head_armor|itp_fit_to_head ,0, 147 , weight(1.25)|abundance(100)|head_armor(28)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1, fac_kingdom_4]],
-
-
-########## Northern - medium ##########
-
-["vaegir_spiked_helmet", "Spiked Cap", [("vaeg_helmet1",0)], itp_merchandise| itp_type_head_armor   ,0, 230 , weight(2.50)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["nordic_footman_helmet", "Nordic Footman Helmet", [("Helmet_B_vs2",0)], itp_merchandise| itp_type_head_armor |itp_fit_to_head ,0, 150 , weight(1.75)|abundance(100)|head_armor(30)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
 ["segmented_helmet", "Segmented Helmet", [("segmented_helm_new",0)], itp_merchandise| itp_type_head_armor   ,0, 174 , weight(1.25)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1]],
 ["helmet_with_neckguard", "Helmet with Neckguard", [("neckguard_helm_new",0)], itp_merchandise| itp_type_head_armor   ,0, 190 , weight(1.5)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1]],
-["rus_helm", "Vaegiran helm", [("rus_helm",0), ("inv_rus_helm",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 230 , weight(2)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["nordic_fighter_helmet", "Nordic Fighter Helmet", [("Helmet_B",0)], itp_merchandise| itp_type_head_armor|itp_fit_to_head ,0, 240 , weight(2)|abundance(100)|head_armor(34)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["spiked_helmet", "Spiked Helmet", [("spiked_helmet_new",0)], itp_merchandise| itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_3]],
-["vaegir_lamellar_helmet", "Helmet with Lamellar Guard", [("vaeg_helmet4",0)], itp_merchandise| itp_type_head_armor   ,0, 360 , weight(2.75)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["nordic_helmet", "Nordic Helmet", [("helmet_w_eyeguard_new",0)], itp_merchandise| itp_type_head_armor   ,0, 340 , weight(2)|abundance(100)|head_armor(40)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["nordic_huscarl_helmet", "Nordic Huscarl's Helmet", [("Helmet_C_vs2",0)], itp_merchandise| itp_type_head_armor   ,0, 390 , weight(2)|abundance(100)|head_armor(40)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
 ["viking_helm1", "Nordic Helm", [("plainhelm",0)], itp_merchandise | itp_type_head_armor,0, 524 , weight(1.6)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["norsk_decorated", "Norsk Decorated", [("norskspangendecorated",0)], itp_merchandise | itp_type_head_armor,0, 754 , weight(1.8)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-
-
-
-
-########## Northern - heavy ##########
-
 ["norsk_spangen", "Norsk Helm", [("norskspangen1",0)], itp_merchandise | itp_type_head_armor,0, 578 , weight(1.8)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["tagancha_helm_a", "Tagancha helm", [("tagancha_helm_a",0), ("inv_tagancha_helm_a",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 580 , weight(2)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["viking_helm5", "Coifed Nordic Helm", [("coifedpointyhelm",0)], itp_merchandise | itp_type_head_armor,0, 874 , weight(2.1)|abundance(90)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["gnezdovo_helm_a", "Gnezdovo helm", [("gnezdovo_helm_a",0), ("inv_gnezdovo_helm_a",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 640 , weight(2)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["gnezdovo_helm_b", "Gnezdovo helm", [("gnezdovo_helm_b",0), ("inv_gnezdovo_helm_b",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 640 , weight(2)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
 ["vaegir_noble_helmet", "Vaegiran Nobleman Helmet", [("vaeg_helmet7",0)], itp_merchandise| itp_type_head_armor   ,0, 710, weight(2.75)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["viking_helm4", "Nordic Helm", [("pointedhelmet",0)], itp_merchandise | itp_type_head_armor,0, 789 , weight(2.2)|abundance(90)|head_armor(46)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["vaegir_war_helmet", "Vaegiran War Helmet", [("vaeg_helmet6",0)], itp_merchandise| itp_type_head_armor   ,0, 820 , weight(3)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["viking_helm3", "Nordic Helm", [("normanhelmet",0)], itp_merchandise | itp_type_head_armor,0, 944 , weight(2.1)|abundance(90)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["novogrod_helm", "Novogrod helm", [("novogrod_helm",0), ("inv_novogrod_helm",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 740 , weight(2)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["nordic_warlord_helmet", "Nordic Warlord Helmet", [("Helmet_C",0)], itp_merchandise| itp_type_head_armor ,0, 880 , weight(2.25)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
 ["nikolskoe_helm", "Nikolskoe helm", [("nikolskoe_helm",0), ("inv_nikolskoe_helm",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature  ,0, 820 , weight(2)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["tagancha_helm_b", "Tagancha helm", [("tagancha_helm_b",0), ("inv_tagancha_helm_b",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 820 , weight(2)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
 ["viking_helm2", "Chieftain Helm", [("chieftainhelm",0)], itp_merchandise | itp_type_head_armor,0, 974 , weight(2.3)|abundance(70)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["vaegir_mask", "Vaegiran War Mask", [("vaeg_helmet9",0)], itp_merchandise| itp_type_head_armor |itp_covers_beard ,0, 950 , weight(3.50)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["litchina_helm", "litchina helm", [("litchina_helm",0), ("inv_litchina_helm",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature,0, 820 , weight(2)|abundance(100)|head_armor(54)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["noblevikinghelm", "Noble Nordic Helm", [("noble_vikinghelm",0)], itp_merchandise | itp_type_head_armor,0, 1934 , weight(2.8)|abundance(60)|head_armor(55)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-
-
-
+##rm--
 
 
 
@@ -1242,14 +1242,14 @@ items = [
 ["sarranid_horseman_helmet", "Horseman Helmet", [("sar_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 180 , weight(2.75)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
 ["turban_with_mail_coif", "Turban With Mail Coif", [("turban_mail_a",0)], itp_merchandise|itp_type_head_armor, 0, 225, weight(2.5)|abundance(80)|head_armor(28)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
 
-
-##### TIER 2 - 17 ARMOR ####
-##### TIER 3 - 24 ARMOR ####
-##### TIER 4 - 31 ARMOR ####
-##### TIER 5 - 38 ARMOR ####
-##### TIER 6 - 45 ARMOR ####
-##### TIER 7 - 52 ARMOR ####
-##### TIER 8 - 59 ARMOR ####
+##### TIER 1 - 10 ARMOR #####
+##### TIER 2 - 17 ARMOR #####
+##### TIER 3 - 24 ARMOR #####
+##### TIER 4 - 31 ARMOR #####
+##### TIER 5 - 38 ARMOR #####
+##### TIER 6 - 45 ARMOR #####
+##### TIER 7 - 52 ARMOR #####
+##### TIER 8 - 59 ARMOR #####
 
 ########## Eastern - medium ##########
 
