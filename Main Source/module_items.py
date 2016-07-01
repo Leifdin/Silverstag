@@ -1170,7 +1170,7 @@ items = [
 
 ##### TIER 4 - 31 ARMOR #####
 ["helmet_with_cap",				"Helmet with Cap",				[("norman_helmet_a",0)],							itp_merchandise|itp_type_head_armor|itp_fit_to_head,		0, 345 , weight(2.1)|abundance(100)|head_armor(30)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
-["vaegir_spiked_helmet",		"Spiked Cap",					[("vaeg_helmet1",0)],								itp_merchandise|itp_type_head_armor,						0, 390 , weight(2.2)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["spiked_cap",					"Spiked Cap",					[("vaeg_helmet1",0)],								itp_merchandise|itp_type_head_armor,						0, 390 , weight(2.2)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["northern_helmet",				"Northern Helmet",				[("Helmet_B_vs2",0)],								itp_merchandise|itp_type_head_armor|itp_fit_to_head,		0, 450 , weight(2.1)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["helmet_with_lamellar_guard",	"Helmet with Lamellar Guard",	[("vaeg_helmet4",0)],								itp_merchandise|itp_type_head_armor,						0, 495 , weight(2.3)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["steppe_helmet_a",				"Steppe Helmet",				[("rus_helm",0), ("inv_rus_helm",ixmesh_inventory)],itp_merchandise|itp_type_head_armor|itp_attach_armature,	0, 515 , weight(2.1)|abundance(100)|head_armor(33)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
@@ -1195,7 +1195,7 @@ items = [
 
 ##### TIER 7 - 52 ARMOR #####
 ["nasal_helmet",			"Nasal Helmet",				[("nasal_helmet_b",0)],		itp_merchandise|itp_type_head_armor,	0, 2750 , weight(3.8)|abundance(100)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
-["noblevikinghelm",			"Noble Nordic Helm",		[("noble_vikinghelm",0)],	itp_merchandise|itp_type_head_armor,	0, 3000 , weight(3.9)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["noble_nordic_helm",		"Noble Nordic Helm",		[("noble_vikinghelm",0)],	itp_merchandise|itp_type_head_armor,	0, 3000 , weight(3.9)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 ["nordic_warlord_helmet",	"Nordic Warlord Helmet",	[("Helmet_C",0)],			itp_merchandise|itp_type_head_armor,	0, 3250 , weight(4.0)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 ["face_mask",				"Face Mask",				[("litchina_helm",0), ("inv_litchina_helm",ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature, 0, 3500 , weight(3.9)|abundance(100)|head_armor(53)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 ["heavy_war_helm",			"Heavy War Helm",			[("novogrod_helm",0), ("inv_novogrod_helm",ixmesh_inventory)], itp_merchandise|itp_type_head_armor|itp_attach_armature, 0, 3750 , weight(4.1)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
@@ -1206,16 +1206,16 @@ items = [
 
 
 ##rm++
-["rus_helmet_a", "Vaegiran Helmet", [("rus_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(20)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_2]],
-["footman_helmet", "Footman's Helmet", [("skull_cap_new",0)], itp_merchandise| itp_type_head_armor   ,0, 95 , weight(1.5)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1, fac_kingdom_5]],
-["segmented_helmet", "Segmented Helmet", [("segmented_helm_new",0)], itp_merchandise| itp_type_head_armor   ,0, 174 , weight(1.25)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1]],
-["helmet_with_neckguard", "Helmet with Neckguard", [("neckguard_helm_new",0)], itp_merchandise| itp_type_head_armor   ,0, 190 , weight(1.5)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1]],
-["viking_helm1", "Nordic Helm", [("plainhelm",0)], itp_merchandise | itp_type_head_armor,0, 524 , weight(1.6)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["norsk_spangen", "Norsk Helm", [("norskspangen1",0)], itp_merchandise | itp_type_head_armor,0, 578 , weight(1.8)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
-["vaegir_noble_helmet", "Vaegiran Nobleman Helmet", [("vaeg_helmet7",0)], itp_merchandise| itp_type_head_armor   ,0, 710, weight(2.75)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["nikolskoe_helm", "Nikolskoe helm", [("nikolskoe_helm",0), ("inv_nikolskoe_helm",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature  ,0, 820 , weight(2)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
-["viking_helm2", "Chieftain Helm", [("chieftainhelm",0)], itp_merchandise | itp_type_head_armor,0, 974 , weight(2.3)|abundance(70)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
-["vaegir_mask", "Vaegiran War Mask", [("vaeg_helmet9",0)], itp_merchandise| itp_type_head_armor |itp_covers_beard ,0, 950 , weight(3.50)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
+#["rus_helmet_a", "Vaegiran Helmet", [("rus_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(20)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_2]],
+#["footman_helmet", "Footman's Helmet", [("skull_cap_new",0)], itp_merchandise| itp_type_head_armor   ,0, 95 , weight(1.5)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1, fac_kingdom_5]],
+#["segmented_helmet", "Segmented Helmet", [("segmented_helm_new",0)], itp_merchandise| itp_type_head_armor   ,0, 174 , weight(1.25)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1]],
+#["helmet_with_neckguard", "Helmet with Neckguard", [("neckguard_helm_new",0)], itp_merchandise| itp_type_head_armor   ,0, 190 , weight(1.5)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_1]],
+#["viking_helm1", "Nordic Helm", [("plainhelm",0)], itp_merchandise | itp_type_head_armor,0, 524 , weight(1.6)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
+#["norsk_spangen", "Norsk Helm", [("norskspangen1",0)], itp_merchandise | itp_type_head_armor,0, 578 , weight(1.8)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_4]],
+#["vaegir_noble_helmet", "Vaegiran Nobleman Helmet", [("vaeg_helmet7",0)], itp_merchandise| itp_type_head_armor   ,0, 710, weight(2.75)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
+#["nikolskoe_helm", "Nikolskoe helm", [("nikolskoe_helm",0), ("inv_nikolskoe_helm",ixmesh_inventory)], itp_merchandise| itp_type_head_armor | itp_attach_armature  ,0, 820 , weight(2)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
+#["viking_helm2", "Chieftain Helm", [("chieftainhelm",0)], itp_merchandise | itp_type_head_armor,0, 974 , weight(2.3)|abundance(70)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+#["vaegir_mask", "Vaegiran War Mask", [("vaeg_helmet9",0)], itp_merchandise| itp_type_head_armor |itp_covers_beard ,0, 950 , weight(3.50)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_2]],
 ##rm--
 
 
