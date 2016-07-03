@@ -1234,7 +1234,7 @@ items = [
 ##### TIER 2 - 17 ARMOR #####
 ["leather_steppe_cap_a",		"Leather Steppe Cap",					[("leather_steppe_cap_a_new",0)],	itp_merchandise|itp_type_head_armor,					0, 110, weight(1.25)|abundance(100)|head_armor(15)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
 ["leather_steppe_cap_b",		"Leather Steppe Cap",					[("tattered_steppe_cap_b_new",0)],	itp_merchandise|itp_type_head_armor,					0, 115, weight(1.35)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["sarranid_leather_cap",		"Sarranid Leather Cap",					[("helm_saracin_3",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 145, weight(1.15)|abundance(100)|head_armor(17)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["desert_leather_cap",			"Desert Leather Cap",					[("helm_saracin_3",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 145, weight(1.15)|abundance(100)|head_armor(17)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
 ["white_turban_with_iron_cap",	"White Turban With Iron Cap",			[("saracen_helmet_f",0)],			itp_merchandise|itp_type_head_armor,					0, 155, weight(1.45)|abundance(100)|head_armor(19)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 ["yellow_turban_with_iron_cap",	"Yellow Turban With Iron Cap",			[("saracen_helmet_a",0)],			itp_merchandise|itp_type_head_armor,					0, 195, weight(1.55)|abundance(100)|head_armor(21)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
 
@@ -1263,7 +1263,7 @@ items = [
 ["heavy_steppe_helmet",		"Heavy Steppe Helmet",		[("khergit_guard_helmet",0)],		itp_merchandise|itp_type_head_armor,										0, 750, weight(2.95)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
 ["desert_warrior_helmet",	"Desert Warrior Helmet",	[("helm_saracin_j",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 775, weight(3.10)|abundance(100)|head_armor(40)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["iron_cap_with_turban",	"Iron Cap with Turban",		[("helm_saracin_2",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 800, weight(3.00)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["veiled__helmet",			"Veiled Helmet",			[("gulam_helm_a",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 725, weight(3.10)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["veiled_helmet",			"Veiled Helmet",			[("gulam_helm_a",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 725, weight(3.10)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 
 ##### TIER 6 - 45 ARMOR #####
 ["elite_steppe_helmet",		"Elite Steppe Helmet",		[("lamellar_helmet_a",0)],		itp_merchandise|itp_type_head_armor,										0, 1000, weight(3.75)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
@@ -1276,21 +1276,21 @@ items = [
 
 
 ##rm++
-["steppe_cap", "Steppe Cap", [("steppe_cap_a_new",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 14 , weight(1)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["iron_cap_with_chainmail", "Iron Cap with Chainmail", [("helm_saracin_c",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 550, weight(3.5)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["sipahi_helmet_a", "Sipahi Helmet", [("sipahi_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["sarranid_warrior_cap", "Sarranid Warrior Cap", [("tuareg_helmet",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 90 , weight(2)|abundance(100)|head_armor(19)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["sarranid_horseman_helmet", "Horseman Helmet", [("sar_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 180 , weight(2.75)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["heavy_ghulam_helmet", "Heavy Ghulam Helmet", [("gulam_helm_d",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 500, weight(3.5)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["sarranid_helmet1", "Sarranid Keffiyeh Helmet", [("sar_helmet1",0)], itp_merchandise| itp_type_head_armor   ,0, 290 , weight(2.50)|abundance(100)|head_armor(35)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["sarranid_archer_helmet", "Sarranid Archer Helmet", [("helm_saracin_b",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 450, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["sarranid_mail_coif", "Sarranid Mail Coif", [("tuareg_helmet2",0)], itp_merchandise| itp_type_head_armor ,0, 430 , weight(3)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["sarranid_helmet_with_coif", "Sarranid Helmet with Coif", [("helm_saracin_a",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 700, weight(3.5)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["saracen_helmet_with_mail", "Saracen Helmet With Mail", [("saracen_helmet_e",0)], itp_merchandise|itp_type_head_armor, 0, 500, weight(3.25)|abundance(80)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["sarranid_veiled_helmet", "Sarranid Veiled Helmet", [("sar_helmet4",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 810 , weight(3.50)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["full_saracen_helmet", "Full Saracen Helmet", [("saracen_helmet_c",0)], itp_merchandise|itp_type_head_armor, 0, 750, weight(3.5)|abundance(80)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["gilded_mamluke_helmet", "Gilded Mamluke Helmet", [("mamluk_helmet_2",0)], itp_merchandise|itp_type_head_armor, 0, 1000, weight(3.5)|abundance(80)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["mamluke_helmet", "Mamluke Helmet", [("mamluk_helmet",0)], itp_merchandise|itp_type_head_armor, 0, 1000, weight(3.5)|abundance(80)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
+#["steppe_cap", "Steppe Cap", [("steppe_cap_a_new",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 14 , weight(1)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
+#["iron_cap_with_chainmail", "Iron Cap with Chainmail", [("helm_saracin_c",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 550, weight(3.5)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+#["sipahi_helmet_a", "Sipahi Helmet", [("sipahi_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+#["sarranid_warrior_cap", "Sarranid Warrior Cap", [("tuareg_helmet",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 90 , weight(2)|abundance(100)|head_armor(19)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+#["sarranid_horseman_helmet", "Horseman Helmet", [("sar_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 180 , weight(2.75)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+#["heavy_ghulam_helmet", "Heavy Ghulam Helmet", [("gulam_helm_d",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 500, weight(3.5)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+#["sarranid_helmet1", "Sarranid Keffiyeh Helmet", [("sar_helmet1",0)], itp_merchandise| itp_type_head_armor   ,0, 290 , weight(2.50)|abundance(100)|head_armor(35)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+#["sarranid_archer_helmet", "Sarranid Archer Helmet", [("helm_saracin_b",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 450, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+#["sarranid_mail_coif", "Sarranid Mail Coif", [("tuareg_helmet2",0)], itp_merchandise| itp_type_head_armor ,0, 430 , weight(3)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+#["sarranid_helmet_with_coif", "Sarranid Helmet with Coif", [("helm_saracin_a",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 700, weight(3.5)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+#["saracen_helmet_with_mail", "Saracen Helmet With Mail", [("saracen_helmet_e",0)], itp_merchandise|itp_type_head_armor, 0, 500, weight(3.25)|abundance(80)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
+#["sarranid_veiled_helmet", "Sarranid Veiled Helmet", [("sar_helmet4",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 810 , weight(3.50)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+#["full_saracen_helmet", "Full Saracen Helmet", [("saracen_helmet_c",0)], itp_merchandise|itp_type_head_armor, 0, 750, weight(3.5)|abundance(80)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
+#["gilded_mamluke_helmet", "Gilded Mamluke Helmet", [("mamluk_helmet_2",0)], itp_merchandise|itp_type_head_armor, 0, 1000, weight(3.5)|abundance(80)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
+#["mamluke_helmet", "Mamluke Helmet", [("mamluk_helmet",0)], itp_merchandise|itp_type_head_armor, 0, 1000, weight(3.5)|abundance(80)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
 ##rm--
 
 
