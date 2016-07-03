@@ -2387,7 +2387,7 @@ game_menus = [
 
         (troop_add_item, "trp_player","itm_tabard",imod_sturdy),
         (troop_add_item, "trp_player","itm_leather_boots",imod_ragged),
-        (troop_add_item, "trp_player","itm_sword_medieval_a", imod_rusty),
+        (troop_add_item, "trp_player","itm_western_arming_sword", imod_rusty),
         (troop_add_item, "trp_player","itm_hunting_crossbow", 0),
         (troop_add_item, "trp_player","itm_bolts", 0),
         (troop_add_item, "trp_player","itm_saddle_horse",imod_swaybacked),
@@ -2412,7 +2412,7 @@ game_menus = [
         (troop_add_item, "trp_player","itm_leather_jerkin",imod_ragged),
         (troop_add_item, "trp_player","itm_leather_boots",imod_tattered),
            
-        (troop_add_item, "trp_player","itm_sword_medieval_a", imod_rusty),
+        (troop_add_item, "trp_player","itm_western_arming_sword", imod_rusty),
         (troop_add_item, "trp_player","itm_hunting_crossbow",0),
         (troop_add_item, "trp_player","itm_bolts",0),
         (troop_add_item, "trp_player","itm_saddle_horse",imod_swaybacked),
@@ -2452,7 +2452,7 @@ game_menus = [
 
         (troop_add_item, "trp_player","itm_linen_tunic",imod_sturdy),
         (troop_add_item, "trp_player","itm_woolen_hose",0),
-        (troop_add_item, "trp_player","itm_sword_medieval_a", imod_rusty),
+        (troop_add_item, "trp_player","itm_western_arming_sword", imod_rusty),
         (troop_add_item, "trp_player","itm_hunting_crossbow", 0),
         (troop_add_item, "trp_player","itm_bolts", 0),
         (troop_add_item, "trp_player","itm_saddle_horse",imod_swaybacked),

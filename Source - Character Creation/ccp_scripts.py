@@ -218,7 +218,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_swadia_item_blunt, "itm_mace_2"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_spear, "itm_shortened_spear"),             # Diff 0
-		(troop_set_slot, ccp_data, ccp_swadia_item_sword, "itm_sword_medieval_a"),           # Diff 0
+		(troop_set_slot, ccp_data, ccp_swadia_item_sword, "itm_western_arming_sword"),           # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_bow, "itm_hunting_bow"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_arrow, "itm_arrows"),          # Diff n/a
 		(troop_set_slot, ccp_data, ccp_swadia_item_throwing, "itm_throwing_spears"),         # Diff 1, but downgrades to lesser knives if needed.
@@ -244,7 +244,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_vaegir_item_blunt, "itm_mace_2"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_spear, "itm_shortened_spear"),             # Diff 0
-		(troop_set_slot, ccp_data, ccp_vaegir_item_sword, "itm_sword_medieval_a"),           # Diff 0
+		(troop_set_slot, ccp_data, ccp_vaegir_item_sword, "itm_western_arming_sword"),           # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_bow, "itm_hunting_bow"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_arrow, "itm_arrows"),          # Diff n/a
 		(troop_set_slot, ccp_data, ccp_vaegir_item_throwing, "itm_throwing_spears"),         # Diff 1, but downgrades to lesser knives if needed.
@@ -270,7 +270,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_khergit_item_blunt, "itm_mace_2"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_spear, "itm_shortened_spear"),             # Diff 0
-		(troop_set_slot, ccp_data, ccp_khergit_item_sword, "itm_sword_medieval_a"),           # Diff 0
+		(troop_set_slot, ccp_data, ccp_khergit_item_sword, "itm_western_arming_sword"),           # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_bow, "itm_hunting_bow"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_arrow, "itm_arrows"),          # Diff n/a
 		(troop_set_slot, ccp_data, ccp_khergit_item_throwing, "itm_throwing_spears"),         # Diff 1, but downgrades to lesser knives if needed.
@@ -296,7 +296,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_nord_item_blunt, "itm_mace_2"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_spear, "itm_shortened_spear"),             # Diff 0
-		(troop_set_slot, ccp_data, ccp_nord_item_sword, "itm_sword_medieval_a"),           # Diff 0
+		(troop_set_slot, ccp_data, ccp_nord_item_sword, "itm_western_arming_sword"),           # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_bow, "itm_hunting_bow"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_arrow, "itm_arrows"),          # Diff n/a
 		(troop_set_slot, ccp_data, ccp_nord_item_throwing, "itm_throwing_spears"),         # Diff 1, but downgrades to lesser knives if needed.
@@ -322,7 +322,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_rhodok_item_blunt, "itm_mace_2"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_spear, "itm_shortened_spear"),             # Diff 0
-		(troop_set_slot, ccp_data, ccp_rhodok_item_sword, "itm_sword_medieval_a"),           # Diff 0
+		(troop_set_slot, ccp_data, ccp_rhodok_item_sword, "itm_western_arming_sword"),           # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_bow, "itm_hunting_bow"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_arrow, "itm_arrows"),          # Diff n/a
 		(troop_set_slot, ccp_data, ccp_rhodok_item_throwing, "itm_throwing_spears"),         # Diff 1, but downgrades to lesser knives if needed.
@@ -348,7 +348,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_sarrand_item_blunt, "itm_mace_2"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_spear, "itm_shortened_spear"),             # Diff 0
-		(troop_set_slot, ccp_data, ccp_sarrand_item_sword, "itm_sword_medieval_a"),           # Diff 0
+		(troop_set_slot, ccp_data, ccp_sarrand_item_sword, "itm_western_arming_sword"),           # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_bow, "itm_hunting_bow"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_arrow, "itm_arrows"),          # Diff n/a
 		(troop_set_slot, ccp_data, ccp_sarrand_item_throwing, "itm_throwing_spears"),         # Diff 1, but downgrades to lesser knives if needed.
