@@ -1221,71 +1221,78 @@ items = [
 
 
 
-########## Eastern - light ##########
 
-["turban", "Turban", [("tuareg_open",0)], itp_merchandise| itp_type_head_armor   ,0, 28 , weight(1)|abundance(100)|head_armor(11)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_6]],
-["leather_steppe_cap_a", "Steppe Cap", [("leather_steppe_cap_a_new",0)], itp_merchandise|itp_type_head_armor   ,0, 24 , weight(1)|abundance(100)|head_armor(12)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["nomad_cap_b", "Nomad Cap", [("nomad_cap_b_new",0)], itp_merchandise| itp_type_head_armor |itp_civilian  ,0, 6 , weight(0.75)|abundance(100)|head_armor(13)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth ],
-["desert_turban", "Desert Turban", [("tuareg",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard ,0, 38 , weight(1.50)|abundance(100)|head_armor(14)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_6]],
-["leather_steppe_cap_b", "Steppe Cap ", [("tattered_steppe_cap_b_new",0)], itp_merchandise|itp_type_head_armor   ,0, 36 , weight(1)|abundance(100)|head_armor(14)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["leather_steppe_cap_c", "Steppe Cap", [("steppe_cap_a_new",0)], itp_merchandise|itp_type_head_armor   ,0, 51 , weight(1)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["steppe_cap", "Steppe Cap", [("steppe_cap_a_new",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 14 , weight(1)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["felt_steppe_cap", "Felt Steppe Cap", [("felt_steppe_cap",0)], itp_type_head_armor   ,0, 237 , weight(2)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["brown_sarranid_turban", "Brown Sarranid Turban", [("saracin_turban_a",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 100, weight(1)|abundance(100)|head_armor(18)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
-["red_sarranid_turban", "Red Sarranid Turban", [("saracin_turban_b",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 100, weight(1)|abundance(100)|head_armor(18)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
-["blue_sarranid_turban", "Blue Sarranid Turban", [("saracin_turban_c",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 100, weight(1)|abundance(100)|head_armor(18)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
-["sarranid_warrior_cap", "Sarranid Warrior Cap", [("tuareg_helmet",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 90 , weight(2)|abundance(100)|head_armor(19)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["magyar_helmet_a", "Magyar Helmet", [("magyar_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(20)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["white_turban_with_iron_cap", "White Turban With Iron Cap", [("saracen_helmet_f",0)], itp_merchandise|itp_type_head_armor, 0, 150, weight(2)|abundance(80)|head_armor(22)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["helmet_with_yellow_turban", "Helmet With Yellow Turban", [("saracen_helmet_a",0)], itp_merchandise|itp_type_head_armor, 0, 150, weight(2)|abundance(80)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["sarranid_leather_cap", "Sarranid Leather Cap", [("helm_saracin_3",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 250, weight(1.9)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
-["sarranid_horseman_helmet", "Horseman Helmet", [("sar_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 180 , weight(2.75)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["turban_with_mail_coif", "Turban With Mail Coif", [("turban_mail_a",0)], itp_merchandise|itp_type_head_armor, 0, 225, weight(2.5)|abundance(80)|head_armor(28)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
+
+
+
 
 ##### TIER 1 - 10 ARMOR #####
+["turban_a",			"Turban",				[("tuareg_open",0)],		itp_merchandise|itp_type_head_armor,					0, 50, weight(1)|abundance(100)|head_armor(10)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["turban_b",			"Turban",				[("tuareg",0)],				itp_merchandise|itp_type_head_armor|itp_covers_beard,	0, 75, weight(1)|abundance(100)|head_armor(11)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["leather_nomad_cap",	"Leather Nomad Cap",	[("nomad_cap_b_new",0)],	itp_merchandise|itp_type_head_armor,					0, 95, weight(1)|abundance(100)|head_armor(12)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+
 ##### TIER 2 - 17 ARMOR #####
+["leather_steppe_cap_a",		"Leather Steppe Cap",					[("leather_steppe_cap_a_new",0)],	itp_merchandise|itp_type_head_armor,					0, 110, weight(1.25)|abundance(100)|head_armor(15)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+["leather_steppe_cap_b",		"Leather Steppe Cap",					[("tattered_steppe_cap_b_new",0)],	itp_merchandise|itp_type_head_armor,					0, 115, weight(1.35)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+["sarranid_leather_cap",		"Sarranid Leather Cap",					[("helm_saracin_3",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 145, weight(1.15)|abundance(100)|head_armor(17)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["white_turban_with_iron_cap",	"White Turban With Iron Cap",			[("saracen_helmet_f",0)],			itp_merchandise|itp_type_head_armor,					0, 155, weight(1.45)|abundance(100)|head_armor(19)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["yellow_turban_with_iron_cap",	"Yellow Turban With Iron Cap",			[("saracen_helmet_a",0)],			itp_merchandise|itp_type_head_armor,					0, 195, weight(1.55)|abundance(100)|head_armor(21)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+
 ##### TIER 3 - 24 ARMOR #####
+["felt_steppe_cap",			"Felt Steppe Cap",			[("felt_steppe_cap",0)],	itp_merchandise|itp_type_head_armor,					0, 175, weight(1.75)|abundance(100)|head_armor(22)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+["leather_steppe_cap_c",	"Leather Steppe Cap",		[("steppe_cap_a_new",0)],	itp_merchandise|itp_type_head_armor,					0, 195, weight(1.85)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0), imodbits_cloth ],
+["turban_with_coif_a",		"Turban With Mail Coif",	[("saracin_turban_a",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 215, weight(1.95)|abundance(100)|head_armor(21)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["turban_with_coif_b",		"Turban With Mail Coif",	[("saracin_turban_b",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 275, weight(1.95)|abundance(100)|head_armor(24)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["turban_with_coif_c",		"Turban With Mail Coif",	[("saracin_turban_c",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 325, weight(1.95)|abundance(100)|head_armor(26)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["turban_with_coif_d",		"Turban With Mail Coif",	[("turban_mail_a",0)],		itp_merchandise|itp_type_head_armor,					0, 415, weight(2.10)|abundance(100)|head_armor(27)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["steppe_helmet",			"Steppe Helmet",			[("magyar_helmet_a",0)],	itp_merchandise|itp_type_head_armor,					0, 315, weight(2.10)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0), imodbits_cloth ],
+
 ##### TIER 4 - 31 ARMOR #####
+["cavalry_helmet",			"Cavalry Helmet",			[("lamellar_helmet_b",0)],		itp_merchandise|itp_type_head_armor,					0, 375, weight(2.25)|abundance(100)|head_armor(29)|body_armor(0)|leg_armor(0), imodbits_cloth ],
+["helmet_with_turban_a",	"Helmet With Turban",		[("saracen_helmet_b",0)],		itp_merchandise|itp_type_head_armor,					0, 425, weight(2.75)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["helmet_with_turban_b",	"Helmet With Turban",		[("saracen_helmet_d",0)],		itp_merchandise|itp_type_head_armor,					0, 400, weight(2.55)|abundance(100)|head_armor(32)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+["shahi",					"Shahi",					[("shahi",0)],					itp_merchandise|itp_type_head_armor,					0, 475, weight(2.45)|abundance(100)|head_armor(33)|body_armor(0)|leg_armor(0), imodbits_cloth ],
+["rabati",					"Rabati",					[("rabati",0)],					itp_merchandise|itp_type_head_armor,					0, 525, weight(2.60)|abundance(100)|head_armor(35)|body_armor(0)|leg_armor(0), imodbits_cloth ],
+["iron_cap_with_padding",	"Iron Cap with Padding",	[("helm_saracin_c",0)],			itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 575, weight(2.85)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["conical_helm",			"Conical Helm",				[("conical_helmet_steppe",0)],	itp_merchandise|itp_type_head_armor,					0, 525, weight(2.95)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate ],
+
 ##### TIER 5 - 38 ARMOR #####
+["helmet_with_turban_c",	"Helmet With Turban",		[("gulam_helm_b",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head|itp_attach_armature,	0, 625, weight(2.70)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["helmet_with_turban_d",	"Helmet With Turban",		[("gulam_helm_c",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head|itp_attach_armature,	0, 695, weight(2.70)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["heavy_conical_helm",		"Heavy Conical Helm",		[("tattered_steppe_cap_a_new",0)],	itp_merchandise|itp_type_head_armor|itp_merchandise,						0, 725, weight(2.85)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+["heavy_steppe_helmet",		"Heavy Steppe Helmet",		[("khergit_guard_helmet",0)],		itp_merchandise|itp_type_head_armor,										0, 750, weight(2.95)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+["desert_warrior_helmet",	"Desert Warrior Helmet",	[("helm_saracin_j",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 775, weight(3.10)|abundance(100)|head_armor(40)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["iron_cap_with_turban",	"Iron Cap with Turban",		[("helm_saracin_2",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 800, weight(3.00)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["veiled__helmet",			"Veiled Helmet",			[("gulam_helm_a",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 725, weight(3.10)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+
 ##### TIER 6 - 45 ARMOR #####
+["elite_steppe_helmet",		"Elite Steppe Helmet",		[("lamellar_helmet_a",0)],		itp_merchandise|itp_type_head_armor,										0, 1000, weight(3.75)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["nobleman_steppe_helmet",	"Nobleman Steppe Helmet",	[("helm_saracin_1",0)],			itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 1250, weight(3.50)|abundance(100)|head_armor(46)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["elite_desert_helmet",		"Elite Desert Helmet",		[("gulam_helm_f",0)],			itp_merchandise|itp_type_head_armor|itp_fit_to_head|itp_attach_armature,	0, 1500, weight(3.85)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+
 ##### TIER 7 - 52 ARMOR #####
-##### TIER 8 - 59 ARMOR #####
+["royal_desert_helmet",		"Royal Desert Helmet",		[("helm_Sultan_saracens",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head|itp_attach_armature,	0, 2500, weight(4.00)|abundance(100)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 
-########## Eastern - medium ##########
 
-["shahi", "Shahi", [("shahi",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(28)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["khergit_war_helmet", "Khergit War Helmet", [("tattered_steppe_cap_a_new",0)], itp_type_head_armor | itp_merchandise   ,0, 200 , weight(2)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["iron_cap_with_padding", "Iron Cap with Padding", [("helm_saracin_c",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 350, weight(2)|abundance(100)|head_armor(31)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["helmet_with_white_turban", "Helmet With White Turban", [("saracen_helmet_b",0)], itp_merchandise|itp_type_head_armor, 0, 275, weight(2.75)|abundance(80)|head_armor(33)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["khergit_helmet", "Khergit Helmet", [("khergit_guard_helmet",0)], itp_type_head_armor   ,0, 361 , weight(2)|abundance(100)|head_armor(33)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["khergit_cavalry_helmet", "Khergit Cavalry Helmet", [("lamellar_helmet_b",0)], itp_type_head_armor | itp_merchandise   ,0, 333 , weight(2)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["sarranid_helmet1", "Sarranid Keffiyeh Helmet", [("sar_helmet1",0)], itp_merchandise| itp_type_head_armor   ,0, 290 , weight(2.50)|abundance(100)|head_armor(35)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["rabati", "Rabati", [("rabati",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
-["red_ghulam_helmet", "Red Ghulam Helmet", [("gulam_helm_b",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 350, weight(2.7)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["blue_ghulam_helmet", "Blue Ghulam Helmet", [("gulam_helm_c",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 350, weight(2.7)|abundance(100)|head_armor(36)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["sarranid_archer_helmet", "Sarranid Archer Helmet", [("helm_saracin_b",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 450, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["saracen_helmet", "Saracen Helmet", [("saracen_helmet_d",0)], itp_merchandise|itp_type_head_armor, 0, 325, weight(3)|abundance(80)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["khergit_conical", "Conical Helm", [("conical_helmet_steppe",0)], itp_type_head_armor   ,0, 724 , weight(1.7)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_3]],
+
+##rm++
+["steppe_cap", "Steppe Cap", [("steppe_cap_a_new",0)], itp_merchandise| itp_type_head_armor  |itp_civilian ,0, 14 , weight(1)|abundance(100)|head_armor(16)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
 ["iron_cap_with_chainmail", "Iron Cap with Chainmail", [("helm_saracin_c",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 550, weight(3.5)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["sarranid_mail_coif", "Sarranid Mail Coif", [("tuareg_helmet2",0)], itp_merchandise| itp_type_head_armor ,0, 430 , weight(3)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
 ["sipahi_helmet_a", "Sipahi Helmet", [("sipahi_helmet_a",0)], itp_type_head_armor   ,0, 278 , weight(2)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0) ,imodbits_cloth ],
+["sarranid_warrior_cap", "Sarranid Warrior Cap", [("tuareg_helmet",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 90 , weight(2)|abundance(100)|head_armor(19)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+["sarranid_horseman_helmet", "Horseman Helmet", [("sar_helmet2",0)], itp_merchandise| itp_type_head_armor   ,0, 180 , weight(2.75)|abundance(100)|head_armor(25)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
 ["heavy_ghulam_helmet", "Heavy Ghulam Helmet", [("gulam_helm_d",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 500, weight(3.5)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["khergit_guard_helmet", "Khergit Guard Helmet", [("lamellar_helmet_a",0)], itp_type_head_armor |itp_merchandise   ,0, 433 , weight(2)|abundance(100)|head_armor(40)|body_armor(0)|leg_armor(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["sarranid_warrior_helmet", "Sarranid Warrior Helmet", [("helm_saracin_j",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 680, weight(3.5)|abundance(100)|head_armor(42)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-
-
-########## Eastern - heavy ##########
+["sarranid_helmet1", "Sarranid Keffiyeh Helmet", [("sar_helmet1",0)], itp_merchandise| itp_type_head_armor   ,0, 290 , weight(2.50)|abundance(100)|head_armor(35)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
+["sarranid_archer_helmet", "Sarranid Archer Helmet", [("helm_saracin_b",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 450, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+["sarranid_mail_coif", "Sarranid Mail Coif", [("tuareg_helmet2",0)], itp_merchandise| itp_type_head_armor ,0, 430 , weight(3)|abundance(100)|head_armor(41)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
 ["sarranid_helmet_with_coif", "Sarranid Helmet with Coif", [("helm_saracin_a",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 700, weight(3.5)|abundance(100)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["saracen_helmet_with_mail", "Saracen Helmet With Mail", [("saracen_helmet_e",0)], itp_merchandise|itp_type_head_armor, 0, 500, weight(3.25)|abundance(80)|head_armor(44)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
 ["sarranid_veiled_helmet", "Sarranid Veiled Helmet", [("sar_helmet4",0)], itp_merchandise| itp_type_head_armor | itp_covers_beard  ,0, 810 , weight(3.50)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
-["iron_cap_with_turban", "Iron Cap with Turban", [("helm_saracin_2",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 750, weight(3.5)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["veiled_ghulam_helmet", "Veiled Ghulam Helmet", [("gulam_helm_a",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 750, weight(4)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["full_saracen_helmet", "Full Saracen Helmet", [("saracen_helmet_c",0)], itp_merchandise|itp_type_head_armor, 0, 750, weight(3.5)|abundance(80)|head_armor(49)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["ghulam_helmet_with_tuban", "Ghulam Helmet with Turban", [("gulam_helm_f",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 850, weight(3.5)|abundance(100)|head_armor(50)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["gilded_mamluke_helmet", "Gilded Mamluke Helmet", [("mamluk_helmet_2",0)], itp_merchandise|itp_type_head_armor, 0, 1000, weight(3.5)|abundance(80)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
 ["mamluke_helmet", "Mamluke Helmet", [("mamluk_helmet",0)], itp_merchandise|itp_type_head_armor, 0, 1000, weight(3.5)|abundance(80)|head_armor(52)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_plate, [], [fac_kingdom_6]],
-["sarranid_nobleman_helmet", "Sarranid Nobleman Helmet", [("helm_saracin_1",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head, 0, 1000, weight(3.5)|abundance(100)|head_armor(51)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["sarranid_sultan_helmet", "Sarranid Sultan Helmet", [("helm_Sultan_saracens",0)], itp_type_head_armor|itp_merchandise|itp_fit_to_head|itp_attach_armature, 0, 750, weight(4)|abundance(100)|head_armor(55)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
+##rm--
+
 
 ########## Mercenary ##########
 
