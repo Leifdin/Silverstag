@@ -1132,7 +1132,7 @@ dialogs = [
 
     (assign, "$g_main_attacker_agent", 0),
 	(troop_add_gold, "trp_player", 50),
-	(troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+	(troop_add_item, "trp_player", "itm_nordic_sword", 0),
 	
   (else_try),
 	#(display_message, "str_wielded_item_reg3"),
@@ -1142,14 +1142,14 @@ dialogs = [
 
     (assign, "$g_main_attacker_agent", 0),
 	(troop_add_gold, "trp_player", 50),
-	(troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+	(troop_add_item, "trp_player", "itm_nordic_sword", 0),
 	(call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", -1),
   (else_try),
 	(neg|agent_is_alive, "$g_main_attacker_agent"),
 	(str_store_string, s9, "str_well_id_say_that_he_started_it_that_entitles_you_to_his_sword_and_purse_i_suppose_have_a_drink_on_the_house_as_i_daresay_youve_saved_a_patron_or_two_a_broken_skull_still_i_hope_he_still_has_a_pulse_its_not_good_for_an_establishment_to_get_a_name_as_a_place_where_men_are_killed"),
     (assign, "$g_main_attacker_agent", 0),
 	(troop_add_gold, "trp_player", 50),
-	(troop_add_item, "trp_player", "itm_sword_viking_1", 0),
+	(troop_add_item, "trp_player", "itm_nordic_sword", 0),
 	(call_script, "script_troop_change_relation_with_troop", "trp_player", "$g_talk_troop", 1),
   (try_end),	
   (troop_set_slot, "trp_hired_assassin", slot_troop_cur_center, -1),

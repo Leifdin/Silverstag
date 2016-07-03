@@ -1320,7 +1320,7 @@ game_menus = [
 ##       (troop_add_item, "$g_player_troop","itm_tab_shield_small_round_c",0),
 ##       (troop_add_item, "$g_player_troop","itm_heavy_crossbow",0),
 ##       (troop_add_item, "$g_player_troop","itm_bolts",0),
-##       (troop_add_item, "$g_player_troop","itm_sword_medieval_b_small",0),
+##       (troop_add_item, "$g_player_troop","itm_arming_sword_small",0),
 ##       (troop_equip_items, "$g_player_troop"),
 #### US     
 ##       (set_visitors, 1, "trp_vaegir_infantry", 4),
@@ -2325,7 +2325,7 @@ game_menus = [
         (troop_add_item, "trp_player","itm_leather_boots",imod_ragged),
         (troop_add_item, "trp_player","itm_coarse_tunic",0),
            
-        (troop_add_item, "trp_player","itm_sword_medieval_b", imod_balanced),
+        (troop_add_item, "trp_player","itm_arming_sword", imod_balanced),
         (troop_add_item, "trp_player","itm_hunting_crossbow",0),
         (troop_add_item, "trp_player","itm_bolts",0),
            
