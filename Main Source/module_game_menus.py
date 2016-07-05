@@ -60,6 +60,7 @@ game_menus = [
 		],"DEBUG: Rapidly enter new game.",
 		[
 			(call_script, "script_ccp_default_settings"),
+			(call_script, "script_ccp_tester_settings"),
 			(troop_set_name, "trp_player", "@Tester"),
 			(troop_set_type, "trp_player", 0),
 			(assign, "$show_autoloot_data", 1),

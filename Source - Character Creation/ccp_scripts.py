@@ -1789,7 +1789,60 @@ scripts = [
 			### DIAGNOSTIC- ###
 		(try_end),
 	]),
+("ccp_tester_settings",
+	[
+	# Update abilties.
+		(troop_raise_attribute, "trp_player",ca_charisma, 50),
+		(troop_raise_attribute, "trp_player",ca_strength, 50),
+		(troop_raise_attribute, "trp_player",ca_intelligence, 50),
+		(troop_raise_attribute, "trp_player",ca_agility, 50),
+		
+		# Update skills.
+		(troop_raise_skill, "trp_player", skl_ironflesh, 10),
+		(troop_raise_skill, "trp_player", skl_power_strike, 10),
+		(troop_raise_skill, "trp_player", skl_power_throw, 10),
+		(troop_raise_skill, "trp_player", skl_power_draw, 10),
+		(troop_raise_skill, "trp_player", skl_weapon_master, 10),
+		(troop_raise_skill, "trp_player", skl_shield, 10),
+		(troop_raise_skill, "trp_player", skl_athletics, 10),
+		(troop_raise_skill, "trp_player", skl_riding, 10),
+		(troop_raise_skill, "trp_player", skl_horse_archery, 10),
+		(troop_raise_skill, "trp_player", skl_looting, 10),
+		#(troop_raise_skill, "trp_player", skl_foraging, ":skill_foraging"),
+		(troop_raise_skill, "trp_player", skl_trainer, 10),
+		(troop_raise_skill, "trp_player", skl_tracking, 10),
+		(troop_raise_skill, "trp_player", skl_tactics, 10),
+		(troop_raise_skill, "trp_player", skl_pathfinding,10),
+		(troop_raise_skill, "trp_player", skl_spotting, 10),
+		(troop_raise_skill, "trp_player", skl_inventory_management, 10),
+		(troop_raise_skill, "trp_player", skl_wound_treatment, 10),
+		(troop_raise_skill, "trp_player", skl_surgery, 10),
+		(troop_raise_skill, "trp_player", skl_first_aid, 10),
+		(troop_raise_skill, "trp_player", skl_engineer, 10),
+		(troop_raise_skill, "trp_player", skl_persuasion, 10),
+		(troop_raise_skill, "trp_player", skl_prisoner_management, 10),
+		(troop_raise_skill, "trp_player", skl_leadership, 10),
+		(troop_raise_skill, "trp_player", skl_trade, 10),
+		
+		# Update proficiencies.
+		(troop_raise_proficiency_linear, "trp_player", wpt_one_handed_weapon, 350),
+		(troop_raise_proficiency_linear, "trp_player", wpt_two_handed_weapon, 350),
+		(troop_raise_proficiency_linear, "trp_player", wpt_polearm, 350),
+		(troop_raise_proficiency_linear, "trp_player", wpt_archery, 350),
+		(troop_raise_proficiency_linear, "trp_player", wpt_crossbow, 350),
+		(troop_raise_proficiency_linear, "trp_player", wpt_throwing, 350),
+		
+		# Update miscellaneous.
+		(troop_add_gold, "trp_player", 250000),
+		
+	])
+
+
+
+
 ]
+
+
 
 
 from util_wrappers import *

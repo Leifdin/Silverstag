@@ -1313,15 +1313,17 @@ items = [
 
 
 
-##################
-##### SWORDS #####
-##################
+######################
+##### ONE-HANDED #####
+######################
 
 
+##############
+### SWORDS ###
+##############
 
-########## One-handed ##########
+########## Western ###########
 
-##### Western #####
 ##### Tier 1 #####
 ["short_sword",	"Short Sword",	[("sword_medieval_c_small",0),("sword_medieval_c_small_scabbard", ixmesh_carry)],	itp_merchandise|itp_type_one_handed_wpn|itp_primary,itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	450, weight(1.5)|difficulty(6)|spd_rtng(99)|weapon_length(86)|swing_damage(25, cut)|thrust_damage(15, pierce), imodbits_sword_high ],
 ["sword",		"Sword",		[("sword_medieval_c",0),("sword_medieval_c_scabbard", ixmesh_carry)],				itp_merchandise|itp_type_one_handed_wpn|itp_primary,itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	400, weight(1.5)|difficulty(6)|spd_rtng(95)|weapon_length(95)|swing_damage(22, cut)|thrust_damage(12, pierce), imodbits_sword_high ],
@@ -1349,7 +1351,7 @@ items = [
 ["western_nobleman_sword_b", "Western Nobleman Sword", [("crusader_long_sword_b",0),("crusader_long_sword_b_scabbard",ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 3000, weight(1.5)|difficulty(8)|spd_rtng(92)|weapon_length(100)|swing_damage(35,cut)|thrust_damage(22,pierce), imodbits_sword_high ],
 ["western_nobleman_sword_c", "Western Nobleman Sword", [("crusader_long_sword_c",0),("crusader_long_sword_c_scabbard",ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 4000, weight(1.5)|difficulty(8)|spd_rtng(89)|weapon_length(100)|swing_damage(35,cut)|thrust_damage(23,pierce), imodbits_sword_high ],
 
-##### Northern #####
+########## Northern ###########
 
 ##### Tier 3 #####
 ["nordic_short_sword",	"Nordic Short Sword",	[("sword_viking_b_small",0),("sword_viking_b_small_scabbard", ixmesh_carry)],		itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 1000 , weight(1.25)|difficulty(2)|spd_rtng(99)|weapon_length(85)|swing_damage(27, cut)|thrust_damage(25, pierce), imodbits_sword_high ],
@@ -1362,7 +1364,7 @@ items = [
 ##### Tier 5 #####
 ["nordic_nobleman_sword",	"Nordic Nobleman Sword", [("sword_viking_a",0),("sword_viking_a_scabbard", ixmesh_carry)],				itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 3000 , weight(1.5)|difficulty(2)|spd_rtng(99)|weapon_length(95)|swing_damage(31 , cut) | thrust_damage(30 ,  pierce),imodbits_sword_high, [], [fac_kingdom_4]],
 
-##### Eastern #####
+########## Eastern ###########
 
 ##### Tier 1 #####
 ["scimitar", "Scimitar", [("scimitar_a",0),("scab_scimeter_a", ixmesh_carry)], itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_scimitar|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 300, weight(1.5)|difficulty(2)|spd_rtng(105)|weapon_length(97)|swing_damage(22 , cut)|thrust_damage(0 ,  pierce), imodbits_sword_high ],
@@ -1385,7 +1387,8 @@ items = [
 ["eastern_nobleman_sword_a",	"Eastern Nobleman Sword",	[("saracin_sword_e",0),("scab_saracin_sword_e",ixmesh_carry)],		itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	3500, weight(1.5)|difficulty(8)|spd_rtng(100)|weapon_length(102)|swing_damage(32,cut)|thrust_damage(26,pierce), imodbits_sword_high ],
 ["eastern_nobleman_sword_b",	"Eastern Nobleman Sword",	[("saracin_sword_c",0),("scab_saracin_sword_c",ixmesh_carry)],		itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	4500, weight(1.5)|difficulty(8)|spd_rtng(95)|weapon_length(105)|swing_damage(33,cut)|thrust_damage(27,pierce), imodbits_sword_high ],
 
-##### Sidearms #####
+########## Sidearms ##########
+
 ##### Tier 1 #####
 ["sickle",	"Sickle",	[("sickle",0)],				itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_secondary|itp_no_parry|itp_wooden_parry, itc_cleaver,				10, weight(1.5)|difficulty(0)|spd_rtng(125)|weapon_length(40)|swing_damage(22 , cut)|thrust_damage(0,  pierce), imodbits_none ],
 ["cleaver",	"Cleaver",	[("cleaver_new",0)],		itp_merchandise|itp_type_one_handed_wpn|itp_primary|itp_secondary|itp_no_parry|itp_wooden_parry, itc_cleaver,				14, weight(1.5)|difficulty(0)|spd_rtng(120)|weapon_length(35)|swing_damage(26 , cut)|thrust_damage(0,  pierce), imodbits_none ],
@@ -1418,35 +1421,11 @@ items = [
 #["sword_medieval_b_small", "Short Sword", [("sword_medieval_b_small",0),("sword_medieval_b_small_scabbard", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 152 , weight(1)|difficulty(2)|spd_rtng(102) | weapon_length(85)|swing_damage(26, cut) | thrust_damage(24, pierce),imodbits_sword_high ],
 #["sword_medieval_c_long", "Arming Sword", [("sword_medieval_c_long",0),("sword_medieval_c_long_scabbard", ixmesh_carry)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 480 , weight(1.7)|difficulty(2)|spd_rtng(99) | weapon_length(100)|swing_damage(29 , cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
 
+############
+### AXES ###
+############
 
 
-
-
-########## Two-handed ##########
-["two_handed_cleaver", "War Cleaver", [("military_cleaver_a",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back, 640 , weight(2.75)|difficulty(10)|spd_rtng(93) | weapon_length(120)|swing_damage(45 , cut) | thrust_damage(0 ,  cut),imodbits_sword_high ],
-["military_cleaver_b", "Soldier's Cleaver", [("military_cleaver_b",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip, 193 , weight(1.5)|difficulty(5)|spd_rtng(96) | weapon_length(95)|swing_damage(31 , cut) | thrust_damage(0 ,  pierce),imodbits_sword_high ],
-["great_sword",         "Great Sword", [("b_bastard_sword",0),("scab_bastardsw_b", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back|itcf_show_holster_when_drawn, 423 , weight(2.75)|difficulty(10)|spd_rtng(95) | weapon_length(125)|swing_damage(39 , cut) | thrust_damage(31 ,  pierce),imodbits_sword_high ],
-["sword_of_war", "Sword of War", [("b_bastard_sword",0),("scab_bastardsw_b", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back|itcf_show_holster_when_drawn, 524 , weight(3)|difficulty(11)|spd_rtng(94) | weapon_length(130)|swing_damage(40 , cut) | thrust_damage(31 ,  pierce),imodbits_sword_high ],
-["sword_two_handed_b",         "Two-handed Sword", [("sword_two_handed_b",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back, 670 , weight(2.75)|difficulty(10)|spd_rtng(97) | weapon_length(110)|swing_damage(40 , cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
-["sword_two_handed_a",         "Great Sword", [("sword_two_handed_a",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back, 1123 , weight(2.75)|difficulty(10)|spd_rtng(96) | weapon_length(120)|swing_damage(42 , cut) | thrust_damage(29 ,  pierce),imodbits_sword_high ],
-["khergit_sword_two_handed_a",         "Two-handed Sabre", [("khergit_sword_two_handed_a",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back, 523 , weight(2.75)|difficulty(10)|spd_rtng(96) | weapon_length(120)|swing_damage(40 , cut) | thrust_damage(0 ,  pierce),imodbits_sword_high, [], [fac_kingdom_3]],
-["khergit_sword_two_handed_b",         "Two-handed Sabre", [("khergit_sword_two_handed_b",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back, 920 , weight(2.75)|difficulty(10)|spd_rtng(96) | weapon_length(120)|swing_damage(44 , cut) | thrust_damage(0 ,  pierce),imodbits_sword_high, [], [fac_kingdom_3]],
-["bastard_sword_a", "Bastard Sword", [("bastard_sword_a",0),("bastard_sword_a_scabbard", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_primary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 294 , weight(2.0)|difficulty(9)|spd_rtng(98) | weapon_length(101)|swing_damage(35 , cut) | thrust_damage(26 ,  pierce),imodbits_sword_high ],
-["bastard_sword_b", "Swadian Bastard Sword", [("bastard_sword_b",0),("bastard_sword_b_scabbard", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_primary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 526 , weight(2.25)|difficulty(9)|spd_rtng(97) | weapon_length(105)|swing_damage(37 , cut) | thrust_damage(27 ,  pierce),imodbits_sword_high, [], [fac_kingdom_1]],
-["flamberge",  "Flamberge Zweihander", [("flamberge",0)], itp_type_two_handed_wpn|itp_merchandise|itp_crush_through|itp_unbalanced|itp_always_loot|itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back, 1123 , weight(4.75)|abundance(15)|difficulty(11)|spd_rtng(84) | weapon_length(148)|swing_damage(45, cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
-["mod_stag_sword1",  "Sword of The Stag", [("faradon_twohanded2",0)], itp_crush_through|itp_unbalanced|itp_type_two_handed_wpn|itp_bonus_against_shield|itp_can_knock_down|itp_merchandise| itp_cant_use_on_horseback|itp_primary, itc_greatsword|itcf_carry_sword_back, 1970 , weight(3.95)|difficulty(15)|spd_rtng(87) | weapon_length(118)|swing_damage(41 , cut) | thrust_damage(28 ,  pierce),imodbits_sword_high, [], [fac_player_supporters_faction]],
-["highlander_claymore", "Highlander Claymore", [("2h_claymore",0)], itp_type_two_handed_wpn|itp_merchandise|itp_primary, itc_bastardsword|itcf_carry_sword_back, 294, weight(2.0)|difficulty(13)|spd_rtng(98)|weapon_length(101)|swing_damage(47, cut)|thrust_damage(42 , pierce),imodbits_sword_high, [], [fac_kingdom_5]],
-["flamberge_b",         "Flamberge Zweihander", [("flamberge",0)], itp_type_two_handed_wpn|itp_merchandise|itp_always_loot|itp_two_handed|itp_next_item_as_melee|itp_primary, itc_staff|itcf_carry_sword_back, 1123 , weight(3.75)|difficulty(11)|spd_rtng(95) | weapon_length(135)|swing_damage(42, cut) | thrust_damage(56 ,  pierce),imodbits_sword_high ],
-["flamberge_b_alt",         "Flamberge Zweihander", [("flamberge",0)], itp_type_polearm|itp_merchandise|itp_always_loot|itp_two_handed|itp_primary, itc_staff|itcf_carry_sword_back, 1123 , weight(3.75)|difficulty(11)|spd_rtng(77) | weapon_length(145)|swing_damage(50, cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
-
-
-
-################
-##### AXES #####
-################
-
-
-########## One-handed ##########
 ["western_short_war_axe_b", "Western Short War Axe", [("axe_crusader_b",0)], itp_type_one_handed_wpn|itp_merchandise|itp_wooden_parry|itp_primary|itp_secondary|itp_bonus_against_shield, itc_scimitar|itcf_carry_axe_left_hip, 250, weight(1.8)|difficulty(13)|spd_rtng(105)|weapon_length(64)|swing_damage(29,pierce)|thrust_damage(0,pierce), imodbits_axe ],
 ["western_short_war_axe_a", "Western Short War Axe", [("axe_crusader_a",0)], itp_type_one_handed_wpn|itp_merchandise|itp_wooden_parry|itp_primary|itp_secondary|itp_bonus_against_shield, itc_scimitar|itcf_carry_axe_left_hip, 250, weight(1.8)|difficulty(10)|spd_rtng(106)|weapon_length(66)|swing_damage(32,cut)|thrust_damage(0,pierce), imodbits_axe ],
 ["western_war_axe_a", "Western War Axe", [("axe_crusader_1",0)], itp_type_one_handed_wpn|itp_merchandise|itp_wooden_parry|itp_primary|itp_secondary|itp_bonus_against_shield, itc_scimitar|itcf_carry_axe_left_hip, 250, weight(2.5)|difficulty(12)|spd_rtng(98)|weapon_length(80)|swing_damage(36,cut)|thrust_damage(0,pierce), imodbits_axe ],
@@ -1474,35 +1453,11 @@ items = [
 ["mod_cavalry_axe1", "Cavalry Axe", [("bb_slavic_cavalry_axe_1",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  457 , weight(1.9)|difficulty(4)|spd_rtng(101) | weapon_length(75)|swing_damage(32 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe ],
 ["military_sickle_a", "Military Sickle", [("military_sickle_a",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip, 220 , weight(1.0)|difficulty(9)|spd_rtng(100) | weapon_length(75)|swing_damage(26 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_5]],
 
-########## Two-handed ##########
-["axe",                 "Axe", [("iron_ax",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 65 , weight(4)|difficulty(10)|spd_rtng(91) | weapon_length(108)|swing_damage(32 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
-["voulge1",         "Voulge", [("voulge",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 129 , weight(4.5)|difficulty(11)|spd_rtng(87) | weapon_length(119)|swing_damage(35 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
-["battle_axe",         "Battle Axe", [("battle_ax",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 240 , weight(5)|difficulty(12)|spd_rtng(88) | weapon_length(108)|swing_damage(41 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
-["war_axe",         "War Axe", [("war_ax",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 264 , weight(5)|difficulty(12)|spd_rtng(86) | weapon_length(110)|swing_damage(43 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
-["two_handed_battle_axe_2",         "Two-handed War Axe", [("two_handed_battle_axe_b",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 152 , weight(4.5)|difficulty(12)|spd_rtng(96) | weapon_length(92)|swing_damage(44 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_4, fac_kingdom_5]],
-["shortened_voulge",         "Shortened Voulge", [("two_handed_battle_axe_c",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 228 , weight(4.5)|difficulty(12)|spd_rtng(92) | weapon_length(100)|swing_damage(45 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2]],
-["great_axe",         "Great Axe", [("two_handed_battle_axe_e",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 316 , weight(4.5)|difficulty(12)|spd_rtng(94) | weapon_length(96)|swing_damage(47 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["long_axe",         "Long Axe", [("long_axe_a",0)], itp_type_polearm|itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_next_item_as_melee|itp_unbalanced|itp_merchandise,itc_staff|itcf_carry_axe_back, 390 , weight(4.75)|difficulty(12)|spd_rtng(93) | weapon_length(120)|swing_damage(46 , cut) | thrust_damage(19 ,  blunt),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["long_axe_alt",         "Long Axe", [("long_axe_a",0)],itp_type_two_handed_wpn|itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 390 , weight(4.75)|difficulty(12)|spd_rtng(88) | weapon_length(120)|swing_damage(46 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["long_axe_b",         "Long War Axe", [("long_axe_b",0)], itp_type_polearm| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_next_item_as_melee|itp_unbalanced|itp_merchandise, itc_staff|itcf_carry_axe_back, 510 , weight(5.0)|difficulty(13)|spd_rtng(92) | weapon_length(125)|swing_damage(50 , cut) | thrust_damage(18 ,  blunt),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["long_axe_b_alt",         "Long War Axe", [("long_axe_b",0)], itp_type_two_handed_wpn| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 510 , weight(5.0)|difficulty(13)|spd_rtng(87) | weapon_length(125)|swing_damage(50 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["long_axe_c",         "Great Long Axe", [("long_axe_c",0)], itp_type_polearm| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_next_item_as_melee|itp_unbalanced|itp_merchandise, itc_staff|itcf_carry_axe_back, 660 , weight(5.5)|difficulty(13)|spd_rtng(91) | weapon_length(127)|swing_damage(54 , cut) | thrust_damage(19 ,  blunt),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["long_axe_c_alt",      "Great Long Axe", [("long_axe_c",0)], itp_type_two_handed_wpn| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 660 , weight(5.5)|difficulty(13)|spd_rtng(85) | weapon_length(127)|swing_damage(54 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
-["bardiche",         "Bardiche", [("two_handed_battle_axe_d",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 291 , weight(4.75)|difficulty(13)|spd_rtng(91) | weapon_length(102)|swing_damage(47 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2]],
-["great_bardiche",         "Great Bardiche", [("two_handed_battle_axe_f",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 617 , weight(5.0)|difficulty(14)|spd_rtng(89) | weapon_length(116)|swing_damage(50 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2]],
-["voulge",         "Voulge", [("two_handed_battle_long_axe_a",0)], itp_type_polearm|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_staff, 120 , weight(3.0)|difficulty(10)|spd_rtng(88) | weapon_length(175)|swing_damage(40 , cut) | thrust_damage(18 ,  pierce),imodbits_axe ],
-["long_bardiche",         "Long Bardiche", [("two_handed_battle_long_axe_b",0)], itp_type_polearm|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_staff, 390 , weight(4.75)|difficulty(12)|spd_rtng(89) | weapon_length(140)|swing_damage(48 , cut) | thrust_damage(17 ,  pierce),imodbits_axe ],
-["great_long_bardiche",         "Great Long Bardiche", [("two_handed_battle_long_axe_c",0)], itp_type_polearm|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_staff, 660 , weight(5.0)|difficulty(13)|spd_rtng(88) | weapon_length(155)|swing_damage(50 , cut) | thrust_damage(17 ,  pierce),imodbits_axe ],
-["poleaxe",         "Poleaxe", [("pole_ax",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_two_handed|itp_wooden_parry, itc_staff, 384 , weight(4.5)|difficulty(13)|spd_rtng(77) | weapon_length(180)|swing_damage(50 , cut) | thrust_damage(15 ,  blunt),imodbits_polearm, [], [fac_kingdom_1]],
-["mod_two_handed_taxe_1", "Dohaken War Axe", [("axe_1",0)], itp_type_polearm|itp_offset_lance|itp_primary|itp_bonus_against_shield|itp_two_handed|itp_wooden_parry|itp_wooden_parry, itc_staff|itcf_carry_axe_back, 280 , weight(2.50)|difficulty(10)|spd_rtng(87) | weapon_length(145)|swing_damage(39 , pierce) | thrust_damage(32 ,  pierce),imodbits_axe ],
-["mod_onehand_taxe3", "Dohaken Battle Axe", [("axe_2",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  397 , weight(1.4)|difficulty(4)|spd_rtng(99) | weapon_length(55)|swing_damage(32 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
-["mod_tpoleaxe",  "Poleaxe of The Order", [("weapon_1",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_two_handed|itp_wooden_parry, itc_staff, 384 , weight(4.3)|difficulty(13)|spd_rtng(78) | weapon_length(190)|swing_damage(48 , cut) | thrust_damage(24 ,  blunt),imodbits_polearm, [], [fac_player_supporters_faction]],
-["two_handed_axe",         "One-handed Axe", [("two_handed_battle_axe_a",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 90 , weight(4.5)|difficulty(12)|spd_rtng(96) | weapon_length(90)|swing_damage(35 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
 
 
-###########################
-##### MACES AND CLUBS #####
-###########################
+#######################
+### MACES AND CLUBS ###
+#######################
 
 
 ########## One-handed ##########
@@ -1533,9 +1488,55 @@ items = [
 ["long_spiked_club",         "Long Spiked Club", [("mace_long_c",0)], itp_type_one_handed_wpn|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_morningstar|itcf_carry_axe_back, 264 , weight(3)|difficulty(4)|spd_rtng(90) | weapon_length(108)|swing_damage(16 , blunt) | thrust_damage(13 ,  blunt),imodbits_mace ],
 ["sarranid_mace_1",         "Iron Mace", [("mace_small_d",0)], itp_type_one_handed_wpn|itp_merchandise|itp_can_knock_down |itp_primary|itp_wooden_parry, itc_scimitar|itcf_carry_mace_left_hip, 45 , weight(2.0)|difficulty(2)|spd_rtng(99) | weapon_length(73)|swing_damage(22 , blunt) | thrust_damage(0 ,  pierce),imodbits_mace ],
 
+######################
+##### TWO-HANDED #####
+######################
 
 
-########## Two-handed ##########
+########## Two-handed Swords ##########
+["two_handed_cleaver", "War Cleaver", [("military_cleaver_a",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back, 640 , weight(2.75)|difficulty(10)|spd_rtng(93) | weapon_length(120)|swing_damage(45 , cut) | thrust_damage(0 ,  cut),imodbits_sword_high ],
+["military_cleaver_b", "Soldier's Cleaver", [("military_cleaver_b",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary, itc_scimitar|itcf_carry_sword_left_hip, 193 , weight(1.5)|difficulty(5)|spd_rtng(96) | weapon_length(95)|swing_damage(31 , cut) | thrust_damage(0 ,  pierce),imodbits_sword_high ],
+["great_sword",         "Great Sword", [("b_bastard_sword",0),("scab_bastardsw_b", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back|itcf_show_holster_when_drawn, 423 , weight(2.75)|difficulty(10)|spd_rtng(95) | weapon_length(125)|swing_damage(39 , cut) | thrust_damage(31 ,  pierce),imodbits_sword_high ],
+["sword_of_war", "Sword of War", [("b_bastard_sword",0),("scab_bastardsw_b", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back|itcf_show_holster_when_drawn, 524 , weight(3)|difficulty(11)|spd_rtng(94) | weapon_length(130)|swing_damage(40 , cut) | thrust_damage(31 ,  pierce),imodbits_sword_high ],
+["sword_two_handed_b",         "Two-handed Sword", [("sword_two_handed_b",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back, 670 , weight(2.75)|difficulty(10)|spd_rtng(97) | weapon_length(110)|swing_damage(40 , cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
+["sword_two_handed_a",         "Great Sword", [("sword_two_handed_a",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back, 1123 , weight(2.75)|difficulty(10)|spd_rtng(96) | weapon_length(120)|swing_damage(42 , cut) | thrust_damage(29 ,  pierce),imodbits_sword_high ],
+["khergit_sword_two_handed_a",         "Two-handed Sabre", [("khergit_sword_two_handed_a",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back, 523 , weight(2.75)|difficulty(10)|spd_rtng(96) | weapon_length(120)|swing_damage(40 , cut) | thrust_damage(0 ,  pierce),imodbits_sword_high, [], [fac_kingdom_3]],
+["khergit_sword_two_handed_b",         "Two-handed Sabre", [("khergit_sword_two_handed_b",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary, itc_nodachi|itcf_carry_sword_back, 920 , weight(2.75)|difficulty(10)|spd_rtng(96) | weapon_length(120)|swing_damage(44 , cut) | thrust_damage(0 ,  pierce),imodbits_sword_high, [], [fac_kingdom_3]],
+["bastard_sword_a", "Bastard Sword", [("bastard_sword_a",0),("bastard_sword_a_scabbard", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_primary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 294 , weight(2.0)|difficulty(9)|spd_rtng(98) | weapon_length(101)|swing_damage(35 , cut) | thrust_damage(26 ,  pierce),imodbits_sword_high ],
+["bastard_sword_b", "Swadian Bastard Sword", [("bastard_sword_b",0),("bastard_sword_b_scabbard", ixmesh_carry)], itp_type_two_handed_wpn|itp_merchandise| itp_primary, itc_bastardsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 526 , weight(2.25)|difficulty(9)|spd_rtng(97) | weapon_length(105)|swing_damage(37 , cut) | thrust_damage(27 ,  pierce),imodbits_sword_high, [], [fac_kingdom_1]],
+["flamberge",  "Flamberge Zweihander", [("flamberge",0)], itp_type_two_handed_wpn|itp_merchandise|itp_crush_through|itp_unbalanced|itp_always_loot|itp_two_handed|itp_primary, itc_greatsword|itcf_carry_sword_back, 1123 , weight(4.75)|abundance(15)|difficulty(11)|spd_rtng(84) | weapon_length(148)|swing_damage(45, cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
+["mod_stag_sword1",  "Sword of The Stag", [("faradon_twohanded2",0)], itp_crush_through|itp_unbalanced|itp_type_two_handed_wpn|itp_bonus_against_shield|itp_can_knock_down|itp_merchandise| itp_cant_use_on_horseback|itp_primary, itc_greatsword|itcf_carry_sword_back, 1970 , weight(3.95)|difficulty(15)|spd_rtng(87) | weapon_length(118)|swing_damage(41 , cut) | thrust_damage(28 ,  pierce),imodbits_sword_high, [], [fac_player_supporters_faction]],
+["highlander_claymore", "Highlander Claymore", [("2h_claymore",0)], itp_type_two_handed_wpn|itp_merchandise|itp_primary, itc_bastardsword|itcf_carry_sword_back, 294, weight(2.0)|difficulty(13)|spd_rtng(98)|weapon_length(101)|swing_damage(47, cut)|thrust_damage(42 , pierce),imodbits_sword_high, [], [fac_kingdom_5]],
+["flamberge_b",         "Flamberge Zweihander", [("flamberge",0)], itp_type_two_handed_wpn|itp_merchandise|itp_always_loot|itp_two_handed|itp_next_item_as_melee|itp_primary, itc_staff|itcf_carry_sword_back, 1123 , weight(3.75)|difficulty(11)|spd_rtng(95) | weapon_length(135)|swing_damage(42, cut) | thrust_damage(56 ,  pierce),imodbits_sword_high ],
+["flamberge_b_alt",         "Flamberge Zweihander", [("flamberge",0)], itp_type_polearm|itp_merchandise|itp_always_loot|itp_two_handed|itp_primary, itc_staff|itcf_carry_sword_back, 1123 , weight(3.75)|difficulty(11)|spd_rtng(77) | weapon_length(145)|swing_damage(50, cut) | thrust_damage(28 ,  pierce),imodbits_sword_high ],
+
+
+########## Two-handed Axes ##########
+["axe",                 "Axe", [("iron_ax",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 65 , weight(4)|difficulty(10)|spd_rtng(91) | weapon_length(108)|swing_damage(32 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
+["voulge1",         "Voulge", [("voulge",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 129 , weight(4.5)|difficulty(11)|spd_rtng(87) | weapon_length(119)|swing_damage(35 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
+["battle_axe",         "Battle Axe", [("battle_ax",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 240 , weight(5)|difficulty(12)|spd_rtng(88) | weapon_length(108)|swing_damage(41 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
+["war_axe",         "War Axe", [("war_ax",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_nodachi|itcf_carry_axe_back, 264 , weight(5)|difficulty(12)|spd_rtng(86) | weapon_length(110)|swing_damage(43 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
+["two_handed_battle_axe_2",         "Two-handed War Axe", [("two_handed_battle_axe_b",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 152 , weight(4.5)|difficulty(12)|spd_rtng(96) | weapon_length(92)|swing_damage(44 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_4, fac_kingdom_5]],
+["shortened_voulge",         "Shortened Voulge", [("two_handed_battle_axe_c",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 228 , weight(4.5)|difficulty(12)|spd_rtng(92) | weapon_length(100)|swing_damage(45 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2]],
+["great_axe",         "Great Axe", [("two_handed_battle_axe_e",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 316 , weight(4.5)|difficulty(12)|spd_rtng(94) | weapon_length(96)|swing_damage(47 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["long_axe",         "Long Axe", [("long_axe_a",0)], itp_type_polearm|itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_next_item_as_melee|itp_unbalanced|itp_merchandise,itc_staff|itcf_carry_axe_back, 390 , weight(4.75)|difficulty(12)|spd_rtng(93) | weapon_length(120)|swing_damage(46 , cut) | thrust_damage(19 ,  blunt),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["long_axe_alt",         "Long Axe", [("long_axe_a",0)],itp_type_two_handed_wpn|itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 390 , weight(4.75)|difficulty(12)|spd_rtng(88) | weapon_length(120)|swing_damage(46 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["long_axe_b",         "Long War Axe", [("long_axe_b",0)], itp_type_polearm| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_next_item_as_melee|itp_unbalanced|itp_merchandise, itc_staff|itcf_carry_axe_back, 510 , weight(5.0)|difficulty(13)|spd_rtng(92) | weapon_length(125)|swing_damage(50 , cut) | thrust_damage(18 ,  blunt),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["long_axe_b_alt",         "Long War Axe", [("long_axe_b",0)], itp_type_two_handed_wpn| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 510 , weight(5.0)|difficulty(13)|spd_rtng(87) | weapon_length(125)|swing_damage(50 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["long_axe_c",         "Great Long Axe", [("long_axe_c",0)], itp_type_polearm| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_next_item_as_melee|itp_unbalanced|itp_merchandise, itc_staff|itcf_carry_axe_back, 660 , weight(5.5)|difficulty(13)|spd_rtng(91) | weapon_length(127)|swing_damage(54 , cut) | thrust_damage(19 ,  blunt),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["long_axe_c_alt",      "Great Long Axe", [("long_axe_c",0)], itp_type_two_handed_wpn| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 660 , weight(5.5)|difficulty(13)|spd_rtng(85) | weapon_length(127)|swing_damage(54 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+["bardiche",         "Bardiche", [("two_handed_battle_axe_d",0)], itp_type_two_handed_wpn|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 291 , weight(4.75)|difficulty(13)|spd_rtng(91) | weapon_length(102)|swing_damage(47 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2]],
+["great_bardiche",         "Great Bardiche", [("two_handed_battle_axe_f",0)], itp_type_two_handed_wpn|itp_merchandise|itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 617 , weight(5.0)|difficulty(14)|spd_rtng(89) | weapon_length(116)|swing_damage(50 , cut) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2]],
+["voulge",         "Voulge", [("two_handed_battle_long_axe_a",0)], itp_type_polearm|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_staff, 120 , weight(3.0)|difficulty(10)|spd_rtng(88) | weapon_length(175)|swing_damage(40 , cut) | thrust_damage(18 ,  pierce),imodbits_axe ],
+["long_bardiche",         "Long Bardiche", [("two_handed_battle_long_axe_b",0)], itp_type_polearm|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_staff, 390 , weight(4.75)|difficulty(12)|spd_rtng(89) | weapon_length(140)|swing_damage(48 , cut) | thrust_damage(17 ,  pierce),imodbits_axe ],
+["great_long_bardiche",         "Great Long Bardiche", [("two_handed_battle_long_axe_c",0)], itp_type_polearm|itp_merchandise| itp_two_handed|itp_primary|itp_bonus_against_shield|itp_wooden_parry, itc_staff, 660 , weight(5.0)|difficulty(13)|spd_rtng(88) | weapon_length(155)|swing_damage(50 , cut) | thrust_damage(17 ,  pierce),imodbits_axe ],
+["poleaxe",         "Poleaxe", [("pole_ax",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_two_handed|itp_wooden_parry, itc_staff, 384 , weight(4.5)|difficulty(13)|spd_rtng(77) | weapon_length(180)|swing_damage(50 , cut) | thrust_damage(15 ,  blunt),imodbits_polearm, [], [fac_kingdom_1]],
+["mod_two_handed_taxe_1", "Dohaken War Axe", [("axe_1",0)], itp_type_polearm|itp_offset_lance|itp_primary|itp_bonus_against_shield|itp_two_handed|itp_wooden_parry|itp_wooden_parry, itc_staff|itcf_carry_axe_back, 280 , weight(2.50)|difficulty(10)|spd_rtng(87) | weapon_length(145)|swing_damage(39 , pierce) | thrust_damage(32 ,  pierce),imodbits_axe ],
+["mod_onehand_taxe3", "Dohaken Battle Axe", [("axe_2",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  397 , weight(1.4)|difficulty(4)|spd_rtng(99) | weapon_length(55)|swing_damage(32 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
+["mod_tpoleaxe",  "Poleaxe of The Order", [("weapon_1",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_two_handed|itp_wooden_parry, itc_staff, 384 , weight(4.3)|difficulty(13)|spd_rtng(78) | weapon_length(190)|swing_damage(48 , cut) | thrust_damage(24 ,  blunt),imodbits_polearm, [], [fac_player_supporters_faction]],
+["two_handed_axe",         "One-handed Axe", [("two_handed_battle_axe_a",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 90 , weight(4.5)|difficulty(12)|spd_rtng(96) | weapon_length(90)|swing_damage(35 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
+
+########## Two-handed Maces ##########
 
 ["staff",         "Staff", [("wooden_staff",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_penalty_with_shield|itp_wooden_parry|itp_wooden_attack, itc_staff|itcf_horseback_slashright_onehanded|itcf_carry_sword_back, 36 , weight(1.5)|difficulty(2)|spd_rtng(104) | weapon_length(130)|swing_damage(18 , blunt) | thrust_damage(19 ,  blunt),imodbits_polearm ],
 ["quarter_staff", "Quarter Staff", [("quarter_staff",0)], itp_type_polearm|itp_offset_lance|itp_merchandise| itp_primary|itp_wooden_parry|itp_wooden_attack, itc_staff|itcf_horseback_slashright_onehanded|itcf_carry_sword_back, 60 , weight(2)|difficulty(3)|spd_rtng(100) | weapon_length(140)|swing_damage(25 , blunt) | thrust_damage(20 ,  blunt),imodbits_polearm ],
@@ -1551,6 +1552,11 @@ items = [
 ["polehammer",         "Polehammer", [("pole_hammer",0)], itp_type_polearm|itp_offset_lance| itp_primary|itp_two_handed|itp_wooden_parry, itc_staff, 169 , weight(7)|difficulty(18)|spd_rtng(50) | weapon_length(126)|swing_damage(50 , blunt) | thrust_damage(35 ,  blunt),imodbits_polearm ],
 ["bec_de_corbin_a",  "War Hammer", [("bec_de_corbin_a",0)], itp_type_polearm|itp_merchandise| itp_cant_use_on_horseback|itp_primary|itp_penalty_with_shield|itp_wooden_parry|itp_two_handed,itcf_carry_spear, 125 , weight(3.0)|difficulty(4)|spd_rtng(91) | weapon_length(135)|swing_damage(38, blunt) | thrust_damage(38 ,  pierce),imodbits_polearm ],
 ["staghammer",         "Staghammer", [("staghammer",0)], itp_type_polearm|itp_can_knock_down|itp_merchandise| itp_primary|itp_wooden_parry, itc_staff|itcf_carry_axe_back, 310 , weight(7)|difficulty(12)|spd_rtng(92) | weapon_length(175)|swing_damage(35 , blunt) | thrust_damage(22 ,  pierce),imodbits_mace, [], [fac_player_supporters_faction] ],
+
+
+
+
+
 
 ####################
 ##### POLEARMS #####
