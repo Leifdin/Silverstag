@@ -32,7 +32,7 @@ from module_constants import *
 # 
 ####################################################################################################################
 
-pilgrim_disguise = [itm_pilgrim_hood,itm_pilgrim_disguise, itm_bastard_sword_a, itm_throwing_daggers] # itm_practice_staff
+pilgrim_disguise = [itm_pilgrim_hood,itm_pilgrim_disguise, itm_western_long_sword_b, itm_throwing_daggers] # itm_practice_staff
 af_castle_lord = af_override_horse | af_override_weapons| af_require_civilian
 
 multiplayer_server_check_belfry_movement = (
