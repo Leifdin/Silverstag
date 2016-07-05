@@ -1371,11 +1371,11 @@ scripts = [
       #axe
       (item_set_slot, "itm_axe", slot_item_multiplayer_item_class, multi_item_class_type_axe),
       (item_set_slot, "itm_battle_axe", slot_item_multiplayer_item_class, multi_item_class_type_axe),
-      (item_set_slot, "itm_one_handed_war_axe_a", slot_item_multiplayer_item_class, multi_item_class_type_axe),
+      (item_set_slot, "itm_short_war_axe_a", slot_item_multiplayer_item_class, multi_item_class_type_axe),
       (item_set_slot, "itm_one_handed_war_axe_b", slot_item_multiplayer_item_class, multi_item_class_type_axe),
       (item_set_slot, "itm_one_handed_battle_axe_a", slot_item_multiplayer_item_class, multi_item_class_type_axe),
-      (item_set_slot, "itm_one_handed_battle_axe_b", slot_item_multiplayer_item_class, multi_item_class_type_axe),
-      (item_set_slot, "itm_one_handed_battle_axe_c", slot_item_multiplayer_item_class, multi_item_class_type_axe),
+      (item_set_slot, "itm_battle_axe_b", slot_item_multiplayer_item_class, multi_item_class_type_axe),
+      (item_set_slot, "itm_battle_axe_a", slot_item_multiplayer_item_class, multi_item_class_type_axe),
 	  
       (item_set_slot, "itm_two_handed_axe", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
       (item_set_slot, "itm_two_handed_battle_axe_2", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
@@ -1417,8 +1417,8 @@ scripts = [
       (item_set_slot, "itm_shortened_military_scythe", slot_item_multiplayer_item_class, multi_item_class_type_cleavers),
 	  
       (item_set_slot, "itm_sarranid_mace_1", slot_item_multiplayer_item_class, multi_item_class_type_blunt),
-      (item_set_slot, "itm_sarranid_axe_a", slot_item_multiplayer_item_class, multi_item_class_type_blunt),
-      (item_set_slot, "itm_sarranid_axe_b", slot_item_multiplayer_item_class, multi_item_class_type_blunt),
+      (item_set_slot, "itm_iron_battle_axe", slot_item_multiplayer_item_class, multi_item_class_type_blunt),
+      (item_set_slot, "itm_iron_war_axe", slot_item_multiplayer_item_class, multi_item_class_type_blunt),
       (item_set_slot, "itm_sarranid_two_handed_axe_a", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
       (item_set_slot, "itm_sarranid_two_handed_axe_b", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
       (item_set_slot, "itm_sarranid_two_handed_mace_1", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
@@ -1933,7 +1933,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_mace_1", "trp_khergit_lancer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_mace_2", "trp_khergit_lancer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_mace_3", "trp_khergit_lancer_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_war_axe_a", "trp_khergit_lancer_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_short_war_axe_a", "trp_khergit_lancer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_war_axe_b", "trp_khergit_lancer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_leather_steppe_cap_a", "trp_khergit_lancer_multiplayer"),
 	  (call_script, "script_multiplayer_set_item_available_for_troop", "itm_leather_nomad_cap", "trp_khergit_lancer_multiplayer"),
@@ -1971,7 +1971,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_nordic_short_sword", "trp_nord_archer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_nordic_nobleman_sword", "trp_nord_archer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_nordic_short_war_sword", "trp_nord_archer_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_war_axe_a", "trp_nord_archer_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_short_war_axe_a", "trp_nord_archer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_war_axe_b", "trp_nord_archer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_two_handed_axe", "trp_nord_archer_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_short_bow", "trp_nord_archer_multiplayer"),
@@ -1998,11 +1998,11 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_nordic_short_sword", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_nordic_nobleman_sword", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_nordic_short_war_sword", "trp_nord_veteran_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_war_axe_a", "trp_nord_veteran_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_short_war_axe_a", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_war_axe_b", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_battle_axe_a", "trp_nord_veteran_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_battle_axe_b", "trp_nord_veteran_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_one_handed_battle_axe_c", "trp_nord_veteran_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_battle_axe_b", "trp_nord_veteran_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_battle_axe_a", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_two_handed_axe", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_two_handed_battle_axe_2", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_great_axe", "trp_nord_veteran_multiplayer"),
@@ -2252,8 +2252,8 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sabre_b", "trp_sarranid_footman_multiplayer"),
 
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_mace_1", "trp_sarranid_footman_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_axe_a", "trp_sarranid_footman_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_axe_b", "trp_sarranid_footman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_iron_battle_axe", "trp_sarranid_footman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_iron_war_axe", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_two_handed_axe_a", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_two_handed_axe_b", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_two_handed_mace_1", "trp_sarranid_footman_multiplayer"),
@@ -2299,8 +2299,8 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_eastern_long_sword_b", "trp_sarranid_mamluke_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sabre_b", "trp_sarranid_mamluke_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_mace_1", "trp_sarranid_mamluke_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_axe_a", "trp_sarranid_mamluke_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_axe_b", "trp_sarranid_mamluke_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_iron_battle_axe", "trp_sarranid_mamluke_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_iron_war_axe", "trp_sarranid_mamluke_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_sarranid_two_handed_axe_a", "trp_sarranid_mamluke_multiplayer"),
 	  
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_lance", "trp_sarranid_mamluke_multiplayer"),
@@ -12453,8 +12453,8 @@ scripts = [
            (this_or_next|eq, ":my_item_class", multi_item_class_type_cleavers),
            (this_or_next|eq, ":my_item_class", multi_item_class_type_two_handed_sword),
            (this_or_next|eq, ":my_item_class", multi_item_class_type_two_handed_axe),
-           (this_or_next|eq, ":my_wielded_item", "itm_sarranid_axe_a"), #sarranid item exception
-           (eq, ":my_wielded_item", "itm_sarranid_axe_b"), #sarranid item exception
+           (this_or_next|eq, ":my_wielded_item", "itm_iron_battle_axe"), #sarranid item exception
+           (eq, ":my_wielded_item", "itm_iron_war_axe"), #sarranid item exception
            (neq, ":my_wielded_item", "itm_sarranid_two_handed_mace_1"), #sarranid item exception
            (get_achievement_stat, ":achievement_stat", ACHIEVEMENT_CHOPPY_CHOP_CHOP, 0),
            (lt, ":achievement_stat", 50),
@@ -12468,8 +12468,8 @@ scripts = [
          (try_begin),
            (this_or_next|eq, ":my_item_class", multi_item_class_type_blunt),
            (eq, ":my_wielded_item", "itm_sarranid_two_handed_mace_1"), #sarranid item exception
-           (neq, ":my_wielded_item", "itm_sarranid_axe_b"), #sarranid item exception
-           (neq, ":my_wielded_item", "itm_sarranid_axe_a"), #sarranid item exception
+           (neq, ":my_wielded_item", "itm_iron_war_axe"), #sarranid item exception
+           (neq, ":my_wielded_item", "itm_iron_battle_axe"), #sarranid item exception
            (get_achievement_stat, ":achievement_stat", ACHIEVEMENT_MACE_IN_YER_FACE, 0),
            (lt, ":achievement_stat", 25),
            (val_add, ":achievement_stat", 1),
