@@ -215,7 +215,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_swadia_item_helmet, "itm_mail_coif"),
 		(troop_set_slot, ccp_data, ccp_swadia_item_ladyhelmet, "itm_leather_cap"),
 		(troop_set_slot, ccp_data, ccp_swadia_item_axe, "itm_light_axe"),              # Diff 0
-		(troop_set_slot, ccp_data, ccp_swadia_item_blunt, "itm_mace_2"),             # Diff 0
+		(troop_set_slot, ccp_data, ccp_swadia_item_blunt, "itm_spiked_club_b"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_spear, "itm_shortened_spear"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_swadia_item_sword, "itm_western_arming_sword"),           # Diff 0
@@ -241,7 +241,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_vaegir_item_helmet, "itm_mail_coif"),
 		(troop_set_slot, ccp_data, ccp_vaegir_item_ladyhelmet, "itm_leather_cap"),
 		(troop_set_slot, ccp_data, ccp_vaegir_item_axe, "itm_light_axe"),              # Diff 0
-		(troop_set_slot, ccp_data, ccp_vaegir_item_blunt, "itm_mace_2"),             # Diff 0
+		(troop_set_slot, ccp_data, ccp_vaegir_item_blunt, "itm_spiked_club_b"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_spear, "itm_shortened_spear"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_vaegir_item_sword, "itm_western_arming_sword"),           # Diff 0
@@ -267,7 +267,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_khergit_item_helmet, "itm_mail_coif"),
 		(troop_set_slot, ccp_data, ccp_khergit_item_ladyhelmet, "itm_leather_cap"),
 		(troop_set_slot, ccp_data, ccp_khergit_item_axe, "itm_light_axe"),              # Diff 0
-		(troop_set_slot, ccp_data, ccp_khergit_item_blunt, "itm_mace_2"),             # Diff 0
+		(troop_set_slot, ccp_data, ccp_khergit_item_blunt, "itm_spiked_club_b"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_spear, "itm_shortened_spear"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_khergit_item_sword, "itm_western_arming_sword"),           # Diff 0
@@ -293,7 +293,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_nord_item_helmet, "itm_mail_coif"),
 		(troop_set_slot, ccp_data, ccp_nord_item_ladyhelmet, "itm_leather_cap"),
 		(troop_set_slot, ccp_data, ccp_nord_item_axe, "itm_light_axe"),              # Diff 0
-		(troop_set_slot, ccp_data, ccp_nord_item_blunt, "itm_mace_2"),             # Diff 0
+		(troop_set_slot, ccp_data, ccp_nord_item_blunt, "itm_spiked_club_b"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_spear, "itm_shortened_spear"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_nord_item_sword, "itm_western_arming_sword"),           # Diff 0
@@ -319,7 +319,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_rhodok_item_helmet, "itm_mail_coif"),
 		(troop_set_slot, ccp_data, ccp_rhodok_item_ladyhelmet, "itm_leather_cap"),
 		(troop_set_slot, ccp_data, ccp_rhodok_item_axe, "itm_light_axe"),              # Diff 0
-		(troop_set_slot, ccp_data, ccp_rhodok_item_blunt, "itm_mace_2"),             # Diff 0
+		(troop_set_slot, ccp_data, ccp_rhodok_item_blunt, "itm_spiked_club_b"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_spear, "itm_shortened_spear"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_rhodok_item_sword, "itm_western_arming_sword"),           # Diff 0
@@ -345,7 +345,7 @@ scripts = [
 		(troop_set_slot, ccp_data, ccp_sarrand_item_helmet, "itm_mail_coif"),
 		(troop_set_slot, ccp_data, ccp_sarrand_item_ladyhelmet, "itm_leather_cap"),
 		(troop_set_slot, ccp_data, ccp_sarrand_item_axe, "itm_light_axe"),              # Diff 0
-		(troop_set_slot, ccp_data, ccp_sarrand_item_blunt, "itm_mace_2"),             # Diff 0
+		(troop_set_slot, ccp_data, ccp_sarrand_item_blunt, "itm_spiked_club_b"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_dagger, "itm_dagger"), # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_spear, "itm_shortened_spear"),             # Diff 0
 		(troop_set_slot, ccp_data, ccp_sarrand_item_sword, "itm_western_arming_sword"),           # Diff 0

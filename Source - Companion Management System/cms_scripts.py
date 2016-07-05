@@ -1951,7 +1951,7 @@ scripts = [
 			(assign, ":score_type", 125),
 		(else_try),
 			(eq, ":melee_type", blunt),
-			(assign, ":score_type", 100),
+			(assign, ":score_type", 135),
 		(try_end),
 		
 		# Apply special modifiers if available.
