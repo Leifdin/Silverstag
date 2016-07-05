@@ -1430,10 +1430,10 @@ scripts = [
       (item_set_slot, "itm_double_sided_lance", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_glaive", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_poleaxe", slot_item_multiplayer_item_class, multi_item_class_type_spear),
-      (item_set_slot, "itm_polehammer", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_long_hafted_knobbed_mace", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_staff", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_quarter_staff", slot_item_multiplayer_item_class, multi_item_class_type_spear),
-      (item_set_slot, "itm_iron_staff", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_quarter_staff", slot_item_multiplayer_item_class, multi_item_class_type_spear),
 	  
       (item_set_slot, "itm_shortened_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
