@@ -64,6 +64,7 @@ game_menus = [
 			(troop_set_name, "trp_player", "@Tester"),
 			(troop_set_type, "trp_player", 0),
 			(assign, "$show_autoloot_data", 1),
+			(assign, "$cheat_mode", 1),
 			(call_script, "script_hub_initialize"), # hub_scripts.py
 			(change_screen_map),
 		]),
