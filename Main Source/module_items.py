@@ -1425,8 +1425,8 @@ items = [
 ### AXES ###
 ############
 
-["short_axe", "Nordic Footman Axe", [("bb_slavic_axe_1",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  357 , weight(1.8)|difficulty(3)|spd_rtng(102) | weapon_length(62)|swing_damage(29 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_4]],
-["light_axe", "Cavalry Axe", [("bb_slavic_cavalry_axe_1",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  457 , weight(1.9)|difficulty(4)|spd_rtng(101) | weapon_length(75)|swing_damage(32 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe ],
+["short_axe", "Short Axe", [("bb_slavic_axe_1",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  357 , weight(1.8)|difficulty(3)|spd_rtng(102) | weapon_length(62)|swing_damage(29 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_4]],
+["light_axe", "Light Axe", [("bb_slavic_cavalry_axe_1",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  457 , weight(1.9)|difficulty(4)|spd_rtng(101) | weapon_length(75)|swing_damage(32 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe ],
 
 ["short_war_axe_a", "Short War Axe", [("axe_crusader_b",0)], itp_type_one_handed_wpn|itp_merchandise|itp_wooden_parry|itp_primary|itp_secondary|itp_bonus_against_shield, itc_scimitar|itcf_carry_axe_left_hip, 250, weight(1.8)|difficulty(13)|spd_rtng(105)|weapon_length(64)|swing_damage(29,pierce)|thrust_damage(0,pierce), imodbits_axe ],
 ["short_war_axe_b", "Short War Axe", [("axe_crusader_a",0)], itp_type_one_handed_wpn|itp_merchandise|itp_wooden_parry|itp_primary|itp_secondary|itp_bonus_against_shield, itc_scimitar|itcf_carry_axe_left_hip, 250, weight(1.8)|difficulty(10)|spd_rtng(106)|weapon_length(66)|swing_damage(32,cut)|thrust_damage(0,pierce), imodbits_axe ],
@@ -1439,7 +1439,7 @@ items = [
 
 ["iron_battle_axe", "Iron Battle Axe", [("one_handed_battle_axe_g",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip, 250 , weight(1.65)|difficulty(9)|spd_rtng(97) | weapon_length(71)|swing_damage(35 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
 ["iron_war_axe", "Iron War Axe", [("one_handed_battle_axe_h",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip, 540 , weight(2.0)|difficulty(9)|spd_rtng(92) | weapon_length(71)|swing_damage(30 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe ],
-["military_sickle_a", "Military Sickle", [("military_sickle_a",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip, 220 , weight(1.0)|difficulty(9)|spd_rtng(100) | weapon_length(75)|swing_damage(26 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_5]],
+["military_sickle", "Military Sickle", [("military_sickle_a",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip, 220 , weight(1.0)|difficulty(9)|spd_rtng(100) | weapon_length(75)|swing_damage(26 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_5]],
 
 
 
