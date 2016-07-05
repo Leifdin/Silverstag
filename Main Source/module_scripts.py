@@ -1406,7 +1406,7 @@ scripts = [
       (item_set_slot, "itm_military_sickle", slot_item_multiplayer_item_class, multi_item_class_type_war_picks),
       (item_set_slot, "itm_fighting_pick", slot_item_multiplayer_item_class, multi_item_class_type_war_picks),
       (item_set_slot, "itm_military_pick", slot_item_multiplayer_item_class, multi_item_class_type_war_picks),
-      (item_set_slot, "itm_club_with_spike_head", slot_item_multiplayer_item_class, multi_item_class_type_war_picks),
+      (item_set_slot, "itm_goedendag", slot_item_multiplayer_item_class, multi_item_class_type_war_picks),
 	  
 	  #Cleavers
       (item_set_slot, "itm_cheap_cleaver", slot_item_multiplayer_item_class, multi_item_class_type_cleavers),
@@ -2092,7 +2092,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_steel_bolts", "trp_rhodok_veteran_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_fighting_pick", "trp_rhodok_veteran_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_military_pick", "trp_rhodok_veteran_crossbowman_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_club_with_spike_head", "trp_rhodok_veteran_crossbowman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_goedendag", "trp_rhodok_veteran_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_maul", "trp_rhodok_veteran_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_knobbed_mace", "trp_rhodok_veteran_crossbowman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_arming_sword", "trp_rhodok_veteran_crossbowman_multiplayer"),
@@ -2121,7 +2121,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_fighting_pick", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_military_pick", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_morningstar", "trp_rhodok_sergeant_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_club_with_spike_head", "trp_rhodok_sergeant_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_goedendag", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cheap_cleaver", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cheap_cleaver", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_two_handed_cleaver", "trp_rhodok_sergeant_multiplayer"),
