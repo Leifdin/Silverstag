@@ -1422,7 +1422,7 @@ scripts = [
       (item_set_slot, "itm_war_axe", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
       (item_set_slot, "itm_war_axe", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
       (item_set_slot, "itm_spiked_mace", slot_item_multiplayer_item_class, multi_item_class_type_two_handed_axe),
-      (item_set_slot, "itm_bamboo_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_winged_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
 	  
 	  
 	  
@@ -1435,12 +1435,12 @@ scripts = [
       (item_set_slot, "itm_quarter_staff", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_quarter_staff", slot_item_multiplayer_item_class, multi_item_class_type_spear),
 	  
-      (item_set_slot, "itm_shortened_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
-      (item_set_slot, "itm_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
-      (item_set_slot, "itm_war_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_short_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_peasant_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_cutting_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_military_scythe", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_pike", slot_item_multiplayer_item_class, multi_item_class_type_spear),
-      (item_set_slot, "itm_ashwood_pike", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_heavy_pike", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_awlpike", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_awlpike_long", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       #lance
@@ -1474,7 +1474,7 @@ scripts = [
       (item_set_slot, "itm_tab_shield_small_round_a", slot_item_multiplayer_item_class, multi_item_class_type_small_shield),
       (item_set_slot, "itm_tab_shield_small_round_b", slot_item_multiplayer_item_class, multi_item_class_type_small_shield),
       (item_set_slot, "itm_tab_shield_small_round_c", slot_item_multiplayer_item_class, multi_item_class_type_small_shield),
-      (item_set_slot, "itm_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_peasant_spear", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       #throwing
       (item_set_slot, "itm_darts", slot_item_multiplayer_item_class, multi_item_class_type_throwing),
       (item_set_slot, "itm_war_darts", slot_item_multiplayer_item_class, multi_item_class_type_throwing),
@@ -1806,8 +1806,8 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_helmet_with_lamellar_guard", "trp_vaegir_archer_multiplayer"),
       
       #2b-Vaegir Spearman
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_spear", "trp_vaegir_spearman_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_spear", "trp_vaegir_spearman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_peasant_spear", "trp_vaegir_spearman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cutting_spear", "trp_vaegir_spearman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_awlpike", "trp_vaegir_spearman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_kite_a", "trp_vaegir_spearman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_kite_b", "trp_vaegir_spearman_multiplayer"),
@@ -2009,8 +2009,8 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_long_axe", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_long_war_axe", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_great_long_axe", "trp_nord_veteran_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_spear", "trp_nord_veteran_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_spear", "trp_nord_veteran_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_peasant_spear", "trp_nord_veteran_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cutting_spear", "trp_nord_veteran_multiplayer"),
 	  
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_round_a", "trp_nord_veteran_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_round_b", "trp_nord_veteran_multiplayer"),
@@ -2053,8 +2053,8 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_long_war_axe", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_great_voulge", "trp_nord_scout_multiplayer"),
 	  
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_spear", "trp_nord_scout_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_spear", "trp_nord_scout_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_peasant_spear", "trp_nord_scout_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cutting_spear", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_light_lance", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_lance", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_small_round_a", "trp_nord_scout_multiplayer"),
@@ -2129,10 +2129,10 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_maul", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_knobbed_mace", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_flanged_mace", "trp_rhodok_sergeant_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_spear", "trp_rhodok_sergeant_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_peasant_spear", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_pike", "trp_rhodok_sergeant_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_ashwood_pike", "trp_rhodok_sergeant_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_spear", "trp_rhodok_sergeant_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_heavy_pike", "trp_rhodok_sergeant_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cutting_spear", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_glaive", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_pavise_a", "trp_rhodok_sergeant_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_pavise_b", "trp_rhodok_sergeant_multiplayer"),
@@ -2257,9 +2257,9 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_axe", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_axe", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_spiked_mace", "trp_sarranid_footman_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_bamboo_spear", "trp_sarranid_footman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_winged_spear", "trp_sarranid_footman_multiplayer"),
 	  
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_spear", "trp_sarranid_footman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_peasant_spear", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_jarid", "trp_sarranid_footman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_javelin", "trp_sarranid_footman_multiplayer"),
 	  
