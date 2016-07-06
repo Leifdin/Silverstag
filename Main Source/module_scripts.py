@@ -1427,7 +1427,7 @@ scripts = [
 	  
 	  
       #spears
-      (item_set_slot, "itm_double_sided_lance", slot_item_multiplayer_item_class, multi_item_class_type_spear),
+      (item_set_slot, "itm_heavy_lance", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_glaive", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_poleaxe", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_long_hafted_knobbed_mace", slot_item_multiplayer_item_class, multi_item_class_type_spear),
@@ -1444,10 +1444,10 @@ scripts = [
       (item_set_slot, "itm_awlpike", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       (item_set_slot, "itm_awlpike_long", slot_item_multiplayer_item_class, multi_item_class_type_spear),
       #lance
-      (item_set_slot, "itm_light_lance", slot_item_multiplayer_item_class, multi_item_class_type_lance),
+      (item_set_slot, "itm_simple_lance", slot_item_multiplayer_item_class, multi_item_class_type_lance),
       (item_set_slot, "itm_lance", slot_item_multiplayer_item_class, multi_item_class_type_lance),
       (item_set_slot, "itm_heavy_lance", slot_item_multiplayer_item_class, multi_item_class_type_lance),
-      (item_set_slot, "itm_great_lance", slot_item_multiplayer_item_class, multi_item_class_type_lance),
+      (item_set_slot, "itm_knightly_lance_a", slot_item_multiplayer_item_class, multi_item_class_type_lance),
       #shields
 	  
       (item_set_slot, "itm_tab_shield_round_a", slot_item_multiplayer_item_class, multi_item_class_type_small_shield),
@@ -1718,7 +1718,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_war_darts", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_lance", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_heavy_lance", "trp_swadian_man_at_arms_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_great_lance", "trp_swadian_man_at_arms_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_knightly_lance_a", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_arming_sword", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_arming_sword", "trp_swadian_man_at_arms_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_arming_sword", "trp_swadian_man_at_arms_multiplayer"),
@@ -2055,7 +2055,7 @@ scripts = [
 	  
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_peasant_spear", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cutting_spear", "trp_nord_scout_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_light_lance", "trp_nord_scout_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_simple_lance", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_lance", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_small_round_a", "trp_nord_scout_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_small_round_b", "trp_nord_scout_multiplayer"),
@@ -2172,7 +2172,7 @@ scripts = [
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_cheap_cleaver", "trp_rhodok_horseman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_two_handed_cleaver", "trp_rhodok_horseman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_shortened_military_scythe", "trp_rhodok_horseman_multiplayer"),
-      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_light_lance", "trp_rhodok_horseman_multiplayer"),
+      (call_script, "script_multiplayer_set_item_available_for_troop", "itm_simple_lance", "trp_rhodok_horseman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_lance", "trp_rhodok_horseman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_heavy_lance", "trp_rhodok_horseman_multiplayer"),
       (call_script, "script_multiplayer_set_item_available_for_troop", "itm_tab_shield_heater_cav_a", "trp_rhodok_horseman_multiplayer"),
