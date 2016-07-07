@@ -140,8 +140,8 @@ slot_prop_pavise_banner_mesh = 6
 ### SLOTS END
 
 ### NON-SLOT Convenience Constants
-pavise_begin = "itm_tab_shield_pavise_a"
-pavise_end   = "itm_tab_shield_small_round_a"
+pavise_begin = "itm_old_board_shield"
+pavise_end   = "itm_blue_company_round_shield"
 
 #Order Constants
 no_order  = -1
