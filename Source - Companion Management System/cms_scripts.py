@@ -1984,6 +1984,10 @@ scripts = [
 			(item_has_property, ":item_no", itp_penalty_with_shield),
 			(val_add, ":score_special", -25),
 			(eq, 1, 0),
+		(else_try),
+			(is_between, ":item_no", "itm_pitch_fork", "itm_pike"), #lower rating for spears
+			(val_add, ":score_special", -80),
+			(eq, 1, 0),
 		(try_end),
 		
 		# Combine everything to get our item's rating.

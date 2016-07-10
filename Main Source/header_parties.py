@@ -106,5 +106,6 @@ soldier_personality = aggressiveness_8 | courage_9
 merchant_personality = aggressiveness_0 | courage_7
 escorted_merchant_personality = aggressiveness_0 | courage_11
 bandit_personality   = aggressiveness_3 | courage_8 | banditness
+troop_testers = aggressiveness_15 | courage_15 | ai_bhvr_hold
 
 

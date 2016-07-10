@@ -68,7 +68,31 @@ game_menus = [
 			(call_script, "script_hub_initialize"), # hub_scripts.py
 			(change_screen_map),
 		]),
-      ## WINDYPLAINS- ##
+		## WINDYPLAINS- ##
+		## LEIFDIN ++ Item testing mode ##
+		("test_access",
+		[
+			(options_get_cheat_mode, ":cheat_setting"),
+			(this_or_next|ge, BETA_TESTING_MODE, 1),
+			(eq, ":cheat_setting", 1),
+		],"DEBUG: Enter item/troop testing mode.",
+		[
+			(call_script, "script_ccp_default_settings"),
+			(call_script, "script_ccp_tester_settings"),
+			(troop_set_name, "trp_player", "@Tester"),
+			(troop_set_type, "trp_player", 0),
+			(assign, "$show_autoloot_data", 1),
+			(assign, "$cheat_mode", 1),
+			(call_script, "script_hub_initialize"), # hub_scripts.py
+			(change_screen_map),
+			(party_relocate_near_party, "p_main_party", "p_town_4", 2),
+			## Add troops to test ##
+			(party_add_members, "p_main_party", "trp_item_balancing_spear", 50),
+			(spawn_around_party, "p_main_party", "pt_troop_testing_party"),
+			
+		]),
+		## LEIFDIN-- ##
+      
 	  
 	  ("go_back",[],"Go back",
        [
