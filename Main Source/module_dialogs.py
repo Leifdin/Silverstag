@@ -1028,7 +1028,7 @@ dialogs = [
        (assign, "$g_tutorial_training_ground_horseman_trainer_item_1", "itm_arena_lance"),
        (assign, "$g_tutorial_training_ground_horseman_trainer_item_2", -1),
      (else_try),
-       (assign, "$g_tutorial_training_ground_horseman_trainer_item_1", "itm_practice_bow_2"),
+       (assign, "$g_tutorial_training_ground_horseman_trainer_item_1", "itm_practice_bow"),
        (assign, "$g_tutorial_training_ground_horseman_trainer_item_2", "itm_practice_arrows_2"),
      (try_end),
      ]],
