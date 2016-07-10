@@ -3009,7 +3009,7 @@ scripts = [
 	#Get Pavise Prop (for Native heraldic/tableau shields)
     (assign, ":spr_pavise", "spr_pavise_1"),
 	(try_begin),
-		(is_between, ":shield", pavise_begin, "itm_tab_shield_pavise_c"), #a & b are 'shoddy-er' pavises
+		(is_between, ":shield", pavise_begin, "itm_board_shield"), #a & b are 'shoddy-er' pavises
 		(assign, ":spr_pavise", "spr_pavise_2"),
 	(try_end),
 	

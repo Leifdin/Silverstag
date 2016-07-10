@@ -1990,7 +1990,7 @@ game_menus = [
         (troop_raise_proficiency, "trp_player",wpt_two_handed_weapon,10),
         (troop_raise_proficiency, "trp_player",wpt_polearm,10),
 
-        (troop_add_item, "trp_player","itm_tab_shield_round_a",imod_battered),
+        (troop_add_item, "trp_player","itm_old_round_shield",imod_battered),
         (troop_set_slot, "trp_player", slot_troop_renown, 100),
         (call_script, "script_change_player_honor", 3),
 
@@ -2014,7 +2014,7 @@ game_menus = [
         (troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,20),
 
         (troop_set_slot, "trp_player", slot_troop_renown, 50),
-        (troop_add_item, "trp_player","itm_tab_shield_round_a",imod_battered),
+        (troop_add_item, "trp_player","itm_old_round_shield",imod_battered),
            
 ##        (troop_add_item, "trp_player","itm_dress",imod_sturdy),
 ##        (troop_add_item, "trp_player","itm_dagger",imod_watered_steel),
@@ -2065,7 +2065,7 @@ game_menus = [
         (troop_raise_proficiency, "trp_player",wpt_two_handed_weapon,15),
         (troop_raise_proficiency, "trp_player",wpt_polearm,20),
         (troop_raise_proficiency, "trp_player",wpt_throwing,10),
-        (troop_add_item, "trp_player","itm_tab_shield_kite_b",imod_battered),
+        (troop_add_item, "trp_player","itm_plain_kite_shield",imod_battered),
            
 ##        (troop_add_item, "trp_player","itm_leather_jerkin",imod_ragged),
 ##        (troop_add_item, "trp_player","itm_skullcap",imod_rusty),
@@ -2112,7 +2112,7 @@ game_menus = [
         (troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,10),
         (troop_raise_proficiency, "trp_player",wpt_archery,30),
         (troop_raise_proficiency, "trp_player",wpt_throwing,10),
-        (troop_add_item, "trp_player","itm_tab_shield_small_round_a",imod_battered),
+        (troop_add_item, "trp_player","itm_plain_cavalry_shield",imod_battered),
 ##        (troop_add_item, "trp_player","itm_javelin",imod_bent),
 ##        (troop_add_item, "trp_player","itm_sword_khergit_1",imod_rusty),
 ##        (troop_add_item, "trp_player","itm_nomad_armor",0),
@@ -2134,7 +2134,7 @@ game_menus = [
         (troop_raise_proficiency, "trp_player",wpt_one_handed_weapon,5),
         (troop_raise_proficiency, "trp_player",wpt_archery,20),
         (troop_raise_proficiency, "trp_player",wpt_throwing,5),
-        (troop_add_item, "trp_player","itm_tab_shield_small_round_a",imod_battered),
+        (troop_add_item, "trp_player","itm_plain_cavalry_shield",imod_battered),
 ##        (troop_add_item, "trp_player","itm_javelin",imod_bent),
 ##        (troop_add_item, "trp_player","itm_sickle",imod_plain),
 ##        (troop_add_item, "trp_player","itm_nomad_armor",0),

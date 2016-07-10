@@ -2089,7 +2089,7 @@ scripts = [
 		# Armor
 		(this_or_next|is_between, ":item_no", "itm_heraldic_mail_with_surcoat", "itm_white_highlander_shirt"),
 		# Shields
-		(is_between, ":item_no", "itm_tab_shield_round_a", "itm_darts"),
+		(is_between, ":item_no", "itm_old_round_shield", "itm_blue_company_round_shield"),
 		
 		## FLORIS DEFINITIONS ##
 		
