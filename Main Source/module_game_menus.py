@@ -87,8 +87,9 @@ game_menus = [
 			(change_screen_map),
 			(party_relocate_near_party, "p_main_party", "p_town_4", 2),
 			## Add troops to test ##
-			(party_add_members, "p_main_party", "trp_item_balancing_spear", 50),
-			(spawn_around_party, "p_main_party", "pt_troop_testing_party"),
+			(party_add_template, "p_main_party", "pt_troop_testing_party_1"),
+			(spawn_around_party, "p_main_party", "pt_troop_testing_party_2"),
+			(party_set_morale, "p_main_party", 100),
 			
 		]),
 		## LEIFDIN-- ##

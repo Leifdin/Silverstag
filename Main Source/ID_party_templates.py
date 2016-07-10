@@ -127,4 +127,5 @@ pt_sea_raider_lair = 125
 pt_looter_lair = 126
 pt_bandit_lair_templates_end = 127
 pt_leaded_looters = 128
-pt_troop_testing_party = 129
+pt_troop_testing_party_1 = 129
+pt_troop_testing_party_2 = 130
