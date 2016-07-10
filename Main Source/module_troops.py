@@ -2535,8 +2535,22 @@ troops = [
 # CUSTOM ITEM EVENT LOG (END)
 ####################################################################################################################################
 
+##### ITEM TESTING TROOPS #####
+# 1h swords - nord cavalry
+# 1h axes - nord infantry
+# 1h maces - nord archers
+# 2h swords - swadian cavalry
+# 2h axes - swadian infantry
+# 2h maces - swadian archers
+# spears - rhodok cavalry
+# poleaxes - rhodok infantry
+# pikes - rhodok archers
+# lances - vaegir cavalry
+# bows - vaegir infantry
+# crossbows - vaegir archers
 
-
+["item_balancing_1h_sword",			"1H SWORD",			 "1H SWORDS",			tf_guarantee_all|tf_male,0,0,fac_kingdom_4,[itm_leather_gloves, itm_leather_boots, itm_cloth_tunicgreen, itm_helmet_with_cap, itm_nordic_war_sword, itm_nordic_shield],str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_ironflesh_2,nord_face_younger_1,nord_face_middle_2],
+["item_balancing_spear",			"SPEAR",			 "SPEARS",				tf_guarantee_all|tf_male,0,0,fac_kingdom_5,[itm_leather_gloves, itm_leather_boots, itm_cloth_tunicred, itm_helmet_with_cap, itm_cutting_spear],str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_ironflesh_2,nord_face_younger_1,nord_face_middle_2],
 
 ["module_end_troops",        "Placeholder",                 "Placeholder",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[],def_attrib|level(34),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
 

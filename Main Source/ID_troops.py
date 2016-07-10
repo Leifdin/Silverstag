@@ -1527,4 +1527,6 @@ trp_array_commission_log_imod = 1525
 trp_array_commission_log_event = 1526
 trp_array_commission_log_location = 1527
 trp_array_commission_log_date = 1528
-trp_module_end_troops = 1529
+trp_item_balancing_1h_sword = 1529
+trp_item_balancing_spear = 1530
+trp_module_end_troops = 1531
