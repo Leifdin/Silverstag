@@ -1536,4 +1536,5 @@ trp_item_balancing_2h_mace = 1534
 trp_item_balancing_spear = 1535
 trp_item_balancing_poleaxe = 1536
 trp_item_balancing_pike = 1537
-trp_module_end_troops = 1538
+trp_item_balancing_lance = 1538
+trp_module_end_troops = 1539
