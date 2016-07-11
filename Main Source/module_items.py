@@ -508,27 +508,6 @@ items = [
 
 
 
-######################
-##### AMMUNITION #####
-######################
-
-
-##################### Arrows #####################
-["arrows",				"Broadhead Arrows",	[("arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver", ixmesh_carry)], itp_type_arrows|itp_merchandise|itp_default_ammo, itcf_carry_quiver_back, 72,weight(3)|abundance(160)|weapon_length(95)|thrust_damage(8,cut)|max_ammo(20),imodbits_missile],
-["khergit_arrows",		"Khergit Arrows", 	[("arrow_b",0),("flying_missile",ixmesh_flying_ammo),("quiver_b", ixmesh_carry)], itp_type_arrows|itp_merchandise, itcf_carry_quiver_back_right, 410,weight(3.5)|abundance(30)|weapon_length(95)|thrust_damage(8,pierce)|max_ammo(20),imodbits_missile, [], [fac_kingdom_3]],
-["barbed_arrows",		"Barbed Arrows", 	[("barbed_arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver_d", ixmesh_carry)], itp_type_arrows|itp_merchandise, itcf_carry_quiver_back_right, 124,weight(3)|abundance(70)|weapon_length(95)|thrust_damage(2,cut)|max_ammo(30),imodbits_missile],
-["bodkin_arrows",		"Bodkin Arrows", 	[("piercing_arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver_c", ixmesh_carry)], itp_type_arrows|itp_merchandise, itcf_carry_quiver_back_right, 350,weight(3)|abundance(50)|weapon_length(91)|thrust_damage(2,pierce)|max_ammo(30),imodbits_missile],
-["practice_arrows_2",	"Practice Arrows",	[("arena_arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver", ixmesh_carry)], itp_type_arrows, itcf_carry_quiver_back, 0,weight(1.5)|weapon_length(95)|max_ammo(80),imodbits_missile],
-
-##################### Bolts #####################
-["bolts",				"Bolts", 			[("bolt",0),("flying_missile",ixmesh_flying_ammo),("bolt_bag", ixmesh_carry),("bolt_bag_b", ixmesh_carry|imodbit_large_bag)], itp_type_bolts|itp_merchandise|itp_default_ammo|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 64,weight(2.25)|abundance(90)|weapon_length(63)|thrust_damage(1,pierce)|max_ammo(29),imodbits_missile],
-["steel_bolts",			"Steel Bolts", 		[("bolt",0),("flying_missile",ixmesh_flying_ammo),("bolt_bag_c", ixmesh_carry)], itp_type_bolts|itp_merchandise|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 210,weight(2.5)|abundance(20)|weapon_length(63)|thrust_damage(2,pierce)|max_ammo(29),imodbits_missile, [], [fac_kingdom_5, fac_kingdom_1]],
-
-#easter egg
-["crossbow_machinegun_bolts",			"Crossbow Machine Gun Bolts", 		[("bolt",0),("flying_missile",ixmesh_flying_ammo),("bolt_bag_c", ixmesh_carry)], itp_type_bolts|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 210,weight(2.5)|abundance(20)|weapon_length(63)|thrust_damage(2,pierce)|max_ammo(500),imodbits_missile, [], [fac_kingdom_5, fac_kingdom_1]],
-
-##################### Bullets #####################
-["cartridges",			"Cartridges",		[("cartridge_a",0)], itp_type_bullets|itp_merchandise|itp_can_penetrate_shield|itp_default_ammo, 0, 41,weight(2.25)|abundance(90)|weapon_length(3)|thrust_damage(1,pierce)|max_ammo(50),imodbits_missile],
 
 
 ##################
@@ -1666,6 +1645,99 @@ items = [
 #["mod_onehand_taxe3", "Dohaken Battle Axe", [("axe_2",0)], itp_type_one_handed_wpn|itp_merchandise| itp_primary|itp_secondary|itp_bonus_against_shield|itp_wooden_parry, itc_scimitar|itcf_carry_axe_left_hip,  397 , weight(1.4)|difficulty(4)|spd_rtng(99) | weapon_length(55)|swing_damage(32 , cut) | thrust_damage(0 ,  pierce),imodbits_axe ],
 #["two_handed_axe",         "One-handed Axe", [("two_handed_battle_axe_a",0)], itp_type_one_handed_wpn|itp_merchandise|itp_primary|itp_bonus_against_shield|itp_wooden_parry|itp_unbalanced, itc_nodachi|itcf_carry_axe_back, 90 , weight(4.5)|difficulty(12)|spd_rtng(96) | weapon_length(90)|swing_damage(35 , pierce) | thrust_damage(0 ,  pierce),imodbits_axe, [], [fac_kingdom_2, fac_kingdom_4]],
 
+##########################
+##### RANGED WEAPONS #####
+##########################
+
+["stones",         "Stones", [("throwing_stone",0)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_stone, 1 , weight(4)|difficulty(0)|spd_rtng(97) | shoot_speed(30) | thrust_damage(24 ,  blunt)|max_ammo(30)|weapon_length(8),imodbit_large_bag ],
+["throwing_knives", "Throwing Knives", [("throwing_knife",0)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_knife, 76 , weight(2.5)|difficulty(1)|spd_rtng(121) | shoot_speed(25) | thrust_damage(29 ,  cut)|max_ammo(22)|weapon_length(0),imodbits_thrown ],
+["throwing_daggers", "Throwing Daggers", [("throwing_dagger",0)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_knife, 193 , weight(2.5)|difficulty(1)|spd_rtng(110) | shoot_speed(24) | thrust_damage(32 ,  cut)|max_ammo(18)|weapon_length(0),imodbits_thrown ],
+
+########### Darts ##########
+
+["darts",         "Darts", [("dart_b",0),("dart_b_bag", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_javelin|itcf_carry_quiver_right_vertical|itcf_show_holster_when_drawn, 155 , weight(2)|difficulty(1)|spd_rtng(95) | shoot_speed(28) | thrust_damage(28 ,  pierce)|max_ammo(12)|weapon_length(32),imodbits_thrown ],
+["war_darts",         "War Darts", [("dart_a",0),("dart_a_bag", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 285 , weight(2)|difficulty(1)|spd_rtng(93) | shoot_speed(27) | thrust_damage(31 ,  pierce)|max_ammo(12)|weapon_length(45),imodbits_thrown ],
+
+########### Javelins ##########
+
+["javelin",         "Javelins", [("javelin",0),("javelins_quiver_new", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 300, weight(4)|difficulty(2)|spd_rtng(91) | shoot_speed(25) | thrust_damage(38 ,  pierce)|max_ammo(10)|weapon_length(75),imodbits_thrown ],
+["javelin_melee",         "Javelin", [("javelin",0)], itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff, 300, weight(4)|difficulty(2)|spd_rtng(95) |swing_damage(12, cut)| thrust_damage(14,  pierce)|weapon_length(75),imodbits_polearm ],
+
+["throwing_spears",         "Throwing Spears", [("jarid_new_b",0),("jarid_new_b_bag", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 525 , weight(4)|difficulty(3)|spd_rtng(87) | shoot_speed(22) | thrust_damage(50 ,  pierce)|max_ammo(8)|weapon_length(65),imodbits_thrown ],
+["throwing_spear_melee",         "Throwing Spear", [("jarid_new_b",0),("javelins_quiver", ixmesh_carry)],itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff, 525 , weight(4)|difficulty(3)|spd_rtng(91) | swing_damage(18, cut) | thrust_damage(23 ,  pierce)|weapon_length(75),imodbits_thrown ],
+
+["jarid",         "Jarids", [("jarid_new",0),("jarid_quiver", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 560 , weight(2.75)|difficulty(2)|spd_rtng(89) | shoot_speed(24) | thrust_damage(45 ,  pierce)|max_ammo(6)|weapon_length(65),imodbits_thrown ],
+["jarid_melee",         "Jarid", [("jarid_new",0),("jarid_quiver", ixmesh_carry)], itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff, 560 , weight(2.75)|difficulty(2)|spd_rtng(93) | swing_damage(16, cut) | thrust_damage(20 ,  pierce)|weapon_length(65),imodbits_thrown ],
+
+########### Axes ##########
+
+["light_throwing_axes", "Light Throwing Axes", [("francisca",0)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee,itcf_throw_axe,360, weight(3)|difficulty(1)|spd_rtng(99) | shoot_speed(18) | thrust_damage(40,cut)|max_ammo(14)|weapon_length(53),imodbits_thrown_minus_heavy ],
+["light_throwing_axes_melee", "Light Throwing Axe", [("francisca",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,360, weight(3)|difficulty(1)|spd_rtng(99)|weapon_length(53)| swing_damage(26,cut),imodbits_thrown_minus_heavy ],
+
+["throwing_axes", "Throwing Axes", [("throwing_axe_a",0)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee,itcf_throw_axe,490, weight(5)|difficulty(2)|spd_rtng(98) | shoot_speed(18) | thrust_damage(45,cut)|max_ammo(12)|weapon_length(53),imodbits_thrown_minus_heavy ],
+["throwing_axes_melee", "Throwing Axe", [("throwing_axe_a",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,490, weight(5)|difficulty(2)|spd_rtng(98) | swing_damage(29,cut)|weapon_length(53),imodbits_thrown_minus_heavy ],
+
+["heavy_throwing_axes", "Heavy Throwing Axes", [("throwing_axe_b",0)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee,itcf_throw_axe,620, weight(7)|difficulty(4)|spd_rtng(97) | shoot_speed(18) | thrust_damage(53,cut)|max_ammo(10)|weapon_length(53),imodbits_thrown_minus_heavy ],
+["heavy_throwing_axes_melee", "Heavy Throwing Axe", [("throwing_axe_b",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,620, weight(7)|difficulty(4)|spd_rtng(97) | swing_damage(32,cut)|weapon_length(53),imodbits_thrown_minus_heavy ],
+
+["keys", "Ring of Keys", [("throwing_axe_a",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,240, weight(5)|spd_rtng(98) | swing_damage(29,cut)|max_ammo(5)|weapon_length(53),imodbits_thrown ],
+
+########### Bows ##########
+["light_hunting_bow",	"Light Hunting Bow",	[("saracin_bow_a",0),("saracin_bow_case_a",ixmesh_carry)],	itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	15, weight(1)|difficulty(0)|spd_rtng(110)|shoot_speed(52)|thrust_damage(24, cut), imodbits_bow ],
+["hunting_bow",			"Hunting Bow",			[("hunting_bow",0),("hunting_bow_carry",ixmesh_carry)],		itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									25, weight(1)|difficulty(0)|spd_rtng(100)|shoot_speed(52) | thrust_damage(28,  cut), imodbits_bow ],
+["short_bow",			"Short Bow",			[("short_bow",0),("short_bow_carry",ixmesh_carry)],			itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									50, weight(1)|difficulty(1)|spd_rtng(97)|shoot_speed(55) | thrust_damage(35,  cut), imodbits_bow ],
+["nomad_bow",			"Nomad Bow",			[("nomad_bow",0),("nomad_bow_case", ixmesh_carry)],			itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	150, weight(1.25)|difficulty(2)|spd_rtng(94)|shoot_speed(56) | thrust_damage(18,  pierce), imodbits_bow ],
+["long_bow",			"Long Bow",				[("long_bow",0),("long_bow_carry",ixmesh_carry)],			itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									175, weight(1.75)|difficulty(3)|spd_rtng(79)|shoot_speed(56) | thrust_damage(21,  pierce), imodbits_bow ],
+["light_war_bow",		"Light War Bow",		[("saracin_bow_b",0),("saracin_bow_case_b",ixmesh_carry)],	itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	250, weight(1.75)|difficulty(0)|spd_rtng(88)|shoot_speed(63)|thrust_damage(23, pierce), imodbits_bow ],
+["khergit_bow",			"Khergit Bow",			[("khergit_bow",0),("khergit_bow_case", ixmesh_carry)],		itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	300, weight(1.25)|difficulty(2)|spd_rtng(90)|shoot_speed(57) | thrust_damage(24, pierce), imodbits_bow ],
+["strong_bow",			"Strong Bow",			[("strong_bow",0),("strong_bow_case", ixmesh_carry)],		itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	450, weight(1.25)|difficulty(3)|spd_rtng(88)|shoot_speed(60) | thrust_damage(26, pierce), imodbits_bow ],
+["war_bow",				"War Bow",				[("war_bow",0),("war_bow_carry",ixmesh_carry)],				itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									750, weight(1.5)|difficulty(4)|spd_rtng(84)|shoot_speed(65) | thrust_damage(28, pierce), imodbits_bow ],
+["heavy_war_bow",		"Heavy War Bow",		[("saracin_bow_c",0),("saracin_bow_case_c",ixmesh_carry)],	itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	1000, weight(2.25)|difficulty(7)|spd_rtng(80)|shoot_speed(70)|thrust_damage(30, pierce), imodbits_bow ],
+
+
+
+
+########### Crossbows ##########
+
+["hunting_crossbow",	"Hunting Crossbow",	[("crossbow_a",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed ,itcf_shoot_crossbow|itcf_carry_crossbow_back,									22 , weight(2.25)|difficulty(2)|spd_rtng(47) | shoot_speed(62) | thrust_damage(37 ,  pierce)|max_ammo(1),imodbits_crossbow ],
+["light_crossbow",		"Light Crossbow",	[("crossbow_b",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed ,itcf_shoot_crossbow|itcf_carry_crossbow_back,									67 , weight(2.5)|difficulty(3)|spd_rtng(45) | shoot_speed(70) | thrust_damage(44 ,  pierce)|max_ammo(1),imodbits_crossbow ],
+["crossbow",			"Crossbow",			[("crossbow_a",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	182 , weight(3)|difficulty(3)|spd_rtng(43) | shoot_speed(78) | thrust_damage(49,pierce)|max_ammo(1),imodbits_crossbow ],
+["heavy_crossbow",		"Heavy Crossbow",	[("crossbow_c",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	349 , weight(3.5)|difficulty(5)|spd_rtng(41) | shoot_speed(82) | thrust_damage(58 ,pierce)|max_ammo(1),imodbits_crossbow ],
+["sniper_crossbow",		"Siege Crossbow",	[("crossbow_c",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	683 , weight(3.75)|difficulty(10)|spd_rtng(22) | shoot_speed(90) | thrust_damage(63 ,pierce)|max_ammo(1),imodbits_crossbow ],
+#easter egg
+["crossbow_machinegun",		"Crossbow Machinegun",	[("crossbow_c",0)], itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	683 , weight(3.75)|difficulty(18)|spd_rtng(75) | shoot_speed(250) | thrust_damage(50 ,pierce)|max_ammo(100),imodbits_crossbow ],
+
+########### Firearms ##########
+
+["flintlock_pistol", 					"Flintlock Pistol", 				[("flintlock_pistol_1",0)],	itp_merchandise|itp_type_pistol|itp_primary ,itcf_shoot_pistol|itcf_reload_pistol,																2300, weight(1.5)|difficulty(0)|spd_rtng(55) | shoot_speed(160) | thrust_damage(45 ,pierce)|max_ammo(1)|accuracy(75),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,27),(position_move_y, pos1,36),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
+["flintlock_rifle", 					"Flintlock Rifle",					[("flintlock_rifle_1",0)],	itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	2800, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(24) | shoot_speed(180) | thrust_damage(95 ,pierce)|max_ammo(1)|accuracy(99),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,139),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
+["arquebus", 							"Arquebus",							[("arquebus",0)],			itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	3100, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(45) | shoot_speed(160) | thrust_damage(60 ,pierce)|max_ammo(1)|accuracy(78),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,100),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
+["blunderbus", 							"Blunderbus",						[("blunderbus",0)],			itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	4600, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(50) | shoot_speed(160) | thrust_damage(85 ,pierce)|max_ammo(1)|accuracy(70),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,72),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
+["matchlock_musket_a", 					"Matchlock Musket",					[("matchlock_2",0)],		itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	2800, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(38) | shoot_speed(160) | thrust_damage(70 ,pierce)|max_ammo(1)|accuracy(85),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,112),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
+["matchlock_musket_b", 					"Matchlock Musket",					[("matchlock_1",0)],		itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	3800, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(42) | shoot_speed(160) | thrust_damage(65 ,pierce)|max_ammo(1)|accuracy(80),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,107),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
+
+######################
+##### AMMUNITION #####
+######################
+
+
+##################### Arrows #####################
+["arrows",				"Broadhead Arrows",	[("arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver", ixmesh_carry)], itp_type_arrows|itp_merchandise|itp_default_ammo, itcf_carry_quiver_back, 72,weight(3)|abundance(160)|weapon_length(95)|thrust_damage(8,cut)|max_ammo(20),imodbits_missile],
+["khergit_arrows",		"Khergit Arrows", 	[("arrow_b",0),("flying_missile",ixmesh_flying_ammo),("quiver_b", ixmesh_carry)], itp_type_arrows|itp_merchandise, itcf_carry_quiver_back_right, 410,weight(3.5)|abundance(30)|weapon_length(95)|thrust_damage(8,pierce)|max_ammo(20),imodbits_missile, [], [fac_kingdom_3]],
+["barbed_arrows",		"Barbed Arrows", 	[("barbed_arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver_d", ixmesh_carry)], itp_type_arrows|itp_merchandise, itcf_carry_quiver_back_right, 124,weight(3)|abundance(70)|weapon_length(95)|thrust_damage(2,cut)|max_ammo(30),imodbits_missile],
+["bodkin_arrows",		"Bodkin Arrows", 	[("piercing_arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver_c", ixmesh_carry)], itp_type_arrows|itp_merchandise, itcf_carry_quiver_back_right, 350,weight(3)|abundance(50)|weapon_length(91)|thrust_damage(2,pierce)|max_ammo(30),imodbits_missile],
+["practice_arrows_2",	"Practice Arrows",	[("arena_arrow",0),("flying_missile",ixmesh_flying_ammo),("quiver", ixmesh_carry)], itp_type_arrows, itcf_carry_quiver_back, 0,weight(1.5)|weapon_length(95)|max_ammo(80),imodbits_missile],
+
+##################### Bolts #####################
+["bolts",				"Bolts", 			[("bolt",0),("flying_missile",ixmesh_flying_ammo),("bolt_bag", ixmesh_carry),("bolt_bag_b", ixmesh_carry|imodbit_large_bag)], itp_type_bolts|itp_merchandise|itp_default_ammo|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 64,weight(2.25)|abundance(90)|weapon_length(63)|thrust_damage(1,pierce)|max_ammo(29),imodbits_missile],
+["steel_bolts",			"Steel Bolts", 		[("bolt",0),("flying_missile",ixmesh_flying_ammo),("bolt_bag_c", ixmesh_carry)], itp_type_bolts|itp_merchandise|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 210,weight(2.5)|abundance(20)|weapon_length(63)|thrust_damage(2,pierce)|max_ammo(29),imodbits_missile, [], [fac_kingdom_5, fac_kingdom_1]],
+
+#easter egg
+["crossbow_machinegun_bolts",			"Crossbow Machine Gun Bolts", 		[("bolt",0),("flying_missile",ixmesh_flying_ammo),("bolt_bag_c", ixmesh_carry)], itp_type_bolts|itp_can_penetrate_shield, itcf_carry_quiver_right_vertical, 210,weight(2.5)|abundance(20)|weapon_length(63)|thrust_damage(2,pierce)|max_ammo(500),imodbits_missile, [], [fac_kingdom_5, fac_kingdom_1]],
+
+##################### Bullets #####################
+["cartridges",			"Cartridges",		[("cartridge_a",0)], itp_type_bullets|itp_merchandise|itp_can_penetrate_shield|itp_default_ammo, 0, 41,weight(2.25)|abundance(90)|weapon_length(3)|thrust_damage(1,pierce)|max_ammo(50),imodbits_missile],
+
 
 ###################
 ##### SHIELDS #####
@@ -1830,76 +1902,6 @@ items = [
 ["lute",         					"Lute", [("lute",0)], itp_type_shield|itp_wooden_parry|itp_civilian, itcf_carry_bow_back,  118 , weight(2.5)|hit_points(480)|body_armor(1)|spd_rtng(82)|weapon_length(90),0 ],
 
 
-##########################
-##### RANGED WEAPONS #####
-##########################
-
-["stones",         "Stones", [("throwing_stone",0)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_stone, 1 , weight(4)|difficulty(0)|spd_rtng(97) | shoot_speed(30) | thrust_damage(24 ,  blunt)|max_ammo(30)|weapon_length(8),imodbit_large_bag ],
-["throwing_knives", "Throwing Knives", [("throwing_knife",0)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_knife, 76 , weight(2.5)|difficulty(1)|spd_rtng(121) | shoot_speed(25) | thrust_damage(29 ,  cut)|max_ammo(22)|weapon_length(0),imodbits_thrown ],
-["throwing_daggers", "Throwing Daggers", [("throwing_dagger",0)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_knife, 193 , weight(2.5)|difficulty(1)|spd_rtng(110) | shoot_speed(24) | thrust_damage(32 ,  cut)|max_ammo(18)|weapon_length(0),imodbits_thrown ],
-
-########### Darts ##########
-
-["darts",         "Darts", [("dart_b",0),("dart_b_bag", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_javelin|itcf_carry_quiver_right_vertical|itcf_show_holster_when_drawn, 155 , weight(2)|difficulty(1)|spd_rtng(95) | shoot_speed(28) | thrust_damage(28 ,  pierce)|max_ammo(12)|weapon_length(32),imodbits_thrown ],
-["war_darts",         "War Darts", [("dart_a",0),("dart_a_bag", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 285 , weight(2)|difficulty(1)|spd_rtng(93) | shoot_speed(27) | thrust_damage(31 ,  pierce)|max_ammo(12)|weapon_length(45),imodbits_thrown ],
-
-########### Javelins ##########
-
-["javelin",         "Javelins", [("javelin",0),("javelins_quiver_new", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 300, weight(4)|difficulty(2)|spd_rtng(91) | shoot_speed(25) | thrust_damage(38 ,  pierce)|max_ammo(10)|weapon_length(75),imodbits_thrown ],
-["javelin_melee",         "Javelin", [("javelin",0)], itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff, 300, weight(4)|difficulty(2)|spd_rtng(95) |swing_damage(12, cut)| thrust_damage(14,  pierce)|weapon_length(75),imodbits_polearm ],
-
-["throwing_spears",         "Throwing Spears", [("jarid_new_b",0),("jarid_new_b_bag", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 525 , weight(4)|difficulty(3)|spd_rtng(87) | shoot_speed(22) | thrust_damage(50 ,  pierce)|max_ammo(8)|weapon_length(65),imodbits_thrown ],
-["throwing_spear_melee",         "Throwing Spear", [("jarid_new_b",0),("javelins_quiver", ixmesh_carry)],itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff, 525 , weight(4)|difficulty(3)|spd_rtng(91) | swing_damage(18, cut) | thrust_damage(23 ,  pierce)|weapon_length(75),imodbits_thrown ],
-
-["jarid",         "Jarids", [("jarid_new",0),("jarid_quiver", ixmesh_carry)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn, 560 , weight(2.75)|difficulty(2)|spd_rtng(89) | shoot_speed(24) | thrust_damage(45 ,  pierce)|max_ammo(6)|weapon_length(65),imodbits_thrown ],
-["jarid_melee",         "Jarid", [("jarid_new",0),("jarid_quiver", ixmesh_carry)], itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff, 560 , weight(2.75)|difficulty(2)|spd_rtng(93) | swing_damage(16, cut) | thrust_damage(20 ,  pierce)|weapon_length(65),imodbits_thrown ],
-
-########### Axes ##########
-
-["light_throwing_axes", "Light Throwing Axes", [("francisca",0)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee,itcf_throw_axe,360, weight(3)|difficulty(1)|spd_rtng(99) | shoot_speed(18) | thrust_damage(40,cut)|max_ammo(14)|weapon_length(53),imodbits_thrown_minus_heavy ],
-["light_throwing_axes_melee", "Light Throwing Axe", [("francisca",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,360, weight(3)|difficulty(1)|spd_rtng(99)|weapon_length(53)| swing_damage(26,cut),imodbits_thrown_minus_heavy ],
-
-["throwing_axes", "Throwing Axes", [("throwing_axe_a",0)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee,itcf_throw_axe,490, weight(5)|difficulty(2)|spd_rtng(98) | shoot_speed(18) | thrust_damage(45,cut)|max_ammo(12)|weapon_length(53),imodbits_thrown_minus_heavy ],
-["throwing_axes_melee", "Throwing Axe", [("throwing_axe_a",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,490, weight(5)|difficulty(2)|spd_rtng(98) | swing_damage(29,cut)|weapon_length(53),imodbits_thrown_minus_heavy ],
-
-["heavy_throwing_axes", "Heavy Throwing Axes", [("throwing_axe_b",0)], itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee,itcf_throw_axe,620, weight(7)|difficulty(4)|spd_rtng(97) | shoot_speed(18) | thrust_damage(53,cut)|max_ammo(10)|weapon_length(53),imodbits_thrown_minus_heavy ],
-["heavy_throwing_axes_melee", "Heavy Throwing Axe", [("throwing_axe_b",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,620, weight(7)|difficulty(4)|spd_rtng(97) | swing_damage(32,cut)|weapon_length(53),imodbits_thrown_minus_heavy ],
-
-["keys", "Ring of Keys", [("throwing_axe_a",0)], itp_type_one_handed_wpn |itp_primary|itp_bonus_against_shield,itc_scimitar,240, weight(5)|spd_rtng(98) | swing_damage(29,cut)|max_ammo(5)|weapon_length(53),imodbits_thrown ],
-
-########### Bows ##########
-["light_hunting_bow",	"Light Hunting Bow",	[("saracin_bow_a",0),("saracin_bow_case_a",ixmesh_carry)],	itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	15, weight(1)|difficulty(0)|spd_rtng(110)|shoot_speed(52)|thrust_damage(24, cut), imodbits_bow ],
-["hunting_bow",			"Hunting Bow",			[("hunting_bow",0),("hunting_bow_carry",ixmesh_carry)],		itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									25, weight(1)|difficulty(0)|spd_rtng(100)|shoot_speed(52) | thrust_damage(28,  cut), imodbits_bow ],
-["short_bow",			"Short Bow",			[("short_bow",0),("short_bow_carry",ixmesh_carry)],			itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									50, weight(1)|difficulty(1)|spd_rtng(97)|shoot_speed(55) | thrust_damage(35,  cut), imodbits_bow ],
-["nomad_bow",			"Nomad Bow",			[("nomad_bow",0),("nomad_bow_case", ixmesh_carry)],			itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	150, weight(1.25)|difficulty(2)|spd_rtng(94)|shoot_speed(56) | thrust_damage(18,  pierce), imodbits_bow ],
-["long_bow",			"Long Bow",				[("long_bow",0),("long_bow_carry",ixmesh_carry)],			itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									175, weight(1.75)|difficulty(3)|spd_rtng(79)|shoot_speed(56) | thrust_damage(21,  pierce), imodbits_bow ],
-["light_war_bow",		"Light War Bow",		[("saracin_bow_b",0),("saracin_bow_case_b",ixmesh_carry)],	itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	250, weight(1.75)|difficulty(0)|spd_rtng(88)|shoot_speed(63)|thrust_damage(23, pierce), imodbits_bow ],
-["khergit_bow",			"Khergit Bow",			[("khergit_bow",0),("khergit_bow_case", ixmesh_carry)],		itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	300, weight(1.25)|difficulty(2)|spd_rtng(90)|shoot_speed(57) | thrust_damage(24, pierce), imodbits_bow ],
-["strong_bow",			"Strong Bow",			[("strong_bow",0),("strong_bow_case", ixmesh_carry)],		itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	450, weight(1.25)|difficulty(3)|spd_rtng(88)|shoot_speed(60) | thrust_damage(26, pierce), imodbits_bow ],
-["war_bow",				"War Bow",				[("war_bow",0),("war_bow_carry",ixmesh_carry)],				itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bow_back,									750, weight(1.5)|difficulty(4)|spd_rtng(84)|shoot_speed(65) | thrust_damage(28, pierce), imodbits_bow ],
-["heavy_war_bow",		"Heavy War Bow",		[("saracin_bow_c",0),("saracin_bow_case_c",ixmesh_carry)],	itp_merchandise|itp_type_bow|itp_primary|itp_two_handed, itcf_shoot_bow|itcf_carry_bowcase_left|itcf_show_holster_when_drawn,	1000, weight(2.25)|difficulty(7)|spd_rtng(80)|shoot_speed(70)|thrust_damage(30, pierce), imodbits_bow ],
-
-
-
-
-########### Crossbows ##########
-
-["hunting_crossbow",	"Hunting Crossbow",	[("crossbow_a",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed ,itcf_shoot_crossbow|itcf_carry_crossbow_back,									22 , weight(2.25)|difficulty(2)|spd_rtng(47) | shoot_speed(62) | thrust_damage(37 ,  pierce)|max_ammo(1),imodbits_crossbow ],
-["light_crossbow",		"Light Crossbow",	[("crossbow_b",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed ,itcf_shoot_crossbow|itcf_carry_crossbow_back,									67 , weight(2.5)|difficulty(3)|spd_rtng(45) | shoot_speed(70) | thrust_damage(44 ,  pierce)|max_ammo(1),imodbits_crossbow ],
-["crossbow",			"Crossbow",			[("crossbow_a",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	182 , weight(3)|difficulty(3)|spd_rtng(43) | shoot_speed(78) | thrust_damage(49,pierce)|max_ammo(1),imodbits_crossbow ],
-["heavy_crossbow",		"Heavy Crossbow",	[("crossbow_c",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	349 , weight(3.5)|difficulty(5)|spd_rtng(41) | shoot_speed(82) | thrust_damage(58 ,pierce)|max_ammo(1),imodbits_crossbow ],
-["sniper_crossbow",		"Siege Crossbow",	[("crossbow_c",0)], itp_merchandise|itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	683 , weight(3.75)|difficulty(10)|spd_rtng(22) | shoot_speed(90) | thrust_damage(63 ,pierce)|max_ammo(1),imodbits_crossbow ],
-#easter egg
-["crossbow_machinegun",		"Crossbow Machinegun",	[("crossbow_c",0)], itp_type_crossbow|itp_primary|itp_two_handed|itp_cant_reload_on_horseback ,itcf_shoot_crossbow|itcf_carry_crossbow_back,	683 , weight(3.75)|difficulty(18)|spd_rtng(75) | shoot_speed(250) | thrust_damage(50 ,pierce)|max_ammo(100),imodbits_crossbow ],
-
-########### Firearms ##########
-
-["flintlock_pistol", 					"Flintlock Pistol", 				[("flintlock_pistol_1",0)],	itp_merchandise|itp_type_pistol|itp_primary ,itcf_shoot_pistol|itcf_reload_pistol,																2300, weight(1.5)|difficulty(0)|spd_rtng(55) | shoot_speed(160) | thrust_damage(45 ,pierce)|max_ammo(1)|accuracy(75),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,27),(position_move_y, pos1,36),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
-["flintlock_rifle", 					"Flintlock Rifle",					[("flintlock_rifle_1",0)],	itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	2800, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(24) | shoot_speed(180) | thrust_damage(95 ,pierce)|max_ammo(1)|accuracy(99),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,139),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
-["arquebus", 							"Arquebus",							[("arquebus",0)],			itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	3100, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(45) | shoot_speed(160) | thrust_damage(60 ,pierce)|max_ammo(1)|accuracy(78),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,100),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
-["blunderbus", 							"Blunderbus",						[("blunderbus",0)],			itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	4600, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(50) | shoot_speed(160) | thrust_damage(85 ,pierce)|max_ammo(1)|accuracy(70),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,72),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
-["matchlock_musket_a", 					"Matchlock Musket",					[("matchlock_2",0)],		itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	2800, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(38) | shoot_speed(160) | thrust_damage(70 ,pierce)|max_ammo(1)|accuracy(85),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,112),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
-["matchlock_musket_b", 					"Matchlock Musket",					[("matchlock_1",0)],		itp_merchandise|itp_type_musket|itp_cant_reload_on_horseback|itp_primary|itp_two_handed, itcf_reload_musket|itcf_carry_spear|itcf_shoot_musket,	3800, weight(1.5)|abundance(90)|difficulty(0)|spd_rtng(42) | shoot_speed(160) | thrust_damage(65 ,pierce)|max_ammo(1)|accuracy(80),imodbits_none, [(ti_on_weapon_attack, [(play_sound,"snd_pistol_shot"),(position_move_x, pos1,0),(position_move_y, pos1,107),(particle_system_burst, "psys_pistol_smoke", pos1, 15)])]],
 
 ["torch",         "Torch", [("club",0)], itp_type_one_handed_wpn|itp_primary, itc_scimitar, 11 , weight(2.5)|difficulty(0)|spd_rtng(95) | weapon_length(95)|swing_damage(11 , blunt) | thrust_damage(0 ,  pierce),imodbits_none, [(ti_on_init_item, [(set_position_delta,0,60,0),(particle_system_add_new, "psys_torch_fire"),(particle_system_add_new, "psys_torch_smoke"),(set_current_color,150, 130, 70),(add_point_light, 10, 30),])]],
 
