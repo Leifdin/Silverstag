@@ -2549,9 +2549,14 @@ troops = [
 # lances - vaegir cavalry
 # bows - vaegir infantry
 # crossbows - vaegir archers
-
+##### Tier 1 #####
 ["new_nord_farmhand",			"Nord Farmhand",			"Nord Farmhand",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_4,	[itm_blue_hose, itm_cloth_tunicstriped, itm_cloth_tunicstriped2, itm_pitch_fork, itm_stones, itm_cloth_cap_a, itm_cloth_cap_b, itm_cloth_cap_c],		str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(75)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_1|knows_athletics_2|knows_ironflesh_2, nord_face_younger_1, nord_face_middle_2],
-["new_nord_bowman",				"Nord Bowman",			 	"Nord Bowman",				tf_guarantee_all_ranged|tf_male, 0, 0, fac_kingdom_4,	[itm_ankle_boots, itm_rawhide_coat, itm_short_axe, itm_short_bow, itm_arrows, itm_arrows, itm_woolen_cap],			str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(125)|wp_crossbow(0)|wp_throwing(0),knows_power_draw_3|knows_athletics_2|knows_ironflesh_2, nord_face_younger_1, nord_face_middle_2],
+
+##### Tier 2 #####
+["new_nord_bowman",				"Nord Bowman",			 	"Nord Bowman",				tf_guarantee_all_ranged|tf_male, 0, 0, fac_kingdom_4,	[itm_ankle_boots, itm_rawhide_coat, itm_short_axe, itm_short_bow, itm_arrows, itm_arrows, itm_woolen_cap],												str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(125)|wp_crossbow(0)|wp_throwing(0),knows_power_draw_3|knows_athletics_2|knows_ironflesh_2, nord_face_younger_1, nord_face_middle_2],
+
+##### Tier 3 #####
+["new_nord_spearman",			"Nord Spearman",			"Nord Spearmen",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_4,	[itm_splinted_leather_greaves, itm_padded_jacketgreen, itm_padded_jacketwhite, itm_helmet_with_cap, itm_winged_spear],									str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_3|knows_ironflesh_4, nord_face_younger_1, nord_face_older_2],
 
 
 

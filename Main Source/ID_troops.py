@@ -1529,4 +1529,5 @@ trp_array_commission_log_location = 1527
 trp_array_commission_log_date = 1528
 trp_new_nord_farmhand = 1529
 trp_new_nord_bowman = 1530
-trp_module_end_troops = 1531
+trp_new_nord_spearman = 1531
+trp_module_end_troops = 1532
