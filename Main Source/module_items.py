@@ -785,12 +785,12 @@ items = [
 ["padded_jacketgreen",		"Padded Jacket",			[("padded_jack_b",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 690, weight(14)|abundance(100)|head_armor(0)|body_armor(36)|leg_armor(9)|difficulty(0) ,imodbits_cloth ],
 ["byrnie",					"Byrnie",					[("byrnie_a_new",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 850, weight(16)|abundance(100)|head_armor(0)|body_armor(39)|leg_armor(8)|difficulty(0) ,imodbits_armor ],
 ["studded_leather_coat",	"Studded Leather Coat",		[("leather_armor_a",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 690, weight(14)|abundance(100)|head_armor(0)|body_armor(36)|leg_armor(10)|difficulty(0) ,imodbits_armor ],
-["light_lamellar_armor",	"Light Lamellar Armor",		[("armor_medium_tyrk_c",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 850, weight(19)|abundance(100)|head_armor(0)|body_armor(42)|leg_armor(8)|difficulty(0), imodbits_armor ],
+["light_lamellar_armor",	"Light Lamellar Armor",		[("armor_medium_tyrk_b",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 850, weight(19)|abundance(100)|head_armor(0)|body_armor(42)|leg_armor(8)|difficulty(0), imodbits_armor ],
 ["light_coat_of_plates",	"Light Coat of Plates",		[("armor_medium_tyrk_d",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 750, weight(17)|abundance(100)|head_armor(0)|body_armor(40)|leg_armor(8)|difficulty(0), imodbits_armor ],
 
 ##### TIER 5 - 44 BODY ARMOUR, 12 LEG ARMOUR #####
 ["heavy_coat_of_plates",	"Heavy Coat of Plates",		[("lamellar_armor_d",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1000, weight(18)|abundance(100)|head_armor(0)|body_armor(44)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
-["heavy_chainmail_armor",	"Heavy Chianmail Armor",	[("armor_medium_tyrk_e",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1000, weight(17)|abundance(100)|head_armor(0)|body_armor(12)|leg_armor(13)|difficulty(0), imodbits_armor ],
+["heavy_chainmail_armor",	"Heavy Chianmail Armor",	[("armor_medium_tyrk_e",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1000, weight(17)|abundance(100)|head_armor(0)|body_armor(42)|leg_armor(13)|difficulty(0), imodbits_armor ],
 ["banded_armor",			"Banded Armor",				[("banded_armor_a",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1100, weight(21)|abundance(100)|head_armor(0)|body_armor(46)|leg_armor(13)|difficulty(0) ,imodbits_armor ],
 ["heavy_lamellar_vest_a",	"Heavy Lamellar Vest",		[("khergit_mail_b",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
 ["heavy_lamellar_vest_b",	"Heavy Lamellar Vest",		[("khergit_mail_c",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1200, weight(19)|abundance(100)|head_armor(0)|body_armor(45)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
@@ -800,7 +800,7 @@ items = [
 ["kuyak_b",					"Kuyak",					[("kuyak_b",0)],				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1250, weight(22)|abundance(100)|head_armor(0)|body_armor(46)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
 
 ##### TIER 6 - 49 BODY ARMOUR, 13 LEG ARMOUR #####
-["heavy_lamellar_armor_a",	"Heavy Lamellar Armor",		[("armor_medium_tyrk_b",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1750, weight(25)|abundance(100)|head_armor(0)|body_armor(49)|leg_armor(10)|difficulty(0), imodbits_armor ],
+["heavy_lamellar_armor_a",	"Heavy Lamellar Armor",		[("armor_medium_tyrk_c",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1750, weight(25)|abundance(100)|head_armor(0)|body_armor(49)|leg_armor(10)|difficulty(0), imodbits_armor ],
 ["heavy_lamellar_armor_b",	"Heavy Lamellar Armor",		[("armor_medium_tyrk_a",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1750, weight(25)|abundance(100)|head_armor(0)|body_armor(49)|leg_armor(10)|difficulty(0), imodbits_armor ],
 ["haubergeon", 				"Haubergeon", 				[("haubergeon_c",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1800 , weight(21)|abundance(100)|head_armor(0)|body_armor(48)|leg_armor(14)|difficulty(0) ,imodbits_armor ],
 ["lamellar_armor", 			"Lamellar Armor", 			[("lamellar_armor_b",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1450 , weight(25)|abundance(100)|head_armor(0)|body_armor(50)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
