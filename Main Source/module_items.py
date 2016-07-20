@@ -787,6 +787,7 @@ items = [
 ["studded_leather_coat",	"Studded Leather Coat",		[("leather_armor_a",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 690, weight(14)|abundance(100)|head_armor(0)|body_armor(36)|leg_armor(10)|difficulty(0) ,imodbits_armor ],
 ["light_lamellar_armor",	"Light Lamellar Armor",		[("armor_medium_tyrk_b",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 850, weight(19)|abundance(100)|head_armor(0)|body_armor(42)|leg_armor(8)|difficulty(0), imodbits_armor ],
 ["light_coat_of_plates",	"Light Coat of Plates",		[("armor_medium_tyrk_d",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 750, weight(17)|abundance(100)|head_armor(0)|body_armor(40)|leg_armor(8)|difficulty(0), imodbits_armor ],
+["haubergeon", 				"Haubergeon", 				[("haubergeon_c",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 950, weight(21)|abundance(100)|head_armor(0)|body_armor(43)|leg_armor(9)|difficulty(0) ,imodbits_armor ],
 
 ##### TIER 5 - 44 BODY ARMOUR, 12 LEG ARMOUR #####
 ["heavy_coat_of_plates",	"Heavy Coat of Plates",		[("lamellar_armor_d",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1000, weight(18)|abundance(100)|head_armor(0)|body_armor(44)|leg_armor(12)|difficulty(0) ,imodbits_armor ],
@@ -802,7 +803,6 @@ items = [
 ##### TIER 6 - 49 BODY ARMOUR, 13 LEG ARMOUR #####
 ["heavy_lamellar_armor_a",	"Heavy Lamellar Armor",		[("armor_medium_tyrk_c",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1750, weight(25)|abundance(100)|head_armor(0)|body_armor(49)|leg_armor(10)|difficulty(0), imodbits_armor ],
 ["heavy_lamellar_armor_b",	"Heavy Lamellar Armor",		[("armor_medium_tyrk_a",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1750, weight(25)|abundance(100)|head_armor(0)|body_armor(49)|leg_armor(10)|difficulty(0), imodbits_armor ],
-["haubergeon", 				"Haubergeon", 				[("haubergeon_c",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1800 , weight(21)|abundance(100)|head_armor(0)|body_armor(48)|leg_armor(14)|difficulty(0) ,imodbits_armor ],
 ["lamellar_armor", 			"Lamellar Armor", 			[("lamellar_armor_b",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1450 , weight(25)|abundance(100)|head_armor(0)|body_armor(50)|leg_armor(11)|difficulty(0) ,imodbits_armor ],
 ["lamellar_scale_blue", 	"Lamellar Scale", 			[("arabian_mail_shirt",0)],		itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1800 , weight(24)|abundance(100)|head_armor(0)|body_armor(48)|leg_armor(10)|difficulty(0) ,imodbits_armor ],
 ["lamellar_scale_yellow", 	"Lamellar Scale", 			[("arabian_mail_shirt_b",0)],	itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 1800 , weight(24)|abundance(100)|head_armor(0)|body_armor(48)|leg_armor(10)|difficulty(0) ,imodbits_armor ],
@@ -1745,8 +1745,8 @@ items = [
 
 ########## Round ##########
 
-["wooden_shield", 				"Wooden Shield",				[("shield_round_a",0)],		itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,	42,		weight(2)|hit_points(280)|body_armor(10)|spd_rtng(100)|shield_width(50),imodbits_shield ],
-["nordic_shield", 				"Nordic Shield",				[("shield_round_b",0)],		itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,	95,		weight(2)|hit_points(310)|body_armor(11)|spd_rtng(100)|shield_width(50),imodbits_shield ],
+["wooden_shield", 				"Wooden Shield",				[("shield_round_a",0)],		itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,	42,		weight(2)|hit_points(280)|body_armor(12)|spd_rtng(100)|shield_width(50),imodbits_shield ],
+["nordic_shield", 				"Nordic Shield",				[("shield_round_b",0)],		itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,	95,		weight(2)|hit_points(310)|body_armor(14)|spd_rtng(100)|shield_width(50),imodbits_shield ],
 
 ["buckler_a", 					"Buckler", 						[("s_h2",0)],				itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,	250,	weight(3)|hit_points(275)|body_armor(13)|spd_rtng(100)|shield_width(60),imodbits_shield ],
 ["buckler_b", 					"Buckler", 						[("s_h2_1",0)],				itp_merchandise|itp_type_shield|itp_wooden_parry, itcf_carry_round_shield,	250,	weight(3)|hit_points(275)|body_armor(13)|spd_rtng(100)|shield_width(60),imodbits_shield ],
