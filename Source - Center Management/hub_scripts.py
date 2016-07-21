@@ -1589,6 +1589,90 @@ scripts = [
 		(troop_set_slot, "trp_r_nord_berserker_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		(troop_set_class, "trp_r_nord_berserker_2", CLASS_INFANTRY),
 		
+		#### NEW TROOPS #####
+		
+		##### I1 Nord Farmhand #####
+		(troop_set_class, "trp_new_nord_farmhand", CLASS_INFANTRY),
+		
+		##### A2 Nord Bowman #####
+		(troop_set_class, "trp_new_nord_bowman", CLASS_RANGED),
+		
+		##### C2 Nord Scout #####
+		(troop_set_class, "trp_new_nord_scout", CLASS_CAVALRY),
+		
+		##### I3 Nord Spearman #####
+		(troop_set_class, "trp_new_nord_spearman", CLASS_INFANTRY),
+		
+		##### I3 Nord Retainer #####
+		(troop_set_class, "trp_new_nord_retainer", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_nord_retainer", slot_troop_recruit_type, STRT_MERCENARY),
+		
+		##### I3 Nord Skald #####
+		(troop_set_class, "trp_new_nord_skald", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_skald"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_skald", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_skald", BONUS_STORYTELLER , BONUS_UNASSIGNED),
+		
+		##### I4 Nord Tracker #####
+		(troop_set_class, "trp_new_nord_tracker", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_tracker"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_tracker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_TRAILBLAZER , BONUS_UNASSIGNED),
+		
+		##### A4 Nord Skirmisher #####
+		(troop_set_class, "trp_new_nord_skirmisher", CLASS_RANGED),
+		
+		##### I5 Nord Berserker #####
+		(troop_set_class, "trp_new_nord_tracker", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_tracker"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_tracker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_BERSERKER , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_BLOODLUST , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_berserker", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		##### I5 Hired Blade #####
+		(troop_set_class, "trp_new_hired_blade", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_hired_blade", slot_troop_recruit_type, STRT_MERCENARY),
+		
+		##### I5 Nord Sharpshooter #####
+		(troop_set_class, "trp_new_nord_sharpshooter", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_sharpshooter"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_sharpshooter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_sharpshooter", BONUS_SHARPSHOOTER , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_sharpshooter", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		##### I6 Nord Godi #####
+		(troop_set_class, "trp_new_nord_godi", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_godi"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_godi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_godi", BONUS_TACTICIAN , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_godi", BONUS_COMMANDING_PRESENCE , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_godi", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		##### I7 Nord Hirdman #####
+		(troop_set_class, "trp_new_nord_hirdman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_hirdman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_hirdman", PREREQ_LIEGE_RELATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_hirdman", BONUS_CHARGING_STRIKE , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_hirdman", BONUS_SECOND_WIND , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_hirdman", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		##### C4 Nord Lancer #####
+		(troop_set_class, "trp_new_nord_lancer", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_lancer"), # combat_scripts.py
+		(troop_set_slot, "trp_new_nord_lancer", slot_troop_unique_location, "p_castle_36"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_lancer", BONUS_FORTITUDE , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_lancer", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		##### I7 Wercheg Guard #####
+		(troop_set_class, "trp_new_wercheg_guard", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_wercheg_guard"), # combat_scripts.py
+		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_unique_location, "p_town_12"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_wercheg_guard", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_wercheg_guard", BONUS_HARDY, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
 		######################################################
 		#####               RHODOK FACTION               #####
 		######################################################
