@@ -44,6 +44,7 @@ game_menus = [
      ("continue",[],"Continue...",
 		[
 			(call_script, "script_ccp_default_settings"),
+			(assign, "$troop_testing_party_is_spawned", 0),
 			## WINDYPLAINS+ ## - Redirection of character creation to combined presentation.
 			(start_presentation, "prsnt_ccp_character_creation"),
 			# (jump_to_menu, "mnu_start_game_1"),
@@ -65,6 +66,7 @@ game_menus = [
 			(troop_set_type, "trp_player", 0),
 			(assign, "$show_autoloot_data", 1),
 			(assign, "$cheat_mode", 1),
+			(assign, "$troop_testing_party_is_spawned", 0),
 			(call_script, "script_hub_initialize"), # hub_scripts.py
 			(change_screen_map),
 		]),
@@ -89,6 +91,7 @@ game_menus = [
 			## Add troops to test ##
 			(party_add_template, "p_main_party", "pt_troop_testing_party_1"),
 			(spawn_around_party, "p_main_party", "pt_troop_testing_party_2"),
+			(assign, "$troop_testing_party_is_spawned", 1),
 			(assign, "$troop_testing_party_id", reg(0)),
 			(party_set_morale, "p_main_party", 100),
 			(party_set_morale, "$troop_testing_party_id", 100),			

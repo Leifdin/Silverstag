@@ -48,10 +48,11 @@ vat_obj_label_selected_kingdom        = 5
 
 vat_obj_text_input_troop_id           = 6
 vat_obj_number_box_troop_count        = 7
-vat_obj_button_add_troops             = 8
+vat_obj_button_add_troops_to_player   = 8
+vat_obj_button_add_troops_to_tester   = 9
 
 vat_obj_troop_image                   = 100
 vat_val_troop_record                  = 200
 vat_stop_end_of_records               = 300
 
-vat_val_troop_count                   = 9
+vat_val_troop_count                   = 10
