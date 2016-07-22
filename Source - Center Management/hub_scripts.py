@@ -1362,115 +1362,115 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(troop_set_slot, "trp_r_nord_varangian_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## C3 - Jelbegi Lancer (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_jelbegi_lancer", slot_troop_unique_location, "p_castle_36"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_jelbegi_lancer", CLASS_CAVALRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_jelbegi_lancer_1", slot_troop_unique_location, "p_castle_36"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_jelbegi_lancer_1", CLASS_CAVALRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_jelbegi_lancer_2", slot_troop_unique_location, "p_castle_36"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_jelbegi_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_jelbegi_lancer_2", CLASS_CAVALRY),
+		### C3 - Jelbegi Lancer (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_jelbegi_lancer", slot_troop_unique_location, "p_castle_36"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_nord_jelbegi_lancer", CLASS_CAVALRY),
+		## +1
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_jelbegi_lancer_1", slot_troop_unique_location, "p_castle_36"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_nord_jelbegi_lancer_1", CLASS_CAVALRY),
+		## +2
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_jelbegi_lancer_2", slot_troop_unique_location, "p_castle_36"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_jelbegi_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_jelbegi_lancer_2", CLASS_CAVALRY),
 		
-		## C5 - Thane of Sargoth (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_thane", slot_troop_unique_location, "p_town_1"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_thane", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_thane", CLASS_CAVALRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_thane_1", slot_troop_unique_location, "p_town_1"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_thane_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_thane_1", CLASS_CAVALRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_thane_2", slot_troop_unique_location, "p_town_1"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_thane_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_thane_2", CLASS_CAVALRY),
+		### C5 - Thane of Sargoth (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_thane", slot_troop_unique_location, "p_town_1"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_thane", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_thane", CLASS_CAVALRY),
+		## +1
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_thane_1", slot_troop_unique_location, "p_town_1"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_thane_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_thane_1", CLASS_CAVALRY),
+		## +2
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_thane_2", slot_troop_unique_location, "p_town_1"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_thane_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_thane_2", CLASS_CAVALRY),
 		
-		## C6 - Valkyrie of Tihr (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_valkyrie", slot_troop_unique_location, "p_town_2"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_valkyrie", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_valkyrie", CLASS_CAVALRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_valkyrie_1", slot_troop_unique_location, "p_town_2"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_valkyrie_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_valkyrie_1", CLASS_CAVALRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_valkyrie_2", slot_troop_unique_location, "p_town_2"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_valkyrie_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_valkyrie_2", CLASS_CAVALRY),
+		### C6 - Valkyrie of Tihr (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_valkyrie", slot_troop_unique_location, "p_town_2"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_valkyrie", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_valkyrie", CLASS_CAVALRY),
+		## +1
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_valkyrie_1", slot_troop_unique_location, "p_town_2"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_valkyrie_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_valkyrie_1", CLASS_CAVALRY),
+		## +2
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_valkyrie_2", slot_troop_unique_location, "p_town_2"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_valkyrie_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_valkyrie_2", CLASS_CAVALRY),
 		
-		## A2 - Maiden of Aldelen (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_maiden", slot_troop_unique_location, "p_village_61"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_maiden", CLASS_RANGED),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_maiden_1", slot_troop_unique_location, "p_village_61"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_maiden_1", CLASS_RANGED),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_nord_maiden_2", slot_troop_unique_location, "p_village_61"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_maiden_2", CLASS_RANGED),
+		### A2 - Maiden of Aldelen (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_maiden", slot_troop_unique_location, "p_village_61"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_nord_maiden", CLASS_RANGED),
+		## +1
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_maiden_1", slot_troop_unique_location, "p_village_61"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_nord_maiden_1", CLASS_RANGED),
+		## +2
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_nord_maiden_2", slot_troop_unique_location, "p_village_61"),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_nord_maiden_2", CLASS_RANGED),
 		
 		## A4 - Nordic Scout (Affiliated)
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_scout"), # combat_scripts.py
@@ -5692,32 +5692,44 @@ scripts = [
 				(troop_set_plural_name, ":troop_no", s23),
 			## v0.23 UNIQUE TROOPS END ##
 			## v0.24 UNIQUE TROOPS BEGIN ##
+			#(else_try),
+				### MAIDEN OF ADELEN
+				#(eq, ":troop_no", "trp_r_nord_maiden"),
+				#(str_store_string, s22, "@Maiden of {s21}"),
+				#(str_store_string, s23, "@Maidens of {s21}"),
+				#(troop_set_name, ":troop_no", s22),
+				#(troop_set_plural_name, ":troop_no", s23),
+			#(else_try),
+				### JELBEGI LANCER
+				#(eq, ":troop_no", "trp_r_nord_jelbegi_lancer"),
+				#(str_store_string, s22, "@{s21} Lancer"),
+				#(str_store_string, s23, "@{s21} Lancers"),
+				#(troop_set_name, ":troop_no", s22),
+				#(troop_set_plural_name, ":troop_no", s23),
+			#(else_try),
+				### THANE OF SARGOTH
+				#(eq, ":troop_no", "trp_r_nord_thane"),
+				#(str_store_string, s22, "@Thane of {s21}"),
+				#(str_store_string, s23, "@Thanes of {s21}"),
+				#(troop_set_name, ":troop_no", s22),
+				#(troop_set_plural_name, ":troop_no", s23),
+			#(else_try),
+				### VALKYRIE OF TIHR
+				#(eq, ":troop_no", "trp_r_nord_valkyrie"),
+				#(str_store_string, s22, "@Valkyrie of {s21}"),
+				#(str_store_string, s23, "@Valkyries of {s21}"),
+				#(troop_set_name, ":troop_no", s22),
+				#(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
-				## MAIDEN OF ADELEN
-				(eq, ":troop_no", "trp_r_nord_maiden"),
-				(str_store_string, s22, "@Maiden of {s21}"),
-				(str_store_string, s23, "@Maidens of {s21}"),
+				(eq, ":troop_no", "trp_new_nord_lancer"),
+				(str_store_string, s22, "@Nord Lancer"),
+				(str_store_string, s23, "@Nord Lancers"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
-				## JELBEGI LANCER
-				(eq, ":troop_no", "trp_r_nord_jelbegi_lancer"),
-				(str_store_string, s22, "@{s21} Lancer"),
-				(str_store_string, s23, "@{s21} Lancers"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## THANE OF SARGOTH
-				(eq, ":troop_no", "trp_r_nord_thane"),
-				(str_store_string, s22, "@Thane of {s21}"),
-				(str_store_string, s23, "@Thanes of {s21}"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## VALKYRIE OF TIHR
-				(eq, ":troop_no", "trp_r_nord_valkyrie"),
-				(str_store_string, s22, "@Valkyrie of {s21}"),
-				(str_store_string, s23, "@Valkyries of {s21}"),
+				(eq, ":troop_no", "trp_new_wercheg_guard"),
+				(str_store_string, s22, "@{s21} Guard"),
+				(str_store_string, s23, "@{s21} Guards"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
 			## v0.24 UNIQUE TROOPS END ##
