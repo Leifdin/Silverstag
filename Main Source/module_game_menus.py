@@ -4260,7 +4260,7 @@ game_menus = [
 		]),
 	
 		("back_to_camp_menu", [], "{!}Go Back", [
-			(jump_to_menu, "mnu_mnu_camp_cheat"),
+			(jump_to_menu, "mnu_camp_cheat"),
 		]),
 	]),
 	
