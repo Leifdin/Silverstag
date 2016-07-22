@@ -1225,142 +1225,142 @@ scripts = [
 		#####                NORD FACTION                #####
 		######################################################
 		
-		## A1 - Nordic Hunter
-		(troop_set_class, "trp_r_nord_hunter", CLASS_RANGED),
-		# +1
-		(troop_set_class, "trp_r_nord_hunter_1", CLASS_RANGED),
-		# +2
-		(troop_set_class, "trp_r_nord_hunter_2", CLASS_RANGED),
+		### A1 - Nordic Hunter
+		#(troop_set_class, "trp_r_nord_hunter", CLASS_RANGED),
+		## +1
+		#(troop_set_class, "trp_r_nord_hunter_1", CLASS_RANGED),
+		## +2
+		#(troop_set_class, "trp_r_nord_hunter_2", CLASS_RANGED),
 		
-		## I1 - Nordic Bondsman
-		(troop_set_class, "trp_r_nord_bondsman", CLASS_INFANTRY),
-		# +1
-		(troop_set_class, "trp_r_nord_bondsman_1", CLASS_INFANTRY),
-		# +2
-		(troop_set_class, "trp_r_nord_bondsman_2", CLASS_INFANTRY),
+		### I1 - Nordic Bondsman
+		#(troop_set_class, "trp_r_nord_bondsman", CLASS_INFANTRY),
+		## +1
+		#(troop_set_class, "trp_r_nord_bondsman_1", CLASS_INFANTRY),
+		## +2
+		#(troop_set_class, "trp_r_nord_bondsman_2", CLASS_INFANTRY),
 		
-		## I2 - Nordic Peasant
-		(troop_set_class, "trp_r_nord_peasant", CLASS_INFANTRY),
-		# +1
-		(troop_set_class, "trp_r_nord_peasant_1", CLASS_INFANTRY),
-		# +2
-		(troop_set_class, "trp_r_nord_peasant_2", CLASS_INFANTRY),
+		### I2 - Nordic Peasant
+		#(troop_set_class, "trp_r_nord_peasant", CLASS_INFANTRY),
+		## +1
+		#(troop_set_class, "trp_r_nord_peasant_1", CLASS_INFANTRY),
+		## +2
+		#(troop_set_class, "trp_r_nord_peasant_2", CLASS_INFANTRY),
 		
-		## A3 - Nordic Retinue Archer
-		(troop_set_class, "trp_r_nord_retinue_archer", CLASS_RANGED),
-		# +1
-		(troop_set_class, "trp_r_nord_retinue_archer_1", CLASS_RANGED),
-		# +2
-		(troop_set_class, "trp_r_nord_retinue_archer_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_nord_retinue_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### A3 - Nordic Retinue Archer
+		#(troop_set_class, "trp_r_nord_retinue_archer", CLASS_RANGED),
+		## +1
+		#(troop_set_class, "trp_r_nord_retinue_archer_1", CLASS_RANGED),
+		## +2
+		#(troop_set_class, "trp_r_nord_retinue_archer_2", CLASS_RANGED),
+		#(troop_set_slot, "trp_r_nord_retinue_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I3 - Shield Maiden
-		(troop_set_class, "trp_r_nord_shield_maiden", CLASS_INFANTRY),
-		# +1
-		(troop_set_class, "trp_r_nord_shield_maiden_1", CLASS_INFANTRY),
-		# +2
-		(troop_set_class, "trp_r_nord_shield_maiden_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_shield_maiden_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I3 - Shield Maiden
+		#(troop_set_class, "trp_r_nord_shield_maiden", CLASS_INFANTRY),
+		## +1
+		#(troop_set_class, "trp_r_nord_shield_maiden_1", CLASS_INFANTRY),
+		## +2
+		#(troop_set_class, "trp_r_nord_shield_maiden_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_shield_maiden_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I3 - Nordic Raider (Bandit)
-		(troop_set_class, "trp_r_nord_raider", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		# +1
-		(troop_set_class, "trp_r_nord_raider_1", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider_1", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		# +2
-		(troop_set_class, "trp_r_nord_raider_2", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider_2", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_raider_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I3 - Nordic Raider (Bandit)
+		#(troop_set_class, "trp_r_nord_raider", CLASS_INFANTRY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider", BONUS_STEALTHY, BONUS_UNASSIGNED),
+		## +1
+		#(troop_set_class, "trp_r_nord_raider_1", CLASS_INFANTRY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider_1", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
+		## +2
+		#(troop_set_class, "trp_r_nord_raider_2", CLASS_INFANTRY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider_2", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_raider_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I4 - Nordic Retainer
-		(troop_set_class, "trp_r_nord_retainer", CLASS_INFANTRY),
-		# +1
-		(troop_set_class, "trp_r_nord_retainer_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_retainer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2
-		(troop_set_class, "trp_r_nord_retainer_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_retainer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I4 - Nordic Retainer
+		#(troop_set_class, "trp_r_nord_retainer", CLASS_INFANTRY),
+		## +1
+		#(troop_set_class, "trp_r_nord_retainer_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_retainer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2
+		#(troop_set_class, "trp_r_nord_retainer_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_retainer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I4 - Nordic Spearman
-		(troop_set_class, "trp_r_nord_spearman", CLASS_INFANTRY),
-		# +1
-		(troop_set_class, "trp_r_nord_spearman_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_spearman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2
-		(troop_set_class, "trp_r_nord_spearman_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_spearman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I4 - Nordic Spearman
+		#(troop_set_class, "trp_r_nord_spearman", CLASS_INFANTRY),
+		## +1
+		#(troop_set_class, "trp_r_nord_spearman_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_spearman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2
+		#(troop_set_class, "trp_r_nord_spearman_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_spearman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 
-		## A4 - Nordic Skirmisher
-		(troop_set_class, "trp_r_nord_skirmisher", CLASS_INFANTRY),
-		# +1
-		(troop_set_class, "trp_r_nord_skirmisher_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_skirmisher_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### A4 - Nordic Skirmisher
+		#(troop_set_class, "trp_r_nord_skirmisher", CLASS_INFANTRY),
+		## +1
+		#(troop_set_class, "trp_r_nord_skirmisher_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_skirmisher_1", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		(troop_set_class, "trp_r_nord_skirmisher_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_skirmisher_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_nord_skirmisher_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_skirmisher_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I4 - Jomsviking
-		(troop_set_class, "trp_r_nord_jomsviking", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_jomsviking", slot_troop_recruit_type, STRT_MERCENARY),
-		# +1
-		(troop_set_class, "trp_r_nord_jomsviking_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_jomsviking_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2
-		(troop_set_class, "trp_r_nord_jomsviking_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_jomsviking_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I4 - Jomsviking
+		#(troop_set_class, "trp_r_nord_jomsviking", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_jomsviking", slot_troop_recruit_type, STRT_MERCENARY),
+		## +1
+		#(troop_set_class, "trp_r_nord_jomsviking_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_jomsviking_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2
+		#(troop_set_class, "trp_r_nord_jomsviking_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_jomsviking_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## A5 - Varangian Archer (Mercenary)
-		(troop_set_class, "trp_r_nord_varangian_archer", CLASS_RANGED),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_varangian_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#+1
-		(troop_set_class, "trp_r_nord_varangian_archer_1", CLASS_RANGED),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_varangian_archer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2
-		(troop_set_class, "trp_r_nord_varangian_archer_2", CLASS_RANGED),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_varangian_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### A5 - Varangian Archer (Mercenary)
+		#(troop_set_class, "trp_r_nord_varangian_archer", CLASS_RANGED),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_varangian_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
+		##+1
+		#(troop_set_class, "trp_r_nord_varangian_archer_1", CLASS_RANGED),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_varangian_archer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2
+		#(troop_set_class, "trp_r_nord_varangian_archer_2", CLASS_RANGED),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_varangian_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I7 - Nordic Hirdmadr
-		(troop_set_class, "trp_r_nord_hirdmadr", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_hirdmadr", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +1
-		(troop_set_class, "trp_r_nord_hirdmadr_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_hirdmadr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2
-		(troop_set_class, "trp_r_nord_hirdmadr_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_nord_hirdmadr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I7 - Nordic Hirdmadr
+		#(troop_set_class, "trp_r_nord_hirdmadr", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_hirdmadr", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +1
+		#(troop_set_class, "trp_r_nord_hirdmadr_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_hirdmadr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2
+		#(troop_set_class, "trp_r_nord_hirdmadr_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_nord_hirdmadr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I7 - Varangian Guard (Mercenary)
-		(troop_set_class, "trp_r_nord_varangian_guard", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_varangian_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +1
-		(troop_set_class, "trp_r_nord_varangian_guard_1", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_varangian_guard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2
-		(troop_set_class, "trp_r_nord_varangian_guard_2", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_varangian_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I7 - Varangian Guard (Mercenary)
+		#(troop_set_class, "trp_r_nord_varangian_guard", CLASS_INFANTRY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_varangian_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +1
+		#(troop_set_class, "trp_r_nord_varangian_guard_1", CLASS_INFANTRY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_varangian_guard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2
+		#(troop_set_class, "trp_r_nord_varangian_guard_2", CLASS_INFANTRY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(troop_set_slot, "trp_r_nord_varangian_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		### C3 - Jelbegi Lancer (Unique)
 		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer"), # combat_scripts.py

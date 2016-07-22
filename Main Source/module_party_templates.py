@@ -207,21 +207,21 @@ party_templates = [
  
  ### NORDS ### - NEW TROOPS
  # GAME_MODE_EASY
- ("kingdom_4_reinforcements_a", "kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_nord_peasant,8,18),(trp_r_nord_hunter,8,18),(trp_r_nord_shield_maiden,1,2),(trp_r_nord_skald,2,5)]),
- ("kingdom_4_reinforcements_b", "kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_nord_shield_maiden,2,5),(trp_r_nord_skald,6,10),(trp_r_nord_retinue_archer,6,13)]),
- ("kingdom_4_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,2,6),(trp_r_nord_spearman,2,3),(trp_r_nord_skirmisher,3,8)]),
+ ("kingdom_4_reinforcements_a", "kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 8, 18), (trp_new_nord_bowman, 8, 18), (trp_new_nord_spearman, 1, 2), (trp_new_nord_skald, 0, 2), (trp_new_nord_retainer, 0, 1)]),
+ ("kingdom_4_reinforcements_b", "kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_nord_bowman, 2, 5), (trp_new_nord_skald, 2, 5), (trp_new_nord_retainer, 6, 7), (trp_new_nord_spearman, 7, 12), (trp_new_nord_tracker, 0, 4)],),
+ ("kingdom_4_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_nord_retainer, 2, 6), (trp_new_nord_spearman, 2, 10), (trp_new_nord_skirmisher, 3, 8), (trp_new_nord_tracker, 1, 3), (trp_new_nord_berserker, 0, 3)]),
  # GAME_MODE_NORMAL
- ("kingdom_4_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_nord_peasant,6,13),(trp_r_nord_hunter,5,13),(trp_r_nord_shield_maiden,1,2),(trp_r_nord_skald,2,5),(trp_r_nord_retinue_archer,5,10)]),
- ("kingdom_4_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,5,10),(trp_r_nord_spearman,3,5),(trp_r_nord_skirmisher,5,13)]),
- ("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_nord_berserker,2,6),(trp_r_nord_huscarl,2,8),(trp_r_nord_godi,2,3)]),
+ ("kingdom_4_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 4, 8), (trp_new_nord_bowman, 4, 12), (trp_new_nord_spearman, 4, 5), (trp_new_nord_retainer, 1, 2), (trp_new_nord_skirmisher, 5, 10)]),
+ ("kingdom_4_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_nord_retainer, 2, 6), (trp_new_nord_spearman, 4, 7), (trp_new_nord_skirmisher, 5, 13), (trp_new_nord_berserker, 0, 3), (trp_new_nord_tracker, 0, 5)]),
+ ("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_nord_berserker, 2, 6), (trp_new_nord_sharpshooter, 2, 8), (trp_r_nord_godi,2,3), (trp_new_nord_hirdman, 0, 1)],),
  # GAME_MODE_HARD
- ("kingdom_4_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_nord_shield_maiden,2,5),(trp_r_nord_skald,6,15),(trp_r_nord_retinue_archer,6,13),]),
- ("kingdom_4_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,3,7),(trp_r_nord_spearman,2,3),(trp_r_nord_skirmisher,3,8),(trp_r_nord_berserker,5,10)]),
- ("kingdom_4_reinforcements_i", "kingdom_4_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_nord_berserker,3,8),(trp_r_nord_huscarl,3,8)]),
+ ("kingdom_4_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_nord_spearman, 7, 12), (trp_new_nord_skald, 4, 5), (trp_new_nord_tracker, 6, 13), (trp_new_nord_skirmisher, 3, 5), (trp_new_nord_retainer, 4, 5)]),
+ ("kingdom_4_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_nord_retainer, 3, 7), (trp_new_nord_spearman, 2, 3), (trp_new_nord_skirmisher, 3, 8), (trp_new_nord_sharpshooter, 5, 10)]),
+ ("kingdom_4_reinforcements_i", "kingdom_4_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_nord_berserker, 3, 8), (trp_new_nord_hirdman, 0, 1), (trp_new_nord_godi, 0, 2)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_4_reinforcements_j", "kingdom_4_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_nord_retinue_archer,2,4),(trp_r_nord_retainer,2,6),(trp_r_nord_spearman,2,3),(trp_r_nord_skirmisher,3,6),(trp_r_nord_berserker,6,15)]),
- ("kingdom_4_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,1,4),(trp_r_nord_skirmisher,1,3),(trp_r_nord_berserker,11,21)]),
- ("kingdom_4_reinforcements_l", "kingdom_4_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_nord_berserker,4,6),(trp_r_nord_huscarl,2,7),(trp_r_nord_godi,1,3)]),
+ ("kingdom_4_reinforcements_j", "kingdom_4_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_nord_spearman, 1, 5), (trp_new_nord_skald, 0, 1), (trp_new_nord_tracker, 2, 8), (trp_new_nord_skirmisher, 2, 8), (trp_new_nord_retainer, 4, 5), (trp_new_nord_berserker, 2, 6)]),
+ ("kingdom_4_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_nord_retainer, 2, 4), (trp_new_nord_spearman, 0, 3), (trp_new_nord_skirmisher, 3, 8), (trp_new_nord_sharpshooter, 5, 10), (trp_new_nord_berserker, 5 , 8), (trp_new_nord_godi, 1, 2)]),
+ ("kingdom_4_reinforcements_l", "kingdom_4_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_nord_berserker, 4, 6), (trp_new_nord_hirdman, 1, 3), (trp_new_nord_godi, 1, 3), (trp_new_nord_sharpshooter, 4, 8)]),
  
  
  ### RHODOKS ### - NEW TROOPS
