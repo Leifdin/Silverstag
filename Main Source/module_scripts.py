@@ -139,11 +139,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_khergit_veteran_horse_archer"),
 	  
       ## NORDS - NEW TROOPS
-	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_r_nord_bondsman"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_r_nord_peasant"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_r_nord_shield_maiden"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_r_nord_berserker"),
+	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_new_nord_farmhand"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_new_nord_bowman"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_new_nord_spearman"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_new_nord_skirmisher"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_new_nord_berserker"),
 	  ## NORDS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_nord_recruit"),
       # (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_nord_footman"),
@@ -1214,17 +1214,17 @@ scripts = [
       # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_khergit_lancer"),
 	  ## WINDYPLAINS- ## 
       ## WINDYPLAINS+ ## - New Troop Revamp (Nord)
-	  (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_r_nord_retinue_archer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_r_nord_skirmisher"),
+	  (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_new_nord_spearman"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_new_nord_retainer"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_new_nord_bowman"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_new_nord_tracker"),
       # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_nord_warrior"),
       # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_nord_champion"),
       # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_nord_archer"),
       # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_nord_veteran_archer"),
       ## WINDYPLAINS- ## 
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_cavalry, "trp_nord_scout_multiplayer_ai"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_cavalry, "trp_nord_scout_multiplayer_ai"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_cavalry, "trp_new_nord_scout"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_cavalry, "trp_new_nord_lancer"),
 	  ## WINDYPLAINS+ ## - New Troop Revamp (Rhodok)
       (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_rhodok_vanguard"),
       (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_rhodok_vanguard"),
@@ -6808,11 +6808,11 @@ scripts = [
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_4"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_nord_deserter"),
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_nord_retainer"),
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_nord_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_nord_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_nord_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_nord_berserker"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_nord_retainer"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_nord_scout"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_nord_spearman"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_nord_skirmisher"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),

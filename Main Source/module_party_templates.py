@@ -213,7 +213,7 @@ party_templates = [
  # GAME_MODE_NORMAL
  ("kingdom_4_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 4, 8), (trp_new_nord_bowman, 4, 12), (trp_new_nord_spearman, 4, 5), (trp_new_nord_retainer, 1, 2), (trp_new_nord_skirmisher, 5, 10)]),
  ("kingdom_4_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_nord_retainer, 2, 6), (trp_new_nord_spearman, 4, 7), (trp_new_nord_skirmisher, 5, 13), (trp_new_nord_berserker, 0, 3), (trp_new_nord_tracker, 0, 5)]),
- ("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_nord_berserker, 2, 6), (trp_new_nord_sharpshooter, 2, 8), (trp_r_nord_godi,2,3), (trp_new_nord_hirdman, 0, 1)],),
+ ("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_nord_berserker, 2, 6), (trp_new_nord_sharpshooter, 2, 8), (trp_new_nord_godi,2,3), (trp_new_nord_hirdman, 0, 1)],),
  # GAME_MODE_HARD
  ("kingdom_4_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_nord_spearman, 7, 12), (trp_new_nord_skald, 4, 5), (trp_new_nord_tracker, 6, 13), (trp_new_nord_skirmisher, 3, 5), (trp_new_nord_retainer, 4, 5)]),
  ("kingdom_4_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_nord_retainer, 3, 7), (trp_new_nord_spearman, 2, 3), (trp_new_nord_skirmisher, 3, 8), (trp_new_nord_sharpshooter, 5, 10)]),
