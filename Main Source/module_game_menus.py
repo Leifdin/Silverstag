@@ -1105,7 +1105,8 @@ game_menus = [
 						(display_message, "@{!}{s4}: M{reg3}, 2M{reg4}, PC{reg5}, 2PC{reg6}, PM{reg7}"),
 					(try_end),
 				]),
-				
+			("cheat_faction_orders",[(ge,"$cheat_mode",1)],"{!}Cheat: Add Troops.",
+				[(start_presentation, "prsnt_add_troops"),]),
 			("return", [], "Return", 
 				[(jump_to_menu, "mnu_reports"),]),
 		

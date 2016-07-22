@@ -974,9 +974,78 @@ presentations = [
 			
         (try_end),
     ]),
-  ]),
+]),
+ 
+("add_troops", 0, mesh_load_window, [
+	(ti_on_presentation_load,[
+		(presentation_set_duration, 999999),
+        (set_fixed_point_multiplier, 1000),
+		
+		(assign, "$gpu_storage", VAT_OBJECTS),
+		(assign, "$gpu_data",    VAT_OBJECTS),
+		
+		## TITLE
+		(str_store_string, s21, "@Add Troops"),
+		(call_script, "script_gpu_create_text_label", "str_hub_s21", 500, 665, ce_obj_main_title, gpu_center), # 680
+		(call_script, "script_gpu_resize_object", ce_obj_main_title, 150),
+		# Doubled for bold effect.
+		(call_script, "script_gpu_create_text_label", "str_hub_s21", 500, 665, ce_obj_main_title, gpu_center), # 680
+		(call_script, "script_gpu_resize_object", ce_obj_main_title, 150),
+
+		
+		
+		## TROOP ID INUT BOX
+		(str_store_string, s21, "@Troop ID"),
+		(call_script, "script_gpu_create_text_label", "str_hub_s21", 200, 580, gpu_left),
+		(call_script, "script_gpu_create_text_box", 350, 580, vat_obj_text_input_troop_id),
+		#(call_script, "script_gpu_resize_object", vat_obj_text_input_troop_id, 150),
+		
+		## TROOP COUNT INPUT BOX
+		(str_store_string, s21, "@Troop Count"),
+		(call_script, "script_gpu_create_text_label", "str_hub_s21", 200, 500, gpu_left),
+		(call_script, "script_gpu_create_number_box", 350, 500, 1, 100, vat_obj_number_box_troop_count, vat_val_troop_count),
+		(call_script, "script_gpu_resize_object", vat_obj_number_box_troop_count, 150),
+		
+		## ADD TROOPS BUTTON
+		(str_store_string, s21, "@Add Troops"),
+		(call_script, "script_gpu_create_button", "str_hub_s21", 550, 490, vat_obj_button_add_troops),
+		
+		
+		## DONE BUTTON ##
+		(str_store_string, s21, "@Done"),
+		(call_script, "script_gpu_create_game_button", "str_hub_s21", 500, 40, vat_obj_button_done),
+	]),
+	
+	
+	(ti_on_presentation_run, [
+		(try_begin),
+			(key_clicked, key_escape),
+			(presentation_set_duration, 0),
+			(jump_to_menu, "mnu_cheat_reports"),
+		(try_end), 
+	]),
+	
+	(ti_on_presentation_event_state_change, [
+		(store_trigger_param_1, ":object"),
+        (store_trigger_param_2, ":value"),
+        (try_begin),
+        	## COMBO LABEL - REGION SELECTOR
+			(eq, ":object", "$vai_region_selector"),
+			(assign, "$vai_region_value", ":value"),
+			(store_add, "$vai_region_kingdom", "$vai_region_value", kingdoms_begin),
+			(start_presentation, "prsnt_add_troops"),
+		
+        (else_try),
+			### BUTTON - DONE ###
+			(troop_slot_eq, VAT_OBJECTS, vat_obj_button_done, ":object"),
+			(presentation_set_duration, 0),
+			(jump_to_menu, "mnu_cheat_reports"),
+		(try_end),
+	]),
+]),
+  
 ## WINDYPLAINS- ##
- ]
+]
 	
 def modmerge_presentations(orig_presentations, check_duplicates = False):
     if( not check_duplicates ):
