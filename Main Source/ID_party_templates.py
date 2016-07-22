@@ -129,3 +129,4 @@ pt_bandit_lair_templates_end = 127
 pt_leaded_looters = 128
 pt_troop_testing_party_1 = 129
 pt_troop_testing_party_2 = 130
+pt_troop_testing_party_3 = 131

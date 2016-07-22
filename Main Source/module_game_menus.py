@@ -89,8 +89,8 @@ game_menus = [
 			(change_screen_map),
 			(party_relocate_near_party, "p_main_party", "p_town_4", 2),
 			## Add troops to test ##
-			(party_add_template, "p_main_party", "pt_troop_testing_party_1"),
-			(spawn_around_party, "p_main_party", "pt_troop_testing_party_2"),
+			#(party_add_template, "p_main_party", "pt_troop_testing_party_1"),
+			(spawn_around_party, "p_main_party", "pt_troop_testing_party_3"),
 			(assign, "$troop_testing_party_is_spawned", 1),
 			(assign, "$troop_testing_party_id", reg(0)),
 			(party_set_morale, "p_main_party", 100),
@@ -1108,8 +1108,6 @@ game_menus = [
 						(display_message, "@{!}{s4}: M{reg3}, 2M{reg4}, PC{reg5}, 2PC{reg6}, PM{reg7}"),
 					(try_end),
 				]),
-			("cheat_faction_orders",[(ge,"$cheat_mode",1)],"{!}Cheat: Add Troops.",
-				[(start_presentation, "prsnt_add_troops"),]),
 			("return", [], "Return", 
 				[(jump_to_menu, "mnu_reports"),]),
 		
@@ -3750,6 +3748,14 @@ game_menus = [
    [
      ],
     [
+      ("camp_cheat_add_pt", [], "Add party templates to your party",[
+		(jump_to_menu, "mnu_cheat_add_pt"),
+      ]),
+      
+      ("camp_cheat_add_testers", [], "Spawn and add templates to testing party",[
+		(jump_to_menu, "mnu_cheat_add_testing_party"),
+      ]),
+      
       ("camp_cheat_find_item",[], "Find an item...",
        [
          (jump_to_menu, "mnu_cheat_find_item"),
@@ -3853,6 +3859,733 @@ game_menus = [
        ),
       ]
   ),
+
+	("cheat_add_pt", 0, "Current factions", "none", [], [
+	
+		("bandits", [], "{!}Bandits", [
+			(jump_to_menu, "mnu_cheat_bandits"),
+		]),
+		
+		("player_faction", [], "{!}Player Faction", [
+			(jump_to_menu, "mnu_cheat_player_faction"),
+		]),
+		
+		("faction_1", [], "{!}Kingdom of Swadia", [
+			(jump_to_menu, "mnu_cheat_faction_1"),
+		]),
+	
+		("faction_2", [], "{!}Kingdom of Vaegirs", [
+			(jump_to_menu, "mnu_cheat_faction_2"),
+		]),
+		
+		("faction_3", [], "{!}Khergit Khanate", [
+			(jump_to_menu, "mnu_cheat_faction_3"),
+		]),
+	
+		("faction_4", [], "{!}Kingdom of Nords", [
+			(jump_to_menu, "mnu_cheat_faction_4"),
+		]),
+		
+		("faction_5", [], "{!}Kingdom of Rhodoks", [
+			(jump_to_menu, "mnu_cheat_faction_5"),
+		]),
+		
+		("faction_6", [], "{!}Sarranid Sultanate", [
+			(jump_to_menu, "mnu_cheat_faction_6"),
+		]),
+	
+		("back_to_camp_menu", [], "{!}Go Back", [
+			(jump_to_menu, "mnu_camp_cheat"),
+		]),
+	]),
+	
+	
+	("cheat_bandits", 0, "{!}Bandit templates", "none", [], [
+		("add_looters", [], "{!}Add looter template", [
+			(party_add_template, "p_main_party", "pt_looters"),
+		]),
+		("add_manhunters", [], "{!}Add manhunter template", [
+			(party_add_template, "p_main_party", "pt_manhunters"),
+		]),
+		("add_steppe_bandits", [], "{!}Add steppe bandits", [
+			(party_add_template, "p_main_party", "pt_steppe_bandits"),
+		]),
+		("add_taiga_bandits", [], "{!}Add taiga bandits", [
+			(party_add_template, "p_main_party", "pt_taiga_bandits"),
+		]),
+		("add_desert_bandits", [], "{!}Add desert bandits", [
+			(party_add_template, "p_main_party", "pt_desert_bandits"),
+		]),
+		("add_forest_bandits", [], "{!}Add forest bandits", [
+			(party_add_template, "p_main_party", "pt_forest_bandits"),
+		]),
+		("add_mountain_bandits", [], "{!}Add mountain bandits", [
+			(party_add_template, "p_main_party", "pt_mountain_bandits"),
+		]),
+		("add_sea_raiders", [], "{!}Add sea raiders", [
+			(party_add_template, "p_main_party", "pt_sea_raiders"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	("cheat_player_faction", 0, "{!}Player Faction reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_0_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	
+	("cheat_faction_1", 0, "{!}Kingdom of Swadia reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_1_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	("cheat_faction_2", 0, "{!}Kingdom of Vaegirs reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_2_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	("cheat_faction_3", 0, "{!}Khergit Khanate reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_3_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	("cheat_faction_4", 0, "{!}Kingdom of Nords reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_4_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	("cheat_faction_5", 0, "{!}Kingdom of Rhodoks reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_5_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	("cheat_faction_6", 0, "{!}Sarranid Sultanate reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "p_main_party", "pt_kingdom_6_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+	]),
+	
+	
+	("cheat_add_testing_party", 0, "Testing party", "none", [], [
+		
+		("spawn_testing_party", [], "{!} Spawn Testing Party", [
+			(spawn_around_party, "p_main_party", "pt_troop_testing_party_3"),
+			(assign, "$troop_testing_party_id", reg(0)),
+			(assign, "$troop_testing_party_is_spawned", 1)
+		]),
+	
+		("bandits", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Bandits", [
+			(jump_to_menu, "mnu_cheat_bandits_testers"),
+		]),
+		
+		("player_faction", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Player Faction", [
+			(jump_to_menu, "mnu_cheat_player_faction_testers"),
+		]),
+		
+		("faction_1", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Kingdom of Swadia", [
+			(jump_to_menu, "mnu_cheat_faction_1_testers"),
+		]),
+	
+		("faction_2", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Kingdom of Vaegirs", [
+			(jump_to_menu, "mnu_cheat_faction_2_testers"),
+		]),
+		
+		("faction_3", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Khergit Khanate", [
+			(jump_to_menu, "mnu_cheat_faction_3_testers"),
+		]),
+	
+		("faction_4", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Kingdom of Nords", [
+			(jump_to_menu, "mnu_cheat_faction_4_testers"),
+		]),
+		
+		("faction_5", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Kingdom of Rhodoks", [
+			(jump_to_menu, "mnu_cheat_faction_5_testers"),
+		]),
+		
+		("faction_6", [(eq, "$troop_testing_party_is_spawned", 1),], "{!}Sarranid Sultanate", [
+			(jump_to_menu, "mnu_cheat_faction_6_testers"),
+		]),
+	
+		("back_to_camp_menu", [], "{!}Go Back", [
+			(jump_to_menu, "mnu_mnu_camp_cheat"),
+		]),
+	]),
+	
+	("cheat_bandits_testers", 0, "{!}Bandit templates", "none", [], [
+		("add_looters", [], "{!}Add looter template", [
+			(party_add_template, "$troop_testing_party_id", "pt_looters"),
+		]),
+		("add_manhunters", [], "{!}Add manhunter template", [
+			(party_add_template, "$troop_testing_party_id", "pt_manhunters"),
+		]),
+		("add_steppe_bandits", [], "{!}Add steppe bandits", [
+			(party_add_template, "$troop_testing_party_id", "pt_steppe_bandits"),
+		]),
+		("add_taiga_bandits", [], "{!}Add taiga bandits", [
+			(party_add_template, "$troop_testing_party_id", "pt_taiga_bandits"),
+		]),
+		("add_desert_bandits", [], "{!}Add desert bandits", [
+			(party_add_template, "$troop_testing_party_id", "pt_desert_bandits"),
+		]),
+		("add_forest_bandits", [], "{!}Add forest bandits", [
+			(party_add_template, "$troop_testing_party_id", "pt_forest_bandits"),
+		]),
+		("add_mountain_bandits", [], "{!}Add mountain bandits", [
+			(party_add_template, "$troop_testing_party_id", "pt_mountain_bandits"),
+		]),
+		("add_sea_raiders", [], "{!}Add sea raiders", [
+			(party_add_template, "$troop_testing_party_id", "pt_sea_raiders"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	
+	("cheat_player_faction_testers", 0, "{!}Player Faction reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_0_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	
+	("cheat_faction_1_testers", 0, "{!}Kingdom of Swadia reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_1_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	("cheat_faction_2_testers", 0, "{!}Kingdom of Vaegirs reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_2_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	("cheat_faction_3_testers", 0, "{!}Khergit Khanate reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_3_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	("cheat_faction_4_testers", 0, "{!}Kingdom of Nords reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_4_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	("cheat_faction_5_testers", 0, "{!}Kingdom of Rhodoks reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_5_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	("cheat_faction_6_testers", 0, "{!}Sarranid Sultanate reinforcement templates", "none", [], [
+		("add_template_a", [], "{!}Add template A", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_a"),
+		]),
+		("add_template_b", [], "{!}Add template B", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_b"),
+		]),
+		("add_template_c", [], "{!}Add template C", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_c"),
+		]),
+		("add_template_d", [], "{!}Add template D", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_d"),
+		]),
+		("add_template_e", [], "{!}Add template E", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_e"),
+		]),
+		("add_template_f", [], "{!}Add template F", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_f"),
+		]),
+		("add_template_g", [], "{!}Add template G", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_g"),
+		]),
+		("add_template_h", [], "{!}Add template H", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_h"),
+		]),
+		("add_template_i", [], "{!}Add template I", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_i"),
+		]),
+		("add_template_j", [], "{!}Add template J", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_j"),
+		]),
+		("add_template_k", [], "{!}Add template K", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_k"),
+		]),
+		("add_template_l", [], "{!}Add template L", [
+			(party_add_template, "$troop_testing_party_id", "pt_kingdom_6_reinforcements_l"),
+		]),
+		("return", [], "{!}Return", [
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+	]),
+	
+			
+
+  
   
   ("cheat_find_item",0,
    "{!}Current item range: {reg5} to {reg6}^{s30}",
