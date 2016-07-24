@@ -10,24 +10,24 @@ This mod is released as open-source software without a specific license, which c
 We actively encourage this. Sub-mods may retain the Silverstag name as long as it is clear that it is a sub-mod (example: "Silverstag: <sub-mod name>" or <patch name> (Silverstag v0.23 Patch)). We're not as concerned with how you name it such as that it is clear to the community what it is and which version of Silverstag it is compatible with.
 
 3. You can pull a feature from Silverstag to put in another mod.
-Please note that Silverstag is heavily reliant upon the Warband Script Enhancer (WSE) to function and each of its features are very interrelated which makes it difficult to pull out an individual one.  Any features pulled out that are not specificly created by the Silverstag team have been credited within our download thread on the Taleworlds forum.  Please ensure you're giving credit to the correct folks and if you're unsure I'd be happy to answer questions of this nature. To make matters more clear and easy to follow, the list of content creators other than Silverstag team is a part of this license. Model resource files (.brf files) are named by their creators.
+Please note that Silverstag is heavily reliant upon the Warband Script Enhancer (WSE) to function and each of its features are very interrelated which makes it difficult to pull out an individual one.  Any features pulled out that are not created by the Silverstag team have been credited within our download thread on the Taleworlds forum.  Please ensure you're giving credit to the correct folks and if you're unsure we'd be happy to answer questions of this nature. To make matters more clear and easy to follow, the list of content creators other than Silverstag team is a part of this license.
 
-4. We do not provide technical support for any of the above?.
+4. We do not provide technical support for any of the above.
 The source files are well segregated into modmerger kits and generally follow a naming convention that will point you in the right direction of where to look.  If you're unsure where something is after looking we can help you with that, but we're generally not interested in giving detailed instructions on how to remove / alter a feature within the mod.  It really depends on the number of and nature of the requests. We also may write documentation for the mod at some point.
 
 
 MODULE SYSTEM SETUP NOTES:
 
-    "compile.bat" is the main compiling batch file to use. Check the "slots" excel file within the documentation folder to see where slot numbers have been used by the various source kits.  This information should be up to date.
+    compile.bat/comppile.sh is the main compiling batch file to use. Check the "slots" excel file within the documentation folder to see where slot numbers have been used by the various source kits.  This information should be up to date.
     When scripts are used from a source not within the main module_scripts or the kit you're currently within it will generally have a comment following stating which file to look into.  A common exception to this are "gpu" scripts which are found in the generic presentation utilities kit for building interfaces.
     There are a number of kits that are retained solely for preserving save games and will be removed upon the next save breaking update.  Some of these caused issues while integrated and just have not had their resources / code removed entirely or were left in a disabled state.  Beta Testing Suite, Dynamic Damage and Emoticons are all examples of this and should be left disabled.
 
 
 
-Thanks for your interest and I hope you can gain some use out of the materials supplied.  I look forward to seeing what creations you come up with and would love to hear about them for possible inclusion into the Silverstag mod.
+Thanks for your interest and we hope you can gain some use out of the materials supplied. We look forward to seeing what creations you come up with and would love to hear about them for possible inclusion into the Silverstag mod.
 
 Good Luck,
-Windyplains
+Windyplains & Leifdin
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
