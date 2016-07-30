@@ -1620,7 +1620,7 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_TRAILBLAZER , BONUS_UNASSIGNED),
 		
 		##### A4 Nord Skirmisher #####
-		(troop_set_class, "trp_new_nord_skirmisher", CLASS_RANGED),
+		(troop_set_class, "trp_new_nord_skirmisher", CLASS_INFANTRY),
 		
 		##### I5 Nord Berserker #####
 		(troop_set_class, "trp_new_nord_tracker", CLASS_INFANTRY),
