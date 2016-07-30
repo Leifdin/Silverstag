@@ -19,6 +19,7 @@ summarize_skill_count                  = 2
 ###########################################################################################################################
 
 # character backgrounds
+cb_dev = 7
 cb_noble = 6
 cb_merchant = 5
 cb_guard = 4
