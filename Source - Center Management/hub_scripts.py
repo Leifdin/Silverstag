@@ -245,7 +245,7 @@ scripts = [
 		## Swadian Militia - I2
 		(troop_set_class, "trp_new_swadian_militia", CLASS_INFANTRY),
 		
-		## Swadian Lancer - C2
+		## Swadian Lancer - C3
 		(troop_set_class, "trp_new_swadian_lancer", CLASS_CAVALRY),
 		
 		## Swadian Footman - I3
@@ -260,15 +260,15 @@ scripts = [
 		## Swadian Crossbowman - A3
 		(troop_set_class, "trp_new_swadian_crossbowman", CLASS_RANGED),
 		
-		## Swadain Man-at-Arms - C3
+		## Swadain Man-at-Arms - C4
 		(troop_set_class, "trp_new_swadian_man_at_arms", CLASS_CAVALRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_man_at_arms"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_man_at_arms", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_man_at_arms", BONUS_HARDY, BONUS_UNASSIGNED),
 		
-		## Caravan Guard - H3
-		(troop_set_class, "trp_new_caravan_guard", CLASS_CAVALRY),
-		(troop_set_slot, "trp_new_caravan_guard", slot_troop_recruit_type, STRT_MERCENARY),
+		## Swadian Skirmisher - H4
+		(troop_set_class, "trp_new_swadian_skirmisher", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_swadian_skirmisher", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## Swadian Sargeant - A5
 		(troop_set_class, "trp_new_swadian_sargeant", CLASS_RANGED),
@@ -277,9 +277,18 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sargeant", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sargeant", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
 		
-		## Swadian Billman - I5
+		## Swadian Billman - I6
 		(troop_set_class, "trp_new_swadian_billman", CLASS_INFANTRY),
 		(troop_set_slot, "trp_new_swadian_billman", slot_troop_recruit_type, STRT_NOBLEMAN),
+
+		## Swadian Sentinel - I7
+		(troop_set_class, "trp_new_swadian_sentinel", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_swadian_sentinel", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sentinel"), # combat_scripts.py
+		(troop_set_slot, "trp_new_swadian_sentinel", slot_troop_unique_location, "p_town_16"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sentinel", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sentinel", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sentinel", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
 
 		## Dhirim Captain - C5
 		(troop_set_class, "trp_new_dhirim_captain", CLASS_CAVALRY),

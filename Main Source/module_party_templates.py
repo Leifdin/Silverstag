@@ -129,18 +129,18 @@ party_templates = [
  # GAME_MODE_EASY
  ("kingdom_1_reinforcements_a", "kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_swadian_farmer, 4, 12), (trp_new_swadian_militia, 4, 10), (trp_new_swadian_supplyman, 1, 5), (trp_new_swadian_hunter, 0, 2), (trp_new_swadian_footman, 0, 1)]),
  ("kingdom_1_reinforcements_b", "kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 2, 5), (trp_new_swadian_hunter, 2, 5), (trp_new_swadian_supplyman, 6, 7), (trp_new_swadian_militia, 7, 12), (trp_new_swadian_footman, 0, 4)]),
- ("kingdom_1_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_swadian_lancer, 4, 12), (trp_new_swadian_man_at_arms, 3, 5)]),
+ ("kingdom_1_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_swadian_lancer, 4, 12), (trp_new_swadian_man_at_arms, 3, 5), (trp_new_swadian_skirmisher, 0, 5)]),
  # GAME_MODE_NORMAL
  ("kingdom_1_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_swadian_farmer, 4, 8), (trp_new_swadian_militia, 4, 12), (trp_new_swadian_supplyman, 4, 5), (trp_new_swadian_hunter, 1, 2), (trp_new_swadian_footman, 5, 10)]),
- ("kingdom_1_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 2, 6), (trp_new_swadian_hunter, 4, 7), (trp_new_swadian_supplyman, 5, 13), (trp_new_swadian_billman, 0, 3), (trp_new_swadian_footman, 0, 5)]),
+ ("kingdom_1_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 2, 6), (trp_new_swadian_hunter, 4, 7), (trp_new_swadian_militia, 5, 13), (trp_new_swadian_billman, 0, 3), (trp_new_swadian_footman, 0, 5)]),
  ("kingdom_1_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_swadian_lancer, 6, 8), (trp_new_swadian_man_at_arms, 4, 5)]),
  # GAME_MODE_HARD
  ("kingdom_1_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 7, 12), (trp_new_swadian_supplyman, 4, 5), (trp_new_swadian_sargeant, 6, 13), (trp_new_swadian_billman, 4, 5)]),
- ("kingdom_1_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 3, 7), (trp_new_swadian_supplyman, 2, 3), (trp_new_swadian_billman, 3, 8), (trp_new_swadian_sargeant, 5, 10)]),
+ ("kingdom_1_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 3, 7), (trp_new_swadian_militia, 2, 3), (trp_new_swadian_billman, 3, 8), (trp_new_swadian_sargeant, 5, 10)]),
  ("kingdom_1_reinforcements_i", "kingdom_4_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_swadian_lancer, 3, 5), (trp_new_swadian_man_at_arms, 4, 8), (trp_new_swadian_knight, 0, 4)]),
  # GAME_MODE_VERY_HARD
  ("kingdom_1_reinforcements_j", "kingdom_4_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 1, 5), (trp_new_swadian_supplyman, 0, 1), (trp_new_swadian_sargeant, 2, 8), (trp_new_swadian_billman, 2, 8)]),
- ("kingdom_1_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 2, 4), (trp_new_swadian_supplyman, 0, 1), (trp_new_swadian_billman, 3, 8), (trp_new_swadian_sargeant, 5, 10), (trp_new_swadian_footman, 5 , 10)]),
+ ("kingdom_1_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_swadian_crossbowman, 2, 4), (trp_new_swadian_militia, 0, 1), (trp_new_swadian_billman, 3, 8), (trp_new_swadian_sargeant, 5, 10), (trp_new_swadian_footman, 5 , 10)]),
  ("kingdom_1_reinforcements_l", "kingdom_4_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_swadian_lancer, 1, 4), (trp_new_swadian_man_at_arms, 5, 12), (trp_new_swadian_knight, 1, 6)]),
  
 
