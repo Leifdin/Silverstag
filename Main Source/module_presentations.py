@@ -419,7 +419,7 @@ presentations = [
       (try_begin),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_1"),
         ## WINDYPLAINS+ ## - New Troop Revamp (Common)
-		(assign, ":cur_troop", "trp_r_swadian_man_at_arms"),
+		(assign, ":cur_troop", "trp_new_swadian_man_at_arms"),
         # (assign, ":cur_troop", "trp_swadian_knight"),
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_2"),

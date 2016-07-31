@@ -100,11 +100,11 @@ scripts = [
 	  # Cultures:
 	  ## WINDYPLAINS+ ## - New Troop Revamp - Culture Troops (Common)
 	  ## SWADIA - NEW TROOPS
-	  (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_r_swadian_hunter"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_r_swadian_militia"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_r_swadian_footman"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_r_swadian_billman"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_r_swadian_sergeant"),
+	  (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_new_swadian_hunter"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_new_swadian_militia"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_new_swadian_footman"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_new_swadian_man_at_arms"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_new_swadian_billman"),
 	  ## SWADIA - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_swadian_recruit"),
       # (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_swadian_militia"),
@@ -1175,12 +1175,12 @@ scripts = [
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_cavalry, "trp_desert_bandit"),
       ## WINDYPLAINS+ ## - New Troop Revamp - Quick Battle Troops (Common)
       ## SWADIA
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_r_swadian_footman"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_r_swadian_sergeant"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_r_swadian_hunter"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_r_tilbaut_archer"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_r_swadian_lancer"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_r_dhirim_captain"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_new_swadian_footman"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_new_swadian_billman"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_new_swadian_crossbowman"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_new_swadian_sargeant"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_new_swadian_man_at_arms"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_new_dhirim_captain"),
 	  # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_swadian_footman"),
       # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_swadian_infantry"),
       # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_swadian_skirmisher"),
@@ -6699,14 +6699,14 @@ scripts = [
         (try_begin),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_1"),
       
-          (faction_set_slot, ":faction_no",  slot_faction_deserter_troop, "trp_swadian_deserter"),
+          (faction_set_slot, ":faction_no",  slot_faction_deserter_troop, "trp_new_swadian_militia"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Swadia)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_swadian_sentinel"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_swadian_billman"),
           # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_swadian_sergeant"),
 		  ## WINDYPLAINS- ##
-          (faction_set_slot, ":faction_no",  slot_faction_messenger_troop, "trp_swadian_messenger"),
-          (faction_set_slot, ":faction_no",  slot_faction_prison_guard_troop, "trp_swadian_prison_guard"),
-          (faction_set_slot, ":faction_no",  slot_faction_castle_guard_troop, "trp_swadian_castle_guard"),
+          (faction_set_slot, ":faction_no",  slot_faction_messenger_troop, "trp_new_swadian_lancer"),
+          (faction_set_slot, ":faction_no",  slot_faction_prison_guard_troop, "trp_new_swadian_footman"),
+          (faction_set_slot, ":faction_no",  slot_faction_castle_guard_troop, "trp_new_swadian_sargeant"),
 		  ## WINDYPLAINS+ ## - Support different groupings of reinforcements based on mod difficulty.
 		  (try_begin),
 		      ## GAME_MODE_EASY
@@ -27824,7 +27824,7 @@ scripts = [
       (try_begin),
         (le, ":guard_troop", 0),
 		## WINDYPLAINS+ ## - New Troop Revamp (Swadia)
-        (assign, ":guard_troop", "trp_r_swadian_sentinel"),
+        (assign, ":guard_troop", "trp_new_swadian_sargeant"),
 		# (assign, ":guard_troop", "trp_swadian_sergeant"),
 		## WINDYPLAINS- ##
       (try_end),
@@ -52077,13 +52077,6 @@ scripts = [
 		(try_end),
 		
 		# FORCE CERTAIN TROOP FIXES.
-		# Swadian Militia
-		(troop_set_skill, "trp_r_swadian_militia", "skl_ironflesh", 2),
-		(troop_set_skill, "trp_r_swadian_militia", "skl_power_strike", 2),
-		(troop_set_skill, "trp_r_swadian_militia", "skl_shield", 2),
-		# Swadian Hunter
-		(troop_set_proficiency, "trp_r_swadian_hunter", wpt_archery, 75),
-		(troop_set_skill, "trp_r_swadian_hunter", "skl_power_draw", 0),
 		# Huntsman of Khudan (Veteran) - Keeps ending up with a 26 agility otherwise.
 		(troop_set_attribute, "trp_khudan_mounted_archer_1", ca_agility, 16),
 		

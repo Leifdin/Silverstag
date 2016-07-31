@@ -6602,7 +6602,7 @@ game_menus = [
                 (change_screen_return),              
                 
                 ## WINDYPLAINS+ ## - New Troop Revamp (Swadia)
-				(assign, ":best_troop", "trp_r_swadian_crossbowman"),
+				(assign, ":best_troop", "trp_new_swadian_crossbowman"),
 				# (assign, ":best_troop", "trp_swadian_sharpshooter"),
 				## WINDYPLAINS- ##
                 (assign, ":maximum_troop_score", 0),
