@@ -232,6 +232,14 @@ scripts = [
 		#####               SWADIA FACTION               #####
 		######################################################
 		
+		##### New Troops #####
+		(troop_set_class, "trp_new_swadian_lancer", CLASS_CAVALRY),
+		
+		(troop_set_class, "trp_new_swadian_man_at_arms", CLASS_CAVALRY),
+		
+		
+		
+		
 		## I2 - Swadia Militia
 		(troop_set_class, "trp_r_swadian_militia", CLASS_INFANTRY),
 		# +1 tier

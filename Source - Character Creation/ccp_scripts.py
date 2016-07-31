@@ -1845,7 +1845,7 @@ scripts = [
 		(troop_raise_skill, "trp_player", skl_tactics, 5),
 		(troop_raise_skill, "trp_player", skl_pathfinding,3),
 		(troop_raise_skill, "trp_player", skl_spotting, 3),
-		(troop_raise_skill, "trp_player", skl_inventory_management, 3),
+		(troop_raise_skill, "trp_player", skl_inventory_management, 10),
 		(troop_raise_skill, "trp_player", skl_wound_treatment, 3),
 		(troop_raise_skill, "trp_player", skl_surgery, 3),
 		(troop_raise_skill, "trp_player", skl_first_aid, 3),

@@ -639,6 +639,59 @@ troops = [
 ["khergit_castle_guard","Castle Guard","Castle Guards", tf_guarantee_shield|tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet,0,0,fac_kingdom_3,[itm_heavy_sabre,itm_round_cavalry_shield,itm_plain_cavalry_shield,itm_byrnie,itm_lamellar_armor,itm_khergit_leather_boots,itm_iron_greaves,itm_elite_steppe_helmet,itm_cavalry_helmet,itm_leather_warrior_cap],def_attrib|level(24),wp(130),knows_athletics_5|knows_shield_2|knows_ironflesh_5,khergit_face_middle_1,khergit_face_older_2],
 
 
+###################################
+## KINGDOM OF SWADIA (FACTION 1) ##
+###################################
+
+## Swadian Farmer - I1
+
+## Swadian Supplyman - A2
+## Swadian Militia - I2
+## Swadian Lancer - C2
+
+## Swadian Footman - I3
+## Swadian Hunter - A3
+## Swadian Crossbowman - A3
+## Swadain Man-at-Arms - C3
+## Caravan Guard - H3
+
+## Swadian Sargeant - A5
+## Swadian Billman - I5
+
+
+
+## Dhirim Captain - C5
+## Suno Master Archer - A5
+## Swadian Knight - C7
+
+##### Tier 1 #####
+["new_swadian_farmer",			"Swadian Farmer",			"Swadian Farmers",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_1,		[itm_blue_hose, itm_woolen_hose, itm_short_aketon, itm_scythe, itm_stones, itm_hood_a, itm_hood_b],																												str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(75)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_1|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+
+##### Tier 2 #####
+["new_swadian_supplyman",		"Swadian Supplyman",		"Swadian Supplymen",		tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_1,		[itm_bear_paw_shoes, itm_woolen_hose, itm_gambeson, itm_blue_gambeson, itm_padded_coif, itm_falchion, itm_war_darts, itm_war_darts, itm_war_darts],																str_15|agi_12|int_6|cha_6|level(8),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_1|knows_power_throw_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_hunter",			"Swadian Hunter",			"Swadian Hunter",			tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_1,		[itm_wrapping_boots, itm_red_gambeson, itm_padded_coif, itm_falchion, itm_short_bow, itm_arrows, itm_arrows],																									str_15|agi_12|int_6|cha_6|level(8),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(100),knows_power_draw_3|knows_athletics_3|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_militia",			"Swadian Militia",			"Swadian Militia",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_1,		[itm_ankle_boots, itm_woolen_hose, itm_red_gambeson, itm_mail_coif, itm_peasant_spear],																															str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(125)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_lancer",			"Swadian Lancer",			"Swadian Lancers",			tf_guarantee_all_cavalry|tf_male, 0,0, fac_kingdom_1,		[itm_hose_kneecops_green, itm_hose_kneecops_red, itm_long_aketon, itm_mail_coif, itm_simple_lance, itm_kite_shield_a, itm_kite_shield_b, itm_hunter, itm_white_hunter, itm_dark_brown_hunter],					str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(100)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_riding_3|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+
+##### Tier 3 #####
+["new_swadian_crossbowman",		"Swadian Crossbowman",		"Swadian Crossbowman",		tf_guarantee_all_ranged|tf_female, 0,0, fac_kingdom_1,		[itm_mail_chausses, itm_black_gambeson_a, itm_black_gambeson_b, itm_carlingian_helm, itm_light_crossbow, itm_steel_bolts, itm_steel_bolts],																		str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(200)|wp_throwing(100),knows_athletics_4|knows_ironflesh_3|knows_weapon_master_3, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_footman",			"Swadian Footman",			"Swadian Footmen",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_1,		[itm_mail_chausses, itm_swadian_gambeson, itm_coif, itm_mail_mittens, itm_kite_shield_c, itm_kite_shield_d, itm_cheap_cleaver],																					str_18|agi_12|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_ironflesh_4|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_man-at-arms",		"Swadian Man-at-Arms",		"Swadian Men-at-Arms",		tf_guarantee_all_cavalry|tf_male, 0,0, fac_kingdom_1,		[itm_mail_boots, itm_mail_hauberk, itm_flat_top_helmet, itm_long_sword, itm_kite_shield_c, itm_kite_shield_d, itm_war_horse_b],																					str_12|agi_12|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_riding_3|knows_ironflesh_3|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_caravan_guard",	"Caravan Guard",			"Caravan Guards",			tf_guarantee_all|tf_male, 0,0, fac_kingdom_1,				[itm_hose_kneecops_green, itm_hose_kneecops_red, itm_caravan_guard_robe_t2, itm_mail_coif, itm_light_crossbow, itm_courser, itm_dark_courser, itm_brown_courser, itm_long_sword],								str_12|agi_12|int_6|cha_6|level(12),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(125)|wp_throwing(0),knows_power_strike_2|knows_riding_3|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+
+##### Tier 5 #####
+["new_swadian_sargeant",		"Swadian Sargeant",			"Swadian Sargeants",		tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_1,		[itm_mail_boots, itm_leather_gloves, itm_heavy_swadian_gambeson, itm_norman_helmet_with_coif_a, itm_long_bow, itm_arrows, itm_arrows, itm_infantry_spear],														str_18|agi_15|int_6|cha_6|level(20),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(150)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_power_draw_4|knows_power_strike_4|knows_athletics_4|knows_ironflesh_3|knows_weapon_master_3, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_billman",			"Swadian Billman",			"Swadian Billmen",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_1,		[itm_mail_boots, itm_padded_mail_a, itm_padded_mail_b, itm_flat_top_pepperpot_a, itm_flat_top_pepperpot_b, itm_mail_mittens, itm_bill, itm_voulge, itm_long_bardiche, itm_great_long_bardiche],					str_18|agi_18|int_6|cha_6|level(20),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(200)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_4|knows_ironflesh_6|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+
+##### Uniques #####
+["new_dhirim_captain",			"Dhirim Captain",			"Dhirim Captains",			tf_guarantee_all_cavalry|tf_male, 0,0, fac_kingdom_1,		[itm_iron_greaves, itm_mail_mittens,itm_coat_of_plates, itm_coat_of_plates_red, itm_norman_helmet_with_coif_b, itm_kite_shield_e, itm_kite_shield_f, itm_iron_mace],											str_18|agi_15|int_6|cha_6|level(20),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_riding_4|knows_ironflesh_3|knows_weapon_master_3, swadian_face_younger_1, swadian_face_middle_2],
+["new_suno_master_archer",		"Suno Master Archer",		"Suno Master Archers",		tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_1,		[itm_leather_boots, itm_mail_shirt, itm_chapel_de_fer_a, itm_mail_mittens, itm_long_bow, itm_arrows, itm_arrows, itm_arrows],																					str_24|agi_21|int_6|cha_6|level(20),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(0)|wp_archery(250)|wp_crossbow(0)|wp_throwing(0),knows_power_draw_7|knows_athletics_6|knows_ironflesh_3|knows_weapon_master_6, swadian_face_younger_1, swadian_face_middle_2],
+["new_swadian_knight",			"Swadian Knight",			"Swadian Knight",			tf_guarantee_all_cavalry|tf_male, 0,0, fac_kingdom_1,		[itm_iron_greaves, itm_gauntlets, itm_mail_and_plate_b, itm_mail_and_plate_a, itm_marching_helmet, itm_kite_shield_g, itm_kite_shield_h, itm_knightly_lance_a, itm_knightly_lance_b, itm_western_long_sword_a],	str_21|agi_18|int_6|cha_6|level(28),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_7|knows_riding_6|knows_ironflesh_7|knows_weapon_master_6, swadian_face_younger_1, swadian_face_middle_2],
+
+
+["new_swadian_troops_ends",		"Swadian Crossbowman",		"Swadian Crossbowman",		tf_guarantee_all_ranged|tf_female, 0,0, fac_kingdom_1,		[itm_bear_paw_shoes, itm_woolen_hose, itm_gambeson, itm_blue_gambeson, itm_padded_coif, itm_falchion, itm_war_darts, itm_war_darts, itm_war_darts],																str_15|agi_12|int_6|cha_6|level(8),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_1|knows_power_throw_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
+
+
 ######################################
 ## KINGDOM OF THE NORDS (FACTION 4) ##
 ######################################

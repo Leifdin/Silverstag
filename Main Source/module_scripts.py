@@ -4310,13 +4310,13 @@ scripts = [
         # (val_div, ":wage", 3),
       # (try_end),
 	  ## WINDYPLAINS- ##
-      (try_begin), #mercenaries cost %50 more than the normal cost
-		## WINDYPLAINS+ ## - Mercenaries cost 50% more than the normal cost.
+      (try_begin), #mercenaries cost %100 more than the normal cost
+		## WINDYPLAINS+ ## - Mercenaries cost 100% more than the normal cost.
 	    (troop_slot_eq, ":troop_id", slot_troop_recruit_type, STRT_MERCENARY),
         # (is_between, ":troop_id", mercenary_troops_begin, mercenary_troops_end),
 		## WINDYPLAINS- ##
-        (val_mul, ":wage", 3),
-        (val_div, ":wage", 2),
+        (val_mul, ":wage", 2),
+        #(val_div, ":wage", 2),
       (try_end),
 	  
       (try_begin),
