@@ -3756,6 +3756,10 @@ game_menus = [
 		(jump_to_menu, "mnu_cheat_add_testing_party"),
       ]),
       
+      ("camp_cheat_add_veterans", [], "Add five veterans to your party",[
+		(party_add_members, "p_main_party", "trp_new_swadian_billman", 5),
+		]),
+      
       ("camp_cheat_find_item",[], "Find an item...",
        [
          (jump_to_menu, "mnu_cheat_find_item"),

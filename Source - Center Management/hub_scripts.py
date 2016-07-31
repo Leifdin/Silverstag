@@ -228,6 +228,7 @@ scripts = [
 		(faction_set_slot, "fac_player_supporters_faction", slot_faction_troops_end,   player_troops_end),
 		
 		
+		
 		######################################################
 		#####               SWADIA FACTION               #####
 		######################################################
@@ -256,6 +257,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_hunter"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_hunter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_hunter", BONUS_HUNTER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_hunter", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
 		
 		## Swadian Crossbowman - A3
 		(troop_set_class, "trp_new_swadian_crossbowman", CLASS_RANGED),
@@ -265,6 +267,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_man_at_arms"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_man_at_arms", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_man_at_arms", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_man_at_arms", BONUS_INSPIRING, BONUS_UNASSIGNED),
 		
 		## Swadian Skirmisher - H4
 		(troop_set_class, "trp_new_swadian_skirmisher", CLASS_CAVALRY),
