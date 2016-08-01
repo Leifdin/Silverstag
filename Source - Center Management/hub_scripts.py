@@ -273,16 +273,23 @@ scripts = [
 		(troop_set_class, "trp_new_swadian_skirmisher", CLASS_CAVALRY),
 		(troop_set_slot, "trp_new_swadian_skirmisher", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## Swadian Sargeant - A5
-		(troop_set_class, "trp_new_swadian_sargeant", CLASS_RANGED),
-		(troop_set_slot, "trp_new_swadian_sargeant", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sargeant"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sargeant", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sargeant", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		## Swadian Sharpshooter -A5
+		(troop_set_class, "trp_new_swadian_sharpshooter", CLASS_RANGED),
+		(troop_set_slot, "trp_new_swadian_sharpshooter", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sharpshooter"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sharpshooter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sharpshooter", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
 		
 		## Swadian Billman - I6
 		(troop_set_class, "trp_new_swadian_billman", CLASS_INFANTRY),
 		(troop_set_slot, "trp_new_swadian_billman", slot_troop_recruit_type, STRT_NOBLEMAN),
+
+		## Swadian Sargeant - A7
+		(troop_set_class, "trp_new_swadian_sargeant", CLASS_RANGED),
+		(troop_set_slot, "trp_new_swadian_sargeant", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sargeant"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sargeant", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sargeant", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
 
 		## Swadian Sentinel - I7
 		(troop_set_class, "trp_new_swadian_sentinel", CLASS_INFANTRY),
@@ -310,7 +317,7 @@ scripts = [
 		(troop_set_slot, "trp_new_suno_master_archer", slot_troop_unique_location, "p_town_4"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_suno_master_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_suno_master_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_suno_master_archer", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_suno_master_archer", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
 		
 		## Swadian Knight - C7
 		(troop_set_class, "trp_new_swadian_knight", CLASS_CAVALRY),
@@ -1042,23 +1049,24 @@ scripts = [
 		(troop_set_class, "trp_new_nord_skirmisher", CLASS_INFANTRY),
 		
 		##### I5 Nord Berserker #####
-		(troop_set_class, "trp_new_nord_tracker", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_tracker"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_tracker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_BERSERKER , BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_BLOODLUST , BONUS_UNASSIGNED),
+		(troop_set_class, "trp_new_nord_berserker", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_berserker"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_berserker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_BOUNDLESS_ENDURANCE , BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_CHARGING_STRIKE , BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_nord_berserker", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		##### I5 Hired Blade #####
 		(troop_set_class, "trp_new_hired_blade", CLASS_INFANTRY),
 		(troop_set_slot, "trp_new_hired_blade", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		##### I5 Nord Sharpshooter #####
-		(troop_set_class, "trp_new_nord_sharpshooter", CLASS_RANGED),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_sharpshooter"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_sharpshooter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_sharpshooter", BONUS_SHARPSHOOTER , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_sharpshooter", slot_troop_recruit_type, STRT_NOBLEMAN),
+		##### A6 Nord Retinue Archer #####
+		(troop_set_class, "trp_new_nord_retinue_archer", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_retinue_archer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_retinue_archer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_VOLLEY_COMMANDER , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_SUPPLY_RUNNER , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_retinue_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		##### I6 Nord Godi #####
 		(troop_set_class, "trp_new_nord_godi", CLASS_INFANTRY),
@@ -4005,8 +4013,8 @@ scripts = [
 						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_bowman", ":lord_no"),
 						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_bowman", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_sharpshooter", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_sharpshooter", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_retinue_archer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_retinue_archer", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),

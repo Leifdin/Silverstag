@@ -3748,23 +3748,17 @@ game_menus = [
    [
      ],
     [
-      ("camp_cheat_add_pt", [], "Add party templates to your party",[
-		(jump_to_menu, "mnu_cheat_add_pt"),
-      ]),
-      
-      ("camp_cheat_add_testers", [], "Spawn and add templates to testing party",[
-		(jump_to_menu, "mnu_cheat_add_testing_party"),
-      ]),
-      
-      ("camp_cheat_add_veterans", [], "Add five veterans to your party",[
-		(party_add_members, "p_main_party", "trp_new_swadian_billman", 5),
-		]),
+
       
       ("camp_cheat_find_item",[], "Find an item...",
        [
          (jump_to_menu, "mnu_cheat_find_item"),
 	   ]
-       ),	   
+       ),
+       
+      ("camp_cheat_troop_testing", [], "Troop testing utilities", [
+         (jump_to_menu, "mnu_cheat_troop_testing"),
+      ]),
 
       ("camp_cheat_find_item",[], "Change weather..",
        [
@@ -3864,6 +3858,38 @@ game_menus = [
       ]
   ),
 
+	("cheat_troop_testing", 0, "Troop testing utilities", "none", [], [
+		("camp_cheat_add_pt", [], "Add party templates to your party",[
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+
+		("camp_cheat_add_testers", [], "Spawn and add templates to testing party",[
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+		
+		("camp_cheat_add_veterans", [], "Add five veterans to your party",[
+			(party_add_members, "p_main_party", "trp_new_swadian_billman", 5),
+		]),
+
+		("camp_cheat_add_gold", [], "Add 10K gold to your character",[
+			(troop_add_gold, "trp_player", 10000),
+		]),
+
+		("camp_cheat_add_xp", [], "Add 2K exp to your party", [
+			(party_add_xp, "p_main_party", 2000),
+		]),
+		
+		("resume_travelling", [], "Resume travelling", [
+			(change_screen_return),
+		]),
+		
+		("back_to_cheat_menu", [], "Back to cheat menu", [
+			(jump_to_menu, "mnu_camp_cheat"),
+		]),
+		
+
+	]),
+		
 	("cheat_add_pt", 0, "Current factions", "none", [], [
 	
 		("bandits", [], "{!}Bandits", [
@@ -3899,7 +3925,7 @@ game_menus = [
 		]),
 	
 		("back_to_camp_menu", [], "{!}Go Back", [
-			(jump_to_menu, "mnu_camp_cheat"),
+			(jump_to_menu, "mnu_cheat_troop_testing"),
 		]),
 	]),
 	
@@ -4264,7 +4290,7 @@ game_menus = [
 		]),
 	
 		("back_to_camp_menu", [], "{!}Go Back", [
-			(jump_to_menu, "mnu_camp_cheat"),
+			(jump_to_menu, "mnu_cheat_troop_testing"),
 		]),
 	]),
 	
