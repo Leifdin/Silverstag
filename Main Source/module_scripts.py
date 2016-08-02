@@ -101,10 +101,10 @@ scripts = [
 	  ## WINDYPLAINS+ ## - New Troop Revamp - Culture Troops (Common)
 	  ## SWADIA - NEW TROOPS
 	  (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_new_swadian_hunter"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_new_swadian_militia"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_new_swadian_supplyman"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_new_swadian_footman"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_new_swadian_man_at_arms"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_new_swadian_billman"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_new_swadian_sharpshooter"),
 	  ## SWADIA - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_swadian_recruit"),
       # (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_swadian_militia"),

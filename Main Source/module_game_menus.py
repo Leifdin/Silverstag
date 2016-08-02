@@ -85,6 +85,7 @@ game_menus = [
 			(troop_set_type, "trp_player", 0),
 			(assign, "$show_autoloot_data", 1),
 			(assign, "$cheat_mode", 1),
+			(assign, "$mod_difficulty", GAME_MODE_HARD),
 			(call_script, "script_hub_initialize"), # hub_scripts.py
 			(change_screen_map),
 			(party_relocate_near_party, "p_main_party", "p_town_4", 2),
@@ -94,7 +95,10 @@ game_menus = [
 			(assign, "$troop_testing_party_is_spawned", 1),
 			(assign, "$troop_testing_party_id", reg(0)),
 			(party_set_morale, "p_main_party", 100),
-			(party_set_morale, "$troop_testing_party_id", 100),			
+			(party_set_morale, "$troop_testing_party_id", 100),
+			#(assign, "$mod_difficulty", GAME_MODE_HARD),
+			(call_script, "script_report_game_difficulty"),
+			
 		]),
 		## LEIFDIN-- ##
       
