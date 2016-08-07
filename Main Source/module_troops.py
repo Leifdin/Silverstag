@@ -699,6 +699,31 @@ troops = [
 
 ["new_swadian_uniques_end",		"Swadian Crossbowman",		"Swadian Crossbowman",		tf_guarantee_all_ranged|tf_female, 0,0, fac_kingdom_1,					[itm_bear_paw_shoes, itm_woolen_hose, itm_gambeson, itm_blue_gambeson, itm_padded_coif, itm_falchion, itm_war_darts, itm_war_darts, itm_war_darts],																str_15|agi_12|int_6|cha_6|level(8),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_1|knows_power_throw_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, swadian_face_younger_1, swadian_face_middle_2],
 
+####################################
+## KINGDOM OF VAEGIRS (FACTION 2) ##
+####################################
+## I1 Vaegir Peasant
+
+## A2 Vaegir Skirmisher
+## I2 Vaegir Spearman
+
+## I3 Vaegir Militia
+## C3 Vaegir Retainer
+
+## H4 Vaegir Skirmisher
+## A4 Vaegir Longbowman
+
+## I5 Vaegir Vanguard
+
+## C6 Vaegir Knight
+
+## H7 Vaegir Sargeant
+## A7 Vaegir Marksman
+
+##### Tier 1 #####
+["new_vaegir_peasant",			"Vaegir Peasant",			"Vaegir Peasants",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_ankle_boots, itm_rawhide_coat, itm_sledgehammer, itm_darts, itm_pointed_felt_hat],																															str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(75)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_1|knows_ironflesh_2|knows_weapon_master_2, nord_face_younger_1, nord_face_middle_2],
+
+
 
 ######################################
 ## KINGDOM OF THE NORDS (FACTION 4) ##
