@@ -859,6 +859,23 @@ scripts = [
 			(val_add, ":gold", 15000),
 			(assign, ":richhorse", 1),
 			(assign, ":blunt", 1),
+			(party_add_members, "p_main_party", "trp_npc17", 1),
+			(party_add_members, "p_main_party", "trp_npc12", 1),
+			(party_add_members, "p_main_party", "trp_npc10", 1),
+			(troop_set_skill, "trp_npc17", skl_inventory_management, 5),
+			(troop_set_skill, "trp_npc17", skl_trade, 5),
+			(troop_set_skill, "trp_npc17", skl_looting, 5),
+			(troop_set_skill, "trp_npc17", skl_prisoner_management, 5),
+			
+			(troop_set_skill, "trp_npc12", skl_inventory_management, 5),
+			(troop_set_skill, "trp_npc12", skl_trade, 5),
+			(troop_set_skill, "trp_npc12", skl_looting, 5),
+			(troop_set_skill, "trp_npc12", skl_prisoner_management, 5),
+			
+			(troop_set_skill, "trp_npc10", skl_inventory_management, 5),
+			(troop_set_skill, "trp_npc10", skl_trade, 5),
+			(troop_set_skill, "trp_npc10", skl_looting, 5),
+			(troop_set_skill, "trp_npc10", skl_prisoner_management, 5),
 		(try_end),
 	  
 		(try_begin), #Early life

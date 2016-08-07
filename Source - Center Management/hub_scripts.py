@@ -261,6 +261,7 @@ scripts = [
 		
 		## Swadian Crossbowman - A3
 		(troop_set_class, "trp_new_swadian_crossbowman", CLASS_RANGED),
+		(troop_set_slot, "trp_new_swadian_crossbowman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## Swadain Man-at-Arms - C4
 		(troop_set_class, "trp_new_swadian_man_at_arms", CLASS_CAVALRY),
@@ -1064,7 +1065,7 @@ scripts = [
 		(troop_set_class, "trp_new_nord_retinue_archer", CLASS_RANGED),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_retinue_archer"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_retinue_archer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_VOLLEY_COMMANDER , BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_VOLLEY_COMMANDER , BONUS_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_SUPPLY_RUNNER , BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_nord_retinue_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
