@@ -713,7 +713,7 @@ troops = [
 ## H4 Vaegir Skirmisher
 ## A4 Vaegir Longbowman
 
-## I5 Vaegir Vanguard
+## I5 Vaegir Sentry
 
 ## C6 Vaegir Knight
 
@@ -721,8 +721,28 @@ troops = [
 ## A7 Vaegir Marksman
 
 ##### Tier 1 #####
-["new_vaegir_peasant",			"Vaegir Peasant",			"Vaegir Peasants",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_ankle_boots, itm_rawhide_coat, itm_sledgehammer, itm_darts, itm_pointed_felt_hat],																															str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(75)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_1|knows_ironflesh_2|knows_weapon_master_2, nord_face_younger_1, nord_face_middle_2],
+["new_vaegir_peasant",			"Vaegir Peasant",			"Vaegir Peasants",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_ankle_boots, itm_rawhide_coat, itm_sledgehammer, itm_darts, itm_pointed_felt_hat],																															str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(75)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_1|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
 
+##### Tier 2 #####
+["new_vaegir_spearman",			"Vaegir Spearman",			"Vaegir Spearmen",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_leather_gloves, itm_hunter_boots, itm_pelt_coat, itm_cap_with_fur, itm_boar_spear, itm_javelin],																											str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(100)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_2|knows_power_throw_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+["new_vaegir_bowman",			"Vaegir Bowman",			"Vaegir Bowmen",			tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_2,				[itm_leather_gloves, itm_hide_boots, itm_leather_jacket, itm_fur_hat, itm_light_hunting_bow, itm_sledgehammer, itm_arrows, itm_arrows],																			str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(0)|wp_two_handed(100)|wp_polearm(0)|wp_archery(100)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_power_draw_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+
+##### Tier 3 #####
+["new_vaegir_militia",			"Vaegir Militia",			"Vaegir Militia",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_leather_gloves, itm_splinted_leather_greaves, itm_light_leather, itm_spiked_cap, itm_battle_axe_a, itm_battle_axe_b, itm_heavy_round_shield],																str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_2|knows_ironflesh_4|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+["new_vaegir_retainer",			"Vaegir Retainer",			"Vaegir Retainer",			tf_guarantee_all_cavalry|tf_male|tf_mounted, 0,0, fac_kingdom_2,	[itm_leather_gloves, itm_splinted_leather_greaves, itm_padded_leather, itm_nomad_cap, itm_nomad_sabre, itm_round_cavalry_shield, itm_war_horse_a],																str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_riding_3|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+
+##### Tier 4 #####
+["new_vaegir_longbowman",		"Vaegir Longbowman",		"Vaegir Longbowmen",		tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_2,				[itm_leather_gloves, itm_leather_boots, itm_padded_jacketgreen, itm_padded_jacketwhite, itm_northern_helmet, itm_light_war_bow, itm_winged_mace, itm_buckler_a, itm_buckler_b, itm_buckler_c, itm_arrows],		str_15|agi_15|int_6|cha_6|level(16),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_power_draw_4|knows_athletics_5|knows_ironflesh_3|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+["new_vaegir_skirmisher",		"Vaegir Skirmisher",		"Vaegir Skirmishers",		tf_guarantee_all|tf_male|tf_mounted, 0,0, fac_kingdom_2,			[itm_leather_gloves, itm_splinted_leather_greaves, itm_studded_leather_coat, itm_steppe_helmet, itm_nomad_bow, itm_scimitar, itm_arrows, itm_arrows, itm_war_horse_a],											str_15|agi_12|int_6|cha_6|level(16),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_power_draw_3|knows_horse_archery_4|knows_riding_3|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+
+##### Tier 5 #####
+["new_vaegir_sentry",			"Vaegir Sentry",			"Vaegir Sentrymen",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_plated_gauntlets, itm_splinted_greaves, itm_light_lamellar_armor, itm_pointed_helmet, itm_iron_war_axe, itm_heavy_kite_shield, itm_heavy_heater_shield],													str_21|agi_15|int_6|cha_6|level(20),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_5|knows_ironflesh_6|knows_weapon_master_3, vaegir_face_younger_1, vaegir_face_middle_2],
+
+##### Tier 6 #####
+["new_vaegir_knight",			"Vaegir Knight",			"Vaegir Knights",			tf_guarantee_all_cavalry|tf_male|tf_mounted, 0,0, fac_kingdom_2,	[itm_plated_gauntlets, itm_splinted_greaves, itm_heavy_lamellar_armor_a, itm_heavy_lamellar_armor_b, itm_heavy_pointed_helmet, itm_two_handed_sabre, itm_decorated_lance, itm_war_horse_c],						str_21|agi_21|int_9|cha_12|level(24),wp_one_handed(0)|wp_two_handed(225)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_7|knows_riding_7|knows_ironflesh_7|knows_weapon_master_5|knows_tactics_4, vaegir_face_younger_1, vaegir_face_middle_2],
+
+
+["new_vaegirs_end",			"Vaegir Peasant",			"Vaegir Peasants",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_ankle_boots, itm_rawhide_coat, itm_sledgehammer, itm_darts, itm_pointed_felt_hat],																																str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(75)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_1|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
 
 
 ######################################
