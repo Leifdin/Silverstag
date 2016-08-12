@@ -102,7 +102,7 @@ party_templates = [
   # high-modernised templates are generally includes 3-5 troops in total
 
 
- ## WINDYPLAINS+ ## - Added reinforcement templates for player's culture.
+ ## LEIFDIN+ ## - Added reinforcement templates for player's culture.
  ### PLAYER CUSTOM CULTURE ###
  # Following data is per script "cf_reinforce_party".
  # Reinforcement A gets added to kingdom_parties (50%) and centers (65%).
@@ -131,7 +131,7 @@ party_templates = [
  ("kingdom_1_reinforcements_b", "kingdom_1_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_swadian_farmer, 9, 9), (trp_new_swadian_hunter, 9, 9), (trp_new_swadian_supplyman, 1, 1), (trp_new_swadian_footman, 4, 4), (trp_new_swadian_lancer, 4, 4), (trp_new_swadian_man_at_arms, 3, 3)]),
  ("kingdom_1_reinforcements_c", "kingdom_1_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_swadian_hunter, 10, 10), (trp_new_swadian_footman, 5, 5), (trp_new_swadian_militia, 5, 5), (trp_new_swadian_lancer, 5, 5), (trp_new_swadian_man_at_arms, 4, 4), (trp_new_swadian_sharpshooter, 1, 1)]),
  # GAME_MODE_NORMAL
- ("kingdom_1_reinforcements_d", "kingdom_1_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_swadian_farmer, 6, 6), (trp_new_swadian_hunter, 6, 6), (trp_new_swadian_militia, 7, 7), (trp_new_swadian_supplyman, 2, 2), (trp_new_swadian_footman, 7, 7), (trp_new_nord_skirmisher, 4, 4) ]), ## 30 troops
+ ("kingdom_1_reinforcements_d", "kingdom_1_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_swadian_farmer, 6, 6), (trp_new_swadian_hunter, 6, 6), (trp_new_swadian_militia, 7, 7), (trp_new_swadian_supplyman, 2, 2), (trp_new_swadian_footman, 7, 7), (trp_new_swadian_crossbowman, 4, 4) ]), ## 30 troops
  ("kingdom_1_reinforcements_e", "kingdom_1_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_swadian_farmer, 4, 4), (trp_new_swadian_crossbowman, 5, 5), (trp_new_swadian_supplyman, 1, 1), (trp_new_swadian_man_at_arms, 5, 5), (trp_new_swadian_lancer, 5, 5), (trp_new_swadian_man_at_arms, 5, 5)],), ## 30 troops
  ("kingdom_1_reinforcements_f", "kingdom_1_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_swadian_footman, 3, 3), (trp_new_swadian_crossbowman, 9, 9), (trp_new_swadian_militia, 5, 5), (trp_new_swadian_man_at_arms, 5, 5), (trp_new_swadian_lancer, 5, 5), (trp_new_swadian_sharpshooter, 3, 3)]), ## 30 troops
   # GAME_MODE_HARD
@@ -143,42 +143,24 @@ party_templates = [
  ("kingdom_1_reinforcements_k", "kingdom_1_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_swadian_supplyman, 1, 1), (trp_new_swadian_footman, 3, 3), (trp_new_swadian_crossbowman, 3, 3), (trp_new_swadian_sentinel, 4, 4), (trp_new_swadian_sharpshooter, 10, 10), (trp_new_swadian_sargeant, 9, 9) ],), ## 30 troops
  ("kingdom_1_reinforcements_l", "kingdom_1_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_swadian_sentinel, 2, 2), (trp_new_swadian_billman, 1, 1), (trp_new_swadian_man_at_arms, 10, 10), (trp_new_swadian_lancer, 10, 10), (trp_new_swadian_knight, 4, 4), (trp_new_swadian_sargeant, 3, 3)]), ## 30 troops
  
- #### NORDS ### - NEW TROOPS
- ## GAME_MODE_EASY
- #("kingdom_4_reinforcements_a", "kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 11, 11), (trp_new_nord_bowman, 11, 11), (trp_new_nord_spearman, 3, 3), (trp_new_nord_skald, 1, 1), (trp_new_nord_retainer, 2, 2), (trp_new_nord_skirmisher, 2, 2)]), ## 30 troops
- #("kingdom_4_reinforcements_b", "kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 9, 9), (trp_new_nord_bowman, 9, 9), (trp_new_nord_skald, 1, 1), (trp_new_nord_retainer, 4, 4), (trp_new_nord_spearman, 4, 4), (trp_new_nord_tracker, 3, 3)],), ## 30 troops
- #("kingdom_4_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_nord_bowman, 10, 10), (trp_new_nord_retainer, 5, 5), (trp_new_nord_spearman, 5, 5), (trp_new_nord_skirmisher, 5, 5), (trp_new_nord_tracker, 4, 4), (trp_new_nord_berserker, 1, 1)]), ## 30 troops
- ## GAME_MODE_NORMAL
- #("kingdom_4_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 6, 6), (trp_new_nord_bowman, 6, 6), (trp_new_nord_spearman, 7, 7), (trp_new_nord_skald, 2, 2), (trp_new_nord_retainer, 7, 7), (trp_new_nord_skirmisher, 4, 4) ]), ## 30 troops
- #("kingdom_4_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_nord_farmhand, 4, 4), (trp_new_nord_bowman, 5, 5), (trp_new_nord_skald, 1, 1), (trp_new_nord_retainer, 5, 5), (trp_new_nord_spearman, 5, 5), (trp_new_nord_tracker, 5, 5)],), ## 30 troops
- #("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_nord_bowman, 3, 3), (trp_new_nord_retainer, 9, 9), (trp_new_nord_spearman, 5, 5), (trp_new_nord_skirmisher, 5, 5), (trp_new_nord_tracker, 5, 5), (trp_new_nord_berserker, 3, 3)]), ## 30 troops
- ## GAME_MODE_HARD
- #("kingdom_4_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_nord_spearman, 8, 8), (trp_new_nord_skald, 2, 2), (trp_new_nord_retainer, 8, 8), (trp_new_nord_tracker, 8, 8), (trp_new_nord_skirmisher, 6, 6)]), ## 30 troops
- #("kingdom_4_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_nord_skald, 1, 1), (trp_new_nord_retainer, 7, 7), (trp_new_nord_spearman, 7, 7), (trp_new_nord_tracker, 7, 7), (trp_new_nord_berserker, 4, 4), (trp_new_nord_retinue_archer, 4, 4) ],), ## 30 troops
- #("kingdom_4_reinforcements_i", "kingdom_4_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_nord_hirdman, 2, 2), (trp_new_nord_godi, 2, 2), (trp_new_nord_skirmisher, 5, 5), (trp_new_nord_tracker, 5, 5), (trp_new_nord_berserker, 8, 8), (trp_new_nord_retinue_archer, 8, 8)]), ## 30 troops
- ## GAME_MODE_VERY_HARD
- #("kingdom_4_reinforcements_j", "kingdom_4_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_nord_skirmisher, 5, 5), (trp_new_nord_skald, 2, 2), (trp_new_nord_retainer, 5, 5), (trp_new_nord_tracker, 8, 8), (trp_new_nord_berserker, 5, 5), (trp_new_nord_retinue_archer, 5, 5)]), ## 30 troops
- #("kingdom_4_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_nord_skald, 1, 1), (trp_new_nord_retainer, 3, 3), (trp_new_nord_spearman, 3, 3), (trp_new_nord_tracker, 4, 4), (trp_new_nord_berserker, 10, 10), (trp_new_nord_retinue_archer, 9, 9) ],), ## 30 troops
- #("kingdom_4_reinforcements_l", "kingdom_4_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_nord_hirdman, 4, 4), (trp_new_nord_godi, 4, 4), (trp_new_nord_skirmisher, 5, 5), (trp_new_nord_tracker, 5, 5), (trp_new_nord_berserker, 6, 6), (trp_new_nord_retinue_archer, 6, 6)]), ## 30 troops
-
-
+ 
  ### VAEGIRS ### - NEW TROOPS
  # GAME_MODE_EASY
- ("kingdom_2_reinforcements_a", "kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_vaegir_sentry,16,36),(trp_r_vaegir_psiloi,3,7)]),
- ("kingdom_2_reinforcements_b", "kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_vaegir_psiloi,8,15),(trp_r_vaegir_skirmisher,6,13)]),
- ("kingdom_2_reinforcements_c", "kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,2,5),(trp_r_vaegir_longbowman,2,5),(trp_r_vaegir_koursores,1,3),(trp_r_vaegir_pecheneg,1,3)]),
+ ("kingdom_2_reinforcements_a", "kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_vaegir_peasant, 11, 11), (trp_new_vaegir_bowman, 11, 11), (trp_new_vaegir_militia, 3, 3), (trp_new_vaegir_retainer, 1, 1), (trp_new_vaegir_outrider, 2, 2), (trp_new_vaegir_longbowman, 2, 2)]),
+ ("kingdom_2_reinforcements_b", "kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_vaegir_peasant, 9, 9), (trp_new_vaegir_bowman, 9, 9), (trp_new_vaegir_skirmisher, 1, 1), (trp_new_vaegir_spearman, 4, 4), (trp_new_vaegir_retainer, 4, 4), (trp_new_vaegir_outrider, 3, 3)]),
+ ("kingdom_2_reinforcements_c", "kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_vaegir_bowman, 10, 10), (trp_new_vaegir_militia, 5, 5), (trp_new_vaegir_outrider, 5, 5), (trp_new_vaegir_retainer, 5, 5), (trp_new_vaegir_skirmisher, 4, 4), (trp_new_vaegir_longbowman, 1, 1)]),
  # GAME_MODE_NORMAL
- ("kingdom_2_reinforcements_d", "kingdom_2_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_vaegir_sentry,11,26),(trp_r_vaegir_psiloi,3,7),(trp_r_vaegir_skirmisher,5,10)]),
- ("kingdom_2_reinforcements_e", "kingdom_2_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,8,15),(trp_r_vaegir_longbowman,5,13)]),
- ("kingdom_2_reinforcements_f", "kingdom_2_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_vaegir_cavalrycaptain,1,3),(trp_r_vaegir_bogatyr,1,3),(trp_r_vaegir_vanguard,2,5),(trp_r_vaegir_marksman,2,5)]),
- # GAME_MODE_HARD
- ("kingdom_2_reinforcements_g", "kingdom_2_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_vaegir_psiloi,8,20),(trp_r_vaegir_skirmisher,6,13)]),
- ("kingdom_2_reinforcements_h", "kingdom_2_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,5,10),(trp_r_vaegir_longbowman,3,8),(trp_r_vaegir_koursores,2,5),(trp_r_vaegir_pecheneg,3,5)]),
- ("kingdom_2_reinforcements_i", "kingdom_2_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_vaegir_vanguard,2,5),(trp_r_vaegir_marksman,2,5),(trp_r_vaegir_cavalrycaptain,1,3),(trp_r_vaegir_bogatyr,1,3)]),
+ ("kingdom_2_reinforcements_d", "kingdom_2_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_vaegir_peasant, 6, 6), (trp_new_vaegir_bowman, 6, 6), (trp_new_vaegir_militia, 7, 7), (trp_new_vaegir_skirmisher, 2, 2), (trp_new_vaegir_retainer, 7, 7), (trp_new_vaegir_outrider, 4, 4) ]), ## 30 troops
+ ("kingdom_2_reinforcements_e", "kingdom_2_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_vaegir_peasant, 4, 4), (trp_new_vaegir_longbowman, 5, 5), (trp_new_vaegir_sentry, 1, 1), (trp_new_vaegir_retainer, 5, 5), (trp_new_vaegir_skirmisher, 5, 5), (trp_new_vaegir_outrider, 5, 5)],), ## 30 troops
+ ("kingdom_2_reinforcements_f", "kingdom_2_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_vaegir_militia, 3, 3), (trp_new_vaegir_longbowman, 9, 9), (trp_new_vaegir_retainer, 11, 11), (trp_new_vaegir_outrider, 3, 3), (trp_new_vaegir_skirmisher, 3, 3), (trp_new_vaegir_knight, 1, 1)]), ## 30 troops
+  # GAME_MODE_HARD
+ ("kingdom_2_reinforcements_g", "kingdom_2_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_vaegir_militia, 8, 8), (trp_new_vaegir_sentry, 2, 2), (trp_new_vaegir_longbowman, 8, 8), (trp_new_vaegir_retainer, 8, 8), (trp_new_vaegir_skirmisher, 6, 6)]), ## 30 troops
+ ("kingdom_2_reinforcements_h", "kingdom_2_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_vaegir_outrider, 4, 4), (trp_new_vaegir_militia, 4, 4), (trp_new_vaegir_retainer, 7, 7), (trp_new_vaegir_skirmisher, 7, 7), (trp_new_vaegir_longbowman, 4, 4), (trp_new_vaegir_druzhina, 4, 4) ],), ## 30 troops
+ ("kingdom_2_reinforcements_i", "kingdom_2_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_vaegir_sentry, 5, 5), (trp_new_vaegir_knight, 2, 2), (trp_new_vaegir_retainer, 8, 8), (trp_new_vaegir_skirmisher, 8, 8), (trp_new_vaegir_druzhina, 2, 2), (trp_new_vaegir_marksman, 5, 5)]), ## 30 troops
  # GAME_MODE_VERY_HARD
- ("kingdom_2_reinforcements_j", "kingdom_2_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_vaegir_skirmisher,2,4),(trp_r_vaegir_peltast,3,8),(trp_r_vaegir_longbowman,3,6),(trp_r_vaegir_koursores,3,7),(trp_r_vaegir_pecheneg,3,8)]),
- ("kingdom_2_reinforcements_k", "kingdom_2_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,1,4),(trp_r_vaegir_longbowman,1,3),(trp_r_vaegir_koursores,4,6),(trp_r_vaegir_pecheneg,4,7),(trp_r_vaegir_vanguard,2,4),(trp_r_vaegir_marksman,1,4)]),
- ("kingdom_2_reinforcements_l", "kingdom_2_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_vaegir_vanguard,2,3),(trp_r_vaegir_marksman,2,3),(trp_r_vaegir_cavalrycaptain,1,5),(trp_r_vaegir_bogatyr,1,5)]),
+ ("kingdom_2_reinforcements_j", "kingdom_2_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_vaegir_longbowman, 5, 5), (trp_new_vaegir_outrider, 2, 2), (trp_new_vaegir_militia, 5, 5), (trp_new_vaegir_marksman, 8, 8), (trp_new_vaegir_sentry, 5, 5), (trp_new_vaegir_druzhina, 5, 5)]), ## 30 troops
+ ("kingdom_2_reinforcements_k", "kingdom_2_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_vaegir_outrider, 4, 4), (trp_new_vaegir_militia, 3, 3), (trp_new_vaegir_longbowman, 3, 3), (trp_new_vaegir_sentry, 4, 4), (trp_new_vaegir_marksman, 7, 7), (trp_new_vaegir_skirmisher, 9, 9) ],), ## 30 troops
+ ("kingdom_2_reinforcements_l", "kingdom_2_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_vaegir_retainer, 2, 2), (trp_new_vaegir_retainer, 10, 10), (trp_new_vaegir_skirmisher, 10, 10), (trp_new_vaegir_knight, 4, 4), (trp_new_vaegir_druzhina, 4, 4)]), ## 30 troops
  
 
  ### KHERGITS ### - NEW TROOPS

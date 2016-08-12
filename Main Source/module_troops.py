@@ -754,9 +754,7 @@ troops = [
 ["new_curaw_guardsman",			"Curaw Guardsman",			"Curaw Guardsmen",			tf_guarantee_all_infantry|tf_male, 0, 0, fac_kingdom_2,				[itm_plated_gauntlets, itm_splinted_greaves, itm_heavy_coat_of_plates, itm_spiked_helmet, itm_long_war_axe],																													str_18|agi_16|int_15|cha_6|level(16),wp_one_handed(0)|wp_two_handed(150)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_athletics_4|knows_ironflesh_3|knows_power_strike_4, vaegir_face_middle_1, vaegir_face_older_2],
 ["new_reyvadin_cataphract",		"Reyvadin Cataphract",		"Reyvadin Cataphracts",		tf_guarantee_all_cavalry|tf_male|tf_mounted, 0, 0, fac_kingdom_2,	[itm_scale_gauntlets, itm_splinted_greaves, itm_elite_lamellar_armor_b, itm_elite_lamellar_armor_a, itm_war_helmet, itm_sabre_b, itm_knightly_heater_shield, itm_knightly_kite_shield, itm_war_horse_d,],	str_18|agi_15|int_6|cha_6|level(20),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_shield_4|knows_power_strike_4|knows_riding_5|knows_ironflesh_4, vaegir_face_younger_1, vaegir_face_older_2],
 
-
-
-["new_vaegirs_end",			"Vaegir Peasant",			"Vaegir Peasants",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_ankle_boots, itm_rawhide_coat, itm_sledgehammer, itm_darts, itm_pointed_felt_hat],																																str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(75)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_1|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
+["new_vaegir_uniques_end",			"Vaegir Peasant",			"Vaegir Peasants",			tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_2,				[itm_ankle_boots, itm_rawhide_coat, itm_sledgehammer, itm_darts, itm_pointed_felt_hat],																																str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(75)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_1|knows_ironflesh_2|knows_weapon_master_2, vaegir_face_younger_1, vaegir_face_middle_2],
 
 
 ######################################
