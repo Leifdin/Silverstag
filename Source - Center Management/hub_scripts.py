@@ -338,339 +338,418 @@ scripts = [
 		#####               VAEGIR FACTION               #####
 		##################################################f####
 		
-		## I1 - Vaegiran Militia
-		(troop_set_class, "trp_r_vaegir_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_militia_2", CLASS_INFANTRY),
+		### I1 - Vaegiran Militia
+		#(troop_set_class, "trp_r_vaegir_militia", CLASS_INFANTRY),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_militia_1", CLASS_INFANTRY),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_militia_2", CLASS_INFANTRY),
 		
-		## I3 - Vaegiran Psiloi
-		(troop_set_class, "trp_r_vaegir_psiloi", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_psiloi_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_psiloi_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_psiloi_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I3 - Vaegiran Psiloi
+		#(troop_set_class, "trp_r_vaegir_psiloi", CLASS_INFANTRY),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_psiloi_1", CLASS_INFANTRY),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_psiloi_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_vaegir_psiloi_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I3 - Vaegiran Peltast
-		(troop_set_class, "trp_r_vaegir_peltast", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_peltast_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_peltast_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_peltast_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I3 - Vaegiran Peltast
+		#(troop_set_class, "trp_r_vaegir_peltast", CLASS_INFANTRY),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_peltast_1", CLASS_INFANTRY),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_peltast_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_vaegir_peltast_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## A2 - Vaegiran Skirmisher
-		(troop_set_class, "trp_r_vaegir_skirmisher", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_skirmisher_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_skirmisher_2", CLASS_RANGED),
+		### A2 - Vaegiran Skirmisher
+		#(troop_set_class, "trp_r_vaegir_skirmisher", CLASS_RANGED),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_skirmisher_1", CLASS_RANGED),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_skirmisher_2", CLASS_RANGED),
 		
-		## A5 - Vaegiran Longbowman
-		(troop_set_class, "trp_r_vaegir_longbowman", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_longbowman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_longbowman_1", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_longbowman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_longbowman_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_longbowman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### A5 - Vaegiran Longbowman
+		#(troop_set_class, "trp_r_vaegir_longbowman", CLASS_RANGED),
+		#(troop_set_slot, "trp_r_vaegir_longbowman", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_longbowman_1", CLASS_RANGED),
+		#(troop_set_slot, "trp_r_vaegir_longbowman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_longbowman_2", CLASS_RANGED),
+		#(troop_set_slot, "trp_r_vaegir_longbowman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## C3 - Vaegiran Koursores
-		(troop_set_class, "trp_r_vaegir_koursores", CLASS_CAVALRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_koursores_1", CLASS_CAVALRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_koursores_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_koursores_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### C3 - Vaegiran Koursores
+		#(troop_set_class, "trp_r_vaegir_koursores", CLASS_CAVALRY),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_koursores_1", CLASS_CAVALRY),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_koursores_2", CLASS_CAVALRY),
+		#(troop_set_slot, "trp_r_vaegir_koursores_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## H3 - Vaegiran Pecheneg
-		(troop_set_class, "trp_r_vaegir_pecheneg", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_pecheneg_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_pecheneg_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_pecheneg_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### H3 - Vaegiran Pecheneg
+		#(troop_set_class, "trp_r_vaegir_pecheneg", CLASS_RANGED),
+		## +1 tier
+		#(troop_set_class, "trp_r_vaegir_pecheneg_1", CLASS_RANGED),
+		## +2 tier
+		#(troop_set_class, "trp_r_vaegir_pecheneg_2", CLASS_RANGED),
+		#(troop_set_slot, "trp_r_vaegir_pecheneg_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I2 - Vaegir Sentry (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_sentry", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry_1", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_sentry_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry_2", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_sentry_2", CLASS_INFANTRY),
+		### I2 - Vaegir Sentry (Affiliated)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_sentry", CLASS_INFANTRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry_1", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_sentry_1", CLASS_INFANTRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry_2", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_sentry_2", CLASS_INFANTRY),
 		
-		## C4 - Vaegir Cavalry Captain (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_cavalrycaptain", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_cavalrycaptain_1", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_cavalrycaptain_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_cavalrycaptain_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_cavalrycaptain_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### C4 - Vaegir Cavalry Captain (Affiliated)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_cavalrycaptain", CLASS_CAVALRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_cavalrycaptain_1", CLASS_CAVALRY),
+		#(troop_set_slot, "trp_r_vaegir_cavalrycaptain_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_cavalrycaptain_2", CLASS_CAVALRY),
+		#(troop_set_slot, "trp_r_vaegir_cavalrycaptain_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I5 - Vaegir Vanguard (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_vanguard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_vanguard", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_1", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_vanguard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_vanguard_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_vanguard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_vanguard_2", CLASS_INFANTRY),
+		### I5 - Vaegir Vanguard (Affiliated)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard", BONUS_ENDURANCE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_vanguard", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_vanguard", CLASS_INFANTRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_1", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_vanguard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_vanguard_1", CLASS_INFANTRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_vanguard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_vanguard_2", CLASS_INFANTRY),
 		
-		## C6 - Vaegir Bogatyr (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_bogatyr", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_bogatyr", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_bogatyr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_bogatyr_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_bogatyr_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_bogatyr_2", CLASS_CAVALRY),
+		### C6 - Vaegir Bogatyr (Affiliated)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_HARDY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_bogatyr", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_bogatyr", CLASS_CAVALRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_HARDY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_bogatyr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_bogatyr_1", CLASS_CAVALRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_HARDY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_bogatyr_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_bogatyr_2", CLASS_CAVALRY),
 		
-		## A7 - Vaegir Marksman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_marksman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_marksman", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_marksman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_marksman_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_marksman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_marksman_2", CLASS_RANGED),
+		### A7 - Vaegir Marksman (Affiliated)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_marksman", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_marksman", CLASS_RANGED),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman_1"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_marksman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_marksman_1", CLASS_RANGED),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman_2"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_marksman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_marksman_2", CLASS_RANGED),
 		
-		## C3 - Outrider of Nelag (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_scout", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_scout", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_scout_1", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_scout_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_scout_2", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_scout_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_scout_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### C3 - Outrider of Nelag (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_scout", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_scout", CLASS_CAVALRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_scout_1", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_scout_1", CLASS_CAVALRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_scout_2", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_scout_2", CLASS_CAVALRY),
+		#(troop_set_slot, "trp_r_vaegir_scout_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I4 - Jeirbe Sellsword (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_varagian", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_varagian", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_varagian", slot_troop_recruit_type, STRT_MERCENARY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_varagian_1", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_1", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_varagian_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_varagian_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_varagian_2", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_DEDICATED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_varagian_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_varagian_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I4 - Jeirbe Sellsword (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_varagian", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian", BONUS_HARDY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian", BONUS_ENDURANCE, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_varagian", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_vaegir_varagian", slot_troop_recruit_type, STRT_MERCENARY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_varagian_1", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_1", BONUS_HARDY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_1", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_varagian_1", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_vaegir_varagian_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_varagian_2", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_HARDY, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_DEDICATED, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_r_vaegir_varagian_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_r_vaegir_varagian_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## C5 - Southward Cataphract (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_cataphract", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_cataphract", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_cataphract", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_cataphract_1", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_cataphract_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_cataphract_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_cataphract_2", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_cataphract_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_cataphract_2", CLASS_CAVALRY),
+		### C5 - Southward Cataphract (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_cataphract", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_LOYAL, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_FORTITUDE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_cataphract", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_cataphract", CLASS_CAVALRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_cataphract_1", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_LOYAL, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_cataphract_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_cataphract_1", CLASS_CAVALRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_r_vaegir_cataphract_2", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_LOYAL, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_r_vaegir_cataphract_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_r_vaegir_cataphract_2", CLASS_CAVALRY),
 		
-		## C4 - Boyars Druzhina (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina"), # combat_scripts.py
-		(troop_set_slot, "trp_boyars_druzhina", slot_troop_unique_location, "p_town_8"), # Reyvadin
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_boyars_druzhina", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_boyars_druzhina", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina_1"), # combat_scripts.py
-		(troop_set_slot, "trp_boyars_druzhina_1", slot_troop_unique_location, "p_town_8"), # Reyvadin
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_boyars_druzhina_1", CLASS_CAVALRY),
-		(troop_set_slot, "trp_boyars_druzhina_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina_2"), # combat_scripts.py
-		(troop_set_slot, "trp_boyars_druzhina_2", slot_troop_unique_location, "p_town_8"), # Reyvadin
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_boyars_druzhina_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_boyars_druzhina_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### C4 - Boyars Druzhina (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina"), # combat_scripts.py
+		#(troop_set_slot, "trp_boyars_druzhina", slot_troop_unique_location, "p_town_8"), # Reyvadin
+		#(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_BLOODLUST, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_DEVOTED, BONUS_UNASSIGNED),
+		#(troop_set_slot, "trp_boyars_druzhina", slot_troop_recruit_type, STRT_NOBLEMAN),
+		#(troop_set_class, "trp_boyars_druzhina", CLASS_CAVALRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_boyars_druzhina_1", slot_troop_unique_location, "p_town_8"), # Reyvadin
+		#(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_boyars_druzhina_1", CLASS_CAVALRY),
+		#(troop_set_slot, "trp_boyars_druzhina_1", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_boyars_druzhina_2", slot_troop_unique_location, "p_town_8"), # Reyvadin
+		#(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_boyars_druzhina_2", CLASS_CAVALRY),
+		#(troop_set_slot, "trp_boyars_druzhina_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## C2 - Huntsman of Khudan (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer"), # combat_scripts.py
-		(troop_set_slot, "trp_khudan_mounted_archer", slot_troop_unique_location, "p_town_9"), # Khudan
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_khudan_mounted_archer", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_khudan_mounted_archer_1", slot_troop_unique_location, "p_town_9"), # Khudan
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_1", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_khudan_mounted_archer_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_khudan_mounted_archer_2", slot_troop_unique_location, "p_town_9"), # Khudan
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_khudan_mounted_archer_2", CLASS_CAVALRY),
+		### C2 - Huntsman of Khudan (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer"), # combat_scripts.py
+		#(troop_set_slot, "trp_khudan_mounted_archer", slot_troop_unique_location, "p_town_9"), # Khudan
+		#(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer", BONUS_HUNTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_khudan_mounted_archer", CLASS_CAVALRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_khudan_mounted_archer_1", slot_troop_unique_location, "p_town_9"), # Khudan
+		#(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_1", BONUS_HUNTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_khudan_mounted_archer_1", CLASS_CAVALRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_khudan_mounted_archer_2", slot_troop_unique_location, "p_town_9"), # Khudan
+		#(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_HUNTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_khudan_mounted_archer_2", CLASS_CAVALRY),
 		
-		## I3 - Curaw Guardsman (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman"), # combat_scripts.py
-		(troop_set_slot, "trp_curaw_guardsman", slot_troop_unique_location, "p_town_11"), # Curaw
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_curaw_guardsman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman_1"), # combat_scripts.py
-		(troop_set_slot, "trp_curaw_guardsman_1", slot_troop_unique_location, "p_town_11"), # Curaw
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_1", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_curaw_guardsman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman_2"), # combat_scripts.py
-		(troop_set_slot, "trp_curaw_guardsman_2", slot_troop_unique_location, "p_town_11"), # Curaw
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_2", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_curaw_guardsman_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_curaw_guardsman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		### I3 - Curaw Guardsman (Unique)
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman"), # combat_scripts.py
+		#(troop_set_slot, "trp_curaw_guardsman", slot_troop_unique_location, "p_town_11"), # Curaw
+		#(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman", BONUS_BLOODLUST, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman", BONUS_SPRINTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_curaw_guardsman", CLASS_INFANTRY),
+		## +1 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman_1"), # combat_scripts.py
+		#(troop_set_slot, "trp_curaw_guardsman_1", slot_troop_unique_location, "p_town_11"), # Curaw
+		#(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_1", BONUS_SPRINTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_curaw_guardsman_1", CLASS_INFANTRY),
+		## +2 tier
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman_2"), # combat_scripts.py
+		#(troop_set_slot, "trp_curaw_guardsman_2", slot_troop_unique_location, "p_town_11"), # Curaw
+		#(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_2", BONUS_SPRINTER, BONUS_UNASSIGNED),
+		#(troop_set_class, "trp_curaw_guardsman_2", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_curaw_guardsman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		## I1 Vaegir Peasant
+		(troop_set_class, "trp_new_vaegir_peasant", CLASS_INFANTRY),
+
+		## A2 Vaegir Skirmisher
+		(troop_set_class, "trp_new_vaegir_skirmisher", CLASS_RANGED),
+
+		## I2 Vaegir Spearman
+		(troop_set_class, "trp_new_vaegir_spearman", CLASS_INFANTRY),
+		(troop_set_slot,  "trp_new_vaegir_spearman", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## I3 Vaegir Militia
+		(troop_set_class, "trp_new_vaegir_militia", CLASS_INFANTRY),
+
+		## C3 Vaegir Retainer
+		(troop_set_class, "trp_new_vaegir_retainer", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_retainer", slot_troop_recruit_type, STRT_MERCENARY),
+		
+		## H3 Vaegir Outrider
+		(troop_set_class, "trp_new_vaegir_outrider", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_outrider"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_outrider", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_outrider", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_outrider", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		
+		## H4 Vaegir Skirmisher
+		(troop_set_class, "trp_new_vaegir_skirmisher", CLASS_CAVALRY),
+		
+		## A4 Vaegir Longbowman
+		(troop_set_class, "trp_new_vaegir_longbowman", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_longbowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_longbowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_longbowman", BONUS_LOYAL, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_longbowman", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+
+		## I5 Vaegir Sentry
+		(troop_set_class, "trp_new_vaegir_sentry", CLASS_INFANTRY),
+		(troop_set_slot,  "trp_new_vaegir_spearman", slot_troop_recruit_type, STRT_NOBLEMAN),
+
+		## C6 Vaegir Knight
+		(troop_set_class, "trp_new_vaegir_knight", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_knight"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_knight", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_knight", BONUS_DEDICATED, BONUS_UNASSIGNED),
+
+		## H7 Vaegir Druzhina
+		(troop_set_class, "trp_new_vaegir_druzhina", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_druzhina", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		## A7 Vaegir Marksman
+		(troop_set_class, "trp_new_vaegir_marksman", CLASS_RANGED),
+		(troop_set_slot,  "trp_new_vaegir_marksman", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_marksman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_marksman", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+
+		## H2 Huntsman of Khudan
+		(troop_set_class, "trp_new_huntsman_of_khudan", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_huntsman_of_khudan", slot_troop_unique_location, "p_town_9"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_huntsman_of_khudan", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_huntsman_of_khudan", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_huntsman_of_khudan", BONUS_HUNTER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_huntsman_of_khudan", BONUS_BERSERKER, BONUS_UNASSIGNED),
+		
+		## I4 Curaw Guardsman
+		(troop_set_class, "trp_new_curaw_guardsman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_curaw_guardsman", slot_troop_unique_location, "p_town_11"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_curaw_guardsman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		
+		## C6 Reyvadin Cataphract
+		(troop_set_class, "trp_new_reyvadin_cataphract", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_reyvadin_cataphract", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_reyvadin_cataphract", slot_troop_unique_location, "p_town_8"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_reyvadin_cataphract", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_reyvadin_cataphract", PREREQ_ALLY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_reyvadin_cataphract", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_reyvadin_cataphract", BONUS_BERSERKER, BONUS_UNASSIGNED),
 		
 		
 		######################################################
