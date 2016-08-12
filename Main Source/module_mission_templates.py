@@ -1957,7 +1957,7 @@ mission_templates = [
                 
      (try_begin), 
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_swadian_footman"),
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_vaegir_prison_guard"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_vaegir_sentry"),
        ## LEIFDIN+ ## - New Troop Revamp - Khergits
        (this_or_next|eq, ":dead_agent_troop_no", "trp_r_khergit_clansman"),
        #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
@@ -3487,7 +3487,7 @@ mission_templates = [
                 
         (try_begin), 
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_swadian_footman"),
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_vaegir_prison_guard"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_vaegir_sentry"),
           ##LEIFDIN+ ## - New Troop Revamp - Khergits
           (this_or_next|eq, ":dead_agent_troop_no", "trp_r_khergit_clansman"),
           #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
@@ -7799,9 +7799,9 @@ mission_templates = [
                    (modify_visitors_at_site,"scn_tutorial_5"),
                    (reset_visitors),
 				   ## WINDYPLAINS+ ## - New Troop Revamp (Vaegirs)
-                   (set_visitor,5,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"), 
-                   (set_visitor,6,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"), 
-                   (set_visitor,7,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"), 
+                   (set_visitor,5,"trp_new_vaegir_longbowman"), # "trp_vaegir_archer"), 
+                   (set_visitor,6,"trp_new_vaegir_longbowman"), # "trp_vaegir_archer"), 
+                   (set_visitor,7,"trp_new_vaegir_longbowman"), # "trp_vaegir_archer"), 
 				   ## WINDYPLAINS- ##
                    (entry_point_get_position, pos1, 11),
                    (scene_prop_get_instance, ":flag_object", "spr_tutorial_flag_yellow", 0),

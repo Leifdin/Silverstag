@@ -113,11 +113,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_swadian_knight"),
 	  
       ## VAEGIRS - NEW TROOPS
-	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_r_vaegir_militia"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_r_vaegir_sentry"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_r_vaegir_psiloi"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_r_vaegir_peltast"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_r_vaegir_bogatyr"),
+	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_new_vaegir_peasant"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_new_vaegir_spearman"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_new_vaegir_retainer"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_new_vaegir_skirmisher"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_new_vaegir_sentry"),
 	  ## VAEGIRS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_vaegir_recruit"),
       # (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_vaegir_footman"),
@@ -1188,12 +1188,12 @@ scripts = [
       # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_swadian_man_at_arms"),
       # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_swadian_knight"),
       ## VAEGIRS
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_r_vaegir_sentry"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_r_vaegir_peltast"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_r_vaegir_skirmisher"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_r_vaegir_longbowman"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_r_vaegir_koursores"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_r_vaegir_bogatyr"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_new_vaegir_spearman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_new_vaegir_militia"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_new_vaegir_bowman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_new_vaegir_longbowman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_new_vaegir_retainer"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_new_vaegir_skirmisher"),
       # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_vaegir_footman"),
       # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_vaegir_infantry"),
       # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_vaegir_skirmisher"),
@@ -6736,14 +6736,14 @@ scripts = [
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_2"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_vaegir_deserter"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_vaegir_outrider"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Vaegir)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_vaegir_vanguard"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_vaegir_militia"),
           # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_vaegir_guard"),
           ## WINDYPLAINS- ##
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_vaegir_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_vaegir_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_vaegir_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_vaegir_retainer"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_vaegir_druzhina"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_vaegir_sentry"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
@@ -52075,10 +52075,6 @@ scripts = [
 			(store_wse_version, reg3, 2),
 			(display_message, "@Warband Script Enhancer v{reg1}.{reg2}.{reg3} is running.", gpu_green),
 		(try_end),
-		
-		# FORCE CERTAIN TROOP FIXES.
-		# Huntsman of Khudan (Veteran) - Keeps ending up with a 26 agility otherwise.
-		(troop_set_attribute, "trp_khudan_mounted_archer_1", ca_agility, 16),
 		
 		## Conditional troop re-initialization that should only happen if we're testing them out.
 		(try_begin),
