@@ -126,11 +126,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_vaegir_knight"),
 	  
 	  ## KHERGITS - NEW TROOPS
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_r_khergit_slave"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_r_khergit_scout"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_r_khergit_raider"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_r_khergit_lancer"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_r_khergit_parthian"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_new_khergit_bowman"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_new_khergit_outcast"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_new_khergit_hunter"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_new_khergit_raider"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_new_khergit_master_bowman"),
 	  ## KHERGITS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_khergit_tribesman"),
       # (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_khergit_skirmisher"),
@@ -1204,10 +1204,10 @@ scripts = [
       (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_infantry, "trp_khergit_dismounted_lancer_multiplayer_ai"),
       (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_infantry, "trp_khergit_dismounted_lancer_multiplayer_ai"),
       ## WINDYPLAINS+ ## - New Troop Revamp (Khergits)
-	  (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_r_khergit_scout"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_r_khergit_orlok"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_r_khergit_lancer"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_r_khergit_parthian"),
+	  (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_new_khergit_bowman"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_new_khergit_master_bowman"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_new_khergit_scout"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_new_khergit_lancer"),
 	  # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_khergit_horse_archer"),
       # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_khergit_veteran_horse_archer"),
       # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_khergit_lancer"),
@@ -6772,14 +6772,14 @@ scripts = [
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_3"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_khergit_deserter"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_khergit_outcast"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Vaegir)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_khergit_skirmisher"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_khergit_clansman"),
 		  # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_khergit_horseman"),
 		  ## WINDYPLAINS+ ##
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_khergit_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_khergit_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_khergit_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_khergit_scout"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_khergit_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_khergit_master_bowman"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
@@ -51719,7 +51719,7 @@ scripts = [
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
 				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51758,7 +51758,7 @@ scripts = [
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
 				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51803,7 +51803,7 @@ scripts = [
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
 				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51842,7 +51842,7 @@ scripts = [
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
 				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51887,7 +51887,7 @@ scripts = [
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
 				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51922,7 +51922,7 @@ scripts = [
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
 				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.

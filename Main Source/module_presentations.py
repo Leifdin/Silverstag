@@ -427,7 +427,7 @@ presentations = [
         # (assign, ":cur_troop", "trp_vaegir_knight"),
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_3"),
-        (assign, ":cur_troop", "trp_r_khergit_raider"),
+        (assign, ":cur_troop", "trp_new_khergit_raider"),
 		# (assign, ":cur_troop", "trp_khergit_veteran_horse_archer"),
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_4"),

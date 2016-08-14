@@ -21,7 +21,7 @@ NPC_Odval                                       = "trp_npc17" # "trp_npc19" # Ni
 NPC_Edwyn                                       = "trp_npc2" # "trp_npc22" # Marnid
 
 # Actors
-qp4_actor_townsfolk                             = "trp_r_khergit_surcin"#"trp_khergit_skirmisher" # "trp_khergit_n_tariachin"  # Odval's Story
+qp4_actor_townsfolk                             = "trp_new_khergit_outcast"#"trp_khergit_skirmisher" # "trp_khergit_n_tariachin"  # Odval's Story
 qp4_actor_knight                                = "trp_hired_blade" # "trp_mercenary_e_komtur_ritter"     # Edwyn's Story
 qp4_actor_knight_support                        = "trp_mercenary_swordsman" # "trp_mercenary_e_ritter"    # Edwyn's Story
 qp4_actor_named_knight                          = "trp_qp4_actor_knight"   # Edwyn's Story
