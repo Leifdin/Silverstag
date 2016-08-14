@@ -585,7 +585,7 @@ items = [
 ["iron_greaves", 				"Iron Greaves", 				[("iron_greaves_a",0)], itp_merchandise| itp_type_foot_armor | itp_attach_armature,0, 880 , weight(2.8)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(26)|difficulty(0) ,imodbits_armor ],
 ["black_greaves", 				"Black Greaves", 				[("black_greaves",0)], itp_type_foot_armor  | itp_attach_armature,0, 2361 , weight(3.5)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(35)|difficulty(0) ,imodbits_armor ],
 ["khergit_leather_boots", 		"Khergit Leather Boots", 		[("khergit_leather_boots",0)], itp_merchandise| itp_type_foot_armor |itp_civilian | itp_attach_armature ,0, 60 , weight(1.5)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(11)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
-["khergit_guard_boots",  		"Khergit Guard Boots", 			[("lamellar_boots_a",0)], itp_type_foot_armor | itp_attach_armature,0, 170 , weight(1.8)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(16)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
+["elite_steppe_boots",  		"Elite Steppe Boots", 			[("lamellar_boots_a",0)], itp_type_foot_armor | itp_attach_armature,0, 170 , weight(1.8)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(28)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_3]],
 ["sarranid_boots_a", 			"Sarranid Shoes", 				[("sarranid_shoes",0)], itp_type_foot_armor |itp_civilian | itp_attach_armature ,0, 20 , weight(0.8)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(7)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_6]],
 ["sarranid_boots_b", 			"Sarranid Leather Boots", 		[("sarranid_boots",0)], itp_merchandise| itp_type_foot_armor |itp_civilian | itp_attach_armature ,0, 150 , weight(1.5)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(15)|difficulty(0) ,imodbits_cloth, [], [fac_kingdom_6]],
 ["sarranid_boots_c", 			"Plated Boots", 				[("sarranid_camel_boots",0)], itp_merchandise| itp_type_foot_armor |itp_civilian | itp_attach_armature ,0, 1500 , weight(3)|abundance(100)|head_armor(0)|body_armor(0)|leg_armor(28)|difficulty(0) ,imodbits_plate, [], [fac_kingdom_6]],
@@ -1248,7 +1248,7 @@ items = [
 ["veiled_helmet",			"Veiled Helmet",			[("gulam_helm_a",0)],				itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 725, weight(3.10)|abundance(100)|head_armor(43)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 
 ##### TIER 6 - 45 ARMOR #####
-["elite_steppe_helmet",		"Elite Steppe Helmet",		[("lamellar_helmet_a",0)],		itp_merchandise|itp_type_head_armor,										0, 1000, weight(3.75)|abundance(100)|head_armor(45)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
+["elite_steppe_helmet",		"Elite Steppe Helmet",		[("lamellar_helmet_a",0)],		itp_merchandise|itp_type_head_armor,										0, 1000, weight(4.10)|abundance(100)|head_armor(48)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_cloth ],
 ["nobleman_steppe_helmet",	"Nobleman Steppe Helmet",	[("helm_saracin_1",0)],			itp_merchandise|itp_type_head_armor|itp_fit_to_head,						0, 1250, weight(3.50)|abundance(100)|head_armor(46)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["elite_desert_helmet",		"Elite Desert Helmet",		[("gulam_helm_f",0)],			itp_merchandise|itp_type_head_armor|itp_fit_to_head|itp_attach_armature,	0, 1500, weight(3.85)|abundance(100)|head_armor(47)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 
@@ -1596,7 +1596,7 @@ items = [
 ["simple_lance",		"Simple Lance",		[("spear_d_2-8m",0)],				itp_merchandise|itp_type_polearm|itp_couchable|itp_primary|itp_offset_lance|itp_wooden_parry, itc_cutting_spear,							500, weight(2.5)|abundance(30)|difficulty(12)|spd_rtng(99)|weapon_length(180)|swing_damage(21, cut)|thrust_damage(21, pierce), imodbits_polearm ],
 ##### Tier 2 #####
 ["lance",				"Lance",			[("crusader_knight_spear_a",0)],	itp_merchandise|itp_type_polearm|itp_couchable|itp_primary|itp_offset_lance|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,	350, weight(2.5)|abundance(25)|difficulty(10)|spd_rtng(85)|weapon_length(260)|swing_damage(21, cut)|thrust_damage(21, pierce), imodbits_polearm ],
-["heavy_lance",			"Heavy Lance",		[("spear_f_2-9m",0)],				itp_merchandise|itp_type_polearm|itp_couchable|itp_primary|itp_offset_lance|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,	600, weight(3.5)|abundance(20)|difficulty(13)|spd_rtng(90)|weapon_length(190)|swing_damage(29, cut)|thrust_damage(29, pierce), imodbits_polearm ],
+["heavy_lance",			"Heavy Lance",		[("spear_f_2-9m",0)],				itp_merchandise|itp_type_polearm|itp_couchable|itp_primary|itp_offset_lance|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,	600, weight(3.5)|abundance(20)|difficulty(13)|spd_rtng(80)|weapon_length(190)|swing_damage(29, cut)|thrust_damage(35, pierce), imodbits_polearm ],
 ##### Tier 3 #####
 ["decorated_lance",		"Decorated Lance",	[("mameluk_spears_c",0)],			itp_merchandise|itp_type_polearm|itp_couchable|itp_primary|itp_offset_lance|itp_penalty_with_shield|itp_wooden_parry, itc_cutting_spear,	450, weight(2.5)|abundance(15)|difficulty(11)|spd_rtng(85)|weapon_length(260)|swing_damage(26, cut)|thrust_damage(26, pierce), imodbits_polearm ],
 ##### Tier 4 #####
@@ -1666,7 +1666,7 @@ items = [
 ["throwing_spears",			"Throwing Spears", [("jarid_new_b",0),("jarid_new_b_bag", ixmesh_carry)], 	itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn,					525 , weight(4)|abundance(50)|difficulty(3)|spd_rtng(87) | shoot_speed(22) | thrust_damage(50 ,  pierce)|max_ammo(8)|weapon_length(65),imodbits_thrown ],
 ["throwing_spear_melee",	"Throwing Spear", [("jarid_new_b",0),("javelins_quiver", ixmesh_carry)],	itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff,																										525 , weight(4)|difficulty(3)|spd_rtng(91) | swing_damage(18, cut) | thrust_damage(23 ,  pierce)|weapon_length(75),imodbits_thrown ],
 
-["jarid",					"Jarids", [("jarid_new",0),("jarid_quiver", ixmesh_carry)],					itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn,					560 , weight(5)|abundance(25)|difficulty(2)|spd_rtng(89) | shoot_speed(24) | thrust_damage(45 ,  pierce)|max_ammo(6)|weapon_length(65),imodbits_thrown ],
+["jarid",					"Jarids", [("jarid_new",0),("jarid_quiver", ixmesh_carry)],					itp_type_thrown |itp_merchandise|itp_primary|itp_next_item_as_melee ,itcf_throw_javelin|itcf_carry_quiver_back|itcf_show_holster_when_drawn,					560 , weight(5)|abundance(25)|difficulty(2)|spd_rtng(89) | shoot_speed(24) | thrust_damage(45 ,  pierce)|max_ammo(9)|weapon_length(65),imodbits_thrown ],
 ["jarid_melee",				"Jarid", [("jarid_new",0),("jarid_quiver", ixmesh_carry)],					itp_type_polearm|itp_primary|itp_wooden_parry , itc_staff,																										560 , weight(5)|difficulty(2)|spd_rtng(93) | swing_damage(16, cut) | thrust_damage(20 ,  pierce)|weapon_length(65),imodbits_thrown ],
 
 ########### Axes ##########

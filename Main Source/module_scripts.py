@@ -1557,7 +1557,7 @@ scripts = [
       (item_set_slot, "itm_sarranid_boots_d", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
 	  (item_set_slot, "itm_iron_greaves", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
 	  (item_set_slot, "itm_khergit_leather_boots", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
-	  (item_set_slot, "itm_khergit_guard_boots", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
+	  (item_set_slot, "itm_elite_steppe_boots", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
 
 	  
 	  
@@ -1573,7 +1573,7 @@ scripts = [
       (item_set_slot, "itm_leather_steppe_cap_b", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
       (item_set_slot, "itm_leather_steppe_cap_a", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
       (item_set_slot, "itm_heavy_conical_helm", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
-      (item_set_slot, "itm_elite_steppe_helmet", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
+#      (item_set_slot, "itm_elite_steppe_helmet", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
 	  
 	  
 	  
