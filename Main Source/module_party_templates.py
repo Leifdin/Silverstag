@@ -165,21 +165,21 @@ party_templates = [
 
  ### KHERGITS ### - NEW TROOPS
  # GAME_MODE_EASY
- ("kingdom_3_reinforcements_a", "kingdom_3_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_khergit_slave,16,36),(trp_r_khergit_outcast, 5, 10), (trp_r_khergit_surcin, 10, 15)]), 
- ("kingdom_3_reinforcements_b", "kingdom_3_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_khergit_scout, 25, 35)]), 
- ("kingdom_3_reinforcements_c", "kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 1, 2), (trp_r_khergit_morici, 1, 6), (trp_r_khergit_abaci, 1, 5) ]), 
+ ("kingdom_3_reinforcements_a", "kingdom_3_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_khergit_bowman, 11, 11), (trp_new_khergit_outcast, 11, 11), (trp_new_khergit_scout, 3, 3), (trp_new_khergit_hunter, 3, 3), (trp_new_khergit_master_bowman, 2, 2)]),
+ ("kingdom_3_reinforcements_b", "kingdom_3_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_khergit_bowman, 9, 9), (trp_new_khergit_outcast, 9, 9), (trp_new_khergit_clansman, 4, 4), (trp_new_khergit_hunter, 5, 5), (trp_new_khergit_master_bowman, 3, 3)]),
+ ("kingdom_3_reinforcements_c", "kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_khergit_outcast, 10, 10), (trp_new_khergit_scout, 5, 5), (trp_new_khergit_hunter, 5, 5), (trp_new_khergit_clansman, 5, 5), (trp_new_khergit_raider, 4, 4), (trp_new_khergit_lancer, 1, 1)]),
  # GAME_MODE_NORMAL
- ("kingdom_3_reinforcements_d", "kingdom_3_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_khergit_asud, 5, 10), (trp_r_khergit_kharvaach, 8, 15)]), 
- ("kingdom_3_reinforcements_e", "kingdom_3_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 3, 8), (trp_r_khergit_scout, 10, 15), (trp_r_khergit_morici, 5, 8), (trp_r_khergit_abaci, 8, 12), (trp_r_khergit_skirmisher, 10, 13)]), #
- ("kingdom_3_reinforcements_f", "kingdom_3_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_khergit_parthian, 6, 16)]), #
- # GAME_MODE_HARD
- ("kingdom_3_reinforcements_g", "kingdom_3_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_khergit_skirmisher, 14, 33), (trp_r_khergit_raider, 12, 15)]), 
- ("kingdom_3_reinforcements_h", "kingdom_3_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 8, 15), (trp_r_khergit_parthian, 5, 13)]), 
- ("kingdom_3_reinforcements_i", "kingdom_3_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_khergit_skirmisher, 6, 16), (trp_r_khergit_noyan, 1, 3)]), 
+ ("kingdom_3_reinforcements_d", "kingdom_3_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_khergit_bowman, 6, 6), (trp_new_khergit_outcast, 6, 6), (trp_new_khergit_scout, 7, 7), (trp_new_khergit_hunter, 2, 2), (trp_new_khergit_clansman, 7, 7), (trp_new_khergit_master_bowman, 4, 4) ]), ## 30 troops
+ ("kingdom_3_reinforcements_e", "kingdom_2_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_khergit_bowman, 4, 4), (trp_new_khergit_clansman, 5, 5), (trp_new_khergit_skirmisher, 1, 1), (trp_new_khergit_hunter, 5, 5), (trp_new_khergit_scout, 5, 5), (trp_new_khergit_outcast, 5, 5)],), ## 30 troops
+ ("kingdom_3_reinforcements_f", "kingdom_2_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_khergit_outcast, 3, 3), (trp_new_khergit_master_bowman, 9, 9), (trp_new_khergit_scout, 11, 11), (trp_new_khergit_raider, 3, 3), (trp_new_khergit_hunter, 3, 3), (trp_new_khergit_skirmisher, 1, 1)]), ## 30 troops
+  # GAME_MODE_HARD
+ ("kingdom_3_reinforcements_g", "kingdom_3_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_khergit_outcast, 8, 8), (trp_new_khergit_guard, 2, 2), (trp_new_khergit_master_bowman, 8, 8), (trp_new_khergit_scout, 8, 8), (trp_new_khergit_raider, 6, 6)]), ## 30 troops
+ ("kingdom_3_reinforcements_h", "kingdom_3_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_khergit_hunter, 4, 4), (trp_new_khergit_clansman, 4, 4), (trp_new_khergit_scout, 7, 7), (trp_new_khergit_lancer, 7, 7), (trp_new_khergit_master_bowman, 4, 4), (trp_new_khergit_skirmisher, 4, 4) ],), ## 30 troops
+ ("kingdom_3_reinforcements_i", "kingdom_3_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_khergit_guard, 5, 5), (trp_new_khergit_lancer, 2, 2), (trp_new_khergit_scout, 8, 8), (trp_new_khergit_raider, 8, 8), (trp_new_khergit_master_bowman, 2, 2), (trp_new_khergit_skirmisher, 5, 5)]), ## 30 troops
  # GAME_MODE_VERY_HARD
- ("kingdom_3_reinforcements_j", "kingdom_3_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_khergit_torguu,2,4), (trp_r_khergit_lancer, 6, 16), (trp_r_khergit_skirmisher, 6, 13)]), 
- ("kingdom_3_reinforcements_k", "kingdom_3_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 5, 11), (trp_r_khergit_skirmisher, 5, 9), (trp_r_khergit_torguu, 3, 8), (trp_r_khergit_noyan, 1, 3)]), #
- ("kingdom_3_reinforcements_l", "kingdom_3_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_khergit_bahatur, 1, 2), (trp_r_khergit_noker, 1, 3), (trp_r_khergit_raider, 15, 25), (trp_r_khergit_parthian, 15, 20)]), 
+ ("kingdom_3_reinforcements_j", "kingdom_3_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_khergit_master_bowman, 5, 5), (trp_new_khergit_guard, 2, 2), (trp_new_khergit_scout, 5, 5), (trp_new_khergit_clansman, 8, 8), (trp_new_khergit_lancer, 5, 5), (trp_new_khergit_skirmisher, 5, 5)]), ## 30 troops
+ ("kingdom_3_reinforcements_k", "kingdom_3_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_khergit_scout, 4, 4), (trp_new_khergit_hunter, 3, 3), (trp_new_khergit_lancer, 3, 3), (trp_new_khergit_guard, 4, 4), (trp_new_khergit_skirmisher, 7, 7), (trp_new_khergit_master_bowman, 9, 9) ],), ## 30 troops
+ ("kingdom_3_reinforcements_l", "kingdom_3_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_khergit_scout, 2, 2), (trp_new_khergit_raider, 10, 10), (trp_new_khergit_skirmisher, 10, 10), (trp_new_khergit_lancer, 4, 4), (trp_new_khergit_guard, 4, 4)]), ## 30 troops
  
  
  ### NORDS ### - NEW TROOPS
