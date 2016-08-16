@@ -1036,7 +1036,7 @@ items = [
 
 ##### TIER 5 - 38 ARMOR #####
 ["flat_top_helmet",				"Flat Top Helmet",			[("crusader_helm_7",0)],		itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 550, weight(3.2)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
-["kettle_helm_b",				"Kettle Hat",				[("kettle_hat_new",0)],			itp_merchandise|itp_type_head_armor,					0, 700, weight(3.3)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
+["kettle_helm_b",				"Kettle Helm",				[("kettle_hat_new",0)],			itp_merchandise|itp_type_head_armor,					0, 700, weight(3.3)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
 ["capelina_with_chainmail",		"Capelina with Chainmail",	[("capelina_crusader_a",0)],	itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 700, weight(3.1)|abundance(100)|head_armor(39)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["norman_helmet_with_coif_a",	"Norman Helmet with Coif",	[("crusader_helm_6",0)],		itp_merchandise|itp_type_head_armor|itp_fit_to_head,	0, 650, weight(3.1)|abundance(100)|head_armor(38)|body_armor(0)|leg_armor(0)|difficulty(0), imodbits_armor ],
 ["bascinet", 					"Bascinet",					[("bascinet_avt_new",0)],		itp_merchandise|itp_type_head_armor,					0, 600, weight(2.9)|abundance(100)|head_armor(37)|body_armor(0)|leg_armor(0)|difficulty(0) ,imodbits_plate ],
@@ -1314,8 +1314,8 @@ items = [
 ##### Tier 2 #####
 ["arming_sword",			"Arming Sword",			[("sword_medieval_b",0),("sword_medieval_b_scabbard", ixmesh_carry),("sword_rusty_a",imodbit_rusty),("sword_rusty_a_scabbard", ixmesh_carry|imodbit_rusty)], itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn, 575 , weight(1.5)|abundance(20)|difficulty(2)|spd_rtng(95)|weapon_length(95)|swing_damage(25 , cut)|thrust_damage(15 ,  pierce), imodbits_sword_high ],
 ["long_sword",				"Long Sword",			[("sword_medieval_d_long",0),("sword_medieval_d_long_scabbard", ixmesh_carry)],	itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	550, weight(1.8)|abundance(15)|difficulty(2)|spd_rtng(93) |weapon_length(105)|swing_damage(24, cut)|thrust_damage(14, pierce), imodbits_sword ],
-["mercenary_falchion_a",	"Mercenary Falchion",	[("falshion_1",0),("falshion_1_scab",ixmesh_carry)],							itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	300, weight(1.5)|abundance(11)|difficulty(8)|spd_rtng(102)|weapon_length(65)|swing_damage(22, cut)|thrust_damage(0, pierce), imodbits_sword_high ],
-["mercenary_falchion_b",	"Mercenary Falchion",	[("falshion_2",0)],																itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	300, weight(2.1)|abundance(10)|difficulty(9)|spd_rtng(100)|weapon_length(68)|swing_damage(23, cut)|thrust_damage(0, pierce), imodbits_sword_high ],
+["mercenary_falchion_a",	"Mercenary Falchion",	[("falshion_1",0),("falshion_1_scab",ixmesh_carry)],							itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	300, weight(1.5)|abundance(11)|difficulty(8)|spd_rtng(102)|weapon_length(65)|swing_damage(32, cut)|thrust_damage(0, pierce), imodbits_sword_high ],
+["mercenary_falchion_b",	"Mercenary Falchion",	[("falshion_2",0)],																itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_longsword|itcf_carry_sword_left_hip|itcf_show_holster_when_drawn,	300, weight(2.1)|abundance(10)|difficulty(9)|spd_rtng(98)|weapon_length(68)|swing_damage(33, cut)|thrust_damage(0, pierce), imodbits_sword_high ],
 ["cheap_cleaver",			"Cheap Cleaver",		[("military_cleaver_c",0)],														itp_merchandise|itp_type_one_handed_wpn|itp_primary, itc_scimitar|itcf_carry_sword_left_hip,								263, weight(1.5)|abundance(8)|difficulty(5)|spd_rtng(95) |weapon_length(95)|swing_damage(25, cut)|thrust_damage(0, pierce), imodbits_sword_high ],
 
 ##### Tier 3 #####
@@ -1770,8 +1770,8 @@ items = [
 
 ["decorated_shield_c",			"Decorated Shield",				[("saracin_shield_m",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					1250,	weight(5)|hit_points(400)|body_armor(19)|spd_rtng(85)|shield_width(50), imodbits_shield ],
 ["decorated_shield_d",			"Decorated Shield",				[("saracin_shield_n",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					1250,	weight(5)|hit_points(400)|body_armor(19)|spd_rtng(85)|shield_width(50), imodbits_shield ],
-["kngiht_round_shield_a",		"Knight Round Shield",			[("shield_vostoka_b",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					1500,	weight(8)|hit_points(400)|body_armor(16)|spd_rtng(85)|shield_width(57), imodbits_shield ],
-["kngiht_round_shield_b",		"Knight Round Shield",			[("shield_vostoka_c",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					2000,	weight(8)|hit_points(400)|body_armor(17)|spd_rtng(85)|shield_width(57), imodbits_shield ],
+["knight_round_shield_a",		"Knight Round Shield",			[("shield_vostoka_b",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					1500,	weight(8)|hit_points(400)|body_armor(16)|spd_rtng(85)|shield_width(57), imodbits_shield ],
+["knight_round_shield_b",		"Knight Round Shield",			[("shield_vostoka_c",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					2000,	weight(8)|hit_points(400)|body_armor(17)|spd_rtng(85)|shield_width(57), imodbits_shield ],
 ["decorated_steel_shield", 		"Decorated Steel Shield", 		[("dec_steel_shield",0)],	itp_merchandise|itp_type_shield, itcf_carry_round_shield,					2500,	weight(4)|hit_points(550)|body_armor(21)|spd_rtng(90)|shield_width(40),imodbits_shield ],
 
 
