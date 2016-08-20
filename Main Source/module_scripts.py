@@ -33851,7 +33851,7 @@ scripts = [
 		(try_end),
 		# (store_random_in_range, ":troop_no", ":mercenaries_begin", mercenary_troops_end),
 		# (party_set_slot, ":town_no", slot_center_mercenary_troop_type, ":troop_no"),
-		(store_random_in_range, ":amount", 3, 8),
+		(store_random_in_range, ":amount", 1, 5),
 		(try_begin),
 			(is_between, ":town_no", castles_begin, castles_end), # Castles gain mercenaries at half the standard rate.
 			(val_div, ":amount", 2),
@@ -33859,6 +33859,21 @@ scripts = [
 			(is_between, ":town_no", villages_begin, villages_end), # Villages gain mercenaries at 1/6th the standard rate.
 			(val_div, ":amount", 6),
 		(try_end),
+		## Difficulty modifier ##
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY), ## 4/3 production
+			(store_div, ":difficulty_modifier", ":amount", 3),
+			(val_add, ":amount", ":difficulty_modifier"),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_HARD), ## 2/3 production
+			(store_div, ":difficulty_modifier", ":amount", 3),
+			(val_sub, ":amount", ":difficulty_modifier"),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_VERY_HARD), ## 1/3 production
+			(store_div, ":difficulty_modifier", ":amount", 6),
+			(val_sub, ":amount", ":difficulty_modifier"),
+		(try_end),
+		
 		(val_add, ":amount", ":bonus"),
 		(party_set_slot, ":town_no", slot_center_mercenary_pool_player, ":amount"),
 		(val_mul, ":amount", 3),

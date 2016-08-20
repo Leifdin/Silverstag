@@ -4306,6 +4306,23 @@ scripts = [
 				(val_add, ":stable_capacity", ":stable_bonus"),
 			(try_end),
 			
+			## Modify production based on difficulty ##
+			(try_begin),
+				(eq, "$mod_difficulty", GAME_MODE_EASY), ## 4/3 production
+				(store_div, ":stable_modifier", ":stable_growth", 3),
+				(val_add, ":stable_growth", ":stable_modifier"),
+			(else_try),
+				(eq, "$mod_difficulty", GAME_MODE_HARD), ## 2/3 production
+				(store_div, ":stable_modifier", ":stable_growth", 3),
+				(val_sub, ":stable_growth", ":stable_modifier"),
+			(else_try),
+				(eq, "$mod_difficulty", GAME_MODE_VERY_HARD), ## 1/3 production
+				(store_div, ":stable_modifier", ":stable_growth", 6),
+				(val_sub, ":stable_growth", ":stable_modifier"),
+			(try_end),
+
+				
+			
 			## PRODUCE NEW MOUNTS (player)
 			(party_get_slot, ":available_mounts", ":center_no", slot_center_horse_pool_player),
 			(val_add, ":available_mounts", ":stable_growth"),
