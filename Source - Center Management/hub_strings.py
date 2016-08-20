@@ -132,6 +132,8 @@ strings = [
 	("hub_prereq_center_relation","Center Relation of {reg21}+"),
 	("hub_prereq_owner_only",     "You must be lord of this center"),
 	("hub_prereq_affiliated",     "Affiliation: {s21}"),
+	("hub_prereq_expensive",      "Recruitment cost is double as usual"),
+	("hub_prereq_disreputable",   "Recruitment may tarnish your reputation"),
 	
 	## ORIGINAL CENTER NAMES
 	### TOWNS BEGIN ###

@@ -149,6 +149,8 @@ PREREQ_AFFILIATED                  = 7  # Requires that you are a part of the sa
 PREREQ_CHARTERED                   = 8  # Not implemented.
 PREREQ_UNIQUE_LOCATION_UPGRADE     = 9  # Used for slot upgrades on uniques to prevent them from being recruitable.
 PREREQ_LIEGE_RELATION              = 10 # Requires that you have a minimum of 50 relation with the leader of this faction.
+PREREQ_EXPENSIVE                   = 11 # Troop is twice as expensive as usually
+PREREQ_DISREPUTABLE                = 12 # Hiring troop may reduce honor
 
 troop_prereq_friend_relation       = 10
 troop_prereq_ally_relation         = 25

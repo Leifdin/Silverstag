@@ -466,6 +466,12 @@ scripts = [
 		(else_try),
 			(eq, ":prereq", PREREQ_LIEGE_RELATION),
 			(str_store_string, s31, "@LIEGE RELATION"),
+		(else_try),
+			(eq, ":prereq", PREREQ_DISREPUTABLE),
+			(str_store_string, s31, "@DISREPUTABLE"),
+		(else_try),
+			(eq, ":prereq", PREREQ_EXPENSIVE),
+			(str_store_string, s31, "@EXPENSIVE"),
 		(else_try), 
 			### DEFAULT RESPONSE ###
 			(str_store_string, s31, "@UNDEFINED"),

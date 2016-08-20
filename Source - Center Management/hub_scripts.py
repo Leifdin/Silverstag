@@ -2172,6 +2172,7 @@ scripts = [
 		
 		(assign, ":color_good", 14336), # Dark Green
 		(assign, ":color_bad", 4980736), # Dark Red
+		(assign, ":color_warning", 0x0AC2FF), # Blue?
 		
 		## OBJ - TROOP IMAGE
 		(store_sub, ":pos_y_portrait", ":pos_y", 100),
@@ -2206,6 +2207,14 @@ scripts = [
 			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISHONORABLE),
 			(assign, ":color", gpu_dishonorable),
 			(str_store_string, s22, "@{s22} (Dishonorable)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISREPUTABLE),
+			(assign, ":color", gpu_disreputable),
+			(str_store_string, s22, "@{s22} (Disreputable)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE),
+			(assign, ":color", gpu_expensive),
+			(str_store_string, s22, "@{s22} (Expensive)"),
 		(else_try),
 			(assign, ":color", gpu_black),
 		(try_end),
@@ -2510,6 +2519,39 @@ scripts = [
 				(assign, ":disable_recruitment", 1),
 			(try_end),
 		(try_end),
+
+		## OBJ - REQUIREMENT - EXPENSIVE
+		(try_begin),
+			(assign, ":continue", 0),
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE), # combat_scripts.py - prereq constants in combat_constants.py
+				(assign, ":continue", 1),
+			(try_end),
+			(eq, ":continue", 1),
+			(val_sub, ":pos_y_temp", 20),
+			(str_store_string, s21, "@Double recruitment cost"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
+			(call_script, "script_gpu_resize_object", 0, 75),
+			(try_begin),
+				(overlay_set_color, reg1, ":color_warning"),
+			(try_end),
+		(try_end),
+		## OBJ - REQUIREMENT - DISREPUTABLE
+		(try_begin),
+			(assign, ":continue", 0),
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISREPUTABLE), # combat_scripts.py - prereq constants in combat_constants.py
+				(assign, ":continue", 1),
+			(try_end),
+			(eq, ":continue", 1),
+			(val_sub, ":pos_y_temp", 20),
+			(str_store_string, s21, "@Recruiting reduces honour"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
+			(call_script, "script_gpu_resize_object", 0, 75),
+			(try_begin),
+				(overlay_set_color, reg1, ":color_warning"),
+			(try_end),
+		(try_end),
 		
 		## BUTTON - RECRUIT TROOP
 		(store_sub, ":pos_y_button_1", ":pos_y", 35),
@@ -2709,6 +2751,12 @@ scripts = [
 			(store_mul, ":discount_cheap", ":rating_total", 40),
 			(val_div, ":discount_cheap", 100),
 			(val_sub, ":rating_total", ":discount_cheap"),
+		(try_end),
+
+		## EXPENSIVE TROOPS ## - Increase price by 100%
+		(try_begin),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE),
+			(val_add, ":rating_total", ":rating_total"),
 		(try_end),
 		
 		(troop_set_slot, ":troop_no", slot_troop_purchase_cost, ":rating_total"),
