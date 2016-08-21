@@ -644,7 +644,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_siege_commander"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_siege_commander", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_rhodok_siege_commander", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		## I7 Rhodok Hedge Knight

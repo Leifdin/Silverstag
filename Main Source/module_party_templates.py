@@ -105,9 +105,9 @@ party_templates = [
  ## LEIFDIN+ ## - Added reinforcement templates for player's culture.
  ### PLAYER CUSTOM CULTURE ###
  # Following data is per script "cf_reinforce_party".
- # Reinforcement A gets added to kingdom_parties (50%) and centers (65%).
- # Reinforcement B gets added to kingdom_parties (25%) and centers (35%).
- # Reinforcement C gets added to kingdom_parties (25%) only .
+ # Reinforcement A gets added to centres only
+ # Reinforcement B gets added to kingdom_parties (50%) and centers (50%).
+ # Reinforcement C gets added to kingdom_parties only .
  # GAME_MODE_EASY
  ("kingdom_0_reinforcements_a", "kingdom_0_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_player_tier_2,16,36),(trp_player_tier_3_infantry,3,7)]),
  ("kingdom_0_reinforcements_b", "kingdom_0_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_player_tier_3_infantry,8,15),(trp_player_tier_3_ranged,6,13)]),
@@ -202,21 +202,21 @@ party_templates = [
  
  ### RHODOKS ### - NEW TROOPS
  # GAME_MODE_EASY
- ("kingdom_5_reinforcements_a", "kingdom_5_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_rhodok_militia,8,18),(trp_rhodok_trained_militia,8,18),(trp_rhodok_trained_militia,3,7)]),
- ("kingdom_5_reinforcements_b", "kingdom_5_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_rhodok_trained_militia,8,15),(trp_rhodok_crossbowman,6,13)]),
- ("kingdom_5_reinforcements_c", "kingdom_5_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,3,8),(trp_rhodok_crossbowman_2,3,8),(trp_rhodok_arbalestier,2,5)]),
+ ("kingdom_5_reinforcements_a", "kingdom_5_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_rhodok_militia, 10, 10), (trp_new_rhodok_militia_archer, 10, 10), (trp_new_rhodok_vanguard, 5, 5), (trp_new_rhodok_crossbowman, 5, 5)]), ## 30 troops
+ ("kingdom_5_reinforcements_b", "kingdom_5_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_rhodok_halberdier, 2, 2), (trp_new_rhodok_vanguard, 8, 8), (trp_new_rhodok_scout, 10, 10), (trp_new_rhodok_militia, 10, 10)],), ## 30 troops
+ ("kingdom_5_reinforcements_c", "kingdom_5_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_rhodok_captain, 1, 1), (trp_new_rhodok_siege_breaker, 1, 1), (trp_new_rhodok_pikeman, 2, 2), (trp_new_rhodok_footman, 10, 10), (trp_new_rhodok_crossbowman, 6, 6), (trp_new_rhodok_scout, 10, 10)]), ## 30 troops
  # GAME_MODE_NORMAL
- ("kingdom_5_reinforcements_d", "kingdom_5_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_rhodok_militia,6,13),(trp_rhodok_trained_militia,4,11),(trp_rhodok_crossbowman,7,12)]),
- ("kingdom_5_reinforcements_e", "kingdom_5_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,8,15),(trp_rhodok_crossbowman_2,2,8),(trp_rhodok_arbalestier,4,10)]),
- ("kingdom_5_reinforcements_f", "kingdom_5_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman_2,3,8),(trp_rhodok_arbalestier,3,8),(trp_rhodok_siege_commander,1,3),(trp_rhodok_mercenary_captain,0,2)]),
- # GAME_MODE_HARD
- ("kingdom_5_reinforcements_g", "kingdom_5_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_rhodok_trained_militia,8,20),(trp_rhodok_crossbowman,6,13)]),
- ("kingdom_5_reinforcements_h", "kingdom_5_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,7,15),(trp_rhodok_crossbowman_2,6,13),(trp_rhodok_arbalestier,4,10),(trp_rhodok_highland_pikeman,2,6)]),
- ("kingdom_5_reinforcements_i", "kingdom_5_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman_2,3,8),(trp_rhodok_arbalestier,3,8),(trp_rhodok_hedge_knight,1,4),(trp_rhodok_siege_commander,1,2),(trp_rhodok_mercenary_captain,1,1)]),
+ ("kingdom_5_reinforcements_d", "kingdom_5_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_rhodok_militia, 6, 6), (trp_new_rhodok_militia_archer, 6, 6), (trp_new_rhodok_vanguard, 9, 9), (trp_new_rhodok_crossbowman, 9, 9)]), ## 30 troops
+ ("kingdom_5_reinforcements_e", "kingdom_5_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_rhodok_halberdier, 4, 4), (trp_new_rhodok_vanguard, 10, 10), (trp_new_rhodok_scout, 12, 12), (trp_new_rhodok_militia, 5, 5)],), ## 30 troops
+ ("kingdom_5_reinforcements_f", "kingdom_5_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_rhodok_captain, 2, 2), (trp_new_rhodok_siege_breaker, 2, 2), (trp_new_rhodok_pikeman, 4, 4), (trp_new_rhodok_footman, 5, 5), (trp_new_rhodok_crossbowman, 7, 7), (trp_new_rhodok_scout, 10, 10)]), ## 30 troops
+  # GAME_MODE_HARD
+ ("kingdom_5_reinforcements_g", "kingdom_5_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_rhodok_halberdier, 4, 4), (trp_new_rhodok_siege_breaker, 3, 3), (trp_new_rhodok_vanguard, 11, 11), (trp_new_rhodok_crossbowman, 12, 12)]), ## 30 troops
+ ("kingdom_5_reinforcements_h", "kingdom_5_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_rhodok_halberdier, 9, 9), (trp_new_rhodok_vanguard, 10, 10), (trp_new_rhodok_scout, 10, 10), (trp_new_rhodok_siege_commander, 2, 2)],), ## 30 troops
+ ("kingdom_5_reinforcements_i", "kingdom_5_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_rhodok_captain, 3, 3), (trp_new_rhodok_siege_breaker, 3, 3), (trp_new_rhodok_pikeman, 10, 10), (trp_new_rhodok_crossbowman, 9, 9), (trp_new_rhodok_hedge_knight, 2, 2), (trp_new_rhodok_siege_breaker, 3, 3)]), ## 30 troops
  # GAME_MODE_VERY_HARD
- ("kingdom_5_reinforcements_j", "kingdom_5_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_rhodok_crossbowman,2,4),(trp_rhodok_pikeman,6,15),(trp_rhodok_crossbowman_2,6,14)]),
- ("kingdom_5_reinforcements_k", "kingdom_5_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,5,11),(trp_rhodok_crossbowman_2,2,5),(trp_rhodok_pikeman_2,3,8),(trp_rhodok_arbalestier,4,10),(trp_rhodok_siege_commander,2,5)]),
- ("kingdom_5_reinforcements_l", "kingdom_5_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_rhodok_arbalestier,3,8),(trp_rhodok_hedge_knight,1,4),(trp_rhodok_siege_commander,1,3),(trp_rhodok_mercenary_captain,1,3),(trp_rhodok_siege_breaker,1,4)]),
+ ("kingdom_5_reinforcements_j", "kingdom_5_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_rhodok_halberdier, 6, 6), (trp_new_rhodok_siege_breaker, 5, 5), (trp_new_rhodok_vanguard, 9, 9), (trp_new_rhodok_crossbowman, 12, 12)]), ## 30 troops
+ ("kingdom_5_reinforcements_k", "kingdom_5_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_rhodok_halberdier, 9, 9), (trp_new_rhodok_vanguard, 10, 10), (trp_new_rhodok_scout, 7, 7), (trp_new_rhodok_siege_commander, 3, 3), (trp_new_rhodok_hedge_knight, 1, 1), (trp_new_rhodok_captain, 1, 1)],), ## 30 troops
+ ("kingdom_5_reinforcements_l", "kingdom_5_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_rhodok_captain, 4, 4), (trp_new_rhodok_siege_breaker, 4, 4), (trp_new_rhodok_pikeman, 10, 10), (trp_new_rhodok_crossbowman, 5, 5), (trp_new_rhodok_hedge_knight, 3, 3), (trp_new_rhodok_siege_breaker, 4, 4)]), ## 30 troops
  
  
  ### SARRANID ### - NEW TROOPS
