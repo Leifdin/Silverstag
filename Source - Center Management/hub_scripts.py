@@ -371,7 +371,7 @@ scripts = [
 
 		## I5 Vaegir Sentry
 		(troop_set_class, "trp_new_vaegir_sentry", CLASS_INFANTRY),
-		(troop_set_slot,  "trp_new_vaegir_spearman", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot,  "trp_new_vaegir_sentry", slot_troop_recruit_type, STRT_NOBLEMAN),
 
 		## C6 Vaegir Knight
 		(troop_set_class, "trp_new_vaegir_knight", CLASS_CAVALRY),
@@ -568,387 +568,91 @@ scripts = [
 		#####               RHODOK FACTION               #####
 		######################################################
 		
-		## I1 - Rhodok Militia
-		(troop_set_class, "trp_rhodok_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_militia_2", CLASS_INFANTRY),
-		
-		## A2 - Rhodok Militia Archer
-		(troop_set_class, "trp_rhodok_militia_archer", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_militia_archer_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_militia_archer_2", CLASS_RANGED),
-		
-		## A3 - Rhodok Crossbowman
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_crossbowman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_crossbowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_rhodok_crossbowman", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_crossbowman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_crossbowman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_rhodok_crossbowman_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_crossbowman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_crossbowman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_rhodok_crossbowman_2", CLASS_RANGED),
-		
-		## I3 - Rhodok Footman
-		(troop_set_class, "trp_rhodok_trained_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_trained_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_trained_militia_2", CLASS_INFANTRY),
-		
-		## I3 - Rhodok Pikeman
-		(troop_set_class, "trp_rhodok_pikeman", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_pikeman_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_pikeman_2", CLASS_INFANTRY),
-		# (troop_set_slot, "trp_rhodok_pikeman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## A4 - Rhodok Arbalestier
-		(troop_set_class, "trp_rhodok_arbalestier", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_arbalestier_1", CLASS_RANGED),
-		# (troop_set_slot, "trp_rhodok_arbalestier_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_arbalestier_2", CLASS_RANGED),
-		# (troop_set_slot, "trp_rhodok_arbalestier_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## I3 - Rhodok Vanguard (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_vanguard"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_vanguard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_vanguard", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_vanguard_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_vanguard_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_1", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_1", BONUS_SAVAGE_BASH, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_vanguard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_vanguard_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_vanguard_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_vanguard_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_2", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_2", BONUS_SAVAGE_BASH, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_vanguard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_vanguard_2", CLASS_INFANTRY),
-		
-		## I5 - Highland Pikeman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_highland_pikeman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_highland_pikeman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_highland_pikeman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_highland_pikeman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_highland_pikeman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_highland_pikeman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_1", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_highland_pikeman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_highland_pikeman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_highland_pikeman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_highland_pikeman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_2", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_highland_pikeman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_highland_pikeman_2", CLASS_INFANTRY),
-		
-		## A6 - Siege-Breaker Crossbowman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_breaker"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_breaker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_breaker", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_breaker", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_breaker_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_breaker_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_1", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_breaker_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_breaker_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_breaker_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_breaker_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_2", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_breaker_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_breaker_2", CLASS_RANGED),
-		
-		## I6 - Hedge Knight (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_hedge_knight"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_hedge_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_hedge_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_hedge_knight", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_hedge_knight_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_hedge_knight_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_1", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_hedge_knight_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_hedge_knight_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_hedge_knight_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_hedge_knight_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_hedge_knight_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_hedge_knight_2", CLASS_INFANTRY),
+		## I1 Rhodok Militia
+		(troop_set_class, "trp_new_rhodok_militia", CLASS_INFANTRY),
 
-		## A6 - Siege Commander
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_commander"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_commander", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_commander", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_commander", CLASS_RANGED),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_commander_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_commander_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_1", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_1", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_commander_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_commander_1", CLASS_RANGED),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_commander_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_commander_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_2", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_2", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_commander_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_commander_2", CLASS_RANGED),
+		## A2 Rhodok Militia Archer
+		(troop_set_class, "trp_new_rhodok_militia_archer", CLASS_RANGED),
 
-		## I6 - Mercenary Captain
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_mercenary_captain"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_mercenary_captain", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_mercenary_captain", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_mercenary_captain", CLASS_INFANTRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_mercenary_captain_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_mercenary_captain_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_mercenary_captain_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_mercenary_captain_1", CLASS_INFANTRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_mercenary_captain_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_mercenary_captain_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_mercenary_captain_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_mercenary_captain_2", CLASS_INFANTRY),
+		## I3 Rhodok Footman
+		(troop_set_class, "trp_new_rhodok_footman", CLASS_INFANTRY),
 		
-		## H3 - Jamiche Border Guard (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jamiche_border_guard"), # combat_scripts.py
-		(troop_set_slot, "trp_jamiche_border_guard", slot_troop_unique_location, "p_castle_9"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_jamiche_border_guard", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jamiche_border_guard_1"), # combat_scripts.py
-		(troop_set_slot, "trp_jamiche_border_guard_1", slot_troop_unique_location, "p_castle_9"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_1", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_jamiche_border_guard_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jamiche_border_guard_2"), # combat_scripts.py
-		(troop_set_slot, "trp_jamiche_border_guard_2", slot_troop_unique_location, "p_castle_9"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_2", BONUS_LOYAL, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_jamiche_border_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jamiche_border_guard_2", CLASS_CAVALRY),
+		## A3 Rhodok Scout
+		(troop_set_class, "trp_new_rhodok_scout", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_scout"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_scout", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_scout", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_scout", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## I6 - Veluca Pikeman Captain (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_veluca_pikeman"), # combat_scripts.py
-		(troop_set_slot, "trp_veluca_pikeman", slot_troop_unique_location, "p_town_3"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_veluca_pikeman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_veluca_pikeman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_veluca_pikeman_1"), # combat_scripts.py
-		(troop_set_slot, "trp_veluca_pikeman_1", slot_troop_unique_location, "p_town_3"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_veluca_pikeman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_veluca_pikeman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_veluca_pikeman_2"), # combat_scripts.py
-		(troop_set_slot, "trp_veluca_pikeman_2", slot_troop_unique_location, "p_town_3"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_veluca_pikeman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_veluca_pikeman_2", CLASS_INFANTRY),
+		## C3 Rhodok Man-at-Arms
+		(troop_set_class, "trp_new_rhodok_man_at_arms", CLASS_CAVALRY),
+
+		## A4 Rhodok Crossbowman
+		(troop_set_class, "trp_new_rhodok_crossbowman", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_crossbowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_crossbowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_crossbowman", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_crossbowman", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## I4 - Grunwalder Voulgiers (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_grunwalder_voulgiers"), # combat_scripts.py
-		(troop_set_slot, "trp_grunwalder_voulgiers", slot_troop_unique_location, "p_castle_28"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_grunwalder_voulgiers", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_grunwalder_voulgiers_1"), # combat_scripts.py
-		(troop_set_slot, "trp_grunwalder_voulgiers_1", slot_troop_unique_location, "p_castle_28"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_grunwalder_voulgiers_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_grunwalder_voulgiers_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_grunwalder_voulgiers_2"), # combat_scripts.py
-		(troop_set_slot, "trp_grunwalder_voulgiers_2", slot_troop_unique_location, "p_castle_28"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_grunwalder_voulgiers_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_grunwalder_voulgiers_2", CLASS_INFANTRY),
+		## I4 Rhodok Vanguard
+		(troop_set_class, "trp_new_rhodok_vanguard", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_vanguard"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_vanguard", BONUS_DEVOTED, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_vanguard", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## I5 Rhodok Pikeman
+		(troop_set_class, "trp_new_rhodok_pikeman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_pikeman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_pikeman", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## C3 - Ergellon Lancer (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_ergellon_lancer"), # combat_scripts.py
-		(troop_set_slot, "trp_ergellon_lancer", slot_troop_unique_location, "p_castle_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_ergellon_lancer", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_ergellon_lancer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_ergellon_lancer_1", slot_troop_unique_location, "p_castle_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_ergellon_lancer_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_ergellon_lancer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_ergellon_lancer_2", slot_troop_unique_location, "p_castle_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_ergellon_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_ergellon_lancer_2", CLASS_CAVALRY),
+		## I5 Rhodok Halberdier
+		(troop_set_class, "trp_new_rhodok_halberdier", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_halberdier"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_halberdier", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
+
+
+		## H5 Rhodok Ranger
+		(troop_set_class, "trp_new_rhodok_ranger", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## A3 - Yaleni Dyoken (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_yaleni_dyoken"), # combat_scripts.py
-		(troop_set_slot, "trp_yaleni_dyoken", slot_troop_unique_location, "p_town_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_yaleni_dyoken", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_yaleni_dyoken_1"), # combat_scripts.py
-		(troop_set_slot, "trp_yaleni_dyoken_1", slot_troop_unique_location, "p_town_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken_1", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_yaleni_dyoken_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_yaleni_dyoken_2"), # combat_scripts.py
-		(troop_set_slot, "trp_yaleni_dyoken_2", slot_troop_unique_location, "p_town_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken_2", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_yaleni_dyoken_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_yaleni_dyoken_2", CLASS_RANGED),
+
+		## I6 Rhodok Captain
+		(troop_set_class, "trp_new_rhodok_captain", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_captain"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_captain", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_captain", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_captain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_captain", BONUS_RALLYING_FIGURE, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_captain", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_captain", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## Jelkalen Balister (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jelkalen_balister"), # combat_scripts.py
-		(troop_set_slot, "trp_jelkalen_balister", slot_troop_unique_location, "p_town_5"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_jelkalen_balister", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jelkalen_balister", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jelkalen_balister_1"), # combat_scripts.py
-		(troop_set_slot, "trp_jelkalen_balister_1", slot_troop_unique_location, "p_town_5"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_1", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_jelkalen_balister_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jelkalen_balister_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jelkalen_balister_2"), # combat_scripts.py
-		(troop_set_slot, "trp_jelkalen_balister_2", slot_troop_unique_location, "p_town_5"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_2", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_jelkalen_balister_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jelkalen_balister_2", CLASS_RANGED),
+		## A6 Rhodok Siege-Breaker
+		(troop_set_class, "trp_new_rhodok_siege_breaker", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_siege_breaker"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_siege_breaker", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_breaker", BONUS_LOYAL, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_breaker", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_siege_breaker", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## A7 Rhodok Siege Commander
+		(troop_set_class, "trp_new_rhodok_siege_commander", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_siege_commander"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_siege_commander", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_siege_commander", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## Rhodok Ranger (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_ranger"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_ranger", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_ranger", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_rhodok_ranger", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_ranger_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_ranger_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_1", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_ranger_1", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_rhodok_ranger_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_ranger_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_ranger_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_2", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_ranger_2", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_rhodok_ranger_2", CLASS_CAVALRY),
+		## I7 Rhodok Hedge Knight
+		(troop_set_class, "trp_new_rhodok_hedge_knight", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_hedge_knight"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_hedge_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_hedge_knight", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_hedge_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		
 		######################################################
@@ -2172,7 +1876,7 @@ scripts = [
 		
 		(assign, ":color_good", 14336), # Dark Green
 		(assign, ":color_bad", 4980736), # Dark Red
-		(assign, ":color_warning", 0x0AC2FF), # Blue?
+		(assign, ":color_warning", 0x0AC2FF), # Blue
 		
 		## OBJ - TROOP IMAGE
 		(store_sub, ":pos_y_portrait", ":pos_y", 100),
@@ -2215,6 +1919,10 @@ scripts = [
 			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE),
 			(assign, ":color", gpu_expensive),
 			(str_store_string, s22, "@{s22} (Expensive)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_ELITE_MERCENARY),
+			(assign, ":color", gpu_elite_mercenary),
+			(str_store_string, s22, "@{s22} (Mercenary Chapterhouse)"),
 		(else_try),
 			(assign, ":color", gpu_black),
 		(try_end),

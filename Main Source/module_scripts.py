@@ -1077,6 +1077,20 @@ scripts = [
 			(call_script, "script_common_rename_troop", ":troop_no", ":faction_no", SCRT_FIRST),
 		(try_end),
 		## WINDYPLAINS- ##
+		
+		## LEIFDIN ## Add Mercenary Chapterhouse to capital cities
+		# Sargoth
+		(party_set_slot, "p_town_1", slot_center_has_merc_chapterhouse, cis_built),
+		# Jelkala
+		(party_set_slot, "p_town_5", slot_center_has_merc_chapterhouse, cis_built),
+		# Praven
+		(party_set_slot, "p_town_6", slot_center_has_merc_chapterhouse, cis_built),
+		# Reyvadin
+		(party_set_slot, "p_town_8", slot_center_has_merc_chapterhouse, cis_built),
+		# Tulga
+		(party_set_slot, "p_town_10", slot_center_has_merc_chapterhouse, cis_built),
+		# Shariz
+		(party_set_slot, "p_town_19", slot_center_has_merc_chapterhouse, cis_built),
     ]),
 
   #script_game_get_use_string

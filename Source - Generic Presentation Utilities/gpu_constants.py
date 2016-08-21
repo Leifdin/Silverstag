@@ -44,8 +44,9 @@ gpu_dishonorable = 16128      # Dark green
 gpu_affiliated   = 101        # Dark blue
 gpu_unique       = 10714113   # Yellowish Gold
 gpu_owner_only   = gpu_affiliated
-gpu_expensive    = 0x700070
-gpu_disreputable = 0xFF470A
+gpu_expensive    = 0x700070 # dark purple
+gpu_disreputable = 0xFF470A # dark brown
+gpu_elite_mercenary = 0xcc0066 # light purple
 # COLOR CODES end
 
 # Modes for the Color Chooser Panel
