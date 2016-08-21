@@ -666,6 +666,21 @@ troops = [
 ####################################
 ## SARRANID SULTANATE (FACTION 6) ##
 ####################################
+
+## I1 Sarranid Slave
+
+## I2 Sarranid Spearman
+
+## C3 Sarranid Manhunter
+## I3 Sarranid Swordsman
+
+## A4 Sarranid Bowman 
+
+
+
+
+
+
 ["r_sarranid_kul",				"Sarranid Kul",						"Sarranid Kula",tf_guarantee_armor|tf_male,0,0,fac_kingdom_6, [itm_sarranid_cloth_robe, itm_sarranid_cloth_robe, itm_stones, itm_stones, itm_stones, itm_stones], str_12|agi_12|int_6|cha_6|level(4), wp_one_handed(0)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100), knows_power_throw_1|knows_athletics_1|knows_ironflesh_1, sarranid_face_younger_1, sarranid_face_middle_2],
 ["r_sarranid_azab",				"Sarranid Azab",					"Sarranid Azabs",tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_6, [itm_leather_gloves, itm_white_turban_with_iron_cap, itm_nomad_robe, itm_sarranid_boots_a, itm_knobbed_mace, itm_strong_bow, itm_arrows, itm_arrows], str_12|agi_12|int_6|cha_6|level(8), wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(75)|wp_crossbow(0)|wp_throwing(0), knows_power_draw_1|knows_athletics_1, sarranid_face_younger_1, sarranid_face_middle_2],
 ["r_sarranid_yaya",				"Sarranid Yaya",					"Sarranid Yayaa",tf_guarantee_boots|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_shield|tf_male,0,0,fac_kingdom_6, [itm_leather_gloves, itm_shahi, itm_nomad_robe, itm_leather_boots, itm_scimitar, itm_painted_brass_shield_a], str_15|agi_15|int_6|cha_6|level(12), wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0), knows_power_strike_2|knows_athletics_2|knows_ironflesh_2|knows_shield_2, sarranid_face_younger_1, sarranid_face_middle_2],
