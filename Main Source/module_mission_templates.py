@@ -1958,12 +1958,9 @@ mission_templates = [
      (try_begin), 
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_swadian_footman"),
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_vaegir_sentry"),
-       ## LEIFDIN+ ## - New Troop Revamp - Khergits
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_khergit_clansman"),
-       #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
-       ## LEIFDIN- ##
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_nord_prison_guard"),
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_rhodok_prison_guard"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_nord_retinue_archer"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_rhodok_halberdier"),
        (eq, ":dead_agent_troop_no", "trp_sarranid_prison_guard"),
           
        (eq, ":killer_agent_troop_no", "trp_player"),
@@ -3488,12 +3485,9 @@ mission_templates = [
         (try_begin), 
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_swadian_footman"),
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_vaegir_sentry"),
-          ##LEIFDIN+ ## - New Troop Revamp - Khergits
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_khergit_clansman"),
-          #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
-          ##Leifdin- ##
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_nord_prison_guard"),
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_rhodok_prison_guard"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_nord_retinue_archer"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_rhodok_halberdier"),
           (eq, ":dead_agent_troop_no", "trp_sarranid_prison_guard"),
           
           (eq, ":killer_agent_troop_no", "trp_player"),
