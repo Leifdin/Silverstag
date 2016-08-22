@@ -973,8 +973,8 @@ scripts = [
 			(str_store_string, s1, "@This {s2} has learned to ignore minor wounds through mental discipline."),
 			(str_store_string, s32, "@Type: Boost\
 									^^Effect #1:\
-									^Combat health is increased by 1 for every\
-									^2 points of intelligence you have above 8.\
+									^Combat health is increased by 2 for every\
+									^3 points of intelligence you have.\
 									^This effect cannot combine with the health\
 									^granted by the Berserker ability.\
 									^^Effect #2:\
@@ -983,8 +983,7 @@ scripts = [
 									^When calculating penalties your health is\
 									^considered as 20% higher than it actually is.\
 									^^Synergy Bonus: (Fortitude)\
-									^The minimum requirement of 8 intelligence is\
-									^removed."),
+									^Bonus health is increased by 20%\ "),
 		
 		(else_try),
 			(eq, ":ability", BONUS_STEADY_AIM),
@@ -1870,14 +1869,15 @@ scripts = [
 			(else_try),
 				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DISCIPLINED),
 				(store_attribute_level, ":extra_health", ":troop_no", ca_intelligence),
-				## TROOP SYNERGY EFFECT: BONUS_FORTITUDE (+8 INT)
+				(val_div, ":extra_health", 3),
+				(val_mul, ":extra_health", 2),
+				(val_max, ":extra_health", 0),
 				(try_begin),
 					(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_FORTITUDE),
-				(else_try),
-					(val_sub, ":extra_health", 8),
+					(val_mul, ":extra_health", 1.20),
+				#(else_try),
+					#(val_sub, ":extra_health", 8),
 				(try_end),
-				(val_div, ":extra_health", 2),
-				(val_max, ":extra_health", 0),
 			(try_end),
 		(try_end),
 		(assign, reg1, ":extra_health"),
