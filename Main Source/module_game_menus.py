@@ -96,13 +96,15 @@ game_menus = [
 			(assign, "$troop_testing_party_id", reg(0)),
 			(party_set_morale, "p_main_party", 100),
 			(party_set_morale, "$troop_testing_party_id", 100),
-			(assign, "$mod_difficulty", GAME_MODE_HARD),
+			(assign, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			(call_script, "script_report_game_difficulty"),
 			(call_script, "script_initialize_faction_troop_types"),
 			(call_script, "script_reset_garrisons"),
 			(party_add_members, "p_main_party", "trp_npc17", 1),
 			(party_add_members, "p_main_party", "trp_npc12", 1),
 			(party_add_members, "p_main_party", "trp_npc10", 1),
+			(party_add_template, "$troop_testing_party_id", "pt_troop_testing_party_1"),
+			(party_add_template, "p_main_party", "pt_troop_testing_party_2"),
 			
 		]),
 		## LEIFDIN-- ##
