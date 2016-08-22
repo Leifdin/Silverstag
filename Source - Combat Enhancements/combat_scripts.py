@@ -630,17 +630,12 @@ scripts = [
 			(str_store_string, s1, "@This {s2} flies into a frenzy gaining additional health during combat based on the Ironflesh skill."),
 			(str_store_string, s32, "@Type: Personal Combat\
 									^^Effect #1:\
-									^You gain an +X% health for each rank of\
-									^Ironflesh upon entering combat due to your\
+									^You gain an +X% health for each point of\
+									^Strenght upon entering combat due to your\
 									^frenzied state.  While under the effects of\
 									^this ability you cannot receive any benefits\
 									^from the Volley Commander, Tactician or\
-									^Sharpshooter effects from nearby allies.\
-									^^X% is based upon your mod difficulty setting:\
-									^ * +7% / rank in Easy\
-									^ * +5% / rank in Normal\
-									^ * +4% / rank in Hard\
-									^ * +3% / rank in Very Hard"),
+									^Sharpshooter effects from nearby allies.\ "),
 		(else_try),
 			(eq, ":ability", BONUS_BOUNDLESS_ENDURANCE),
 			(str_store_string, s31, "@BOUNDLESS_ENDURANCE"),
@@ -1868,24 +1863,10 @@ scripts = [
 			(eq, "$enable_combat_abilities", 1),
 			(try_begin),
 				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_BERSERKER),
-				(store_skill_level, ":extra_health", "skl_ironflesh", ":troop_no"),
-				(try_begin),
-					(neq, ":troop_no", "trp_player"),
-					(neg|is_between, ":troop_no", companions_begin, companions_end),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_EASY),
-				(else_try),
-					(eq, "$mod_difficulty", GAME_MODE_EASY),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_EASY),
-				(else_try),
-					(eq, "$mod_difficulty", GAME_MODE_HARD),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_HARD),
-				(else_try),
-					(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_VERY_HARD),
-				(else_try),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_NORMAL),
-				(try_end),
-				(val_mul, ":extra_health", ":difficulty_constant"),
+				(store_attribute_level, ":health_modifier", ":troop_no", ca_strength),
+				(store_troop_health, ":extra_health", ":troop_no", 1),
+				(val_mul, ":extra_health", ":health_modifier"),
+				(val_div, ":extra_health", 100),
 			(else_try),
 				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DISCIPLINED),
 				(store_attribute_level, ":extra_health", ":troop_no", ca_intelligence),
