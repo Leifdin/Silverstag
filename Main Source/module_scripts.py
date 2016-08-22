@@ -1078,19 +1078,102 @@ scripts = [
 		(try_end),
 		## WINDYPLAINS- ##
 		
-		## LEIFDIN ## Add Mercenary Chapterhouse to capital cities
-		# Sargoth
-		(party_set_slot, "p_town_1", slot_center_has_merc_chapterhouse, cis_built),
-		# Jelkala
-		(party_set_slot, "p_town_5", slot_center_has_merc_chapterhouse, cis_built),
-		# Praven
-		(party_set_slot, "p_town_6", slot_center_has_merc_chapterhouse, cis_built),
-		# Reyvadin
-		(party_set_slot, "p_town_8", slot_center_has_merc_chapterhouse, cis_built),
-		# Tulga
-		(party_set_slot, "p_town_10", slot_center_has_merc_chapterhouse, cis_built),
-		# Shariz
-		(party_set_slot, "p_town_19", slot_center_has_merc_chapterhouse, cis_built),
+		## LEIFDIN ## Add Mercenary Chapterhouse to cities according to difficulty
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY), ## Build mercenary chapterhouse in every capital city
+			(party_set_slot, "p_town_1", slot_center_has_merc_chapterhouse, cis_built), # Sargoth
+			(party_set_slot, "p_town_5", slot_center_has_merc_chapterhouse, cis_built), # Jelkala
+			(party_set_slot, "p_town_6", slot_center_has_merc_chapterhouse, cis_built), # Praven
+			(party_set_slot, "p_town_8", slot_center_has_merc_chapterhouse, cis_built),# Reyvadin
+			(party_set_slot, "p_town_10", slot_center_has_merc_chapterhouse, cis_built),# Tulga
+			(party_set_slot, "p_town_19", slot_center_has_merc_chapterhouse, cis_built),# Shariz
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_NORMAL), ## Build mercenary chapterhouse in a random city in each faction
+			(try_begin), 
+				(store_random_in_range, ":rand", 0, 3),## Swadians
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_4", slot_center_has_merc_chapterhouse, cis_built), # Suno
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_6", slot_center_has_merc_chapterhouse, cis_built), # Praven
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_7", slot_center_has_merc_chapterhouse, cis_built), # Uxkhal
+				(else_try),
+					(party_set_slot, "p_town_16", slot_center_has_merc_chapterhouse, cis_built), # Dhirim
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Vaegirs
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_8", slot_center_has_merc_chapterhouse, cis_built), # Reyvadin
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_9", slot_center_has_merc_chapterhouse, cis_built), # Khudan
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_11", slot_center_has_merc_chapterhouse, cis_built), # Curaw
+				(else_try),
+					(party_set_slot, "p_town_13", slot_center_has_merc_chapterhouse, cis_built), # Rivacheg
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Khergits
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_10", slot_center_has_merc_chapterhouse, cis_built), # Tulga
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_14", slot_center_has_merc_chapterhouse, cis_built), # Halmar
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_17", slot_center_has_merc_chapterhouse, cis_built), # Ichamur
+				(else_try),
+					(party_set_slot, "p_town_18", slot_center_has_merc_chapterhouse, cis_built), # Narra
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 2),## Nords
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_1", slot_center_has_merc_chapterhouse, cis_built), # Saroth
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_2", slot_center_has_merc_chapterhouse, cis_built), # Tihr
+				(else_try),
+					(party_set_slot, "p_town_12", slot_center_has_merc_chapterhouse, cis_built), # Wercheg
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Rhodoks
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_3", slot_center_has_merc_chapterhouse, cis_built), # Veluca
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_5", slot_center_has_merc_chapterhouse, cis_built), # Jelkala
+				(else_try),
+					(party_set_slot, "p_town_15", slot_center_has_merc_chapterhouse, cis_built), # Yalen
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Sarranids
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_19", slot_center_has_merc_chapterhouse, cis_built), # Shariz
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_20", slot_center_has_merc_chapterhouse, cis_built), # Durquba
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_21", slot_center_has_merc_chapterhouse, cis_built), # Ahmerrad
+				(else_try),
+					(party_set_slot, "p_town_22", slot_center_has_merc_chapterhouse, cis_built), # Bariyye
+				(try_end),
+			(try_end),
+		(try_end),
     ]),
 
   #script_game_get_use_string
