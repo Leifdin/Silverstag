@@ -151,6 +151,7 @@ PREREQ_UNIQUE_LOCATION_UPGRADE     = 9  # Used for slot upgrades on uniques to p
 PREREQ_LIEGE_RELATION              = 10 # Requires that you have a minimum of 50 relation with the leader of this faction.
 PREREQ_EXPENSIVE                   = 11 # Troop is twice as expensive as usually
 PREREQ_DISREPUTABLE                = 12 # Hiring troop may reduce honor
+PREREQ_DOPPELSOLDNER               = 13 # Double wage
 
 troop_prereq_friend_relation       = 10
 troop_prereq_ally_relation         = 25

@@ -76,6 +76,7 @@ strings = [
 	("hub_village_infested",      " * Recruitment Rating of {s21}:  Infested."),
 	("hub_general_stats",         "General Statistics:"),
 	("hub_troop_prereqs",         "Recruitment Requirements:"),
+	("hub_desc_wage",             "Wage: {reg21}"),
 	("hub_desc_armor_value",      "Armor Rating: {reg21}"),
 	("hub_desc_melee_value",      "Melee Rating: {reg21}"),
 	("hub_desc_ranged_value",     "Ranged Rating: {reg21}"),

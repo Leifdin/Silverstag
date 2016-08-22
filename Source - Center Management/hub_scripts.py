@@ -604,15 +604,19 @@ scripts = [
 		## I5 Rhodok Pikeman
 		(troop_set_class, "trp_new_rhodok_pikeman", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_pikeman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_pikeman", BONUS_SAVAGERY, BONUS_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_rhodok_pikeman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## I5 Rhodok Halberdier
 		(troop_set_class, "trp_new_rhodok_halberdier", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_halberdier"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_halberdier", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_halberdier", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_HARDY, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
 
 
@@ -1358,12 +1362,18 @@ scripts = [
 			(call_script, "script_game_get_troop_wage", ":stack_troop", ":party_no"),
 			(assign, ":cur_wage", reg0),
 			(val_mul, ":cur_wage", ":stack_size"),
-			(try_begin),
-				## TROOP EFFECT: BONUS_DEVOTED
-				(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", BONUS_DEVOTED), # combat_scripts.py - ability constants in combat_constants.py
-				(val_div, ":cur_wage", 2),
-			(try_end),
-			(val_add, ":total_wage", ":cur_wage"),
+			#(try_begin),
+				### TROOP EFFECT: BONUS_DEVOTED
+				#(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", BONUS_DEVOTED), # combat_scripts.py - ability constants in combat_constants.py
+				#(val_div, ":cur_wage", 2),
+			#(try_end),
+			#(val_add, ":total_wage", ":cur_wage"),
+			#(try_begin),
+				### TROOP EFFECT: PREREQ_DOPPELSOLDNER
+				#(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
+				#(val_mul, ":cur_wage", 2),
+			#(try_end),
+			#(val_add, ":total_wage", ":cur_wage"),
 		(try_end),
 		(try_begin),
 			(eq, ":garrison_troop", 1),
@@ -1920,6 +1930,10 @@ scripts = [
 			(assign, ":color", gpu_expensive),
 			(str_store_string, s22, "@{s22} (Expensive)"),
 		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DOPPELSOLDNER),
+			(assign, ":color", gpu_expensive),
+			(str_store_string, s22, "@{s22} (Double wage)"),
+		(else_try),
 			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_ELITE_MERCENARY),
 			(assign, ":color", gpu_elite_mercenary),
 			(str_store_string, s22, "@{s22} (Mercenary Chapterhouse)"),
@@ -1959,6 +1973,16 @@ scripts = [
 		(str_store_string, s21, "@Level {reg21} {s22} {s23}"),
 		(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_1", ":pos_y_line_3", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
+		
+		## OBJ - WAGE
+		(call_script, "script_game_get_troop_wage", ":troop_no"), # Returns weekly wage
+		(assign, reg21, reg0),
+		(store_sub, ":pos_y_line_4", ":pos_y_line_3", 20),
+		(call_script, "script_gpu_create_text_label", "str_hub_desc_wage", ":pos_x_col_1", ":pos_y_line_4", 0, gpu_left),
+		(call_script, "script_gpu_resize_object", 0, 75),
+
+		(store_skill_level, ":rating_power_strike", "skl_power_strike", ":troop_no"),
+		(val_mul, ":rating_power_strike", rating_multiplier_skill),
 		
 		## OBJ - ARMOR RATING
 		(call_script, "script_hub_troop_get_armor_rating", ":troop_no"), # Returns armor rating to reg1
@@ -2238,6 +2262,22 @@ scripts = [
 			(eq, ":continue", 1),
 			(val_sub, ":pos_y_temp", 20),
 			(str_store_string, s21, "@Double recruitment cost"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
+			(call_script, "script_gpu_resize_object", 0, 75),
+			(try_begin),
+				(overlay_set_color, reg1, ":color_warning"),
+			(try_end),
+		(try_end),
+		## OBJ - REQUIREMENT - DOPPELSOLDNER
+		(try_begin),
+			(assign, ":continue", 0),
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DOPPELSOLDNER), # combat_scripts.py - prereq constants in combat_constants.py
+				(assign, ":continue", 1),
+			(try_end),
+			(eq, ":continue", 1),
+			(val_sub, ":pos_y_temp", 20),
+			(str_store_string, s21, "@Double wage"),
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
 			(call_script, "script_gpu_resize_object", 0, 75),
 			(try_begin),

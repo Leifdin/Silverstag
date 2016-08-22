@@ -4405,7 +4405,19 @@ scripts = [
 		(val_div, ":faction_wage_discount", 100),
 		(val_add, ":wage", ":faction_wage_discount"), # -wage value should be a discount.
 		## WINDYPLAINS- ##
-		
+		(try_begin),
+		## TROOP EFFECT: BONUS_DEVOTED
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_id", BONUS_DEVOTED), # combat_scripts.py - ability constants in combat_constants.py
+			(val_div, ":wage", 2),
+		(try_end),
+		(try_begin),
+			## TROOP EFFECT: PREREQ_DOPPELSOLDNER
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_id", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
+			(val_mul, ":wage", 2),
+		(try_end),
+	
+	
+	
 	  ## WINDYPLAINS+ ## - SLAVES cost a flat rate to feed them only.
 	  (try_begin),
 		(troop_slot_eq, ":troop_id", slot_troop_recruit_type, STRT_SLAVE),

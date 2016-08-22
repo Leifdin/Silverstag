@@ -472,6 +472,9 @@ scripts = [
 		(else_try),
 			(eq, ":prereq", PREREQ_EXPENSIVE),
 			(str_store_string, s31, "@EXPENSIVE"),
+		(else_try),
+			(eq, ":prereq", PREREQ_DOPPELSOLDNER),
+			(str_store_string, s31, "@DOPPELSOLDNER"),
 		(else_try), 
 			### DEFAULT RESPONSE ###
 			(str_store_string, s31, "@UNDEFINED"),
