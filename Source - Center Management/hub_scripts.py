@@ -604,7 +604,6 @@ scripts = [
 		## I5 Rhodok Pikeman
 		(troop_set_class, "trp_new_rhodok_pikeman", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_pikeman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_pikeman", BONUS_SAVAGERY, BONUS_UNASSIGNED),
@@ -616,13 +615,13 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_halberdier"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_halberdier", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_FORTITUDE, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
 
 
 		## H5 Rhodok Ranger
 		(troop_set_class, "trp_new_rhodok_ranger", CLASS_CAVALRY),
-		(troop_set_slot, "trp_new_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
+		(troop_set_slot, "trp_new_rhodok_ranger", slot_troop_recruit_type, STRT_MERCENARY),
 		
 
 		## I6 Rhodok Captain
@@ -1987,30 +1986,30 @@ scripts = [
 		## OBJ - ARMOR RATING
 		(call_script, "script_hub_troop_get_armor_rating", ":troop_no"), # Returns armor rating to reg1
 		(assign, reg21, reg1),
-		(store_sub, ":pos_y_line_4", ":pos_y_line_3", 20),
-		(call_script, "script_gpu_create_text_label", "str_hub_desc_armor_value", ":pos_x_col_1", ":pos_y_line_4", 0, gpu_left),
+		(store_sub, ":pos_y_line_5", ":pos_y_line_4", 20),
+		(call_script, "script_gpu_create_text_label", "str_hub_desc_armor_value", ":pos_x_col_1", ":pos_y_line_5", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		
 		(store_skill_level, ":rating_power_strike", "skl_power_strike", ":troop_no"),
 		(val_mul, ":rating_power_strike", rating_multiplier_skill),
 		
 		## OBJ - MELEE ATTACK RATING
-		(store_sub, ":pos_y_line_5", ":pos_y_line_4", 20),
+		(store_sub, ":pos_y_line_6", ":pos_y_line_5", 20),
 		(call_script, "script_hub_troop_get_melee_rating", ":troop_no"), # Returns melee rating to reg1
 		(assign, reg21, reg1),
-		(call_script, "script_gpu_create_text_label", "str_hub_desc_melee_value", ":pos_x_col_1", ":pos_y_line_5", 0, gpu_left),
+		(call_script, "script_gpu_create_text_label", "str_hub_desc_melee_value", ":pos_x_col_1", ":pos_y_line_6", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		
 		## OBJ - RANGED ATTACK RATING
 		(call_script, "script_hub_troop_get_ranged_rating", ":troop_no"), # Returns ranged rating to reg1
 		(assign, reg21, reg1),
-		(store_sub, ":pos_y_line_6", ":pos_y_line_5", 20),
+		(store_sub, ":pos_y_line_7", ":pos_y_line_6", 20),
 		(try_begin),
 			(ge, reg21, 1),
-			(call_script, "script_gpu_create_text_label", "str_hub_desc_ranged_value", ":pos_x_col_1", ":pos_y_line_6", 0, gpu_left),
+			(call_script, "script_gpu_create_text_label", "str_hub_desc_ranged_value", ":pos_x_col_1", ":pos_y_line_7", 0, gpu_left),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(else_try),
-			(call_script, "script_gpu_create_text_label", "str_hub_no_range", ":pos_x_col_1", ":pos_y_line_6", 0, gpu_left),
+			(call_script, "script_gpu_create_text_label", "str_hub_no_range", ":pos_x_col_1", ":pos_y_line_7", 0, gpu_left),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(try_end),
 		
