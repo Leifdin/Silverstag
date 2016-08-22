@@ -250,7 +250,7 @@ party_templates = [
 
   ("leaded_looters","Band of robbers",icon_axeman|carries_goods(8)|pf_quest_party,0,fac_neutral,bandit_personality,[(trp_looter_leader,1,1),(trp_looter,3,3)]),
   
-  ("troop_testing_party_1", "Troop Testing Party", icon_axeman|pf_is_static, 0, fac_outlaws, troop_testers, [(trp_new_vaegir_knight, 75, 75)]),
-  ("troop_testing_party_2", "Troop Testing Party", icon_axeman|pf_is_static, 0, fac_outlaws, troop_testers, [(trp_new_swadian_knight, 50, 50)]),
+  ("troop_testing_party_1", "Troop Testing Party", icon_axeman|pf_is_static, 0, fac_outlaws, troop_testers, [(trp_new_nord_berserker, 1, 1)]),
+  ("troop_testing_party_2", "Troop Testing Party", icon_axeman|pf_is_static, 0, fac_outlaws, troop_testers, [(trp_new_swadian_knight, 1, 1)]),
   ("troop_testing_party_3", "Troop Testing Party", icon_axeman|pf_is_static, 0, fac_outlaws, troop_testers, [(trp_looter, 1, 1)]),
 ]

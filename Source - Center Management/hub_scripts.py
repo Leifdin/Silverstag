@@ -158,18 +158,8 @@ scripts = [
 		
 		# D4 - Highland Chieftain
 		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_mountain_chief", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_1", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_mountain_chief_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_mountain_chief_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_2", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_mountain_chief_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_mountain_chief_2", CLASS_INFANTRY),
+		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		(troop_set_class, "trp_mountain_chief", CLASS_RANGED),
 		
 		# D4 - Raider Chieftain
 		(call_script, "script_ce_assign_troop_ability", "trp_nord_chieftain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
@@ -1974,7 +1964,7 @@ scripts = [
 		(call_script, "script_gpu_resize_object", 0, 75),
 		
 		## OBJ - WAGE
-		(call_script, "script_game_get_troop_wage", ":troop_no"), # Returns weekly wage
+		(call_script, "script_game_get_troop_wage", ":troop_no", "p_main_party"), # Returns weekly wage
 		(assign, reg21, reg0),
 		(store_sub, ":pos_y_line_4", ":pos_y_line_3", 20),
 		(call_script, "script_gpu_create_text_label", "str_hub_desc_wage", ":pos_x_col_1", ":pos_y_line_4", 0, gpu_left),
