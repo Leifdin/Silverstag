@@ -1970,8 +1970,8 @@ nord_troops_begin     = "trp_new_nord_farmhand"
 nord_troops_end       = "trp_new_nord_uniques_end"     # "trp_nord_troops_end"
 rhodok_troops_begin   = "trp_new_rhodok_militia"
 rhodok_troops_end     = "trp_new_rhodok_uniques_end"       # "trp_rhodok_troops_end"
-sarranid_troops_begin = "trp_r_sarranid_kul"
-sarranid_troops_end   = "trp_r_sarranid_end_troop" # "trp_durquba_javelineer"
+sarranid_troops_begin = "trp_new_sarranid_slave"
+sarranid_troops_end   = "trp_new_sarranid_uniques_end" # "trp_durquba_javelineer"
 
 ### SPECIAL TROOP DEFINITIONS
 unique_troops_begin                    = "trp_jelbegi_xbow_militia"

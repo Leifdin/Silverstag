@@ -670,13 +670,49 @@ troops = [
 ## I1 Sarranid Slave
 
 ## I2 Sarranid Spearman
+## H2 Sarranid Raider
 
 ## C3 Sarranid Manhunter
 ## I3 Sarranid Swordsman
+## A3 Sarranid Bowman
 
-## A4 Sarranid Bowman 
+## H4 Sarranid Horseman
 
+## C5 Sarranid Lancer
+## A5 Sarranid Skirmisher
 
+## I6 Sarranid Guard
+
+## H7 Sarranid Sipahi
+## C7 Sarranid Mamluke
+
+##### Tier 1 #####
+["new_sarranid_slave",			"Sarranid Slave",			"Sarranid Slaves",		tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_6,						[itm_sarranid_cloth_robe, itm_short_spear, itm_stones, itm_stones],																																												str_12|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(75)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
+
+##### Tier 2 #####
+["new_sarranid_spearman",		"Sarranid Spearman",		"Sarranid Spearmen",	tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_6,						[itm_wrapping_boots, itm_nomad_robe, itm_desert_leather_cap, itm_boar_spear, itm_plain_cavalry_shield, itm_javelin],																															str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(100)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_2|knows_power_throw_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
+["new_sarranid_raider",			"Sarranid Raider",			"Sarranid Raiders",		tf_guarantee_all|tf_male|tf_mounted, 0,0, fac_kingdom_6,					[itm_leather_gloves, itm_nomad_boots, itm_leather_vest, itm_white_turban_with_iron_cap, itm_scimitar, itm_nomad_bow, itm_arrows, itm_hunter],																									str_12|agi_12|int_6|cha_6|level(8),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(100)|wp_crossbow(0)|wp_throwing(0),knows_power_draw_1|knows_power_strike_1|knows_riding_2|knows_horse_archery_2|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
+
+##### Tier 3 #####
+["new_sarranid_manhunter",		"Sarranid Manhunter",		"Sarranid Manhunters",	tf_guarantee_all_cavalry|tf_male|tf_mounted, 0,0, fac_kingdom_6,			[itm_leather_gloves, itm_sarranid_boots_a, itm_desert_leather_armor, itm_yellow_turban_with_iron_cap, itm_knobbed_mace, itm_decorated_brass_shield_a, itm_war_horse_a],																			str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_3|knows_riding_4|knows_ironflesh_2|knows_shield_2|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
+["new_sarranid_swordsman",		"Sarranid Swordsman",		"Sarranid Swordsmen",	tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_6,						[itm_leather_gloves, itm_desert_robe_with_leather_b, itm_desert_robe_with_leatther_a, itm_turban_with_coif_a, itm_scimitar_b, itm_decorated_round_shield_a, itm_jarid],																			str_15|agi_12|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(125),knows_power_strike_4|knows_power_throw_3|knows_athletics_4|knows_ironflesh_3|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
+["new_sarranid_bowman",			"Sarranid Bowman",			"Sarranid Bowmen",		tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_6,						[itm_leather_gloves, itm_sarranid_robe_a, itm_sarranid_robe_d, itm_turban_b, itm_war_club, itm_light_war_bow, itm_arrows],																														str_12|agi_15|int_6|cha_6|level(12),wp_one_handed(0)|wp_two_handed(100)|wp_polearm(0)|wp_archery(125)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_power_draw_4|knows_athletics_5|knows_ironflesh_2|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
+
+##### Tier 4 #####
+["new_sarranid_horseman",		"Sarranid Horseman",		"Sarranid Horsemen",	tf_guarantee_all|tf_male|tf_mounted, 0,0, fac_kingdom_6,					[itm_leather_gloves, itm_sarranid_boots_b, itm_desert_padded_coat_a, itm_desert_padded_coat_a, itm_turban_with_coif_b, itm_scimitar_b, itm_round_cavalry_shield, itm_javelin, itm_javelin, itm_war_horse_b],									str_15|agi_15|int_6|cha_6|level(16),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(150),knows_power_throw_5|knows_power_strike_3|knows_riding_4|knows_horse_archery_4|knows_weapon_master_3, rhodok_face_younger_1, rhodok_face_middle_2],
+
+##### Tier 5 #####
+["new_sarranid_lancer",			"Sarranid Lancer",			"Sarranid Lancers",		tf_guarantee_all_cavalry|tf_male|tf_mounted, 0,0, fac_kingdom_6,			[itm_mail_mittens, itm_sarranid_boots_d, itm_desert_lamellar_armor_a, itm_desert_lamellar_armor_b, itm_helmet_with_turban_d, itm_eastern_long_sword_a, itm_decorated_lance, itm_painted_brass_shield_c, itm_war_horse_c, itm_throwing_spears],	str_18|agi_15|int_6|cha_6|level(20),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_power_strike_7|knows_power_throw_6|knows_horse_archery_5|knows_riding_5|knows_ironflesh_4|knows_shield_3|knows_weapon_master_4, rhodok_face_younger_1, rhodok_face_middle_2],
+["new_sarranid_skirmisher",		"Sarranid Skirmisher",		"Sarranid Skirmishhers",tf_guarantee_all_ranged|tf_male, 0,0, fac_kingdom_6,						[itm_mail_mittens, itm_desert_padded_coat_a, itm_desert_padded_coat_b, itm_turban_with_coif_c, itm_turban_with_coif_c, itm_battle_axe_b, itm_heavy_war_bow, itm_arrows],																		str_18|agi_15|int_6|cha_6|level(20),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(175)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_power_draw_5|knows_athletics_5|knows_ironflesh_2|knows_weapon_master_4, rhodok_face_younger_1, rhodok_face_middle_2],
+
+##### Tier 6 #####
+["new_sarranid_guard",			"Sarranid Guard",			"Sarranid Guardsmen",	tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_6,						[itm_ornate_plated_gauntlets, itm_sarranid_boots_c, itm_heavy_desert_lamellar_armor, itm_desert_warrior_helmet, itm_iron_war_mace, itm_throwing_spears, itm_throwing_spears],																	str_21|agi_15|int_6|cha_6|level(24),wp_one_handed(0)|wp_two_handed(200)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(175),knows_power_strike_7|knows_power_throw_7|knows_athletics_5|knows_ironflesh_7|knows_weapon_master_4, rhodok_face_younger_1, rhodok_face_middle_2],
+
+##### Tier 7 #####
+["new_sarranid_sipahi",			"Sarranid Sipahi",			"Sarranid Sipahis",		tf_guarantee_all|tf_male|tf_mounted, 0,0, fac_kingdom_6,					[itm_plated_gauntlets, itm_sarranid_boots_c, itm_desert_lamellar_armor_c, itm_helmet_with_turban_c, itm_helmet_with_turban_d, itm_eastern_nobleman_sword_a, itm_painted_brass_shield_b, itm_strong_bow, itm_arrows, itm_war_horse_d],			str_18|agi_21|int_15|cha_15|level(28),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(175)|wp_crossbow(0)|wp_throwing(0),knows_power_draw_5|knows_power_strike_4|knows_riding_7|knows_horse_archery_7|knows_weapon_master_7|knows_leadership_5|knows_tactics_5, rhodok_face_younger_1, rhodok_face_middle_2],
+["new_sarranid_mamluke",		"Sarranid Mamlike",			"Sarranid Mamlukes",	tf_guarantee_all_cavalry|tf_male|tf_mounted, 0,0, fac_kingdom_6,			[itm_ornate_plated_gauntlets, itm_sarranid_boots_c, itm_heavy_desert_chainmail_armor, itm_elite_desert_helmet, itm_heavy_sabre, itm_decorated_steel_shield, itm_war_horse_d],																	str_21|agi_21|int_15|cha_15|level(28),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_7|knows_riding_7|knows_weapon_master_7|knows_leadership_5|knows_tactics_5|knows_shield_7, rhodok_face_younger_1, rhodok_face_middle_2],
+
+["new_sarranid_uniques_end",			"Sarranid Slave",			"Sarranid Slaves",		tf_guarantee_all_infantry|tf_male, 0,0, fac_kingdom_6,						[itm_sarranid_cloth_robe, itm_short_spear, itm_stones, itm_stones],																																		str_15|agi_15|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(75)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_power_strike_2|knows_athletics_2|knows_ironflesh_2|knows_weapon_master_2, rhodok_face_younger_1, rhodok_face_middle_2],
 
 
 
