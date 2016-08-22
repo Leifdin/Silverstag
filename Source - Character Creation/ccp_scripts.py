@@ -1840,10 +1840,10 @@ scripts = [
 ("ccp_tester_settings",
 	[
 		# Update abilties.
-		(troop_raise_attribute, "trp_player",ca_charisma, 15),
-		(troop_raise_attribute, "trp_player",ca_strength, 15),
-		(troop_raise_attribute, "trp_player",ca_intelligence, 15),
-		(troop_raise_attribute, "trp_player",ca_agility, 25),
+		(troop_raise_attribute, "trp_player",ca_charisma, 10),
+		(troop_raise_attribute, "trp_player",ca_strength, 10),
+		(troop_raise_attribute, "trp_player",ca_intelligence, 10),
+		(troop_raise_attribute, "trp_player",ca_agility, 15),
 		
 		# Update skills.
 		(troop_raise_skill, "trp_player", skl_ironflesh, 3),
@@ -1859,7 +1859,7 @@ scripts = [
 		#(troop_raise_skill, "trp_player", skl_foraging, ":skill_foraging"),
 		(troop_raise_skill, "trp_player", skl_trainer, 3),
 		(troop_raise_skill, "trp_player", skl_tracking, 3),
-		(troop_raise_skill, "trp_player", skl_tactics, 5),
+		(troop_raise_skill, "trp_player", skl_tactics, 3),
 		(troop_raise_skill, "trp_player", skl_pathfinding,3),
 		(troop_raise_skill, "trp_player", skl_spotting, 3),
 		(troop_raise_skill, "trp_player", skl_inventory_management, 10),
@@ -1869,16 +1869,16 @@ scripts = [
 		(troop_raise_skill, "trp_player", skl_engineer, 3),
 		(troop_raise_skill, "trp_player", skl_persuasion, 3),
 		(troop_raise_skill, "trp_player", skl_prisoner_management, 3),
-		(troop_raise_skill, "trp_player", skl_leadership, 10),
+		(troop_raise_skill, "trp_player", skl_leadership, 4),
 		(troop_raise_skill, "trp_player", skl_trade, 3),
 		
 		# Update proficiencies.
-		(troop_raise_proficiency_linear, "trp_player", wpt_one_handed_weapon, 200),
-		(troop_raise_proficiency_linear, "trp_player", wpt_two_handed_weapon, 200),
-		(troop_raise_proficiency_linear, "trp_player", wpt_polearm, 200),
-		(troop_raise_proficiency_linear, "trp_player", wpt_archery, 200),
-		(troop_raise_proficiency_linear, "trp_player", wpt_crossbow, 200),
-		(troop_raise_proficiency_linear, "trp_player", wpt_throwing, 200),
+		(troop_raise_proficiency_linear, "trp_player", wpt_one_handed_weapon, 100),
+		(troop_raise_proficiency_linear, "trp_player", wpt_two_handed_weapon, 100),
+		(troop_raise_proficiency_linear, "trp_player", wpt_polearm, 100),
+		(troop_raise_proficiency_linear, "trp_player", wpt_archery, 100),
+		(troop_raise_proficiency_linear, "trp_player", wpt_crossbow, 100),
+		(troop_raise_proficiency_linear, "trp_player", wpt_throwing, 100),
 		
 		# Update miscellaneous.
 		(troop_add_gold, "trp_player", 250000),
