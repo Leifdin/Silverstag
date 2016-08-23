@@ -221,21 +221,21 @@ party_templates = [
  
  ### SARRANID ### - NEW TROOPS
  # GAME_MODE_EASY
- ("kingdom_6_reinforcements_a", "kingdom_6_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 12, 18), (trp_r_sarranid_yaya, 5, 12), (trp_r_sarranid_janissary, 3, 5)]),
- ("kingdom_6_reinforcements_b", "kingdom_6_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 1, 4), (trp_r_sarranid_musellem, 4, 5), (trp_r_sarranid_janissary, 4, 8), (trp_r_sarranid_timariot, 2, 5)]),
- ("kingdom_6_reinforcements_c", "kingdom_6_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi,1,4),(trp_r_sarranid_timariot,5,8),(trp_r_sarranid_musellem,4,5),(trp_r_sarranid_sipahi,0,2)]),
+ ("kingdom_6_reinforcements_a", "kingdom_6_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_new_sarranid_slave, 10, 10), (trp_new_sarranid_swordsman, 10, 10), (trp_new_sarranid_spearman, 10, 10)]),
+ ("kingdom_6_reinforcements_b", "kingdom_6_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_new_sarranid_bowman, 25, 25), (trp_new_sarranid_skirmisher, 5, 5)]),
+ ("kingdom_6_reinforcements_c", "kingdom_6_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_new_sarranid_raider, 10, 10), (trp_new_sarranid_horseman, 2, 2), (trp_new_sarranid_manhunter, 16, 16), (trp_new_sarranid_lancer, 2, 2)]),
  # GAME_MODE_NORMAL
- ("kingdom_6_reinforcements_d", "kingdom_6_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 2, 5), (trp_r_sarranid_yaya, 6, 14), (trp_r_sarranid_janissary, 5, 12)]),
- ("kingdom_6_reinforcements_e", "kingdom_6_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 2, 5), (trp_r_sarranid_musellem, 4, 5), (trp_r_sarranid_janissary, 4, 8), (trp_r_sarranid_timariot, 3, 7), (trp_r_sarranid_bashibozuk, 2, 6)]),
- ("kingdom_6_reinforcements_f", "kingdom_6_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi, 3, 6), (trp_r_sarranid_timariot, 8, 12), (trp_r_sarranid_musellem, 4, 8), (trp_r_sarranid_sipahi, 1, 4), (trp_r_sarranid_garip, 1, 2)]),
+ ("kingdom_6_reinforcements_d", "kingdom_6_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_new_sarranid_slave, 7, 7), (trp_new_sarranid_swordsman, 13, 13), (trp_new_sarranid_spearman, 8, 8), (trp_new_sarranid_guard, 2, 2)]),
+ ("kingdom_6_reinforcements_e", "kingdom_6_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_new_sarranid_bowman, 21, 21), (trp_new_sarranid_skirmisher, 9, 9)]),
+ ("kingdom_6_reinforcements_f", "kingdom_6_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_new_sarranid_raider, 7, 7), (trp_new_sarranid_horseman, 4, 4), (trp_new_sarranid_sipahi, 1, 1), (trp_new_sarranid_manhunter, 13, 13), (trp_new_sarranid_lancer, 4, 4), (trp_new_sarranid_mamluke, 1, 1)]),
  # GAME_MODE_HARD
- ("kingdom_6_reinforcements_g", "kingdom_6_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 2, 5), (trp_r_sarranid_yaya, 2, 8), (trp_r_sarranid_janissary, 7, 18)]),
- ("kingdom_6_reinforcements_h", "kingdom_6_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 3, 8), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_janissary, 2, 6), (trp_r_sarranid_timariot, 5, 10), (trp_r_sarranid_bashibozuk, 4, 8), (trp_r_sarranid_sipahi, 3,5)]),
- ("kingdom_6_reinforcements_i", "kingdom_6_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi, 3, 6), (trp_r_sarranid_timariot, 2, 4), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_sipahi, 3, 6), (trp_r_sarranid_garip, 2, 4)]),
+ ("kingdom_6_reinforcements_g", "kingdom_6_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_new_sarranid_swordsman, 18, 18), (trp_new_sarranid_spearman, 5, 5), (trp_new_sarranid_guard, 7, 7)]),
+ ("kingdom_6_reinforcements_h", "kingdom_6_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_new_sarranid_bowman, 17, 17), (trp_new_sarranid_skirmisher, 13, 13)]),
+ ("kingdom_6_reinforcements_i", "kingdom_6_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_new_sarranid_raider, 3, 3), (trp_new_sarranid_horseman, 7, 7), (trp_new_sarranid_sipahi, 2, 2), (trp_new_sarranid_manhunter, 10, 10), (trp_new_sarranid_lancer, 6, 6), (trp_new_sarranid_mamluke, 2, 2)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_6_reinforcements_j", "kingdom_6_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 1, 4), (trp_r_sarranid_yaya, 2, 8), (trp_r_sarranid_janissary, 12, 24)]),
- ("kingdom_6_reinforcements_k", "kingdom_6_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 6, 10), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_janissary, 2, 6), (trp_r_sarranid_timariot, 3, 5), (trp_r_sarranid_bashibozuk, 6, 10), (trp_r_sarranid_sipahi, 3,8)]),
- ("kingdom_6_reinforcements_l", "kingdom_6_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi, 5, 10), (trp_r_sarranid_timariot, 2, 4), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_sipahi, 8, 10), (trp_r_sarranid_garip, 2, 10)]),
+ ("kingdom_6_reinforcements_j", "kingdom_6_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_new_sarranid_swordsman, 18, 18), (trp_new_sarranid_guard, 13, 13)]),
+ ("kingdom_6_reinforcements_k", "kingdom_6_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_new_sarranid_bowman, 12, 12), (trp_new_sarranid_skirmisher, 18, 18)]),
+ ("kingdom_6_reinforcements_l", "kingdom_6_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_new_sarranid_horseman, 9, 9), (trp_new_sarranid_sipahi, 3, 3), (trp_new_sarranid_manhunter, 6, 6), (trp_new_sarranid_lancer, 8, 8), (trp_new_sarranid_mamluke, 4, 4)]),
  ## LEIFDIN--
 
   ("steppe_bandit_lair" ,"Steppe Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_steppe_bandit,15,58)]),
