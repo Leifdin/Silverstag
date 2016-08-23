@@ -1961,7 +1961,7 @@ mission_templates = [
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_khergit_clansman"),
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_nord_retinue_archer"),
        (this_or_next|eq, ":dead_agent_troop_no", "trp_new_rhodok_halberdier"),
-       (eq, ":dead_agent_troop_no", "trp_sarranid_prison_guard"),
+       (eq, ":dead_agent_troop_no", "trp_new_sarranid_guard"),
           
        (eq, ":killer_agent_troop_no", "trp_player"),
           
@@ -3488,7 +3488,7 @@ mission_templates = [
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_khergit_clansman"),
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_nord_retinue_archer"),
           (this_or_next|eq, ":dead_agent_troop_no", "trp_new_rhodok_halberdier"),
-          (eq, ":dead_agent_troop_no", "trp_sarranid_prison_guard"),
+          (eq, ":dead_agent_troop_no", "trp_new_sarranid_guard"),
           
           (eq, ":killer_agent_troop_no", "trp_player"),
           

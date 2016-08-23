@@ -165,11 +165,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_rhodok_sergeant"),
 	  
       ## SARRANID - NEW TROOPS
-	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_r_sarranid_azab"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_r_sarranid_yaya"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_r_sarranid_musellem"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_r_sarranid_timariot"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_r_sarranid_boluk_bashi"),
+	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_new_sarranid_slave"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_new_sarranid_spearman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_new_sarranid_bowman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_new_sarranid_horseman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_new_sarranid_lancer"),
 	  ## SARRANID - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_sarranid_recruit"),
       # (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_sarranid_footman"),
@@ -1306,12 +1306,12 @@ scripts = [
       (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_cavalry, "trp_new_rhodok_man_at_arms"),
       (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_cavalry, "trp_new_rhodok_ranger"),
       
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_r_sarranid_yaya"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_r_sarranid_bashibozuk"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_r_sarranid_azab"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_r_sarranid_corbaci"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_r_sarranid_timariot"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_r_sarranid_boluk_bashi"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_new_sarranid_spearman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_new_sarranid_swordsman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_new_sarranid_bowman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_new_sarranid_skirmisher"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_new_sarranid_manhunter"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_new_sarranid_lancer"),
 
 
       #for multiplayer mode
@@ -6948,11 +6948,11 @@ scripts = [
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_6"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_sarranid_deserter"),
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_sarranid_castle_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_sarranid_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_sarranid_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_sarranid_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_sarranid_raider"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_sarranid_skirmisher"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_sarranid_manhunter"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_sarranid_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_sarranid_swordsman"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
@@ -51824,7 +51824,7 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
 				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
@@ -51863,7 +51863,7 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
 				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
@@ -51908,7 +51908,7 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
 				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
@@ -51947,7 +51947,7 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
 				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
@@ -51992,7 +51992,7 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
 				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
@@ -52027,7 +52027,7 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
 				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),

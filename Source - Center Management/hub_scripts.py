@@ -3143,7 +3143,7 @@ scripts = [
 						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_lancer", ":lord_no", ":cavalry"),
 					(else_try),
 						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_manhunter", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_bariyye_raider", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_manhunter", ":lord_no", ":cavalry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
@@ -3604,9 +3604,6 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_INFANTRY),
 				(ge, ":quantity", 1),
 				(try_begin), # SARRANID - I7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sultan_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sultan_guard", ":lord_no", ":quantity"),
-				(else_try), # NORD - I7
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_wercheg_guard", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_wercheg_guard", ":lord_no", ":quantity"),
 				(else_try),  # SARRANID - I4

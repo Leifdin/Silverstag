@@ -439,7 +439,7 @@ presentations = [
 
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_6"),
-		(assign, ":cur_troop", "trp_r_sarranid_boluk_bashi"),
+		(assign, ":cur_troop", "trp_new_sarranid_lancer"),
 
       (else_try),
         (assign, ":cur_troop", "trp_taiga_bandit"),
