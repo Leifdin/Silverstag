@@ -1451,7 +1451,7 @@ tavern_travelers_end   = tavern_booksellers_begin
 ransom_brokers_begin = "trp_ransom_broker_1"
 ransom_brokers_end   = tavern_travelers_begin
 
-mercenary_troops_begin = "trp_watchman"
+mercenary_troops_begin = "trp_new_geroian_pikeman"
 mercenary_troops_end = "trp_mercenaries_end"
 
 multiplayer_troops_begin = "trp_swadian_crossbowman_multiplayer"
@@ -1956,8 +1956,8 @@ bandit_upgrades_begin = "trp_mountain_bandit_1"
 bandit_upgrades_end   = "trp_manhunter"
 
 ### FACTION TROOP DEFINITIONS
-player_troops_begin   = "trp_player_tier_1"
-player_troops_end     = "trp_player_tier_5_mounted"  # "trp_player_placeholder_1"
+player_troops_begin   = "trp_new_geroian_pikeman"
+player_troops_end     = "trp_mercenaries_end"  # "trp_player_placeholder_1"
 #player_troops_begin   = "trp_new_swadian_farmer"
 #player_troops_end     = "trp_new_swadian_troops_ends"  # "trp_player_placeholder_1"
 swadia_troops_begin   = "trp_new_swadian_farmer"

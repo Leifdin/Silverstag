@@ -4412,7 +4412,7 @@ scripts = [
 		(try_end),
 		(try_begin),
 			## TROOP EFFECT: PREREQ_DOPPELSOLDNER
-			(call_script, "script_cf_ce_troop_has_ability", ":troop_id", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_id", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
 			(val_mul, ":wage", 2),
 		(try_end),
 	

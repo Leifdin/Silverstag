@@ -330,6 +330,9 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_new_suno_master_archer", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
 		
 
+		######################################################
+		#####          	    VAEGIR FACTION               #####
+		######################################################
 
 		
 		
@@ -527,6 +530,10 @@ scripts = [
 		##### A4 Nord Skirmisher #####
 		(troop_set_class, "trp_new_nord_skirmisher", CLASS_INFANTRY),
 		
+		##### C4 Nord Lancer #####
+		(troop_set_class, "trp_new_nord_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_nord_lancer", slot_troop_recruit_type, STRT_MERCENARY),
+		
 		##### I5 Nord Berserker #####
 		(troop_set_class, "trp_new_nord_berserker", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_berserker"), # combat_scripts.py
@@ -567,13 +574,7 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_hirdman", BONUS_SECOND_WIND , BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_nord_hirdman", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		##### C4 Nord Lancer #####
-		(troop_set_class, "trp_new_nord_lancer", CLASS_CAVALRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_lancer"), # combat_scripts.py
-		(troop_set_slot, "trp_new_nord_lancer", slot_troop_unique_location, "p_castle_36"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_lancer", BONUS_FORTITUDE , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_lancer", slot_troop_recruit_type, STRT_NOBLEMAN),
+
 		
 		##### I7 Wercheg Guard #####
 		(troop_set_class, "trp_new_wercheg_guard", CLASS_INFANTRY),
@@ -773,6 +774,62 @@ scripts = [
 		(troop_set_slot, "trp_new_durquba_slave_master", slot_troop_unique_location, "p_town_20"),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_durquba_slave_master", BONUS_WATCHFUL_EYE, BONUS_UNASSIGNED),
 				
+		
+		
+		######################################################
+		#####                 MERCENARIES                #####
+		######################################################
+		
+		## I5 Geroian Pikeman
+		(troop_set_class, "trp_new_geroian_pikeman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_geroian_pikeman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_pikeman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_pikeman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
+		
+		## I5 Geroian Swordsman
+		(troop_set_class, "trp_new_geroian_swordsman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_geroian_swordsman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_swordsman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_swordsman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_swordsman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_swordsman", BONUS_BERSERKER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_swordsman", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		
+		## C5 Geroian Lancer
+		(troop_set_class, "trp_new_geroian_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_durquba_slave_master", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_lancer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_lancer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		
+		## A5 Geroian Crossbowman
+		(troop_set_class, "trp_new_geroian_crossbowman", CLASS_RANGED),
+		(troop_set_slot, "trp_new_geroian_crossbowman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_crossbowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_crossbowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_crossbowman", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		
+		## A4 Supply Runner
+		(troop_set_class, "trp_new_supply_runner", CLASS_RANGED),
+		(troop_set_slot, "trp_new_supply_runner", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_supply_runner"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		
+		## I5 Drill Sargenat TODO - implement his ability
+		#(troop_set_class, "trp_new_drill_sargeant", CLASS_INFANTRY),
+		#(troop_set_slot, "trp_new_drill_sargeant", slot_troop_recruit_type, STRT_MERCENARY),
+		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_drill_sargeant"), # combat_scripts.py
+		#(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", , BONUS_UNASSIGNED),
+		
+		## I5 Watchman
+		(troop_set_class, "trp_new_watchman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_watchman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_watchman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_watchman", BONUS_WATCHFUL_EYE, BONUS_UNASSIGNED),
 		
 		
 		
