@@ -530,30 +530,34 @@ scripts = [
 		##### I5 Nord Berserker #####
 		(troop_set_class, "trp_new_nord_berserker", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_berserker"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_berserker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_BOUNDLESS_ENDURANCE , BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_CHARGING_STRIKE , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_berserker", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_nord_berserker", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_berserker", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_berserker", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_CHEAP , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_SPRINTER , BONUS_UNASSIGNED),
 		
 		##### I5 Hired Blade #####
 		(troop_set_class, "trp_new_hired_blade", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_hired_blade", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_hired_blade", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_hired_blade", BONUS_BLADEMASTER , BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_hired_blade", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### A6 Nord Retinue Archer #####
 		(troop_set_class, "trp_new_nord_retinue_archer", CLASS_RANGED),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_retinue_archer"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_retinue_archer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_retinue_archer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_VOLLEY_COMMANDER , BONUS_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_SUPPLY_RUNNER , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_retinue_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_nord_retinue_archer", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I6 Nord Godi #####
 		(troop_set_class, "trp_new_nord_godi", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_godi"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_godi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_godi", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_godi", BONUS_TACTICIAN , BONUS_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_godi", BONUS_COMMANDING_PRESENCE , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_godi", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_nord_godi", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I7 Nord Hirdman #####
 		(troop_set_class, "trp_new_nord_hirdman", CLASS_INFANTRY),
@@ -576,8 +580,9 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_wercheg_guard"), # combat_scripts.py
 		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_unique_location, "p_town_12"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_wercheg_guard", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_wercheg_guard", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_wercheg_guard", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		######################################################
 		#####               RHODOK FACTION               #####
