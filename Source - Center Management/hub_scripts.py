@@ -437,7 +437,6 @@ scripts = [
 
 		## I2 Khergit Outcast
 		(troop_set_class, "trp_new_khergit_outcast", CLASS_INFANTRY),
-		(troop_set_slot, "trp_new_khergit_outcast", slot_troop_recruit_type, STRT_MERCENARY),
 
 		## H3 Khergit Scout
 		(troop_set_class, "trp_new_khergit_scout", CLASS_CAVALRY),
@@ -447,7 +446,6 @@ scripts = [
 		
 		## C3 Khergit Hunter
 		(troop_set_class, "trp_new_khergit_hunter", CLASS_CAVALRY),
-		(troop_set_slot, "trp_new_khergit_hunter", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## I3 Khergit Shaman
 		(troop_set_class, "trp_new_khergit_shaman", CLASS_INFANTRY),
@@ -458,20 +456,24 @@ scripts = [
 		
 		## C4 Khergit Raider
 		(troop_set_class, "trp_new_khergit_raider", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_khergit_raider", slot_troop_recruit_type, STRT_MERCENARY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_raider"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_raider", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_raider", BONUS_SCAVENGER , BONUS_UNASSIGNED),
 		
 		## I4 Khergit Clansman
 		(troop_set_class, "trp_new_khergit_clansman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_khergit_clansman", slot_troop_recruit_type, STRT_MERCENARY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_clansman"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_clansman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_clansman", BONUS_DEVOTED , BONUS_UNASSIGNED),
 		
 		## A5 Khergit Master Bowman
 		(troop_set_class, "trp_new_khergit_master_bowman", CLASS_RANGED),
-		(troop_set_slot, "trp_new_khergit_master_bowman", slot_troop_recruit_type, STRT_NOBLEMAN),
-
+		(troop_set_slot, "trp_new_khergit_master_bowman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_master_bowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_master_bowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_master_bowman", BONUS_CHEAP , BONUS_UNASSIGNED),
+		
 		## C6 Khergit Lancer
 		(troop_set_class, "trp_new_khergit_lancer", CLASS_CAVALRY),
 		(troop_set_slot, "trp_new_khergit_lancer", slot_troop_recruit_type, STRT_NOBLEMAN),
