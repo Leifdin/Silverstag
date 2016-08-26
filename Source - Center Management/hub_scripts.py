@@ -342,14 +342,11 @@ scripts = [
 
 		## I2 Vaegir Spearman
 		(troop_set_class, "trp_new_vaegir_spearman", CLASS_INFANTRY),
-		(troop_set_slot,  "trp_new_vaegir_spearman", slot_troop_recruit_type, STRT_MERCENARY),
 
 		## I3 Vaegir Militia
 		(troop_set_class, "trp_new_vaegir_militia", CLASS_INFANTRY),
 
-		## C3 Vaegir Retainer
-		(troop_set_class, "trp_new_vaegir_retainer", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_new_vaegir_retainer", slot_troop_recruit_type, STRT_MERCENARY),
+
 		
 		## H3 Vaegir Outrider
 		(troop_set_class, "trp_new_vaegir_outrider", CLASS_CAVALRY),
@@ -360,19 +357,41 @@ scripts = [
 		
 		## H4 Vaegir Skirmisher
 		(troop_set_class, "trp_new_vaegir_skirmisher", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_skirmisher", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## A4 Vaegir Longbowman
 		(troop_set_class, "trp_new_vaegir_longbowman", CLASS_RANGED),
+		(troop_set_slot,  "trp_new_vaegir_longbowman", slot_troop_recruit_type, STRT_MERCENARY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_longbowman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_longbowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_longbowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_longbowman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_longbowman", BONUS_LOYAL, BONUS_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_longbowman", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
 
+		## C5 Vaegir Retainer
+		(troop_set_class, "trp_new_vaegir_retainer", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_retainer", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_retainer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_retainer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_retainer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		
 		## I5 Vaegir Sentry
 		(troop_set_class, "trp_new_vaegir_sentry", CLASS_INFANTRY),
-		(troop_set_slot,  "trp_new_vaegir_sentry", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot,  "trp_new_vaegir_sentry", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_sentry"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_sentry", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_sentry", BONUS_DEVOTED, BONUS_UNASSIGNED),
 
-		## C6 Vaegir Knight
+		## A6 Vaegir Marksman
+		(troop_set_class, "trp_new_vaegir_marksman", CLASS_RANGED),
+		(troop_set_slot,  "trp_new_vaegir_marksman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_marksman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_marksman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_marksman", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_marksman", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+
+		## C7 Vaegir Knight
 		(troop_set_class, "trp_new_vaegir_knight", CLASS_CAVALRY),
 		(troop_set_slot,  "trp_new_vaegir_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_knight"), # combat_scripts.py
@@ -384,12 +403,7 @@ scripts = [
 		(troop_set_class, "trp_new_vaegir_druzhina", CLASS_CAVALRY),
 		(troop_set_slot,  "trp_new_vaegir_druzhina", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## A7 Vaegir Marksman
-		(troop_set_class, "trp_new_vaegir_marksman", CLASS_RANGED),
-		(troop_set_slot,  "trp_new_vaegir_marksman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_marksman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_marksman", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+
 
 		## H2 Huntsman of Khudan
 		(troop_set_class, "trp_new_huntsman_of_khudan", CLASS_CAVALRY),
