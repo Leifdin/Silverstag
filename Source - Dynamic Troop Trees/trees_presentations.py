@@ -133,7 +133,7 @@ presentations = [
 		#### STATISTICS ####
 		####################
 		
-		(assign, ":pos_y", 625),
+		(assign, ":pos_y", 650),
 		(assign, ":pos_x", 430),
 		(assign, ":y_step_line", 25),
 		(store_add, ":pos_x_col_2", ":pos_x", 140),
@@ -151,6 +151,17 @@ presentations = [
         (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x", ":pos_y", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		(troop_get_slot, reg21, "$temp", slot_troop_tier),
+		(str_store_string, s21, "@{reg21}"),
+        (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y", 0, gpu_right),
+		(call_script, "script_gpu_resize_object", 0, 75),
+		
+		## OBJ - LABEL - WAGE
+		(val_sub, ":pos_y", ":y_step_line"),
+		(str_store_string, s21, "@Wage:"),
+        (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x", ":pos_y", 0, gpu_left),
+		(call_script, "script_gpu_resize_object", 0, 75),
+		(call_script, "script_game_get_troop_wage", "$temp", "p_main_party"),
+		(assign, reg21, reg0),
 		(str_store_string, s21, "@{reg21}"),
         (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y", 0, gpu_right),
 		(call_script, "script_gpu_resize_object", 0, 75),
@@ -480,8 +491,8 @@ presentations = [
 		
 		## OBJ - LABEL - EQUIPMENT:
 		(str_store_string, s21, "@Equipment:"),
-        (call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 625, 0, gpu_left),
-		(call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 625, 0, gpu_left),
+        (call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 650, 0, gpu_left),
+		(call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 650, 0, gpu_left),
 		
 		## OBJ - INVENTORY CONTAINER
 		(call_script, "script_gpu_container_heading", 790, 50, 160, 560, insp_obj_container_inventory),
