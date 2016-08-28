@@ -16256,9 +16256,30 @@ scripts = [
 		# (display_message, "@DEBUG (loot): Looting skill of {reg33} = +{reg31} value bonus, {reg32}% factor.", gpu_debug),
 		### DIAGNOSTIC- ###
 		
-		(store_random_in_range, ":base_limit", 30, 45),
+				## LEIFDIN - modify loot amount and quality according to difficulty
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY),
+			(store_random_in_range, ":base_limit", 38, 57),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_NORMAL),
+			(store_random_in_range, ":base_limit", 30, 45),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_HARD),
+			(store_random_in_range, ":base_limit", 23, 34),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
+			(store_random_in_range, ":base_limit", 15, 23),
+		(try_end),
+
+		
+		#(store_random_in_range, ":base_limit", 30, 45),
 		(store_add, ":loot_limit", ":base_limit", ":looting_quantity_bonus"),
 		(val_add, ":loot_limit", ":scavenger_quantity"),
+		
+
+		
+		
+		
         (party_get_num_companion_stacks, ":num_stacks",":enemy_party"),
         (try_for_range, ":stack_no", 0, ":num_stacks"),
 			(lt, ":loot_slot", ":loot_limit"),#Don't overfill loot
@@ -16296,7 +16317,20 @@ scripts = [
 					
 					# Limit what we can loot based on our looting threshold.
 					# (item_get_value, ":item_value", ":item_no"),
-					(store_add, ":value_threshold", 200, ":looting_value_bonus"),
+					
+					(try_begin),
+						(eq, "$mod_difficulty", GAME_MODE_EASY),
+						(store_add, ":value_threshold", 200, ":looting_value_bonus"),
+					(else_try),
+						(eq, "$mod_difficulty", GAME_MODE_NORMAL),
+						(store_add, ":value_threshold", 150, ":looting_value_bonus"),
+					(else_try),
+						(eq, "$mod_difficulty", GAME_MODE_HARD),
+						(store_add, ":value_threshold", 100, ":looting_value_bonus"),
+					(else_try),
+						(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
+						(store_add, ":value_threshold", 50, ":looting_value_bonus"),
+					(try_end),
 					
 					### DIAGNOSTIC+ ###
 					# (assign, reg33, ":item_no"),
@@ -52253,7 +52287,7 @@ scripts = [
 ("initialize_default_settings",
 	[
 		(assign, "$display_extra_xp_prof", 1),           # Show extra xp & weapon proficiency gains.
-		(assign, "$mod_difficulty", GAME_MODE_NORMAL),   # Normal
+		(assign, "$mod_difficulty", GAME_MODE_EASY),   # Normal
 		(assign, "$g_wp_tpe_active", 1),                 # TPE active.
 		(assign, "$killer_regen_mode", 3),               # Player & AI
 		(assign, "$disable_npc_complaints", 0),          # Companions will complain.
@@ -52269,7 +52303,7 @@ scripts = [
 		(assign, "$diplomacy_force_recruit_enabled", 1), # Manadatory conscription will by default influence auto-recruitment.
 		(assign, "$enable_popups", 1),                   # Players will be notified of certain events via a pop-up message.
 		(assign, "$enable_troop_ratio_bar", 1),          # Enable the troop ratio bar by default.
-		(assign, "$cms_minimum_pickup_value", 50),       # Set an initial minimum pickup threshold for quartermasters.
+		(assign, "$cms_minimum_pickup_value", 1),       # Set an initial minimum pickup threshold for quartermasters.
 		(assign, "$cms_mode_jailer", CMS_JAILER_STORE_AND_SELL), # Sets the default behavior of the party gaoler.
 		(assign, "$hub_display_party_members", 1),       # Not really a mod option, but it needed to be initialized at least once.
 		(assign, "$enable_sprinting", 1),                # Sprinting is enabled.
@@ -52277,8 +52311,8 @@ scripts = [
 		(assign, "$enable_fallen_riders", 1),            # Unhorsed riders take damage by default.
 		(assign, "$enable_battle_minimap", 1),           # Enable the overhead battle mini-map by default.
 		(assign, "$enable_combat_abilities", 1),         # Combat abilities are enabled by default.
-		(assign, "$cms_minimum_cash_block", 750),        # Set minimum cash limit for auto-purchasing of food.
-		(assign, "$enable_troop_prefixes", 0),           # Troop prefixes disabled.
+		(assign, "$cms_minimum_cash_block", 3000),        # Set minimum cash limit for auto-purchasing of food.
+		(assign, "$enable_troop_prefixes", 1),           # Troop prefixes disabled.
 		(assign, "$cms_report_mode", CMS_REPORTS_DETAILED), # Sets companion roles to report detailed information to the message log.
 		(assign, "$enable_tutorials", 1),                # Set tutorial quests as on by default.
 		(assign, "$troop_naming_convention", NAME_STYLE_IMMERSIVE), # Establish base naming convention for upgraded troops.

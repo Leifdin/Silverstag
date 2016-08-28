@@ -1326,6 +1326,7 @@ scripts = [
 ("ce_drill_sargeant_get_party_penalty",
 	[
 		(store_script_param, ":party_no", 1),
+		(neq, ":party_no", -1),
 		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
 		(assign, ":troop_count", 0),
 		(assign, ":drill_sargeant_penalty_party", 0),

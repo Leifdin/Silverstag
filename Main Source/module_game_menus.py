@@ -85,7 +85,7 @@ game_menus = [
 			(troop_set_type, "trp_player", 0),
 			(assign, "$show_autoloot_data", 1),
 			(assign, "$cheat_mode", 1),
-			(assign, "$mod_difficulty", GAME_MODE_HARD),
+			(assign, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			(call_script, "script_hub_initialize"), # hub_scripts.py
 			(change_screen_map),
 			(party_relocate_near_party, "p_main_party", "p_town_4", 2),
