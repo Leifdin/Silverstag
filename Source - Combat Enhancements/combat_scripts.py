@@ -1309,15 +1309,14 @@ scripts = [
 		(store_script_param, ":party_no", 1),
 		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
 		(assign, ":troop_count", 0),
-		(assign, ":drill_sargeant_penalty", 0),
-		(assign, reg2, 0), # Value not clamped.
+		(assign, ":drill_sargeant_penalty_party", 0),
 		(try_for_range, ":stack_no", 0, ":num_stacks"),
 			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
 			## TROOP EFFECT: BONUS_DRILL_SARGEANT
 			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
 			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SARGEANT),
+			(assign, ":drill_sargeant_penalty_stack", 5),
 			(val_add, ":troop_count", ":stack_size"),
-			(val_add, ":drill_sargeant_penalty", 5),
 			#(val_mul, ":drill_sargeant_penalty", ":stack_size"),
 			## Substract leadership bonus
 			(try_begin),
@@ -1328,17 +1327,37 @@ scripts = [
 					(val_div, ":leadership_bonus", 2),
 				(try_end),
 			(try_end),
-			(val_sub, ":drill_sargeant_penalty", ":leadership_bonus"),
-			(val_mul, ":drill_sargeant_penalty", ":stack_size"),
+			(val_sub, ":drill_sargeant_penalty_stack", ":leadership_bonus"),
+			(val_mul, ":drill_sargeant_penalty_stack", ":stack_size"),
+			(val_add, ":drill_sargeant_penalty_party", ":drill_sargeant_penalty_stack"),
 		(try_end),
 		(try_begin),
-			(neg|is_between, ":drill_sargeant_penalty", 1, 26),
+			(neg|is_between, ":drill_sargeant_penalty_party", 1, 26),
 			(assign, reg2, 1), ## Value clamped
 		(try_end),
-		(val_clamp, ":drill_sargeant_penalty", 0, 26),
-		(assign, reg0, ":drill_sargeant_penalty"),
+		(assign, reg0, ":drill_sargeant_penalty_party"),
 		(assign, reg1, ":troop_count"),
 		(assign, "$morale_modifier_drill_sargeant", reg0),
+	]),
+	
+# script_ce_drill_sargeant_get_party_bonus
+# EXAMPLE: (call_script, "script_ce_drill_sargeant_get_party_bonus", ":party_no"), # combat_scripts.py - prereq constants in combat_constants.py
+("ce_drill_sargeant_get_party_bonus",
+	[
+		(store_script_param, ":party_no", 1),
+		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
+		(assign, ":drill_sargeant_bonus_party", 0),
+		(try_for_range, ":stack_no", 0, ":num_stacks"),
+			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
+			## TROOP EFFECT: BONUS_DRILL_SARGEANT
+			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SARGEANT),
+			(store_attribute_level, ":drill_sargeant_bonus_stack", ":troop_no", ca_strength),
+			(val_div, ":drill_sargeant_bonus_stack", 5),
+			(val_mul, ":drill_sargeant_bonus_stack", ":stack_size"),
+			(val_add, ":drill_sargeant_bonus_party", ":drill_sargeant_bonus_stack"),
+		(try_end),
+		(assign, reg0, ":drill_sargeant_bonus_party"),
 	]),
 	
 # script_ce_storyteller_get_party_bonus
@@ -1890,15 +1909,19 @@ scripts = [
 		(eq, ":continue", 1),
 	]),
 	
-# script_cf_ce_troop_has_ability
+# script_ce_troop_get_bonus_health
 # EXAMPLE: (call_script, "script_ce_troop_get_bonus_health", ":troop_no"), # combat_scripts.py - ability constants in combat_constants.py
 ("ce_troop_get_bonus_health",
     [
 		(store_script_param, ":troop_no", 1),
+		(store_script_param, ":party_id", 2),
 		
 		(assign, ":extra_health", 0),
+		
 		(try_begin),
 			(eq, "$enable_combat_abilities", 1),
+			(call_script, "script_ce_drill_sargeant_get_party_bonus", ":party_id"),
+			(val_add, ":extra_health", reg0),
 			(try_begin),
 				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_BERSERKER),
 				(store_attribute_level, ":health_modifier", ":troop_no", ca_strength),
@@ -1920,11 +1943,11 @@ scripts = [
 			(try_end),
 		(try_end),
 		(assign, reg1, ":extra_health"),
-		# (try_begin),
-			# (eq, ":troop_no", "trp_player"),
-			# (str_store_troop_name, s31, "trp_player"),
-			# (display_message, "@DEBUG (CE): {s31}'s health bonus is {reg1}.", gpu_debug),
-		# (try_end),
+		 (try_begin),
+			 (eq, ":troop_no", "trp_player"),
+			 (str_store_troop_name, s31, "trp_player"),
+			 (display_message, "@DEBUG (CE): {s31}'s health bonus is {reg1}.", gpu_debug),
+		 (try_end),
 	]),
 	
 # script_ce_reset_agent_max_health

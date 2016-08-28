@@ -816,6 +816,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_supply_runner"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_DRILL_SARGEANT, BONUS_UNASSIGNED),
 		
 		## I5 Drill Sargenat TODO - implement his ability
 		(troop_set_class, "trp_new_drill_sargeant", CLASS_INFANTRY),
