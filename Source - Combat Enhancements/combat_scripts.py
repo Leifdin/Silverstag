@@ -37,7 +37,7 @@ scripts = [
 		## NPC4 - Rolf
 		(assign, ":troop_no", "trp_npc4"),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_1, BONUS_HARDY),
-		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_ENDURANCE),
+		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SARGEANT),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_3, BONUS_COMMANDING_PRESENCE),
 		## NPC5 - Baheshtur
 		(assign, ":troop_no", "trp_npc5"),
@@ -57,7 +57,7 @@ scripts = [
 		## NPC8 - Matheld
 		(assign, ":troop_no", "trp_npc8"),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_1, BONUS_BERSERKER),
-		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_BOUNDLESS_ENDURANCE),
+		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SARGEANT),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_3, BONUS_BLOODLUST),
 		## NPC9 - Alayen
 		(assign, ":troop_no", "trp_npc9"),
@@ -1117,6 +1117,18 @@ scripts = [
 									^^Synergy (Inspiring):\
 									^Your courage boosting effect is increased by +30%.\
 									^^Note: ^This applies to all ranged weapons."),
+
+		(else_try),
+			(eq, ":ability", BONUS_DRILL_SARGEANT),
+			(str_store_string, s31, "@DRILL SARGEANT"),
+			(str_store_string, s1, "@This {s2} increases friendly troop health on expense of morale"),
+			(str_store_string, s32, "@Type: Personal Combat\
+									^^Effect #1:\
+									^This ability reduces morale by 5 minus\
+									^0.5/leadership point in tradeoff for\
+									^0.20 health/strenght for all troops in party\
+									^^Synergy (Inspiring):\
+									^Morale is reduced by 5 minus 1/leadership point."),
 		
 		(else_try), 
 			### DEFAULT RESPONSE ### 
