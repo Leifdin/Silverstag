@@ -128,6 +128,10 @@ scripts = [
 		### TROOP EFFECT: INPSIRING ###
 		(call_script, "script_ce_inspiring_get_party_bonus", "p_main_party"),
 		(val_add, ":new_morale", reg0), # Inspiring bonus
+
+		### TROOP EFFECT: DRILL_SARGEANT ###
+		(call_script, "script_ce_drill_sargeant_get_party_penalty", "p_main_party"),
+		(val_sub, ":new_morale", reg0), # Drill Sargeant Penalty
 		
 		### LEADERSHIP SKILL ### : 0 to +40/60 morale.
 		(store_skill_level, ":player_leadership", "skl_leadership", "trp_player"),

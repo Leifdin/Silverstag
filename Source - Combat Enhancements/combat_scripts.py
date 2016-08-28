@@ -1301,6 +1301,45 @@ scripts = [
 		(assign, reg1, ":troop_count"),
 		(assign, "$morale_modifier_inspiring", reg0),
 	]),
+
+# script_ce_drill_sargeant_get_party_penalty
+# EXAMPLE: (call_script, "script_ce_inspiring_get_party_bonus", ":party_no"), # combat_scripts.py - prereq constants in combat_constants.py
+("ce_drill_sargeant_get_party_penalty",
+	[
+		(store_script_param, ":party_no", 1),
+		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
+		(assign, ":troop_count", 0),
+		(assign, ":drill_sargeant_penalty", 0),
+		(assign, reg2, 0), # Value not clamped.
+		(try_for_range, ":stack_no", 0, ":num_stacks"),
+			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
+			## TROOP EFFECT: BONUS_DRILL_SARGEANT
+			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SARGEANT),
+			(val_add, ":troop_count", ":stack_size"),
+			(val_add, ":drill_sargeant_penalty", 5),
+			#(val_mul, ":drill_sargeant_penalty", ":stack_size"),
+			## Substract leadership bonus
+			(try_begin),
+				(store_skill_level, ":leadership_bonus", "skl_leadership", ":troop_no"),
+				(try_begin),
+					(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_INSPIRING), ## SYNERGY: INSPIRING - double leadership bonus
+				(else_try),
+					(val_div, ":leadership_bonus", 2),
+				(try_end),
+			(try_end),
+			(val_sub, ":drill_sargeant_penalty", ":leadership_bonus"),
+			(val_mul, ":drill_sargeant_penalty", ":stack_size"),
+		(try_end),
+		(try_begin),
+			(neg|is_between, ":drill_sargeant_penalty", 1, 26),
+			(assign, reg2, 1), ## Value clamped
+		(try_end),
+		(val_clamp, ":drill_sargeant_penalty", 0, 26),
+		(assign, reg0, ":drill_sargeant_penalty"),
+		(assign, reg1, ":troop_count"),
+		(assign, "$morale_modifier_drill_sargeant", reg0),
+	]),
 	
 # script_ce_storyteller_get_party_bonus
 # EXAMPLE: (call_script, "script_ce_storyteller_get_party_bonus", ":party_no"), # combat_scripts.py - prereq constants in combat_constants.py

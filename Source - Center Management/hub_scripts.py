@@ -818,11 +818,11 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
 		
 		## I5 Drill Sargenat TODO - implement his ability
-		#(troop_set_class, "trp_new_drill_sargeant", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_new_drill_sargeant", slot_troop_recruit_type, STRT_MERCENARY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_drill_sargeant"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", , BONUS_UNASSIGNED),
+		(troop_set_class, "trp_new_drill_sargeant", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_drill_sargeant", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_drill_sargeant"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", BONUS_DRILL_SARGEANT , BONUS_UNASSIGNED),
 		
 		## I5 Watchman
 		(troop_set_class, "trp_new_watchman", CLASS_INFANTRY),

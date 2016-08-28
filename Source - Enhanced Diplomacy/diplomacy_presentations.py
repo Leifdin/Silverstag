@@ -807,6 +807,11 @@ presentations = [
 				(val_add, ":line_count", 1),
 			(try_end),
 			(try_begin),
+				(call_script, "script_ce_drill_sargeant_get_party_penalty", "p_main_party"),
+				(ge, reg0, 1), # Drill Sargeant penalty
+				(val_add, ":line_count", 1),
+			(try_end),
+			(try_begin),
 				(call_script, "script_cf_common_player_is_vassal_or_greater", 1),
 				(faction_get_slot, ":faction_morale_bonus", "$players_kingdom", slot_faction_party_morale_adjust),
 				(neq, ":faction_morale_bonus", 0),
@@ -1167,6 +1172,7 @@ presentations = [
 				## COLUMN 3 - Factor Value
 				(assign, reg21, "$g_player_party_morale_modifier_leadership"),
 				(val_add, reg21, "$morale_modifier_inspiring"),
+				(val_sub, reg21, "$morale_modifier_drill_sargeant"),
 				(str_clear, s22),
 				(try_begin),
 					(ge, reg21, 1),
@@ -1232,6 +1238,32 @@ presentations = [
 					(try_begin),
 						(ge, reg21, 1),
 						(str_store_string, s22, "@+"),
+					(try_end),
+					(str_store_string, s21, "@{s22}{reg21}"),
+					(call_script, "script_gpu_create_text_label", "str_gpu_s21", ":pos_x_5", ":pos_y", 0, gpu_right),
+					(call_script, "script_gpu_resize_object", 0, 75),
+				(try_end),
+				
+				#### SUB-FACTOR: DRILL SARGEANT EFFECT
+				(call_script, "script_ce_drill_sargeant_get_party_penalty", "p_main_party"),
+				(assign, reg21, reg0), # Drill Sargeant Penalty
+				(assign, reg22, reg1), # Troop count
+				(assign, reg23, reg2), # Clamped
+				
+				(try_begin),
+					(neq, reg21, 0),
+					(val_sub, ":pos_y", ":line_step"),
+					## COLUMN 4 - Factor Contributors
+					(store_sub, reg24, reg22, 1),
+					(str_store_string, s21, "@{reg22} troop{reg24?s:} with the Drill Sargeant ability"),
+					(call_script, "script_gpu_create_text_label", "str_gpu_s21", ":pos_x_4", ":pos_y", 0, gpu_left),
+					(call_script, "script_gpu_resize_object", 0, 75),
+					
+					## COLUMN 5 - Factor Contributor Values
+					(str_clear, s22),
+					(try_begin),
+						(ge, reg21, 1),
+						(str_store_string, s22, "@-"),
 					(try_end),
 					(str_store_string, s21, "@{s22}{reg21}"),
 					(call_script, "script_gpu_create_text_label", "str_gpu_s21", ":pos_x_5", ":pos_y", 0, gpu_right),

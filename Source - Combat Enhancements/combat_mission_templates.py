@@ -1275,7 +1275,7 @@ combat_enhancement_triggers = [
 		(try_end),
 	]),
 	
-## TRIGGER: TROOP ABILITY - BONUS_BERSERKER / BONUS_DISCIPLINED
+## TRIGGER: TROOP ABILITY - BONUS_BERSERKER / BONUS_DISCIPLINED / BONUS_DRILL_SARGEANT
 ## PURPOSE: Enhances the health of spawning troops.
 (ti_on_agent_spawn, 0, 0, [],
     [

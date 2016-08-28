@@ -83,6 +83,15 @@ game_menus = [
 			(str_store_string, s11, "str_space"),
 		(try_end),
 		
+		### TROOP EFFECT: BONUS_DRILL_SARGEANT ###
+		(assign, reg11, "$morale_modifier_drill_sargeant"),
+		(try_begin),
+			(gt, reg11, 0),
+			(str_store_string, s12, "@{!} -"),
+		(else_try),
+			(str_store_string, s12, "str_space"),
+		(try_end),
+		
 		### RECENT CHANGES ###
 		(party_get_morale, reg5, "p_main_party"),
 		(store_sub, reg4, reg5, ":target_morale"),
