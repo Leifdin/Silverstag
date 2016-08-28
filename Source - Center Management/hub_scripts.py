@@ -810,19 +810,31 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_crossbowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_crossbowman", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
 		
+		## I4 - Field Surgeon
+		(troop_set_class, "trp_new_field_surgeon", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_field_surgeon", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_field_surgeon"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_field_surgeon", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_field_surgeon", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_field_surgeon", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_field_surgeon", BONUS_FIELD_SURGEON, BONUS_UNASSIGNED),
+		
 		## A4 Supply Runner
 		(troop_set_class, "trp_new_supply_runner", CLASS_RANGED),
 		(troop_set_slot, "trp_new_supply_runner", slot_troop_recruit_type, STRT_MERCENARY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_supply_runner"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_DRILL_SARGEANT, BONUS_UNASSIGNED),
 		
-		## I5 Drill Sargenat TODO - implement his ability
+		## I5 Drill Sargenat
 		(troop_set_class, "trp_new_drill_sargeant", CLASS_INFANTRY),
 		(troop_set_slot, "trp_new_drill_sargeant", slot_troop_recruit_type, STRT_MERCENARY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_drill_sargeant"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", BONUS_DRILL_SARGEANT , BONUS_UNASSIGNED),
 		
 		## I5 Watchman
@@ -830,6 +842,8 @@ scripts = [
 		(troop_set_slot, "trp_new_watchman", slot_troop_recruit_type, STRT_MERCENARY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_watchman"), # combat_scripts.py
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_watchman", BONUS_WATCHFUL_EYE, BONUS_UNASSIGNED),
 		
 		

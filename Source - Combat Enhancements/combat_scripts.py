@@ -1129,6 +1129,13 @@ scripts = [
 									^0.20 health/strenght for all troops in party\
 									^^Synergy (Inspiring):\
 									^Morale is reduced by 5 minus 1/leadership point."),
+		(else_try),
+			(eq, ":ability", BONUS_FIELD_SURGEON), 
+			(str_store_string, s31, "@FIELD SURGEON"),
+			(str_store_string, s1, "@This {s2} increases probability of troop surviving a death blow."),
+			(str_store_string, s32, "@Type: Party Benefit\
+									^^Effect #1:\
+									^Your surgery skill is enhanced by 2.\ "),
 		
 		(else_try), 
 			### DEFAULT RESPONSE ### 
