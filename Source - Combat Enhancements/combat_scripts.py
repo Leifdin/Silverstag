@@ -37,7 +37,7 @@ scripts = [
 		## NPC4 - Rolf
 		(assign, ":troop_no", "trp_npc4"),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_1, BONUS_HARDY),
-		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SARGEANT),
+		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SERGEANT),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_3, BONUS_COMMANDING_PRESENCE),
 		## NPC5 - Baheshtur
 		(assign, ":troop_no", "trp_npc5"),
@@ -57,7 +57,7 @@ scripts = [
 		## NPC8 - Matheld
 		(assign, ":troop_no", "trp_npc8"),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_1, BONUS_BERSERKER),
-		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SARGEANT),
+		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SERGEANT),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_3, BONUS_BLOODLUST),
 		## NPC9 - Alayen
 		(assign, ":troop_no", "trp_npc9"),
@@ -1119,7 +1119,7 @@ scripts = [
 									^^Note: ^This applies to all ranged weapons."),
 
 		(else_try),
-			(eq, ":ability", BONUS_DRILL_SARGEANT),
+			(eq, ":ability", BONUS_DRILL_SERGEANT),
 			(str_store_string, s31, "@DRILL SARGEANT"),
 			(str_store_string, s1, "@This {s2} increases friendly troop health on expense of morale"),
 			(str_store_string, s32, "@Type: Personal Combat\
@@ -1332,9 +1332,9 @@ scripts = [
 		(assign, ":drill_sargeant_penalty_party", 0),
 		(try_for_range, ":stack_no", 0, ":num_stacks"),
 			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
-			## TROOP EFFECT: BONUS_DRILL_SARGEANT
+			## TROOP EFFECT: BONUS_DRILL_SERGEANT
 			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
-			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SARGEANT),
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SERGEANT),
 			(assign, ":drill_sargeant_penalty_stack", 5),
 			(val_add, ":troop_count", ":stack_size"),
 			#(val_mul, ":drill_sargeant_penalty", ":stack_size"),
@@ -1369,9 +1369,9 @@ scripts = [
 		(assign, ":drill_sargeant_bonus_party", 0),
 		(try_for_range, ":stack_no", 0, ":num_stacks"),
 			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
-			## TROOP EFFECT: BONUS_DRILL_SARGEANT
+			## TROOP EFFECT: BONUS_DRILL_SERGEANT
 			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
-			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SARGEANT),
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SERGEANT),
 			(store_attribute_level, ":drill_sargeant_bonus_stack", ":troop_no", ca_strength),
 			(val_div, ":drill_sargeant_bonus_stack", 5),
 			(val_mul, ":drill_sargeant_bonus_stack", ":stack_size"),

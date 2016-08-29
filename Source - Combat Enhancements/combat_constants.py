@@ -127,7 +127,7 @@ BONUS_RAPID_RELOAD                 = 54 # Increases the reloading speed of troop
 BONUS_FIRING_CAPTAIN               = 55 # Increases the reloading speed of nearby troops by 4% per point of Leadership.
 BONUS_SAVAGERY                     = 56 # Increases the courage lost by nearby troops when this troop defeats an enemy.
 BONUS_RALLYING_STRIKE              = 57 # Increases the courage gained by nearby troops when this troop defeats an enemy.
-BONUS_DRILL_SARGEANT               = 58 # Decreases morale by 5. Increases health of all troops by 1 per 5 strenght points. Morale penalty is decreased by 0.5 per Leadership point.
+BONUS_DRILL_SERGEANT               = 58 # Decreases morale by 5. Increases health of all troops by 1 per 5 strenght points. Morale penalty is decreased by 0.5 per Leadership point.
 BONUS_FIELD_SURGEON                = 59 # Increases party leaders surgery by 1 per 5 troops
 BONUS_END_OF_ABILITIES             = 60
 

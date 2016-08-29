@@ -835,7 +835,7 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", BONUS_DRILL_SARGEANT , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", BONUS_DRILL_SERGEANT , BONUS_UNASSIGNED),
 		
 		## I5 Watchman
 		(troop_set_class, "trp_new_watchman", CLASS_INFANTRY),
