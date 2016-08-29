@@ -53,8 +53,8 @@ scripts = [
 		(store_attribute_level, ":STR", ":troop_no", ca_strength),
 		(val_add, ":max_health", ":STR"),
 		
-		# Add in ability bonuses from Disciplined or Bloodlust.
-		(call_script, "script_ce_troop_get_bonus_health", ":troop_no"), # combat_scripts.py
+		# Add in ability bonuses from Disciplined, Bloodlust or Drill Sergeant
+		(call_script, "script_ce_troop_get_bonus_health", ":troop_no", "p_main_party"), # combat_scripts.py
 		(assign, ":extra_health", reg1),
 		(val_add, ":max_health", ":extra_health"),
 		# (try_begin),

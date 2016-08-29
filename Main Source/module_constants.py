@@ -1396,8 +1396,8 @@ kingdoms_end = "fac_kingdoms_end"
 npc_kingdoms_begin = "fac_kingdom_1"
 npc_kingdoms_end = kingdoms_end
 
-bandits_begin = "trp_bandit"
-bandits_end = "trp_manhunter" # "trp_black_khergit_horseman"
+bandits_begin = "trp_new_looter"
+bandits_end = "trp_new_bandits_end" # "trp_black_khergit_horseman"
 
 kingdom_ladies_begin = "trp_knight_1_1_wife"
 kingdom_ladies_end = "trp_heroes_end"
