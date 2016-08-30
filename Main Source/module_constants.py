@@ -163,7 +163,7 @@ slot_faction_political_issue_time 						 = 65 #Now is used
 
 
 #slot_faction_deserter_party_template       = 62
-
+slot_faction_bandit_template         = 76
 slot_faction_reinforcements_a        = 77
 slot_faction_reinforcements_b        = 78
 slot_faction_reinforcements_c        = 79

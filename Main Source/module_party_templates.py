@@ -37,27 +37,55 @@ party_templates = [
 
   ("cattle_herd","Cattle Herd",icon_cattle|carries_goods(10),0,fac_neutral,merchant_personality,[(trp_cattle,80,120)]),
 
-##  ("vaegir_nobleman","Vaegir Nobleman",icon_vaegir_knight|carries_goods(10)|pf_quest_party,0,fac_commoners,merchant_personality,[(trp_nobleman,1,1),(trp_vaegir_knight,2,6),(trp_vaegir_horseman,4,12)]),
-##  ("swadian_nobleman","Swadian Nobleman",icon_gray_knight|carries_goods(10)|pf_quest_party,0,fac_commoners,merchant_personality,[(trp_nobleman,1,1),(trp_swadian_knight,2,6),(trp_swadian_man_at_arms,4,12)]),
-# Ryan BEGIN
   ("looters","Looters",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_looter,3,45)]),
-# Ryan END
   ("manhunters","Manhunters",icon_gray_knight,0,fac_manhunters,soldier_personality,[(trp_manhunter,9,40)]),
-##  ("peasant","Peasant",icon_peasant,0,fac_commoners,merchant_personality,[(trp_farmer,1,6),(trp_peasant_woman,0,7)]),
-
-#  ("black_khergit_raiders","Black Khergit Raiders",icon_khergit_horseman_b|carries_goods(2),0,fac_black_khergits,bandit_personality,[(trp_black_khergit_guard,1,10),(trp_black_khergit_horseman,5,5)]),
   ("steppe_bandits","Steppe Bandits",icon_khergit|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_steppe_raider_chief,1,1),(trp_steppe_runner,4,15),(trp_steppe_guard,4,15),(trp_steppe_bandit,4,15)]),
   ("taiga_bandits","Tundra Bandits",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_taiga_leader,1,1),(trp_taiga_spearman,4,15),(trp_taiga_javelineer,4,15),(trp_taiga_bandit,4,15)]),
   ("desert_bandits","Desert Bandits",icon_vaegir_knight|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_desert_leader,1,1),(trp_desert_fighter,4,15),(trp_desert_nomad,4,15),(trp_desert_bandit,4,15)]),
-##DAWG+EDIT FOREST BANDIT PARTY##
   ("forest_bandits","Forest Bandits",icon_axeman|carries_goods(2),0,fac_forest_bandits,bandit_personality,[(trp_forest_leader,1,1),(trp_forest_bandit,4,15),(trp_forest_footpad,4,15),(trp_forest_poacher,4,15)]),
   ("mountain_bandits","Mountain Bandits",icon_axeman|carries_goods(2),0,fac_mountain_bandits,bandit_personality,[(trp_mountain_chief,1,1),(trp_mountain_bandit,4,15),(trp_mountain_tracker,4,15),(trp_mountain_hunter,4,15)]),
-##DAWG+EDIT SEA RAIDERS PARTY##
   ("sea_raiders","Sea Raiders",icon_axeman|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_nord_chieftain,1,1),(trp_sea_raider,5,16),(trp_marauder,5,16),(trp_nordsman_pelttracker,5,16)]),
-  # ("forest_bandits","Forest Bandits",icon_bandit_forest_bandit|carries_goods(2),0,fac_forest_bandits,bandit_personality,[(trp_forest_leader,1,1),(trp_forest_bandit,4,15),(trp_forest_footpad,4,15),(trp_forest_poacher,4,15)]),
-  # ("mountain_bandits","Mountain Bandits",icon_bandit_mountain_bandit|carries_goods(2),0,fac_mountain_bandits,bandit_personality,[(trp_mountain_chief,1,1),(trp_mountain_bandit,4,15),(trp_mountain_tracker,4,15),(trp_mountain_hunter,4,15)]),
-  # ("sea_raiders","Sea Raiders",icon_bandit_sea_raider|carries_goods(2),0,fac_outlaws,bandit_personality,[(trp_nord_chieftain,1,1),(trp_sea_raider,5,16),(trp_marauder,5,16),(trp_nordsman_pelttracker,5,16)]),
+  
+  ##########################
+  ## New Bandit Templates ##
+  ##########################
+  ("looters_easy","Looters",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,[(trp_new_looter, 3, 35), (trp_new_bandit, 2, 8), (trp_new_brigand, 0, 2)]), ## 5 - 45 troops
+  ("looters_normal","Looters",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,[(trp_new_looter, 5, 20), (trp_new_bandit, 3, 15), (trp_new_brigand, 2, 5)]), ## 10 - 40 troops
+  ("looters_hard","Looters",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,[(trp_new_looter, 5, 10), (trp_new_bandit, 5, 15), (trp_new_brigand, 5, 10)]), ## 15 - 35 troops
+  ("looters_very_hard","Looters",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,[(trp_new_looter, 3, 5), (trp_new_bandit, 10, 15), (trp_new_brigand, 7, 10)]), ## 20 - 30 troops
 
+  ("forest_bandits_easy",		"Forest Bandits",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,	[(trp_new_forest_leader, 0, 1), (trp_new_trapper, 0, 5), (trp_new_footpad, 0, 5), (trp_new_poacher, 2, 20), (trp_new_highwayman, 3, 14)]), ## 5 - 45 troops
+  ("forest_bandits_normal",		"Forest Bandits",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,		[(trp_new_forest_leader, 1, 2), (trp_new_trapper, 2, 5), (trp_new_footpad, 2, 5), (trp_new_poacher, 2, 16), (trp_new_highwayman, 3, 12)]), ## 10 - 40 troops
+  ("forest_bandits_hard",		"Forest Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_forest_leader, 2, 4), (trp_new_trapper, 5, 10), (trp_new_footpad, 5, 10), (trp_new_poacher, 1, 6), (trp_new_highwayman, 2, 5)]), ## 15 - 35 troops
+  ("forest_bandits_very_hard",	"Forest Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_forest_leader, 3, 5), (trp_new_trapper, 8, 12), (trp_new_footpad, 9, 13)]), ## 20 - 30 troops
+
+  ("taiga_bandits_easy",		"Taiga Bandits",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,		[(trp_new_taiga_chieftain, 0, 1), (trp_new_taiga_javelineer, 0, 5), (trp_new_taiga_mauler, 0, 5), (trp_new_taiga_bowman, 2, 20), (trp_new_taiga_spearman, 3, 14)]), ## 5 - 45 troops
+  ("taiga_bandits_normal",		"Taiga Bandits",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,		[(trp_new_taiga_chieftain, 1, 2), (trp_new_taiga_javelineer, 2, 5), (trp_new_taiga_mauler, 2, 5), (trp_new_taiga_bowman, 2, 16), (trp_new_taiga_spearman, 3, 12)]), ## 10 - 40 troops
+  ("taiga_bandits_hard",		"Taiga Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_taiga_chieftain, 2, 4), (trp_new_taiga_javelineer, 5, 10), (trp_new_taiga_mauler, 5, 10), (trp_new_taiga_bowman, 1, 6), (trp_new_taiga_spearman, 2, 5)]), ## 15 - 35 troops
+  ("taiga_bandits_very_hard",	"Taiga Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_taiga_chieftain, 3, 5), (trp_new_taiga_javelineer, 8, 12), (trp_new_taiga_mauler, 9, 13)]), ## 20 - 30 troops
+
+  ("steppe_bandits_easy",		"Steppe Bandits",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,	[(trp_new_overseer, 0, 1), (trp_new_spear_rider, 0, 5), (trp_new_steppe_skirmisher, 0, 5), (trp_new_wind_rider, 2, 20), (trp_new_steppe_runner, 3, 14)]), ## 5 - 45 troops
+  ("steppe_bandits_normal",		"Steppe Bandits",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,		[(trp_new_overseer, 1, 2), (trp_new_spear_rider, 2, 5), (trp_new_steppe_skirmisher, 2, 5), (trp_new_wind_rider, 2, 16), (trp_new_steppe_runner, 3, 12)]), ## 10 - 40 troops
+  ("steppe_bandits_hard",		"Steppe Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_overseer, 2, 4), (trp_new_spear_rider, 5, 10), (trp_new_steppe_skirmisher, 5, 10), (trp_new_wind_rider, 1, 6), (trp_new_steppe_runner, 2, 5)]), ## 15 - 35 troops
+  ("steppe_bandits_very_hard",	"Steppe Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_overseer, 3, 5), (trp_new_spear_rider, 8, 12), (trp_new_steppe_skirmisher, 9, 13)]), ## 20 - 30 troops
+
+  ("sea_raiders_easy",			"Sea Raiders",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,		[(trp_new_raider_chieftain, 0, 1), (trp_new_viking, 0, 5), (trp_new_marauder, 0, 5), (trp_new_pelt_tracker, 2, 20), (trp_new_sea_raider, 3, 14)]), ## 5 - 45 troops
+  ("sea_raiders_normal",		"Sea Raiders",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,		[(trp_new_raider_chieftain, 1, 2), (trp_new_viking, 2, 5), (trp_new_marauder, 2, 5), (trp_new_pelt_tracker, 2, 16), (trp_new_sea_raider, 3, 12)]), ## 10 - 40 troops
+  ("sea_raiders_hard",			"Sea Raiders",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_raider_chieftain, 2, 4), (trp_new_viking, 5, 10), (trp_new_marauder, 5, 10), (trp_new_pelt_tracker, 1, 6), (trp_new_sea_raider, 2, 5)]), ## 15 - 35 troops
+  ("sea_raiders_very_hard",		"Sea Raiders",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_raider_chieftain, 3, 5), (trp_new_viking, 8, 12), (trp_new_marauder, 9, 13)]), ## 20 - 30 troops
+
+  ("mountain_bandits_easy",		"Mountain Bandits",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,	[(trp_new_highland_chief, 0, 1), (trp_new_highland_skirmisher, 0, 5), (trp_new_highland_tracker, 0, 5), (trp_new_highland_trapper, 2, 20), (trp_new_highland_hunter, 3, 14)]), ## 5 - 45 troops
+  ("mountain_bandits_normal",	"Mountain Bandits",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,	[(trp_new_highland_chief, 1, 2), (trp_new_highland_skirmisher, 2, 5), (trp_new_highland_tracker, 2, 5), (trp_new_highland_trapper, 2, 16), (trp_new_highland_hunter, 3, 12)]), ## 10 - 40 troops
+  ("mountain_bandits_hard",		"Mountain Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,	[(trp_new_highland_chief, 2, 4), (trp_new_highland_skirmisher, 5, 10), (trp_new_highland_tracker, 5, 10), (trp_new_highland_trapper, 1, 6), (trp_new_highland_hunter, 2, 5)]), ## 15 - 35 troops
+  ("mountain_bandits_very_hard","Mountain Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,	[(trp_new_highland_chief, 3, 5), (trp_new_highland_skirmisher, 8, 12), (trp_new_highland_tracker, 9, 13)]), ## 20 - 30 troops
+
+  ("desert_bandits_easy",		"Desert Bandits",icon_axeman|carries_goods(10),0,fac_outlaws,bandit_personality,	[(trp_new_sarrdakian_leader, 0, 1), (trp_new_sarrdakian_hunter, 0, 5), (trp_new_sarrdakian_vulture, 0, 5), (trp_new_sarrdakian_drifter, 2, 20), (trp_new_sarrdakian_raider, 3, 14)]), ## 5 - 45 troops
+  ("desert_bandits_normal",		"Desert Bandits",icon_axeman|carries_goods(8),0,fac_outlaws,bandit_personality,		[(trp_new_sarrdakian_leader, 1, 2), (trp_new_sarrdakian_hunter, 2, 5), (trp_new_sarrdakian_vulture, 2, 5), (trp_new_sarrdakian_drifter, 2, 16), (trp_new_sarrdakian_raider, 3, 12)]), ## 10 - 40 troops
+  ("desert_bandits_hard",		"Desert Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_sarrdakian_leader, 2, 4), (trp_new_sarrdakian_hunter, 5, 10), (trp_new_sarrdakian_vulture, 5, 10), (trp_new_sarrdakian_drifter, 1, 6), (trp_new_sarrdakian_raider, 2, 5)]), ## 15 - 35 troops
+  ("desert_bandits_very_hard",	"Desert Bandits",icon_axeman|carries_goods(6),0,fac_outlaws,bandit_personality,		[(trp_new_sarrdakian_leader, 3, 5), (trp_new_sarrdakian_hunter, 8, 12), (trp_new_sarrdakian_vulture, 9, 13)]), ## 20 - 30 troops
+
+  
+  
   ("deserters","Deserters",icon_vaegir_knight|carries_goods(3),0,fac_deserters,bandit_personality,[]),
     
   ("merchant_caravan","Merchant Caravan",icon_gray_knight|carries_goods(20)|pf_auto_remove_in_town|pf_quest_party,0,fac_commoners,escorted_merchant_personality,[(trp_caravan_master,1,1),(trp_caravan_guard,5,25)]),
@@ -71,10 +99,6 @@ party_templates = [
   ("runaway_serfs","Runaway Serfs",icon_peasant|carries_goods(8)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_farmer,6,7), (trp_peasant_woman,3,3)]),
   ("spy", "Ordinary Townsman", icon_gray_knight|carries_goods(4)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_spy,1,1)]),
   ("sacrificed_messenger", "Sacrificed Messenger", icon_gray_knight|carries_goods(3)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[]),
-##  ("conspirator", "Conspirators", icon_gray_knight|carries_goods(8)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_conspirator,3,4)]),
-##  ("conspirator_leader", "Conspirator Leader", icon_gray_knight|carries_goods(8)|pf_default_behavior|pf_quest_party,0,fac_neutral,merchant_personality,[(trp_conspirator_leader,1,1)]),
-##  ("peasant_rebels", "Peasant Rebels", icon_peasant,0,fac_peasant_rebels,bandit_personality,[(trp_peasant_rebel,33,97)]),
-##  ("noble_refugees", "Noble Refugees", icon_gray_knight|carries_goods(12)|pf_quest_party,0,fac_noble_refugees,merchant_personality,[(trp_noble_refugee,3,5),(trp_noble_refugee_woman,5,7)]),
 
   ("forager_party","Foraging Party",icon_gray_knight|carries_goods(5)|pf_show_faction,0,fac_commoners,merchant_personality,[]),
   ("scout_party","Scouts",icon_gray_knight|carries_goods(1)|pf_show_faction,0,fac_commoners,bandit_personality,[]),
@@ -96,18 +120,13 @@ party_templates = [
   ("kingdom_hero_party","War Party",icon_flagbearer_a|pf_show_faction|pf_default_behavior,0,fac_commoners,soldier_personality,[]),
   
 # Reinforcements
-  # each faction includes three party templates. One is less-modernised, one is med-modernised and one is high-modernised
-  # less-modernised templates are generally includes 7-14 troops in total, 
-  # med-modernised templates are generally includes 5-10 troops in total, 
-  # high-modernised templates are generally includes 3-5 troops in total
-
-
- ## LEIFDIN+ ## - Added reinforcement templates for player's culture.
- ### PLAYER CUSTOM CULTURE ###
+ # each faction includes three party templates:
  # Following data is per script "cf_reinforce_party".
  # Reinforcement A gets added to centres only
  # Reinforcement B gets added to kingdom_parties (50%) and centers (50%).
  # Reinforcement C gets added to kingdom_parties only .
+ ### PLAYER CUSTOM CULTURE ###
+ 
  # GAME_MODE_EASY
  ("kingdom_0_reinforcements_a", "kingdom_0_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_player_tier_2,16,36),(trp_player_tier_3_infantry,3,7)]),
  ("kingdom_0_reinforcements_b", "kingdom_0_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_player_tier_3_infantry,8,15),(trp_player_tier_3_ranged,6,13)]),
