@@ -513,7 +513,6 @@ scripts = [
 		
 		##### I3 Nord Retainer #####
 		(troop_set_class, "trp_new_nord_retainer", CLASS_INFANTRY),
-		(troop_set_slot, "trp_new_nord_retainer", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I3 Nord Skald #####
 		(troop_set_class, "trp_new_nord_skald", CLASS_INFANTRY),
@@ -1267,7 +1266,7 @@ scripts = [
 				#(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
 				#(val_mul, ":cur_wage", 2),
 			#(try_end),
-			#(val_add, ":total_wage", ":cur_wage"),
+			(val_add, ":total_wage", ":cur_wage"),
 		(try_end),
 		(try_begin),
 			(eq, ":garrison_troop", 1),
