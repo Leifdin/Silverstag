@@ -540,7 +540,8 @@ scripts = [
 									^^Effect #1:\
 									^You increase the morale of your party \
 									^members by +2 for every point of the \
-									^Leadership skill that you possess."),
+									^Leadership skill that you possess. \
+									^Bonus can not exceed +25 morale"),
 		(else_try),
 			(eq, ":ability", BONUS_TAX_COLLECTOR),
 			(str_store_string, s31, "@TAX_COLLECTOR"),
@@ -1290,33 +1291,37 @@ scripts = [
 		
 		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
 		(assign, ":troop_count", 0),
-		(assign, ":inspiring_bonus", 0),
-		(assign, reg2, 0), # Value not clamped.
+		(assign, ":inspiring_bonus_party", 0),
+		(assign, reg2, 0), # Value was not clamped.
 		(try_for_range, ":stack_no", 0, ":num_stacks"),
 			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
 			## TROOP EFFECT: BONUS_INSPIRING
+			(assign, ":inspiring_bonus_stack", 0),
 			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
 			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_INSPIRING),
 			(val_add, ":troop_count", ":stack_size"),
-			(assign, ":inspiring_effect", 2),
+			(val_add, ":inspiring_bonus_stack", ":stack_size"),
+			(val_mul, ":inspiring_bonus_stack", 2), ## 2 morale per troop
 			(try_begin),
 				## COMPANIONS
 				(is_between, ":troop_no", companions_begin, companions_end),
-				(store_skill_level, ":inspiring_effect", "skl_leadership", ":troop_no"),
+				(store_skill_level, ":inspiring_bonus_hero", "skl_leadership", ":troop_no"),
 			(else_try),
 				## NON-COMPANION HEROES (Player, Lords)
 				(troop_is_hero, ":troop_no"),
-				(store_skill_level, ":inspiring_effect", "skl_leadership", ":troop_no"),
-				(val_mul, ":inspiring_effect", 2),
+				(store_skill_level, ":inspiring_bonus_hero", "skl_leadership", ":troop_no"),
+				(val_mul, ":inspiring_bonus_hero", 2),
+				(val_add, ":inspiring_bonus_stack", ":inspiring_bonus_hero"),
 			(try_end),
-			(val_add, ":inspiring_bonus", ":inspiring_effect"),
+			(val_add, ":inspiring_bonus_party", ":inspiring_bonus_stack"),
 		(try_end),
+		
 		(try_begin),
-			(neg|is_between, ":inspiring_effect", 1, 26),
+			(neg|is_between, ":inspiring_bonus_party", 1, 26),
 			(assign, reg2, 1),
 		(try_end),
-		(val_clamp, ":inspiring_effect", 0, 26),
-		(assign, reg0, ":inspiring_bonus"),
+		(val_clamp, ":inspiring_bonus_party", 0, 26),
+		(assign, reg0, ":inspiring_bonus_party"),
 		(assign, reg1, ":troop_count"),
 		(assign, "$morale_modifier_inspiring", reg0),
 	]),
