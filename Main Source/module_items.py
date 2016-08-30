@@ -857,7 +857,7 @@ items = [
 
 ##### TIER 3 - ~ 33 BODY ARMOUR, 9 LEG ARMOUR #####
 ["steppe_armor",				"Steppe Armor", 			[("lamellar_leather",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 450, weight(13)|abundance(100)|head_armor(0)|body_armor(30)|leg_armor(7)|difficulty(0) ,imodbits_cloth ],
-["desert_robe_with_leatther_a",	"Desert Robe with Leather", [("arab_bandit_b",0)],				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 690, weight(15)|abundance(100)|head_armor(0)|body_armor(33)|leg_armor(10)|difficulty(0), imodbits_cloth ],
+["desert_robe_with_leather_a",	"Desert Robe with Leather", [("arab_bandit_b",0)],				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 690, weight(15)|abundance(100)|head_armor(0)|body_armor(33)|leg_armor(10)|difficulty(0), imodbits_cloth ],
 ["desert_robe_with_leather_b",	"Desert Robe with Leather", [("arab_bandit_c",0)], 				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 690, weight(15)|abundance(100)|head_armor(0)|body_armor(33)|leg_armor(10)|difficulty(0), imodbits_cloth ],
 ["cavalry_robe",				"Cavalry Robe",				[("arabian_armor_a",0)],			itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 900, weight(15)|abundance(100)|head_armor(0)|body_armor(36)|leg_armor(8)|difficulty(0) ,imodbits_armor ],
 ["steppe_leather_armor_a",		"Steppe Leather Armor",		[("turk_bandit_c",0)],				itp_merchandise|itp_type_body_armor|itp_covers_legs, 0, 600, weight(15)|abundance(100)|head_armor(0)|body_armor(32)|leg_armor(8)|difficulty(0), imodbits_armor ],
