@@ -1331,7 +1331,10 @@ scripts = [
 ("ce_drill_sargeant_get_party_penalty",
 	[
 		(store_script_param, ":party_no", 1),
-		(neq, ":party_no", -1),
+		(try_begin),
+			(lt, ":party_no", 1),
+			(assign, ":party_no", "p_main_party"),
+		(try_end),
 		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
 		(assign, ":troop_count", 0),
 		(assign, ":drill_sargeant_penalty_party", 0),
@@ -1370,6 +1373,10 @@ scripts = [
 ("ce_drill_sargeant_get_party_bonus",
 	[
 		(store_script_param, ":party_no", 1),
+		(try_begin),
+			(lt, ":party_no", 1),
+			(assign, ":party_no", "p_main_party"),
+		(try_end),
 		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
 		(assign, ":drill_sargeant_bonus_party", 0),
 		(try_for_range, ":stack_no", 0, ":num_stacks"),
