@@ -16287,16 +16287,16 @@ scripts = [
 				## LEIFDIN - modify loot amount and quality according to difficulty
 		(try_begin),
 			(eq, "$mod_difficulty", GAME_MODE_EASY),
-			(store_random_in_range, ":base_limit", 38, 57),
+			(store_random_in_range, ":base_limit", 32, 50),
 		(else_try),
 			(eq, "$mod_difficulty", GAME_MODE_NORMAL),
 			(store_random_in_range, ":base_limit", 30, 45),
 		(else_try),
 			(eq, "$mod_difficulty", GAME_MODE_HARD),
-			(store_random_in_range, ":base_limit", 23, 34),
+			(store_random_in_range, ":base_limit", 28, 40),
 		(else_try),
 			(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
-			(store_random_in_range, ":base_limit", 15, 23),
+			(store_random_in_range, ":base_limit", 26, 35),
 		(try_end),
 
 		
@@ -16348,16 +16348,16 @@ scripts = [
 					
 					(try_begin),
 						(eq, "$mod_difficulty", GAME_MODE_EASY),
-						(store_add, ":value_threshold", 200, ":looting_value_bonus"),
+						(store_add, ":value_threshold", 225, ":looting_value_bonus"),
 					(else_try),
 						(eq, "$mod_difficulty", GAME_MODE_NORMAL),
-						(store_add, ":value_threshold", 150, ":looting_value_bonus"),
+						(store_add, ":value_threshold", 200, ":looting_value_bonus"),
 					(else_try),
 						(eq, "$mod_difficulty", GAME_MODE_HARD),
-						(store_add, ":value_threshold", 100, ":looting_value_bonus"),
+						(store_add, ":value_threshold", 175, ":looting_value_bonus"),
 					(else_try),
 						(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
-						(store_add, ":value_threshold", 50, ":looting_value_bonus"),
+						(store_add, ":value_threshold", 150, ":looting_value_bonus"),
 					(try_end),
 					
 					### DIAGNOSTIC+ ###
