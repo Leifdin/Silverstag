@@ -1976,6 +1976,7 @@ scripts = [
 		(try_end),
 		(assign, reg1, ":extra_health"),
 		 (try_begin),
+			 (ge, "$debug_mode", 1),
 			 (eq, ":troop_no", "trp_player"),
 			 (str_store_troop_name, s31, "trp_player"),
 			 (display_message, "@DEBUG (CE): {s31}'s health bonus is {reg1}.", gpu_debug),
