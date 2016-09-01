@@ -1761,14 +1761,14 @@ vba_normal          = 1
 vba_after_training  = 2
 
 arena_tier1_opponents_to_beat = 3
-arena_tier1_prize = 5
+arena_tier1_prize = 15
 arena_tier2_opponents_to_beat = 6
-arena_tier2_prize = 10
+arena_tier2_prize = 75
 arena_tier3_opponents_to_beat = 10
-arena_tier3_prize = 25
+arena_tier3_prize = 200
 arena_tier4_opponents_to_beat = 20
-arena_tier4_prize = 60
-arena_grand_prize = 250
+arena_tier4_prize = 500
+arena_grand_prize = 1000
 
 
 #Additions
