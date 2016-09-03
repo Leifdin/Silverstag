@@ -1294,13 +1294,14 @@ combat_enhancement_triggers = [
 		## BERSERKER ABILITY
 		(eq, "$enable_combat_abilities", 1),
 		(store_agent_hit_points, reg31, ":agent_no", 1),
-		(call_script, "script_ce_troop_get_bonus_health", ":troop_no"), # combat_scripts.py
+		(agent_get_party_id, ":party_id", ":agent_no"),
+		(call_script, "script_ce_troop_get_bonus_health", ":troop_no", ":party_id"), # combat_scripts.py
 		(assign, ":extra_health", reg1),
 		(store_agent_hit_points, ":base_health", ":agent_no", 1),
 		(val_add, ":base_health", ":extra_health"),
 		(agent_set_max_hit_points, ":agent_no", ":base_health", 1),
 		(try_begin),
-			(ge, DEBUG_TROOP_ABILITIES, 2),
+			#(ge, DEBUG_TROOP_ABILITIES, 2),
 			(eq, ":troop_no", "trp_player"),
 			(store_agent_hit_points, reg32, ":agent_no", 1),
 			(str_store_troop_name, s31, ":troop_no"),

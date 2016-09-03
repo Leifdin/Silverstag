@@ -53,8 +53,8 @@ scripts = [
 		(store_attribute_level, ":STR", ":troop_no", ca_strength),
 		(val_add, ":max_health", ":STR"),
 		
-		# Add in ability bonuses from Disciplined or Bloodlust.
-		(call_script, "script_ce_troop_get_bonus_health", ":troop_no"), # combat_scripts.py
+		# Add in ability bonuses from Disciplined, Bloodlust or Drill Sergeant
+		(call_script, "script_ce_troop_get_bonus_health", ":troop_no", "p_main_party"), # combat_scripts.py
 		(assign, ":extra_health", reg1),
 		(val_add, ":max_health", ":extra_health"),
 		# (try_begin),
@@ -148,6 +148,15 @@ scripts = [
 				(eq, ":prereq", PREREQ_LIEGE_RELATION),
 				(assign, reg21, troop_prereq_liege_relation),
 				(str_store_string, s21, "@{s21}  ({reg21}+ Liege Relation)"),
+			(else_try),
+				(eq, ":prereq", PREREQ_DISREPUTABLE),
+				(str_store_string, s21, "@{s21}  (Recruitment reduces honour)"),
+			(else_try),
+				(eq, ":prereq", PREREQ_EXPENSIVE),
+				(str_store_string, s21, "@{s21}  (Double recruitment cost)"),
+			(else_try),
+				(eq, ":prereq", PREREQ_DOPPELSOLDNER),
+				(str_store_string, s21, "@{s21}  (Double wage)"),
 			(try_end), 
 		
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y", 0, gpu_left),

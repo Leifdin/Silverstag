@@ -158,18 +158,8 @@ scripts = [
 		
 		# D4 - Highland Chieftain
 		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_mountain_chief", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_1", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_mountain_chief_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_mountain_chief_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief_2", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_mountain_chief_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_mountain_chief_2", CLASS_INFANTRY),
+		(call_script, "script_ce_assign_troop_ability", "trp_mountain_chief", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		(troop_set_class, "trp_mountain_chief", CLASS_RANGED),
 		
 		# D4 - Raider Chieftain
 		(call_script, "script_ce_assign_troop_ability", "trp_nord_chieftain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
@@ -228,1369 +218,287 @@ scripts = [
 		(faction_set_slot, "fac_player_supporters_faction", slot_faction_troops_end,   player_troops_end),
 		
 		
+		
 		######################################################
 		#####               SWADIA FACTION               #####
 		######################################################
 		
-		## I2 - Swadia Militia
-		(troop_set_class, "trp_r_swadian_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_swadian_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_swadian_militia_2", CLASS_INFANTRY),
 		
-		## A3 - Swadia Crossbowman
-		(troop_set_class, "trp_r_swadian_crossbowman", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_r_swadian_crossbowman_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_r_swadian_crossbowman_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_swadian_crossbowman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## Swadian Farmer - I1
+		(troop_set_class, "trp_new_swadian_farmer", CLASS_INFANTRY),
+
+		## Swadian Supplyman - A2
+		(troop_set_class, "trp_new_swadian_supplyman", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_supplyman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_supplyman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_supplyman", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
 		
-		## I4 - Swadia Footman
-		(troop_set_class, "trp_r_swadian_footman", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_swadian_footman_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_swadian_footman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_r_swadian_footman_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_swadian_footman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## Swadian Militia - I2
+		(troop_set_class, "trp_new_swadian_militia", CLASS_INFANTRY),
 		
-		## I4 - Swadia Billman
-		(troop_set_class, "trp_r_swadian_billman", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_swadian_billman_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_swadian_billman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_r_swadian_billman_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_swadian_billman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+
 		
-		## I4 - Swadia Mercenary
-		(troop_set_class, "trp_r_swadian_mercenary", CLASS_RANGED),
-		(troop_set_slot, "trp_r_swadian_mercenary", slot_troop_recruit_type, STRT_MERCENARY),
-		# +1 tier
-		(troop_set_class, "trp_r_swadian_mercenary_1", CLASS_RANGED),
-		(troop_set_slot, "trp_r_swadian_mercenary_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_r_swadian_mercenary_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_swadian_mercenary_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## Swadian Footman - I3
+		(troop_set_class, "trp_new_swadian_footman", CLASS_INFANTRY),
 		
-		## C4 - Swadia Man at Arms
-		(troop_set_class, "trp_r_swadian_man_at_arms", CLASS_CAVALRY),
-		# +1 tier
-		(troop_set_class, "trp_r_swadian_man_at_arms_1", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_swadian_man_at_arms_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_r_swadian_man_at_arms_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_swadian_man_at_arms_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## Swadian Hunter - A3
+		(troop_set_class, "trp_new_swadian_hunter", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_hunter"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_hunter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_hunter", BONUS_HUNTER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_hunter", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
 		
-		## I1 - Swadian Supplyman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_supplyman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_supplyman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_supplyman", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_supplyman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_supplyman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_supplyman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_supplyman_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_supplyman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_supplyman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_supplyman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_supplyman_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_supplyman_2", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_supplyman_2", CLASS_INFANTRY),
+		## Swadian Crossbowman - A3
+		(troop_set_class, "trp_new_swadian_crossbowman", CLASS_RANGED),
 		
-		## A1 - Swadian Hunter (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_hunter"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_hunter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_hunter", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_hunter", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_hunter", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_hunter_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_hunter_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_hunter_1", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_hunter_1", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_hunter_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_hunter_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_hunter_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_hunter_2", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_hunter_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_hunter_2", CLASS_RANGED),
+		## Swadian Lancer - C4
+		(troop_set_class, "trp_new_swadian_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_swadian_lancer", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## H3 - Uxkhal Bandit (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_uxkhal_bandit"), # combat_scripts.py
-		(troop_set_slot, "trp_r_uxkhal_bandit", slot_troop_unique_location, "p_town_7"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_uxkhal_bandit", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_uxkhal_bandit", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_uxkhal_bandit", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_hub_determine_purchase_cost", "trp_r_uxkhal_bandit"), # To force discount.
-		(troop_set_class, "trp_r_uxkhal_bandit", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_uxkhal_bandit_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_uxkhal_bandit_1", slot_troop_unique_location, "p_town_7"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_uxkhal_bandit_1", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_uxkhal_bandit_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_uxkhal_bandit_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_uxkhal_bandit_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_uxkhal_bandit_1", CLASS_CAVALRY),
-		(call_script, "script_hub_determine_purchase_cost", "trp_r_uxkhal_bandit_1"), # To force discount.
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_uxkhal_bandit_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_uxkhal_bandit_2", slot_troop_unique_location, "p_town_7"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_uxkhal_bandit_2", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_uxkhal_bandit_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_uxkhal_bandit_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_uxkhal_bandit_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_uxkhal_bandit_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_uxkhal_bandit_2", CLASS_CAVALRY),
-		(call_script, "script_hub_determine_purchase_cost", "trp_r_uxkhal_bandit_2"), # To force discount.
+		## Swadian Skirmisher - H4
+		(troop_set_class, "trp_new_swadian_skirmisher", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_swadian_skirmisher", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## C4 - Swadian Lancer (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_lancer"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_lancer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_lancer", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_lancer", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_lancer_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_lancer_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_lancer_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_lancer_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_swadian_lancer_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_lancer_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_lancer_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_lancer_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_lancer_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_lancer_2", CLASS_CAVALRY),
+		## Swadain Man-at-Arms - C5
+		(troop_set_class, "trp_new_swadian_man_at_arms", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_swadian_man_at_arms", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_man_at_arms"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_man_at_arms", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_man_at_arms", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_man_at_arms", BONUS_INSPIRING, BONUS_UNASSIGNED),
+
+		## Swadian Sharpshooter - A5
+		(troop_set_class, "trp_new_swadian_sharpshooter", CLASS_RANGED),
+		(troop_set_slot, "trp_new_swadian_sharpshooter", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sharpshooter"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sharpshooter", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sharpshooter", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sharpshooter", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
 		
-		## I5 - Swadian Sentinel (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_sentinel"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_sentinel", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_sentinel", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_sentinel", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_sentinel_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_sentinel_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_sentinel_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_sentinel_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_sentinel_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_sentinel_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sentinel_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_sentinel_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_sentinel_2", CLASS_INFANTRY),
+		## Swadian Billman - I6
+		(troop_set_class, "trp_new_swadian_billman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_swadian_billman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_billman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_billman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_billman", BONUS_SPRINTER, BONUS_UNASSIGNED),
+
+		## Swadian Sargeant - A7
+		(troop_set_class, "trp_new_swadian_sargeant", CLASS_RANGED),
+		(troop_set_slot, "trp_new_swadian_sargeant", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sargeant"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sargeant", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sargeant", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+
+		## Swadian Sentinel - I7
+		(troop_set_class, "trp_new_swadian_sentinel", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_swadian_sentinel", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_sentinel"), # combat_scripts.py
+		(troop_set_slot, "trp_new_swadian_sentinel", slot_troop_unique_location, "p_town_16"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sentinel", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_sentinel", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sentinel", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_sentinel", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
 		
-		## I5 - Swadian Sergeant (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_sergeant"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_sergeant", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_sergeant", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_sergeant", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_sergeant_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_sergeant_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_sergeant_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_sergeant_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_swadian_sergeant_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_swadian_sergeant_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_swadian_sergeant_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_swadian_sergeant_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_swadian_sergeant_2", CLASS_INFANTRY),
+		## Swadian Knight - C7
+		(troop_set_class, "trp_new_swadian_knight", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_swadian_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_swadian_knight"), # combat_scripts.py
+		(troop_set_slot, "trp_new_swadian_knight", slot_troop_unique_location, "p_town_6"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_swadian_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_knight", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_knight", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_swadian_knight", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
+
+		## Dhirim Captain - I5
+		(troop_set_class, "trp_new_dhirim_captain", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_dhirim_captain", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_dhirim_captain"), # combat_scripts.py
+		(troop_set_slot, "trp_new_dhirim_captain", slot_troop_unique_location, "p_town_16"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_dhirim_captain", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_dhirim_captain", PREREQ_ALLY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_dhirim_captain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_dhirim_captain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
 		
-		## A5 - Tilbaut Archer (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_tilbaut_archer"), # combat_scripts.py
-		(troop_set_slot, "trp_r_tilbaut_archer", slot_troop_unique_location, "p_castle_6"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_tilbaut_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_tilbaut_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_tilbaut_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_tilbaut_archer", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_tilbaut_archer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_tilbaut_archer_1", slot_troop_unique_location, "p_castle_6"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_tilbaut_archer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_tilbaut_archer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer_1", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_tilbaut_archer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_tilbaut_archer_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_tilbaut_archer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_tilbaut_archer_2", slot_troop_unique_location, "p_castle_6"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_tilbaut_archer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_tilbaut_archer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer_2", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_tilbaut_archer_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_tilbaut_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_tilbaut_archer_2", CLASS_RANGED),
+		## Suno Master Archer - A5
+		(troop_set_class, "trp_new_suno_master_archer", CLASS_RANGED),
+		(troop_set_slot, "trp_new_suno_master_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_suno_master_archer"), # combat_scripts.py
+		(troop_set_slot, "trp_new_suno_master_archer", slot_troop_unique_location, "p_town_4"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_suno_master_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_suno_master_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_suno_master_archer", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
 		
-		## C5 - Dhirim Captain (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_dhirim_captain"), # combat_scripts.py
-		(troop_set_slot, "trp_r_dhirim_captain", slot_troop_unique_location, "p_town_16"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_dhirim_captain", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_dhirim_captain", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_dhirim_captain", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_dhirim_captain", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_dhirim_captain_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_dhirim_captain_1", slot_troop_unique_location, "p_town_16"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_dhirim_captain_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_dhirim_captain_1", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_dhirim_captain_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_dhirim_captain_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_dhirim_captain_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_dhirim_captain_2", slot_troop_unique_location, "p_town_16"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_dhirim_captain_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_dhirim_captain_2", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_dhirim_captain_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_dhirim_captain_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_dhirim_captain_2", CLASS_CAVALRY),
-		
-		## A6 - Suno Master Archer (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_suno_master_archer"), # combat_scripts.py
-		(troop_set_slot, "trp_r_suno_master_archer", slot_troop_unique_location, "p_town_4"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_suno_master_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_suno_master_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_suno_master_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_suno_master_archer", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_suno_master_archer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_suno_master_archer_1", slot_troop_unique_location, "p_town_4"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_suno_master_archer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_suno_master_archer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer_1", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer_1", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_suno_master_archer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_suno_master_archer_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_suno_master_archer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_suno_master_archer_2", slot_troop_unique_location, "p_town_4"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_suno_master_archer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_suno_master_archer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer_2", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_suno_master_archer_2", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_suno_master_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_suno_master_archer_2", CLASS_RANGED),
-		
-		## C7 - Praven Knight (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_praven_knight"), # combat_scripts.py
-		(troop_set_slot, "trp_r_praven_knight", slot_troop_unique_location, "p_town_6"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_praven_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_praven_knight", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_praven_knight_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_praven_knight_1", slot_troop_unique_location, "p_town_6"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight_1", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight_1", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_praven_knight_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_praven_knight_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_praven_knight_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_praven_knight_2", slot_troop_unique_location, "p_town_6"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight_2", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_praven_knight_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_praven_knight_2", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_praven_knight_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_praven_knight_2", CLASS_CAVALRY),
-		
-		
+
 		######################################################
-		#####               VAEGIR FACTION               #####
+		#####          	    VAEGIR FACTION               #####
 		######################################################
+
 		
-		## I1 - Vaegiran Militia
-		(troop_set_class, "trp_r_vaegir_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_militia_2", CLASS_INFANTRY),
 		
-		## I3 - Vaegiran Psiloi
-		(troop_set_class, "trp_r_vaegir_psiloi", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_psiloi_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_psiloi_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_psiloi_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I3 - Vaegiran Peltast
-		(troop_set_class, "trp_r_vaegir_peltast", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_peltast_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_peltast_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_peltast_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## I1 Vaegir Peasant
+		(troop_set_class, "trp_new_vaegir_peasant", CLASS_INFANTRY),
+
+		## A2 Vaegir Skirmisher
+		(troop_set_class, "trp_new_vaegir_skirmisher", CLASS_RANGED),
+
+		## I2 Vaegir Spearman
+		(troop_set_class, "trp_new_vaegir_spearman", CLASS_INFANTRY),
+
+		## I3 Vaegir Militia
+		(troop_set_class, "trp_new_vaegir_militia", CLASS_INFANTRY),
+
+
 		
-		## A2 - Vaegiran Skirmisher
-		(troop_set_class, "trp_r_vaegir_skirmisher", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_skirmisher_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_skirmisher_2", CLASS_RANGED),
+		## H3 Vaegir Outrider
+		(troop_set_class, "trp_new_vaegir_outrider", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_outrider"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_outrider", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_outrider", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_outrider", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
 		
-		## A5 - Vaegiran Longbowman
-		(troop_set_class, "trp_r_vaegir_longbowman", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_longbowman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_longbowman_1", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_longbowman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_longbowman_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_longbowman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## H4 Vaegir Skirmisher
+		(troop_set_class, "trp_new_vaegir_skirmisher", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_skirmisher", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## C3 - Vaegiran Koursores
-		(troop_set_class, "trp_r_vaegir_koursores", CLASS_CAVALRY),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_koursores_1", CLASS_CAVALRY),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_koursores_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_koursores_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## A4 Vaegir Longbowman
+		(troop_set_class, "trp_new_vaegir_longbowman", CLASS_RANGED),
+		(troop_set_slot,  "trp_new_vaegir_longbowman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_longbowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_longbowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_longbowman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_longbowman", BONUS_LOYAL, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_longbowman", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+
+		## C5 Vaegir Retainer
+		(troop_set_class, "trp_new_vaegir_retainer", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_retainer", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_retainer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_retainer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_retainer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
 		
-		## H3 - Vaegiran Pecheneg
-		(troop_set_class, "trp_r_vaegir_pecheneg", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_r_vaegir_pecheneg_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_r_vaegir_pecheneg_2", CLASS_RANGED),
-		(troop_set_slot, "trp_r_vaegir_pecheneg_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## I5 Vaegir Sentry
+		(troop_set_class, "trp_new_vaegir_sentry", CLASS_INFANTRY),
+		(troop_set_slot,  "trp_new_vaegir_sentry", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_sentry"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_sentry", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_sentry", BONUS_DEVOTED, BONUS_UNASSIGNED),
+
+		## A6 Vaegir Marksman
+		(troop_set_class, "trp_new_vaegir_marksman", CLASS_RANGED),
+		(troop_set_slot,  "trp_new_vaegir_marksman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_marksman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_marksman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_marksman", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_marksman", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+
+		## C7 Vaegir Knight
+		(troop_set_class, "trp_new_vaegir_knight", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_vaegir_knight"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_vaegir_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_knight", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_vaegir_knight", BONUS_DEDICATED, BONUS_UNASSIGNED),
+
+		## H7 Vaegir Druzhina
+		(troop_set_class, "trp_new_vaegir_druzhina", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_vaegir_druzhina", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## I2 - Vaegir Sentry (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_sentry", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry_1", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_sentry_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_sentry_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_sentry_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_sentry_2", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_sentry_2", CLASS_INFANTRY),
+
+
+		## H2 Huntsman of Khudan
+		(troop_set_class, "trp_new_huntsman_of_khudan", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_huntsman_of_khudan", slot_troop_unique_location, "p_town_9"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_huntsman_of_khudan", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_huntsman_of_khudan", PREREQ_FRIEND, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_huntsman_of_khudan", BONUS_HUNTER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_huntsman_of_khudan", BONUS_BERSERKER, BONUS_UNASSIGNED),
 		
-		## C4 - Vaegir Cavalry Captain (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_cavalrycaptain", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_cavalrycaptain_1", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_cavalrycaptain_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cavalrycaptain_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cavalrycaptain_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cavalrycaptain_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_cavalrycaptain_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_cavalrycaptain_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## I4 Curaw Guardsman
+		(troop_set_class, "trp_new_curaw_guardsman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_curaw_guardsman", slot_troop_unique_location, "p_town_11"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_curaw_guardsman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
 		
-		## I5 - Vaegir Vanguard (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_vanguard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_vanguard", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_1", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_vanguard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_vanguard_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_vanguard_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_vanguard_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_vanguard_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_vanguard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_vanguard_2", CLASS_INFANTRY),
-		
-		## C6 - Vaegir Bogatyr (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_bogatyr", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_bogatyr", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_bogatyr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_bogatyr_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_bogatyr_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_bogatyr_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_bogatyr_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_bogatyr_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_bogatyr_2", CLASS_CAVALRY),
-		
-		## A7 - Vaegir Marksman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_marksman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_marksman", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_1", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_marksman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_marksman_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_marksman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_marksman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_marksman_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_marksman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_marksman_2", CLASS_RANGED),
-		
-		## C3 - Outrider of Nelag (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_scout", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_scout", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_scout_1", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_scout_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_scout_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_scout_2", slot_troop_unique_location, "p_castle_29"), # Nelag Castle (Khergit Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_scout_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_scout_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_scout_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_r_vaegir_scout_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## I4 - Jeirbe Sellsword (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_varagian", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_varagian", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_varagian", slot_troop_recruit_type, STRT_MERCENARY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_varagian_1", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_1", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_varagian_1", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_varagian_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_varagian_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_varagian_2", slot_troop_unique_location, "p_castle_8"), # Jeirbe Castle (Nord Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_varagian_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_varagian_2", BONUS_DEDICATED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_vaegir_varagian_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_r_vaegir_varagian_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## C5 - Southward Cataphract (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_cataphract", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_cataphract", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_cataphract", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_cataphract_1", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_cataphract_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_cataphract_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_vaegir_cataphract_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_vaegir_cataphract_2", slot_troop_unique_location, "p_castle_37"), # Dramug Castle (Swadian Border)
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_vaegir_cataphract_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_vaegir_cataphract_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_vaegir_cataphract_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_vaegir_cataphract_2", CLASS_CAVALRY),
-		
-		## C4 - Boyars Druzhina (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina"), # combat_scripts.py
-		(troop_set_slot, "trp_boyars_druzhina", slot_troop_unique_location, "p_town_8"), # Reyvadin
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_boyars_druzhina", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_boyars_druzhina", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina_1"), # combat_scripts.py
-		(troop_set_slot, "trp_boyars_druzhina_1", slot_troop_unique_location, "p_town_8"), # Reyvadin
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_boyars_druzhina_1", CLASS_CAVALRY),
-		(troop_set_slot, "trp_boyars_druzhina_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_boyars_druzhina_2"), # combat_scripts.py
-		(troop_set_slot, "trp_boyars_druzhina_2", slot_troop_unique_location, "p_town_8"), # Reyvadin
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_boyars_druzhina_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_boyars_druzhina_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_boyars_druzhina_2", CLASS_CAVALRY),
-		(troop_set_slot, "trp_boyars_druzhina_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## C2 - Huntsman of Khudan (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer"), # combat_scripts.py
-		(troop_set_slot, "trp_khudan_mounted_archer", slot_troop_unique_location, "p_town_9"), # Khudan
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_khudan_mounted_archer", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_khudan_mounted_archer_1", slot_troop_unique_location, "p_town_9"), # Khudan
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_1", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_khudan_mounted_archer_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_khudan_mounted_archer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_khudan_mounted_archer_2", slot_troop_unique_location, "p_town_9"), # Khudan
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_khudan_mounted_archer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_khudan_mounted_archer_2", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_khudan_mounted_archer_2", CLASS_CAVALRY),
-		
-		## I3 - Curaw Guardsman (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman"), # combat_scripts.py
-		(troop_set_slot, "trp_curaw_guardsman", slot_troop_unique_location, "p_town_11"), # Curaw
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_curaw_guardsman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman_1"), # combat_scripts.py
-		(troop_set_slot, "trp_curaw_guardsman_1", slot_troop_unique_location, "p_town_11"), # Curaw
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_1", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_curaw_guardsman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_curaw_guardsman_2"), # combat_scripts.py
-		(troop_set_slot, "trp_curaw_guardsman_2", slot_troop_unique_location, "p_town_11"), # Curaw
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_curaw_guardsman_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_curaw_guardsman_2", BONUS_SPRINTER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_curaw_guardsman_2", CLASS_INFANTRY),
-		(troop_set_slot, "trp_curaw_guardsman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
+		## C6 Reyvadin Cataphract
+		(troop_set_class, "trp_new_reyvadin_cataphract", CLASS_CAVALRY),
+		(troop_set_slot,  "trp_new_reyvadin_cataphract", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_reyvadin_cataphract", slot_troop_unique_location, "p_town_8"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_reyvadin_cataphract", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_reyvadin_cataphract", PREREQ_ALLY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_reyvadin_cataphract", BONUS_HARDY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_reyvadin_cataphract", BONUS_BERSERKER, BONUS_UNASSIGNED),
 		
 		
 		######################################################
 		#####              KHERGIT FACTION               #####
 		######################################################
+		
+		## A1 Khergit Bowman
+		(troop_set_class, "trp_new_khergit_bowman", CLASS_RANGED),
 
-		#KHERGITS - STANDARD TROOPS
- 
-		#Khergit Slave I1
-		(troop_set_class, "trp_r_khergit_slave", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_r_khergit_slave_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_r_khergit_slave_2", CLASS_INFANTRY),
-		
-		#Khergit Outcast I2
-		(troop_set_class, "trp_r_khergit_outcast", CLASS_INFANTRY),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_outcast_1", CLASS_INFANTRY),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_outcast_2", CLASS_INFANTRY),
-		
-		#Khergit Surcin A2
-		(troop_set_class, "trp_r_khergit_surcin", CLASS_RANGED),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_surcin_1", CLASS_RANGED),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_surcin_2", CLASS_RANGED),
-		
-		#Khergit Scout C2
-		(troop_set_class, "trp_r_khergit_scout", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_scout", slot_troop_recruit_type, STRT_MERCENARY),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_scout_1", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_scout_1", slot_troop_recruit_type, STRT_MERCENARY),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_scout_2", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_scout", slot_troop_recruit_type, STRT_MERCENARY),
-		
-		#Khergit Asud I3
-		(troop_set_class, "trp_r_khergit_asud", CLASS_INFANTRY),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_asud_1", CLASS_INFANTRY),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_asud_2", CLASS_INFANTRY),
-		(troop_set_slot,  "trp_r_khergit_asud_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#Khergit Kharvaach A3
-		(troop_set_class, "trp_r_khergit_kharvaach", CLASS_RANGED),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_kharvaach_1", CLASS_RANGED),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_kharvaach_2", CLASS_RANGED),
-		(troop_set_slot,  "trp_r_khergit_kharvaach_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#Khergit Morici C3
-		(troop_set_class, "trp_r_khergit_morici", CLASS_CAVALRY),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_morici_1", CLASS_CAVALRY),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_morici_2", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_morici_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#Khergit Abaci H3
-		(troop_set_class, "trp_r_khergit_abaci", CLASS_CAVALRY),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_abaci_1", CLASS_CAVALRY),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_abaci_2", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_abaci_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#Khergit Skirmisher H4
-		(troop_set_class, "trp_r_khergit_skirmisher", CLASS_CAVALRY),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_skirmisher_1", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_skirmisher_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_skirmisher_2", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_skirmisher_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#Khergit Torguu C5
-		(troop_set_class, "trp_r_khergit_torguu", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_torguu", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_torguu_1", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_torguu_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_torguu_2", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_torguu_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#Khergit Parthian H5
-		(troop_set_class, "trp_r_khergit_parthian", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_parthian", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#+1 tier
-		(troop_set_class, "trp_r_khergit_parthian_1", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_parthian_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#+2 tier
-		(troop_set_class, "trp_r_khergit_parthian_2", CLASS_CAVALRY),
-		(troop_set_slot,  "trp_r_khergit_parthian_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#KHERGITS - AFFILIATED TROOPS
-		
-		#Khergit Shaman I2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_shaman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_shaman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_shaman", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_shaman", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_khergit_shaman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_shaman", CLASS_INFANTRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_shaman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_shaman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_shaman_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_shaman_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_khergit_shaman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_shaman_1", CLASS_INFANTRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_shaman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_shaman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_shaman_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_shaman_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_khergit_shaman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_shaman_2", CLASS_INFANTRY),
-		
-		# Khergit Raider C3
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_raider"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_raider", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_raider", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_raider", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_shaman", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_khergit_raider", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_raider_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_raider_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_raider_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_raider_1", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_shaman", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_khergit_raider_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_raider_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_raider_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_raider_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_raider_2", BONUS_TAX_COLLECTOR, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_raider_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_raider_2", CLASS_CAVALRY),
-		
-		# Khergit Lancer C4
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_lancer"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_lancer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_lancer", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_khergit_lancer", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_lancer_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_lancer_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_lancer_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_lancer_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_khergit_lancer_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_lancer_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_lancer_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_lancer_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_lancer_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_lancer_2", CLASS_CAVALRY),
-		
-		#Khergit Clansman I4
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_clansman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_clansman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_clansman", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_clansman", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_clansman", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_khergit_clansman", CLASS_INFANTRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_clansman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_clansman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_clansman_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_clansman_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_clansman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_clansman_1", CLASS_INFANTRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_clansman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_clansman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_clansman_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_clansman_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_clansman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_clansman_2", CLASS_INFANTRY),
-		
-		#Khergit Noyan C6
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_noyan"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noyan", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noyan", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noyan", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_noyan", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_noyan", CLASS_CAVALRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_noyan_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noyan_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noyan_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noyan_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_noyan_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_noyan_1", CLASS_CAVALRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_noyan_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noyan_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noyan_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noyan_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_noyan_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_noyan_2", CLASS_CAVALRY),
-		
-		#Khergit Bahatur H7
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_bahatur"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_bahatur", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_bahatur", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_bahatur", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_bahatur", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_bahatur", CLASS_CAVALRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_bahatur_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_bahatur_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_bahatur_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_bahatur_1", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_bahatur_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_bahatur_1", CLASS_CAVALRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_bahatur_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_bahatur_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_bahatur_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_bahatur_2", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_bahatur_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_bahatur_2", CLASS_CAVALRY),
-		
-		#KHERGIT UNIQUE TROOPS
-		#Khergit Orlok H4
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_orlok"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_orlok", slot_troop_unique_location, "p_town_17"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_orlok", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_orlok", BONUS_SIEGE_GENERAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_orlok", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_khergit_orlok", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_khergit_orlok", CLASS_CAVALRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_orlok_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_orlok_1", slot_troop_unique_location, "p_town_17"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_orlok_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_orlok_1", BONUS_SIEGE_GENERAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_orlok_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_orlok_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_orlok_1", CLASS_CAVALRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_orlok_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_orlok_2", slot_troop_unique_location, "p_town_17"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_orlok_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_orlok_2", BONUS_SIEGE_GENERAL, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_orlok_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_orlok_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_orlok_2", CLASS_CAVALRY),
-		
-		#Khergit Narcarra C4
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_narcarra"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_narcarra", slot_troop_unique_location, "p_town_14"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_narcarra", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_narcarra", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_narcarra", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_khergit_narcarra", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_khergit_narcarra", CLASS_CAVALRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_narcarra_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_narcarra_1", slot_troop_unique_location, "p_town_14"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_narcarra_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_narcarra_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_narcarra_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_narcarra_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_narcarra_1", CLASS_CAVALRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_narcarra_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_narcarra_2", slot_troop_unique_location, "p_town_14"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_narcarra_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_narcarra_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_narcarra_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_narcarra_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_narcarra_2", CLASS_CAVALRY),
-		
-		#Khergit Noker I6
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_noker"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_noker", slot_troop_unique_location, "p_town_18"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noker", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noker", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noker", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noker", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_noker", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_noker", CLASS_INFANTRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_noker_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_noker_1", slot_troop_unique_location, "p_town_18"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noker_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noker_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noker_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noker_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_noker_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_noker_1", CLASS_INFANTRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_noker_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_noker_2", slot_troop_unique_location, "p_town_18"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noker_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_noker_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noker_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_noker_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_noker_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_noker_2", CLASS_INFANTRY),
-		
-		#Khergit Keshig C7
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_keshig"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_keshig", slot_troop_unique_location, "p_town_10"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_keshig", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_keshig", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_keshig", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_keshig", CLASS_CAVALRY),
-		#+1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_keshig_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_keshig_1", slot_troop_unique_location, "p_town_10"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig_1", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_keshig_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_keshig_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_keshig_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_keshig_1", CLASS_CAVALRY),
-		#+2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_khergit_keshig_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_khergit_keshig_2", slot_troop_unique_location, "p_town_10"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_khergit_keshig_2", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_keshig_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_khergit_keshig_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_khergit_keshig_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_khergit_keshig_2", CLASS_CAVALRY),
+		## I2 Khergit Outcast
+		(troop_set_class, "trp_new_khergit_outcast", CLASS_INFANTRY),
 
+		## H3 Khergit Scout
+		(troop_set_class, "trp_new_khergit_scout", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_scout"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_scout", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_scout", BONUS_TRAILBLAZER , BONUS_UNASSIGNED),
+		
+		## C3 Khergit Hunter
+		(troop_set_class, "trp_new_khergit_hunter", CLASS_CAVALRY),
+		
+		## I3 Khergit Shaman
+		(troop_set_class, "trp_new_khergit_shaman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_shaman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_shaman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_shaman", BONUS_INSPIRING , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_shaman", BONUS_COMMANDING_PRESENCE , BONUS_UNASSIGNED),
+		
+		## C4 Khergit Raider
+		(troop_set_class, "trp_new_khergit_raider", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_khergit_raider", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_raider"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_raider", BONUS_SCAVENGER , BONUS_UNASSIGNED),
+		
+		## I4 Khergit Clansman
+		(troop_set_class, "trp_new_khergit_clansman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_khergit_clansman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_clansman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_clansman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_clansman", BONUS_DEVOTED , BONUS_UNASSIGNED),
+		
+		## A5 Khergit Master Bowman
+		(troop_set_class, "trp_new_khergit_master_bowman", CLASS_RANGED),
+		(troop_set_slot, "trp_new_khergit_master_bowman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_master_bowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_master_bowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_master_bowman", BONUS_CHEAP , BONUS_UNASSIGNED),
+		
+		## C6 Khergit Lancer
+		(troop_set_class, "trp_new_khergit_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_khergit_lancer", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_lancer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_lancer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_lancer", BONUS_BERSERKER , BONUS_UNASSIGNED),
+		## C6 Khergit Skirmisher
+
+		## I6 Khergit Guard
+		(troop_set_class, "trp_new_khergit_guard", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_khergit_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_khergit_guard"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_khergit_guard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_guard", BONUS_BLOODLUST , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_khergit_guard", BONUS_CHEAP , BONUS_UNASSIGNED),
+		
+		
 		
 		######################################################
 		#####                NORD FACTION                #####
 		######################################################
-		
-		### A1 - Nordic Hunter
-		#(troop_set_class, "trp_r_nord_hunter", CLASS_RANGED),
-		## +1
-		#(troop_set_class, "trp_r_nord_hunter_1", CLASS_RANGED),
-		## +2
-		#(troop_set_class, "trp_r_nord_hunter_2", CLASS_RANGED),
-		
-		### I1 - Nordic Bondsman
-		#(troop_set_class, "trp_r_nord_bondsman", CLASS_INFANTRY),
-		## +1
-		#(troop_set_class, "trp_r_nord_bondsman_1", CLASS_INFANTRY),
-		## +2
-		#(troop_set_class, "trp_r_nord_bondsman_2", CLASS_INFANTRY),
-		
-		### I2 - Nordic Peasant
-		#(troop_set_class, "trp_r_nord_peasant", CLASS_INFANTRY),
-		## +1
-		#(troop_set_class, "trp_r_nord_peasant_1", CLASS_INFANTRY),
-		## +2
-		#(troop_set_class, "trp_r_nord_peasant_2", CLASS_INFANTRY),
-		
-		### A3 - Nordic Retinue Archer
-		#(troop_set_class, "trp_r_nord_retinue_archer", CLASS_RANGED),
-		## +1
-		#(troop_set_class, "trp_r_nord_retinue_archer_1", CLASS_RANGED),
-		## +2
-		#(troop_set_class, "trp_r_nord_retinue_archer_2", CLASS_RANGED),
-		#(troop_set_slot, "trp_r_nord_retinue_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I3 - Shield Maiden
-		#(troop_set_class, "trp_r_nord_shield_maiden", CLASS_INFANTRY),
-		## +1
-		#(troop_set_class, "trp_r_nord_shield_maiden_1", CLASS_INFANTRY),
-		## +2
-		#(troop_set_class, "trp_r_nord_shield_maiden_2", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_shield_maiden_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I3 - Nordic Raider (Bandit)
-		#(troop_set_class, "trp_r_nord_raider", CLASS_INFANTRY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		## +1
-		#(troop_set_class, "trp_r_nord_raider_1", CLASS_INFANTRY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider_1"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider_1", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		## +2
-		#(troop_set_class, "trp_r_nord_raider_2", CLASS_INFANTRY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_raider_2"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_raider_2", PREREQ_DISHONORABLE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_raider_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_raider_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I4 - Nordic Retainer
-		#(troop_set_class, "trp_r_nord_retainer", CLASS_INFANTRY),
-		## +1
-		#(troop_set_class, "trp_r_nord_retainer_1", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_retainer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +2
-		#(troop_set_class, "trp_r_nord_retainer_2", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_retainer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I4 - Nordic Spearman
-		#(troop_set_class, "trp_r_nord_spearman", CLASS_INFANTRY),
-		## +1
-		#(troop_set_class, "trp_r_nord_spearman_1", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_spearman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +2
-		#(troop_set_class, "trp_r_nord_spearman_2", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_spearman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
 
-		### A4 - Nordic Skirmisher
-		#(troop_set_class, "trp_r_nord_skirmisher", CLASS_INFANTRY),
-		## +1
-		#(troop_set_class, "trp_r_nord_skirmisher_1", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_skirmisher_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		#(troop_set_class, "trp_r_nord_skirmisher_2", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_skirmisher_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I4 - Jomsviking
-		#(troop_set_class, "trp_r_nord_jomsviking", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_jomsviking", slot_troop_recruit_type, STRT_MERCENARY),
-		## +1
-		#(troop_set_class, "trp_r_nord_jomsviking_1", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_jomsviking_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +2
-		#(troop_set_class, "trp_r_nord_jomsviking_2", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_jomsviking_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### A5 - Varangian Archer (Mercenary)
-		#(troop_set_class, "trp_r_nord_varangian_archer", CLASS_RANGED),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_varangian_archer", slot_troop_recruit_type, STRT_NOBLEMAN),
-		##+1
-		#(troop_set_class, "trp_r_nord_varangian_archer_1", CLASS_RANGED),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer_1"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_varangian_archer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +2
-		#(troop_set_class, "trp_r_nord_varangian_archer_2", CLASS_RANGED),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_archer_2"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_archer_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_varangian_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I7 - Nordic Hirdmadr
-		#(troop_set_class, "trp_r_nord_hirdmadr", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_hirdmadr", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +1
-		#(troop_set_class, "trp_r_nord_hirdmadr_1", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_hirdmadr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +2
-		#(troop_set_class, "trp_r_nord_hirdmadr_1", CLASS_INFANTRY),
-		#(troop_set_slot, "trp_r_nord_hirdmadr_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### I7 - Varangian Guard (Mercenary)
-		#(troop_set_class, "trp_r_nord_varangian_guard", CLASS_INFANTRY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_varangian_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +1
-		#(troop_set_class, "trp_r_nord_varangian_guard_1", CLASS_INFANTRY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard_1"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_varangian_guard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		## +2
-		#(troop_set_class, "trp_r_nord_varangian_guard_2", CLASS_INFANTRY),
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_varangian_guard_2"), # combat_scripts.py
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_varangian_guard_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_varangian_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		### C3 - Jelbegi Lancer (Unique)
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_jelbegi_lancer", slot_troop_unique_location, "p_castle_36"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		#(troop_set_class, "trp_r_nord_jelbegi_lancer", CLASS_CAVALRY),
-		## +1
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer_1"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_jelbegi_lancer_1", slot_troop_unique_location, "p_castle_36"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		#(troop_set_class, "trp_r_nord_jelbegi_lancer_1", CLASS_CAVALRY),
-		## +2
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_jelbegi_lancer_2"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_jelbegi_lancer_2", slot_troop_unique_location, "p_castle_36"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_jelbegi_lancer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_jelbegi_lancer_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_jelbegi_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_jelbegi_lancer_2", CLASS_CAVALRY),
-		
-		### C5 - Thane of Sargoth (Unique)
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_thane", slot_troop_unique_location, "p_town_1"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_thane", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_thane", CLASS_CAVALRY),
-		## +1
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane_1"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_thane_1", slot_troop_unique_location, "p_town_1"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_thane_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_thane_1", CLASS_CAVALRY),
-		## +2
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_thane_2"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_thane_2", slot_troop_unique_location, "p_town_1"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_thane_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_thane_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_thane_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_thane_2", CLASS_CAVALRY),
-		
-		### C6 - Valkyrie of Tihr (Unique)
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_valkyrie", slot_troop_unique_location, "p_town_2"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_valkyrie", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_valkyrie", CLASS_CAVALRY),
-		## +1
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie_1"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_valkyrie_1", slot_troop_unique_location, "p_town_2"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_valkyrie_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_valkyrie_1", CLASS_CAVALRY),
-		## +2
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_valkyrie_2"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_valkyrie_2", slot_troop_unique_location, "p_town_2"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_valkyrie_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_valkyrie_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		#(troop_set_slot, "trp_r_nord_valkyrie_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		#(troop_set_class, "trp_r_nord_valkyrie_2", CLASS_CAVALRY),
-		
-		### A2 - Maiden of Aldelen (Unique)
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_maiden", slot_troop_unique_location, "p_village_61"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		#(troop_set_class, "trp_r_nord_maiden", CLASS_RANGED),
-		## +1
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden_1"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_maiden_1", slot_troop_unique_location, "p_village_61"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		#(troop_set_class, "trp_r_nord_maiden_1", CLASS_RANGED),
-		## +2
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_maiden_2"), # combat_scripts.py
-		#(troop_set_slot, "trp_r_nord_maiden_2", slot_troop_unique_location, "p_village_61"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_maiden_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_r_nord_maiden_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		#(troop_set_class, "trp_r_nord_maiden_2", CLASS_RANGED),
-		
-		## A4 - Nordic Scout (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_scout"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_scout", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_scout", CLASS_RANGED),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_scout_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_scout_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_scout_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_scout_1", CLASS_RANGED),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_scout_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_scout_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_scout_2", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_scout_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_scout_2", CLASS_RANGED),
-		
-		## I3 - Nordic Skald (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_skald"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_skald", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_skald", BONUS_STORYTELLER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_skald", CLASS_INFANTRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_skald_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_skald_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_skald_1", BONUS_STORYTELLER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_skald_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_nord_skald_1", CLASS_INFANTRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_skald_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_skald_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_skald_2", BONUS_STORYTELLER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_skald_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_skald_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_skald_2", CLASS_INFANTRY),
-		
-		## I6 - Nordic Godi (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_godi"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_godi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_godi", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_godi", CLASS_INFANTRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_godi_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_godi_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi_1", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_godi_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_godi_1", CLASS_INFANTRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_godi_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_godi_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi_2", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_godi_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_godi_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_godi_2", CLASS_INFANTRY),
-		
-		## I7 - Nord Huscarl (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_huscarl"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_huscarl", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl", BONUS_SAVAGERY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_huscarl", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_huscarl", CLASS_INFANTRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_huscarl_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_huscarl_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl_1", BONUS_SAVAGERY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl_1", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_huscarl_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_huscarl_1", CLASS_INFANTRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_huscarl_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_huscarl_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl_2", BONUS_SAVAGERY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl_2", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_huscarl_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_huscarl_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_huscarl_2", CLASS_INFANTRY),
-		
-		# Bandits
-		## I5 - Nord Berserker (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_berserker"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_berserker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker", BONUS_CHARGING_STRIKE , BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_berserker", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_berserker", CLASS_INFANTRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_berserker_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_berserker_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker_1", BONUS_CHARGING_STRIKE , BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker_1", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_berserker_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_berserker_1", CLASS_INFANTRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_nord_berserker_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_nord_berserker_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker_2", BONUS_CHARGING_STRIKE , BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker_2", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_nord_berserker_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_nord_berserker_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_nord_berserker_2", CLASS_INFANTRY),
-		
-		#### NEW TROOPS #####
-		
 		##### I1 Nord Farmhand #####
 		(troop_set_class, "trp_new_nord_farmhand", CLASS_INFANTRY),
 		
@@ -1605,7 +513,6 @@ scripts = [
 		
 		##### I3 Nord Retainer #####
 		(troop_set_class, "trp_new_nord_retainer", CLASS_INFANTRY),
-		(troop_set_slot, "trp_new_nord_retainer", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I3 Nord Skald #####
 		(troop_set_class, "trp_new_nord_skald", CLASS_INFANTRY),
@@ -1620,34 +527,43 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_TRAILBLAZER , BONUS_UNASSIGNED),
 		
 		##### A4 Nord Skirmisher #####
-		(troop_set_class, "trp_new_nord_skirmisher", CLASS_RANGED),
+		(troop_set_class, "trp_new_nord_skirmisher", CLASS_INFANTRY),
+		
+		##### C4 Nord Lancer #####
+		(troop_set_class, "trp_new_nord_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_nord_lancer", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I5 Nord Berserker #####
-		(troop_set_class, "trp_new_nord_tracker", CLASS_INFANTRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_tracker"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_tracker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_BERSERKER , BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_tracker", BONUS_BLOODLUST , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_berserker", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_class, "trp_new_nord_berserker", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_berserker"), # combat_scripts.py
+		(troop_set_slot, "trp_new_nord_berserker", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_berserker", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_berserker", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_CHEAP , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_berserker", BONUS_SPRINTER , BONUS_UNASSIGNED),
 		
 		##### I5 Hired Blade #####
 		(troop_set_class, "trp_new_hired_blade", CLASS_INFANTRY),
 		(troop_set_slot, "trp_new_hired_blade", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_hired_blade", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_hired_blade", BONUS_BLADEMASTER , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_hired_blade", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		##### I5 Nord Sharpshooter #####
-		(troop_set_class, "trp_new_nord_sharpshooter", CLASS_RANGED),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_sharpshooter"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_sharpshooter", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_sharpshooter", BONUS_SHARPSHOOTER , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_sharpshooter", slot_troop_recruit_type, STRT_NOBLEMAN),
+		##### A6 Nord Retinue Archer #####
+		(troop_set_class, "trp_new_nord_retinue_archer", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_retinue_archer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_retinue_archer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		#(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_VOLLEY_COMMANDER , BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_retinue_archer", BONUS_SUPPLY_RUNNER , BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_nord_retinue_archer", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I6 Nord Godi #####
 		(troop_set_class, "trp_new_nord_godi", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_godi"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_godi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_godi", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_godi", BONUS_TACTICIAN , BONUS_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_godi", BONUS_COMMANDING_PRESENCE , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_godi", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_nord_godi", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		##### I7 Nord Hirdman #####
 		(troop_set_class, "trp_new_nord_hirdman", CLASS_INFANTRY),
@@ -1657,701 +573,277 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_hirdman", BONUS_SECOND_WIND , BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_new_nord_hirdman", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		##### C4 Nord Lancer #####
-		(troop_set_class, "trp_new_nord_lancer", CLASS_CAVALRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_nord_lancer"), # combat_scripts.py
-		(troop_set_slot, "trp_new_nord_lancer", slot_troop_unique_location, "p_castle_36"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_new_nord_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_new_nord_lancer", BONUS_FORTITUDE , BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_nord_lancer", slot_troop_recruit_type, STRT_NOBLEMAN),
+
 		
 		##### I7 Wercheg Guard #####
 		(troop_set_class, "trp_new_wercheg_guard", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_wercheg_guard"), # combat_scripts.py
 		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_unique_location, "p_town_12"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_new_wercheg_guard", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_wercheg_guard", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_new_wercheg_guard", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		######################################################
 		#####               RHODOK FACTION               #####
 		######################################################
 		
-		## I1 - Rhodok Militia
-		(troop_set_class, "trp_rhodok_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_militia_2", CLASS_INFANTRY),
-		
-		## A2 - Rhodok Militia Archer
-		(troop_set_class, "trp_rhodok_militia_archer", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_militia_archer_1", CLASS_RANGED),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_militia_archer_2", CLASS_RANGED),
-		
-		## A3 - Rhodok Crossbowman
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_crossbowman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_crossbowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_rhodok_crossbowman", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_crossbowman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_crossbowman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_1", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_rhodok_crossbowman_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_crossbowman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_crossbowman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_2", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_crossbowman_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_rhodok_crossbowman_2", CLASS_RANGED),
-		
-		## I3 - Rhodok Footman
-		(troop_set_class, "trp_rhodok_trained_militia", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_trained_militia_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_trained_militia_2", CLASS_INFANTRY),
-		
-		## I3 - Rhodok Pikeman
-		(troop_set_class, "trp_rhodok_pikeman", CLASS_INFANTRY),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_pikeman_1", CLASS_INFANTRY),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_pikeman_2", CLASS_INFANTRY),
-		# (troop_set_slot, "trp_rhodok_pikeman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## A4 - Rhodok Arbalestier
-		(troop_set_class, "trp_rhodok_arbalestier", CLASS_RANGED),
-		# +1 tier
-		(troop_set_class, "trp_rhodok_arbalestier_1", CLASS_RANGED),
-		# (troop_set_slot, "trp_rhodok_arbalestier_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		# +2 tier
-		(troop_set_class, "trp_rhodok_arbalestier_2", CLASS_RANGED),
-		# (troop_set_slot, "trp_rhodok_arbalestier_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		
-		## I3 - Rhodok Vanguard (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_vanguard"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_vanguard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_vanguard", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_vanguard_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_vanguard_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_1", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_1", BONUS_SAVAGE_BASH, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_vanguard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_vanguard_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_vanguard_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_vanguard_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_2", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_vanguard_2", BONUS_SAVAGE_BASH, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_vanguard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_vanguard_2", CLASS_INFANTRY),
-		
-		## I5 - Highland Pikeman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_highland_pikeman"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_highland_pikeman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_rhodok_highland_pikeman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_highland_pikeman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_highland_pikeman_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_highland_pikeman_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_1", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_highland_pikeman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_highland_pikeman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_highland_pikeman_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_highland_pikeman_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_2", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_highland_pikeman_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_highland_pikeman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_highland_pikeman_2", CLASS_INFANTRY),
-		
-		## A6 - Siege-Breaker Crossbowman (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_breaker"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_breaker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_breaker", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_breaker", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_breaker_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_breaker_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_1", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_breaker_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_breaker_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_breaker_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_breaker_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_2", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_breaker_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_breaker_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_breaker_2", CLASS_RANGED),
-		
-		## I6 - Hedge Knight (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_hedge_knight"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_hedge_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_hedge_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_hedge_knight", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_hedge_knight_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_hedge_knight_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_1", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_hedge_knight_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_hedge_knight_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_hedge_knight_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_hedge_knight_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_hedge_knight_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_hedge_knight_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_hedge_knight_2", CLASS_INFANTRY),
+		## I1 Rhodok Militia
+		(troop_set_class, "trp_new_rhodok_militia", CLASS_INFANTRY),
 
-		## A6 - Siege Commander
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_commander"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_commander", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_commander", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_commander", CLASS_RANGED),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_commander_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_commander_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_1", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_1", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_commander_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_commander_1", CLASS_RANGED),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_siege_commander_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_siege_commander_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_2", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_siege_commander_2", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_siege_commander_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_siege_commander_2", CLASS_RANGED),
+		## A2 Rhodok Militia Archer
+		(troop_set_class, "trp_new_rhodok_militia_archer", CLASS_RANGED),
 
-		## I6 - Mercenary Captain
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_mercenary_captain"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_mercenary_captain", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_mercenary_captain", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_mercenary_captain", CLASS_INFANTRY),
-		# +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_mercenary_captain_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_mercenary_captain_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_mercenary_captain_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_mercenary_captain_1", CLASS_INFANTRY),
-		# +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_mercenary_captain_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_mercenary_captain_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_mercenary_captain_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_mercenary_captain_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_rhodok_mercenary_captain_2", CLASS_INFANTRY),
+		## I3 Rhodok Footman
+		(troop_set_class, "trp_new_rhodok_footman", CLASS_INFANTRY),
 		
-		## H3 - Jamiche Border Guard (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jamiche_border_guard"), # combat_scripts.py
-		(troop_set_slot, "trp_jamiche_border_guard", slot_troop_unique_location, "p_castle_9"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_jamiche_border_guard", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jamiche_border_guard_1"), # combat_scripts.py
-		(troop_set_slot, "trp_jamiche_border_guard_1", slot_troop_unique_location, "p_castle_9"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_1", BONUS_LOYAL, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_jamiche_border_guard_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jamiche_border_guard_2"), # combat_scripts.py
-		(troop_set_slot, "trp_jamiche_border_guard_2", slot_troop_unique_location, "p_castle_9"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jamiche_border_guard_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jamiche_border_guard_2", BONUS_LOYAL, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_jamiche_border_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jamiche_border_guard_2", CLASS_CAVALRY),
+		## A3 Rhodok Scout
+		(troop_set_class, "trp_new_rhodok_scout", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_scout"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_scout", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_scout", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_scout", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## I6 - Veluca Pikeman Captain (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_veluca_pikeman"), # combat_scripts.py
-		(troop_set_slot, "trp_veluca_pikeman", slot_troop_unique_location, "p_town_3"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_veluca_pikeman", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_veluca_pikeman", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_veluca_pikeman_1"), # combat_scripts.py
-		(troop_set_slot, "trp_veluca_pikeman_1", slot_troop_unique_location, "p_town_3"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_veluca_pikeman_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_veluca_pikeman_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_veluca_pikeman_2"), # combat_scripts.py
-		(troop_set_slot, "trp_veluca_pikeman_2", slot_troop_unique_location, "p_town_3"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_veluca_pikeman_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_veluca_pikeman_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_veluca_pikeman_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_veluca_pikeman_2", CLASS_INFANTRY),
+		## C3 Rhodok Man-at-Arms
+		(troop_set_class, "trp_new_rhodok_man_at_arms", CLASS_CAVALRY),
+
+		## A4 Rhodok Crossbowman
+		(troop_set_class, "trp_new_rhodok_crossbowman", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_crossbowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_crossbowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_crossbowman", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_crossbowman", slot_troop_recruit_type, STRT_PEASANT),
 		
-		## I4 - Grunwalder Voulgiers (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_grunwalder_voulgiers"), # combat_scripts.py
-		(troop_set_slot, "trp_grunwalder_voulgiers", slot_troop_unique_location, "p_castle_28"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_grunwalder_voulgiers", CLASS_INFANTRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_grunwalder_voulgiers_1"), # combat_scripts.py
-		(troop_set_slot, "trp_grunwalder_voulgiers_1", slot_troop_unique_location, "p_castle_28"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_1", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_grunwalder_voulgiers_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_grunwalder_voulgiers_1", CLASS_INFANTRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_grunwalder_voulgiers_2"), # combat_scripts.py
-		(troop_set_slot, "trp_grunwalder_voulgiers_2", slot_troop_unique_location, "p_castle_28"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_grunwalder_voulgiers_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_2", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_grunwalder_voulgiers_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_grunwalder_voulgiers_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_grunwalder_voulgiers_2", CLASS_INFANTRY),
+		## I4 Rhodok Vanguard
+		(troop_set_class, "trp_new_rhodok_vanguard", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_vanguard"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_vanguard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_vanguard", BONUS_DEVOTED, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_vanguard", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## I5 Rhodok Pikeman
+		(troop_set_class, "trp_new_rhodok_pikeman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_pikeman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_pikeman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_pikeman", BONUS_SAVAGERY, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_pikeman", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## C3 - Ergellon Lancer (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_ergellon_lancer"), # combat_scripts.py
-		(troop_set_slot, "trp_ergellon_lancer", slot_troop_unique_location, "p_castle_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_ergellon_lancer", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_ergellon_lancer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_ergellon_lancer_1", slot_troop_unique_location, "p_castle_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_1", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_1", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_ergellon_lancer_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_ergellon_lancer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_ergellon_lancer_2", slot_troop_unique_location, "p_castle_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_ergellon_lancer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_2", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_2", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_ergellon_lancer_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_ergellon_lancer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_ergellon_lancer_2", CLASS_CAVALRY),
+		## I5 Rhodok Halberdier
+		(troop_set_class, "trp_new_rhodok_halberdier", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_halberdier"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_halberdier", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_halberdier", BONUS_FORTITUDE, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
+
+
+		## H5 Rhodok Ranger
+		(troop_set_class, "trp_new_rhodok_ranger", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_rhodok_ranger", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## A3 - Yaleni Dyoken (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_yaleni_dyoken"), # combat_scripts.py
-		(troop_set_slot, "trp_yaleni_dyoken", slot_troop_unique_location, "p_town_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_yaleni_dyoken", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_yaleni_dyoken_1"), # combat_scripts.py
-		(troop_set_slot, "trp_yaleni_dyoken_1", slot_troop_unique_location, "p_town_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken_1", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_yaleni_dyoken_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_yaleni_dyoken_2"), # combat_scripts.py
-		(troop_set_slot, "trp_yaleni_dyoken_2", slot_troop_unique_location, "p_town_15"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_yaleni_dyoken_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken_2", BONUS_BOUNDLESS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_yaleni_dyoken_2", BONUS_SECOND_WIND, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_yaleni_dyoken_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_yaleni_dyoken_2", CLASS_RANGED),
+
+		## I6 Rhodok Captain
+		(troop_set_class, "trp_new_rhodok_captain", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_captain"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_captain", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_captain", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_captain", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_captain", BONUS_RALLYING_FIGURE, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_captain", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_captain", slot_troop_recruit_type, STRT_MERCENARY),
 		
-		## Jelkalen Balister (Unique)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jelkalen_balister"), # combat_scripts.py
-		(troop_set_slot, "trp_jelkalen_balister", slot_troop_unique_location, "p_town_5"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		# (troop_set_slot, "trp_jelkalen_balister", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jelkalen_balister", CLASS_RANGED),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jelkalen_balister_1"), # combat_scripts.py
-		(troop_set_slot, "trp_jelkalen_balister_1", slot_troop_unique_location, "p_town_5"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_1", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_1", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_jelkalen_balister_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jelkalen_balister_1", CLASS_RANGED),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_jelkalen_balister_2"), # combat_scripts.py
-		(troop_set_slot, "trp_jelkalen_balister_2", slot_troop_unique_location, "p_town_5"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_jelkalen_balister_2", PREREQ_ALLY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_2", BONUS_ENDURANCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_jelkalen_balister_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_jelkalen_balister_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_jelkalen_balister_2", CLASS_RANGED),
+		## A6 Rhodok Siege-Breaker
+		(troop_set_class, "trp_new_rhodok_siege_breaker", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_siege_breaker"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_siege_breaker", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_breaker", BONUS_LOYAL, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_breaker", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_siege_breaker", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## A7 Rhodok Siege Commander
+		(troop_set_class, "trp_new_rhodok_siege_commander", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_siege_commander"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_siege_commander", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_siege_commander", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_siege_commander", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
-		## Rhodok Ranger (Affiliated)
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_ranger"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_ranger", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_ranger", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_rhodok_ranger", CLASS_CAVALRY),
-		# +1 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_ranger_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_ranger_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_1", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_1", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_ranger_1", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_rhodok_ranger_1", CLASS_CAVALRY),
-		# +2 tier
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_rhodok_ranger_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_rhodok_ranger_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_2", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_rhodok_ranger_2", BONUS_STEALTHY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_rhodok_ranger_2", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_rhodok_ranger_2", CLASS_CAVALRY),
+		## I7 Rhodok Hedge Knight
+		(troop_set_class, "trp_new_rhodok_hedge_knight", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_rhodok_hedge_knight"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_rhodok_hedge_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_rhodok_hedge_knight", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_new_rhodok_hedge_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		
 		######################################################
 		#####              SARRANID FACTION              #####
 		######################################################
 		
+		
+		## I1 Sarranid Slave
+		(troop_set_class, "trp_new_sarranid_slave", CLASS_INFANTRY),
+
+		## I2 Sarranid Spearman
+		(troop_set_class, "trp_new_sarranid_spearman", CLASS_INFANTRY),
+
+		## H2 Sarranid Raider
+		(troop_set_class, "trp_new_sarranid_raider", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_sarranid_raider"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_raider", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_raider", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+
+		## C3 Sarranid Manhunter
+		(troop_set_class, "trp_new_sarranid_manhunter", CLASS_CAVALRY),
+		
+		## I3 Sarranid Swordsman
+		(troop_set_class, "trp_new_sarranid_swordsman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_sarranid_swordsman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_swordsman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_swordsman", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
+
+		## A3 Sarranid Bowman
+		(troop_set_class, "trp_new_sarranid_bowman", CLASS_RANGED),
+
+		## H4 Sarranid Horseman
+		(troop_set_class, "trp_new_sarranid_horseman", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_sarranid_horseman", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## C5 Sarranid Lancer
+		(troop_set_class, "trp_new_sarranid_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_sarranid_lancer", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_sarranid_lancer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_lancer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+
+		## A5 Sarranid Skirmisher
+		(troop_set_class, "trp_new_sarranid_skirmisher", CLASS_RANGED),
+		(troop_set_slot, "trp_new_sarranid_skirmisher", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_sarranid_skirmisher"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_skirmisher", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_skirmisher", BONUS_CHEAP, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_skirmisher", BONUS_DEVOTED, BONUS_UNASSIGNED),
+
+		## I6 Sarranid Guard
+		(troop_set_class, "trp_new_sarranid_guard", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_rhodok_hedge_knight", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_sarranid_guard"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_guard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_guard", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_guard", BONUS_BERSERKER, BONUS_UNASSIGNED),
+
+		## H7 Sarranid Sipahi
+		(troop_set_class, "trp_new_sarranid_sipahi", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_sarranid_sipahi", slot_troop_recruit_type, STRT_NOBLEMAN),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_sarranid_sipahi"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_sarranid_sipahi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_sipahi", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_sipahi", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_sarranid_sipahi", BONUS_DEVOTED, BONUS_UNASSIGNED),
+
+		## C7 Sarranid Mamluke
+		(troop_set_class, "trp_new_sarranid_mamluke", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_sarranid_mamluke", slot_troop_recruit_type, STRT_NOBLEMAN),
+		
+		## A4 Shariz Siegemaster
+		(troop_set_class, "trp_new_shariz_siegemaster", CLASS_RANGED),
+		(troop_set_slot, "trp_new_shariz_siegemaster", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_shariz_siegemaster"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_shariz_siegemaster", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_shariz_siegemaster", PREREQ_ALLY, PREREQ_UNASSIGNED),
+		(troop_set_slot, "trp_new_shariz_siegemaster", slot_troop_unique_location, "p_town_19"),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_shariz_siegemaster", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_shariz_siegemaster", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+
+		## A4 Jameyyed Voulgier
+		(troop_set_class, "trp_new_jameyyed_voulgier", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_jameyyed_voulgier"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_jameyyed_voulgier", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(troop_set_slot, "trp_new_wercheg_guard", slot_troop_unique_location, "p_castle_41"),
 
 		
-		## Sultan Foot Guards
-		#(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_sultan_foot_guards"), # combat_scripts.py
-		#(troop_set_slot, "trp_sultan_foot_guards", slot_troop_unique_location, "p_town_19"),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_sultan_foot_guards", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_requirement", "trp_sultan_foot_guards", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_sultan_foot_guards", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		#(call_script, "script_ce_assign_troop_ability", "trp_sultan_foot_guards", BONUS_HARDY, BONUS_UNASSIGNED),
-		#(troop_set_class, "trp_sultan_foot_guards", CLASS_INFANTRY),
-
-		
-		## LEIFDIN - NEW TROOPS REVAMP
-		
-		#AFFILIATED
-		#Sarranid Bashibozuk
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_bashibozuk"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_bashibozuk", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_bashibozuk", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_bashibozuk", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_sarranid_bashibozuk", CLASS_INFANTRY),
-		#Sarranid Bashibozuk +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_bashibozuk_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_bashibozuk_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_bashibozuk_1", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_1", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_1", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_1", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_bashibozuk_1", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_sarranid_bashibozuk_1", CLASS_INFANTRY),
-		#Sarranid Bashibozuk +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_bashibozuk_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_bashibozuk_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_bashibozuk_2", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_2", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_2", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_bashibozuk_2", BONUS_BLOODLUST, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_bashibozuk_2", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_sarranid_bashibozuk_2", CLASS_INFANTRY),
-		
-		#Sarranid Corbaci
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_corbaci"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_corbaci", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci", BONUS_RALLYING_FIGURE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_corbaci", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_corbaci", CLASS_RANGED),
-		#Sarranid Corbaci +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_corbaci_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_corbaci_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci_1", BONUS_RALLYING_FIGURE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci_1", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci_1", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_corbaci_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_corbaci_1", CLASS_RANGED),
-		#Sarranid Corbaci +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_corbaci_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_corbaci_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci_2", BONUS_RALLYING_FIGURE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci_2", BONUS_TACTICIAN, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_corbaci_2", BONUS_VOLLEY_COMMANDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_corbaci_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_corbaci_2", CLASS_RANGED),
-		
-		#Sarranid Sipahi
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_sipahi"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_sipahi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_sipahi", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_sipahi", CLASS_CAVALRY),
-		#Sarranid Sipahi +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_sipahi_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_sipahi_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi_1", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi_1", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi_1", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_sipahi_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_sipahi_1", CLASS_CAVALRY),
-		#Sarranid Sipahi +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_sipahi_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_sipahi_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi_2", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi_2", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_sipahi_2", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_sipahi_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_sipahi_2", CLASS_CAVALRY),
-		
-		#Sarranid Boluk-bashi
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_boluk_bashi"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_boluk_bashi", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_boluk_bashi", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_boluk_bashi", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_boluk_bashi", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_boluk_bashi", CLASS_CAVALRY),
-		#Sarranid Boluk-bashi +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_boluk_bashi_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_boluk_bashi_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_boluk_bashi_1", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_boluk_bashi_1", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_boluk_bashi_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_boluk_bashi_1", CLASS_CAVALRY),
-		#Sarranid Boluk-bashi +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_boluk_bashi_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_boluk_bashi_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_boluk_bashi_2", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_boluk_bashi_2", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_boluk_bashi_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_boluk_bashi_2", CLASS_CAVALRY),
-		
-		#Sarranid Garip
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_garip"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_garip", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip", BONUS_POISONED_WEAPONS, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_garip", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_garip", CLASS_CAVALRY),
-		#Sarranid Garip +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_garip_1"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_garip_1", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip_1", BONUS_POISONED_WEAPONS, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip_1", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_garip_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_garip_1", CLASS_CAVALRY),
-		#Sarranid Garip +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sarranid_garip_2"), # combat_scripts.py
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sarranid_garip_2", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip_2", BONUS_POISONED_WEAPONS, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sarranid_garip_2", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sarranid_garip_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sarranid_garip_2", CLASS_CAVALRY),
-		
-		# UNIQUE
-		
-		# Bariyye Raider
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_bariyye_raider"), # combat_scripts.py
-		(troop_set_slot, "trp_r_bariyye_raider", slot_troop_unique_location, "p_town_22"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_bariyye_raider", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_bariyye_raider", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_bariyye_raider", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_bariyye_raider", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_bariyye_raider", CLASS_CAVALRY),
-		# Bariyye Raider +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_bariyye_raider_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_bariyye_raider_1", slot_troop_unique_location, "p_town_22"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_bariyye_raider_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_bariyye_raider_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_bariyye_raider_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_bariyye_raider_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_bariyye_raider_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_bariyye_raider_1", CLASS_CAVALRY),
-		# Bariyye Raider +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_bariyye_raider_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_bariyye_raider_2", slot_troop_unique_location, "p_town_22"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_bariyye_raider_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_bariyye_raider_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_bariyye_raider_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_bariyye_raider_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_bariyye_raider_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_bariyye_raider_2", CLASS_CAVALRY),
-		
-		# Shariz Siegemaster
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_shariz_siegemaster_xbow"), # combat_scripts.py
-		(troop_set_slot, "trp_r_shariz_siegemaster_xbow", slot_troop_unique_location, "p_town_22"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_shariz_siegemaster_xbow", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_shariz_siegemaster_xbow", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_shariz_siegemaster_xbow", slot_troop_recruit_type, STRT_MERCENARY),
-		(troop_set_class, "trp_r_shariz_siegemaster_xbow", CLASS_RANGED),
-		# Shariz Siegemaster +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_shariz_siegemaster_xbow_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_shariz_siegemaster_xbow_1", slot_troop_unique_location, "p_town_22"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_shariz_siegemaster_xbow_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_shariz_siegemaster_xbow_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow_1", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_shariz_siegemaster_xbow_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_shariz_siegemaster_xbow_1", CLASS_RANGED),
-		# Shariz Siegemaster +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_shariz_siegemaster_xbow_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_shariz_siegemaster_xbow_2", slot_troop_unique_location, "p_town_22"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_shariz_siegemaster_xbow_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_shariz_siegemaster_xbow_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow_2", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_shariz_siegemaster_xbow_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_shariz_siegemaster_xbow_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_shariz_siegemaster_xbow_2", CLASS_RANGED),
+		## C5 Durquba Slave Master
+		(troop_set_class, "trp_new_durquba_slave_master", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_durquba_slave_master", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_durquba_slave_master"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_durquba_slave_master", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_durquba_slave_master", PREREQ_ALLY, PREREQ_UNASSIGNED),
+		(troop_set_slot, "trp_new_durquba_slave_master", slot_troop_unique_location, "p_town_20"),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_durquba_slave_master", BONUS_WATCHFUL_EYE, BONUS_UNASSIGNED),
+				
 		
 		
-		## Durquba Javelineer
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_durquba_javelineer"), # combat_scripts.py
-		(troop_set_slot, "trp_r_durquba_javelineer", slot_troop_unique_location, "p_town_20"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_durquba_javelineer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_durquba_javelineer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_durquba_javelineer", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_durquba_javelineer", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_durquba_javelineer", CLASS_RANGED),
-		## Durquba Javelineer +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_durquba_javelineer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_durquba_javelineer_1", slot_troop_unique_location, "p_town_20"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_durquba_javelineer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_durquba_javelineer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_durquba_javelineer_1", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_durquba_javelineer_1", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_durquba_javelineer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_durquba_javelineer_1", CLASS_RANGED),
-		## Durquba Javelineer +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_durquba_javelineer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_durquba_javelineer_2", slot_troop_unique_location, "p_town_20"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_durquba_javelineer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_durquba_javelineer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_durquba_javelineer_2", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_durquba_javelineer_2", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_durquba_javelineer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_durquba_javelineer_2", CLASS_RANGED),
+		######################################################
+		#####                 MERCENARIES                #####
+		######################################################
 		
-		## Mamluke Mounted Archer
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_mamluke_mounted_archer"), # combat_scripts.py
-		(troop_set_slot, "trp_r_mamluke_mounted_archer", slot_troop_unique_location, "p_castle_41"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_mamluke_mounted_archer", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_mamluke_mounted_archer", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_mamluke_mounted_archer", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_mamluke_mounted_archer", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_class, "trp_r_mamluke_mounted_archer", CLASS_CAVALRY),
-		## Mamluke Mounted Archer +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_mamluke_mounted_archer_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_mamluke_mounted_archer_1", slot_troop_unique_location, "p_castle_41"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_mamluke_mounted_archer_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_mamluke_mounted_archer_1", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_mamluke_mounted_archer_1", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_mamluke_mounted_archer_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_mamluke_mounted_archer_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_mamluke_mounted_archer_1", CLASS_CAVALRY),
-		## Mamluke Mounted Archer +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_mamluke_mounted_archer_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_mamluke_mounted_archer_2", slot_troop_unique_location, "p_castle_41"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_mamluke_mounted_archer_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_mamluke_mounted_archer_2", PREREQ_FRIEND, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_mamluke_mounted_archer_2", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_mamluke_mounted_archer_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_mamluke_mounted_archer_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_mamluke_mounted_archer_2", CLASS_CAVALRY),
+		## I5 Geroian Pikeman
+		(troop_set_class, "trp_new_geroian_pikeman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_geroian_pikeman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_pikeman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_pikeman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
 		
-		# Sarranid Sultan Guard
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sultan_guard"), # combat_scripts.py
-		(troop_set_slot, "trp_r_sultan_guard", slot_troop_unique_location, "p_town_19"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sultan_guard", PREREQ_UNIQUE_LOCATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sultan_guard", PREREQ_LIEGE_RELATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sultan_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sultan_guard", CLASS_INFANTRY),
-		# Sarranid Sultan Guard +1
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sultan_guard_1"), # combat_scripts.py
-		(troop_set_slot, "trp_r_sultan_guard_1", slot_troop_unique_location, "p_town_19"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sultan_guard_1", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sultan_guard_1", PREREQ_LIEGE_RELATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard_1", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard_1", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard_1", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sultan_guard_1", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sultan_guard_1", CLASS_INFANTRY),
-		# Sarranid Sultan Guard +2
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_r_sultan_guard_2"), # combat_scripts.py
-		(troop_set_slot, "trp_r_sultan_guard_2", slot_troop_unique_location, "p_town_19"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sultan_guard_2", PREREQ_UNIQUE_LOCATION_UPGRADE, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_requirement", "trp_r_sultan_guard_2", PREREQ_LIEGE_RELATION, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard_2", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard_2", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_r_sultan_guard_2", BONUS_HARDY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_r_sultan_guard_2", slot_troop_recruit_type, STRT_NOBLEMAN),
-		(troop_set_class, "trp_r_sultan_guard_2", CLASS_INFANTRY),
+		## I5 Geroian Swordsman
+		(troop_set_class, "trp_new_geroian_swordsman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_geroian_swordsman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_swordsman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_swordsman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_swordsman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_swordsman", BONUS_BERSERKER, BONUS_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_swordsman", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
+		
+		## C5 Geroian Lancer
+		(troop_set_class, "trp_new_geroian_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_new_durquba_slave_master", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_lancer"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_lancer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_lancer", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		
+		## A5 Geroian Crossbowman
+		(troop_set_class, "trp_new_geroian_crossbowman", CLASS_RANGED),
+		(troop_set_slot, "trp_new_geroian_crossbowman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_geroian_crossbowman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_geroian_crossbowman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_geroian_crossbowman", BONUS_STEADY_AIM, BONUS_UNASSIGNED),
+		
+		## I4 - Field Surgeon
+		(troop_set_class, "trp_new_field_surgeon", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_field_surgeon", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_field_surgeon"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_field_surgeon", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_field_surgeon", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_field_surgeon", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_field_surgeon", BONUS_FIELD_SURGEON, BONUS_UNASSIGNED),
+		
+		## A4 Supply Runner
+		(troop_set_class, "trp_new_supply_runner", CLASS_RANGED),
+		(troop_set_slot, "trp_new_supply_runner", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_supply_runner"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_supply_runner", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_supply_runner", BONUS_SUPPLY_RUNNER, BONUS_UNASSIGNED),
+		
+		## I5 Drill Sargenat
+		(troop_set_class, "trp_new_drill_sargeant", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_drill_sargeant", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_drill_sargeant"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_drill_sargeant", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_drill_sargeant", BONUS_DRILL_SERGEANT , BONUS_UNASSIGNED),
+		
+		## I5 Watchman
+		(troop_set_class, "trp_new_watchman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_new_watchman", slot_troop_recruit_type, STRT_MERCENARY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_new_watchman"), # combat_scripts.py
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_DOPPELSOLDNER, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_new_watchman", PREREQ_EXPENSIVE, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_new_watchman", BONUS_WATCHFUL_EYE, BONUS_UNASSIGNED),
 		
 		
 		
@@ -2763,11 +1255,17 @@ scripts = [
 			(call_script, "script_game_get_troop_wage", ":stack_troop", ":party_no"),
 			(assign, ":cur_wage", reg0),
 			(val_mul, ":cur_wage", ":stack_size"),
-			(try_begin),
-				## TROOP EFFECT: BONUS_DEVOTED
-				(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", BONUS_DEVOTED), # combat_scripts.py - ability constants in combat_constants.py
-				(val_div, ":cur_wage", 2),
-			(try_end),
+			#(try_begin),
+				### TROOP EFFECT: BONUS_DEVOTED
+				#(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", BONUS_DEVOTED), # combat_scripts.py - ability constants in combat_constants.py
+				#(val_div, ":cur_wage", 2),
+			#(try_end),
+			#(val_add, ":total_wage", ":cur_wage"),
+			#(try_begin),
+				### TROOP EFFECT: PREREQ_DOPPELSOLDNER
+				#(call_script, "script_cf_ce_troop_has_ability", ":stack_troop", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
+				#(val_mul, ":cur_wage", 2),
+			#(try_end),
 			(val_add, ":total_wage", ":cur_wage"),
 		(try_end),
 		(try_begin),
@@ -3281,6 +1779,7 @@ scripts = [
 		
 		(assign, ":color_good", 14336), # Dark Green
 		(assign, ":color_bad", 4980736), # Dark Red
+		(assign, ":color_warning", 0x0AC2FF), # Blue
 		
 		## OBJ - TROOP IMAGE
 		(store_sub, ":pos_y_portrait", ":pos_y", 100),
@@ -3315,6 +1814,22 @@ scripts = [
 			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISHONORABLE),
 			(assign, ":color", gpu_dishonorable),
 			(str_store_string, s22, "@{s22} (Dishonorable)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISREPUTABLE),
+			(assign, ":color", gpu_disreputable),
+			(str_store_string, s22, "@{s22} (Disreputable)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE),
+			(assign, ":color", gpu_expensive),
+			(str_store_string, s22, "@{s22} (Expensive)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DOPPELSOLDNER),
+			(assign, ":color", gpu_expensive),
+			(str_store_string, s22, "@{s22} (Double wage)"),
+		(else_try),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_ELITE_MERCENARY),
+			(assign, ":color", gpu_elite_mercenary),
+			(str_store_string, s22, "@{s22} (Mercenary Chapterhouse)"),
 		(else_try),
 			(assign, ":color", gpu_black),
 		(try_end),
@@ -3352,33 +1867,43 @@ scripts = [
 		(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_1", ":pos_y_line_3", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		
+		## OBJ - WAGE
+		(call_script, "script_game_get_troop_wage", ":troop_no", "p_main_party"), # Returns weekly wage
+		(assign, reg21, reg0),
+		(store_sub, ":pos_y_line_4", ":pos_y_line_3", 20),
+		(call_script, "script_gpu_create_text_label", "str_hub_desc_wage", ":pos_x_col_1", ":pos_y_line_4", 0, gpu_left),
+		(call_script, "script_gpu_resize_object", 0, 75),
+
+		(store_skill_level, ":rating_power_strike", "skl_power_strike", ":troop_no"),
+		(val_mul, ":rating_power_strike", rating_multiplier_skill),
+		
 		## OBJ - ARMOR RATING
 		(call_script, "script_hub_troop_get_armor_rating", ":troop_no"), # Returns armor rating to reg1
 		(assign, reg21, reg1),
-		(store_sub, ":pos_y_line_4", ":pos_y_line_3", 20),
-		(call_script, "script_gpu_create_text_label", "str_hub_desc_armor_value", ":pos_x_col_1", ":pos_y_line_4", 0, gpu_left),
+		(store_sub, ":pos_y_line_5", ":pos_y_line_4", 20),
+		(call_script, "script_gpu_create_text_label", "str_hub_desc_armor_value", ":pos_x_col_1", ":pos_y_line_5", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		
 		(store_skill_level, ":rating_power_strike", "skl_power_strike", ":troop_no"),
 		(val_mul, ":rating_power_strike", rating_multiplier_skill),
 		
 		## OBJ - MELEE ATTACK RATING
-		(store_sub, ":pos_y_line_5", ":pos_y_line_4", 20),
+		(store_sub, ":pos_y_line_6", ":pos_y_line_5", 20),
 		(call_script, "script_hub_troop_get_melee_rating", ":troop_no"), # Returns melee rating to reg1
 		(assign, reg21, reg1),
-		(call_script, "script_gpu_create_text_label", "str_hub_desc_melee_value", ":pos_x_col_1", ":pos_y_line_5", 0, gpu_left),
+		(call_script, "script_gpu_create_text_label", "str_hub_desc_melee_value", ":pos_x_col_1", ":pos_y_line_6", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		
 		## OBJ - RANGED ATTACK RATING
 		(call_script, "script_hub_troop_get_ranged_rating", ":troop_no"), # Returns ranged rating to reg1
 		(assign, reg21, reg1),
-		(store_sub, ":pos_y_line_6", ":pos_y_line_5", 20),
+		(store_sub, ":pos_y_line_7", ":pos_y_line_6", 20),
 		(try_begin),
 			(ge, reg21, 1),
-			(call_script, "script_gpu_create_text_label", "str_hub_desc_ranged_value", ":pos_x_col_1", ":pos_y_line_6", 0, gpu_left),
+			(call_script, "script_gpu_create_text_label", "str_hub_desc_ranged_value", ":pos_x_col_1", ":pos_y_line_7", 0, gpu_left),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(else_try),
-			(call_script, "script_gpu_create_text_label", "str_hub_no_range", ":pos_x_col_1", ":pos_y_line_6", 0, gpu_left),
+			(call_script, "script_gpu_create_text_label", "str_hub_no_range", ":pos_x_col_1", ":pos_y_line_7", 0, gpu_left),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(try_end),
 		
@@ -3619,6 +2144,55 @@ scripts = [
 				(assign, ":disable_recruitment", 1),
 			(try_end),
 		(try_end),
+
+		## OBJ - REQUIREMENT - EXPENSIVE
+		(try_begin),
+			(assign, ":continue", 0),
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE), # combat_scripts.py - prereq constants in combat_constants.py
+				(assign, ":continue", 1),
+			(try_end),
+			(eq, ":continue", 1),
+			(val_sub, ":pos_y_temp", 20),
+			(str_store_string, s21, "@Double recruitment cost"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
+			(call_script, "script_gpu_resize_object", 0, 75),
+			(try_begin),
+				(overlay_set_color, reg1, ":color_warning"),
+			(try_end),
+		(try_end),
+		## OBJ - REQUIREMENT - DOPPELSOLDNER
+		(try_begin),
+			(assign, ":continue", 0),
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DOPPELSOLDNER), # combat_scripts.py - prereq constants in combat_constants.py
+				(assign, ":continue", 1),
+			(try_end),
+			(eq, ":continue", 1),
+			(val_sub, ":pos_y_temp", 20),
+			(str_store_string, s21, "@Double wage"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
+			(call_script, "script_gpu_resize_object", 0, 75),
+			(try_begin),
+				(overlay_set_color, reg1, ":color_warning"),
+			(try_end),
+		(try_end),
+		## OBJ - REQUIREMENT - DISREPUTABLE
+		(try_begin),
+			(assign, ":continue", 0),
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISREPUTABLE), # combat_scripts.py - prereq constants in combat_constants.py
+				(assign, ":continue", 1),
+			(try_end),
+			(eq, ":continue", 1),
+			(val_sub, ":pos_y_temp", 20),
+			(str_store_string, s21, "@Recruiting reduces honour"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y_temp", 0, gpu_left),
+			(call_script, "script_gpu_resize_object", 0, 75),
+			(try_begin),
+				(overlay_set_color, reg1, ":color_warning"),
+			(try_end),
+		(try_end),
 		
 		## BUTTON - RECRUIT TROOP
 		(store_sub, ":pos_y_button_1", ":pos_y", 35),
@@ -3818,6 +2392,12 @@ scripts = [
 			(store_mul, ":discount_cheap", ":rating_total", 40),
 			(val_div, ":discount_cheap", 100),
 			(val_sub, ":rating_total", ":discount_cheap"),
+		(try_end),
+
+		## EXPENSIVE TROOPS ## - Increase price by 100%
+		(try_begin),
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE),
+			(val_add, ":rating_total", ":rating_total"),
 		(try_end),
 		
 		(troop_set_slot, ":troop_no", slot_troop_purchase_cost, ":rating_total"),
@@ -4307,17 +2887,17 @@ scripts = [
 				(try_begin),
 					(ge, ":cavalry", 1),
 					(try_begin), ## UNIQUE - PRAVEN
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_praven_knight", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_praven_knight", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_knight", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_knight", ":lord_no", ":cavalry"),
 					(else_try), ## UNIQUE - DHIRIM
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_dhirim_captain", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_dhirim_captain", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_dhirim_captain", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_dhirim_captain", ":lord_no", ":cavalry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_man_at_arms", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_man_at_arms", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_man_at_arms", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_man_at_arms", ":lord_no", ":cavalry"),
 					(else_try), ## AFFILIATED - SWADIA
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_lancer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_lancer", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_lancer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_lancer", ":lord_no", ":cavalry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
@@ -4325,54 +2905,54 @@ scripts = [
 				(try_begin),
 					(ge, ":infantry", 1),
 					(try_begin), ## AFFILIATED - SWADIA
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_sergeant", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_sergeant", ":lord_no", ":infantry"),
-					(else_try), ## AFFILIATED - SWADIA
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_sentinel", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_sentinel", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_billman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_billman", ":lord_no", ":infantry"),
+					(else_try), 
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_militia", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_militia", ":lord_no", ":infantry"),
+					(else_try), 
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_footman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_footman", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_billman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_billman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_farmer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_farmer", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_footman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_footman", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_militia", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_militia", ":lord_no", ":infantry"),
-					(else_try), ## AFFILIATED - SWADIA
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_supplyman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_supplyman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_sentinel", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_sentinel", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_INFANTRY, ":infantry"),
 				(try_end),
 				# archers
 				(try_begin),
 					(ge, ":archers", 1),
-					(try_begin), ## UNIQUE - SUNO
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_suno_master_archer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_suno_master_archer", ":lord_no", ":archers"),
-					(else_try), ## UNIQUE - TILBAUT CASTLE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_tilbaut_archer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_tilbaut_archer", ":lord_no", ":archers"),
-					(else_try), ## MERCENARY - SWADIA
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_mercenary", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_mercenary", ":lord_no", ":archers"),
-					(else_try), ## AFFILIATED - SWADIA
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_hunter", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_hunter", ":lord_no", ":archers"),
+					(try_begin), 
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_sargeant", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_sargeant", ":lord_no", ":archers"),
+					(else_try), 
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_suno_master_archer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_suno_master_archer", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_crossbowman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_crossbowman", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_sharpshooter", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_sharpshooter", ":lord_no", ":archers"),
+					(else_try), 
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_crossbowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_crossbowman", ":lord_no", ":archers"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_hunter", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_hunter", ":lord_no", ":archers"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_supplyman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_supplyman", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),
 				# horse archers
 				(try_begin),
 					(ge, ":horse_archers", 1),
-					# (try_begin),
-						# (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_", ":lord_no"),
-						# (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_", ":lord_no", ":horse_archers"),
-					# (try_end),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_skirmisher", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_skirmisher", ":lord_no", ":horse_archers"),
+					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_HORSE_ARCHERS, ":horse_archers"),
 				(try_end),
 				
@@ -4383,14 +2963,11 @@ scripts = [
 				(try_begin),
 					(ge, ":cavalry", 1),
 					(try_begin), ## AFFILIATED - VAEGIRS
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_bogatyr", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_bogatyr", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_knight", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_knight", ":lord_no", ":cavalry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_cavalrycaptain", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_cavalrycaptain", ":lord_no", ":cavalry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_koursores", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_koursores", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_retainer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_retainer", ":lord_no", ":cavalry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
@@ -4398,20 +2975,17 @@ scripts = [
 				(try_begin),
 					(ge, ":infantry", 1),
 					(try_begin), ## AFFILIATED - VAEGIRS
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_vanguard", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_vanguard", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_sentry", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_sentry", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_peltast", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_peltast", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_militia", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_militia", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_psiloi", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_psiloi", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_spearman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_spearman", ":lord_no", ":infantry"),
 					(else_try), ## AFFILIATED - VAEGIRS
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_sentry", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_sentry", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_militia", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_militia", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_peasant", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_peasant", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_INFANTRY, ":infantry"),
 				(try_end),
@@ -4419,14 +2993,14 @@ scripts = [
 				(try_begin),
 					(ge, ":archers", 1),
 					(try_begin), ## AFFILIATED - VAEGIRS
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_marksman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_marksman", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_marksman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_marksman", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_longbowman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_longbowman", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_longbowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_longbowman", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_skirmisher", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_skirmisher", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_bowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_bowman", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),
@@ -4434,8 +3008,14 @@ scripts = [
 				(try_begin),
 					(ge, ":horse_archers", 1),
 					(try_begin),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_pecheneg", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_pecheneg", ":lord_no", ":horse_archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_druzhina", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_druzhina", ":lord_no", ":horse_archers"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_skirmisher", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_skirmisher", ":lord_no", ":horse_archers"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_outrider", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_outrider", ":lord_no", ":horse_archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_HORSE_ARCHERS, ":horse_archers"),
 				(try_end),
@@ -4447,26 +3027,14 @@ scripts = [
 				(try_begin),
 					(ge, ":cavalry", 1),
 					(try_begin),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_morici", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_morici", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_lancer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_lancer", ":lord_no", ":cavalry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_raider", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_raider", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_raider", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_raider", ":lord_no", ":cavalry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_lancer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_lancer", ":lord_no", ":cavalry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_narcarra", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_narcarra", ":lord_no", ":cavalry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_torguu", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_torguu", ":lord_no", ":cavalry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_noyan", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_noyan", ":lord_no", ":cavalry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_keshig", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_keshig", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_hunter", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_hunter", ":lord_no", ":cavalry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
@@ -4474,23 +3042,17 @@ scripts = [
 				(try_begin),
 					(ge, ":infantry", 1),
 					(try_begin),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_slave", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_slave", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_guard", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_guard", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_outcast", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_outcast", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_clansman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_clansman", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_shaman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_shaman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_shaman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_shaman", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_asud", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_asud", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_clansman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_clansman", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_noker", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_noker", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_outcast", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_outcast", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_INFANTRY, ":infantry"),
 				(try_end),
@@ -4498,11 +3060,11 @@ scripts = [
 				(try_begin),
 					(ge, ":archers", 1),
 					(try_begin),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_surcin", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_surcin", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_master_bowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_master_bowman", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_kharvaach", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_kharvaach", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_bowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_bowman", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),
@@ -4510,23 +3072,11 @@ scripts = [
 				(try_begin),
 					(ge, ":horse_archers", 1),
 					(try_begin),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_scout", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_scout", ":lord_no", ":horse_archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_skirmisher", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_skirmisher", ":lord_no", ":horse_archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_abaci", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_abaci", ":lord_no", ":horse_archers"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_orlok", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_orlok", ":lord_no", ":horse_archers"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_skirmisher", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_skirmisher", ":lord_no", ":horse_archers"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_parthian", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_parthian", ":lord_no", ":horse_archers"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_bahatur", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_bahatur", ":lord_no", ":horse_archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_khergit_scout", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_khergit_scout", ":lord_no", ":horse_archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_HORSE_ARCHERS, ":horse_archers"),
 				(try_end),
@@ -4538,14 +3088,11 @@ scripts = [
 				(try_begin),
 					(ge, ":cavalry", 1),
 					(try_begin), ## UNIQUE - C6
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_valkyrie", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_valkyrie", ":lord_no", ":cavalry"),
-					(else_try), ## UNIQUE - C5
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_thane", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_thane", ":lord_no", ":cavalry"),
-					(else_try), ## UNIQUE - C3
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_jelbegi_lancer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_jelbegi_lancer", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_lancer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_lancer", ":lord_no", ":infantry"),
+					(try_end),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_scout", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_scout", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
@@ -4553,35 +3100,32 @@ scripts = [
 				(try_begin),
 					(ge, ":infantry", 1),
 					(try_begin), ## AFFILIATED - T7
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_huscarl", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_huscarl", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_hirdman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_hirdman", ":lord_no", ":infantry"),
+					(try_begin), ## UNIQUE - T7
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_wercheg_guard", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_wercheg_guard", ":lord_no", ":infantry"),
 					(else_try), ## AFFILIATED - T6
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_godi", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_godi", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_hirdmadr", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_hirdmadr", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_godi", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_godi", ":lord_no", ":infantry"),
 					(else_try), ## AFFILIATED - T5
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_berserker", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_berserker", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_berserker", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_berserker", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_spearman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_spearman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_spearman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_spearman", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_retainer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_retainer", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_hired_blade", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_hired_blade", ":lord_no", ":infantry"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_retainer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_retainer", ":lord_no", ":infantry"),
 					(else_try), ## AFFILIATED - T3
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_skald", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_skald", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_skald", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_skald", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_shield_maiden", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_shield_maiden", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_peasant", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_peasant", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_bondsman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_bondsman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_farmhand", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_farmhand", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_INFANTRY, ":infantry"),
 				(try_end),
@@ -4589,20 +3133,17 @@ scripts = [
 				(try_begin),
 					(ge, ":archers", 1),
 					(try_begin), ## AFFILIATED - T4
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_scout", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_scout", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_tracker", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_tracker", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_skirmisher", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_skirmisher", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_skirmisher", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_skirmisher", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_retinue_archer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_retinue_archer", ":lord_no", ":archers"),
-					(else_try), ## UNIQUE - A2
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_maiden", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_maiden", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_bowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_bowman", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_hunter", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_hunter", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_retinue_archer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_retinue_archer", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),
@@ -4622,15 +3163,12 @@ scripts = [
 				# Cavalry
 				(try_begin),
 					(ge, ":cavalry", 1),
-					(try_begin), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_ergellon_lancer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_ergellon_lancer", ":lord_no", ":cavalry"),
-					(else_try), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_ranger", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_ranger", ":lord_no", ":cavalry"),
-					(else_try), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jamiche_border_guard", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jamiche_border_guard", ":lord_no", ":cavalry"),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_ranger", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_ranger", ":lord_no", ":cavalry"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_man_at_arms", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_man_at_arms", ":lord_no", ":cavalry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
@@ -4638,29 +3176,26 @@ scripts = [
 				(try_begin),
 					(ge, ":infantry", 1),
 					(try_begin), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_highland_pikeman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_highland_pikeman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_hedge_knight", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_hedge_knight", ":lord_no", ":infantry"),
 					(else_try), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_hedge_knight", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_hedge_knight", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_captain", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_captain", ":lord_no", ":infantry"),
 					(else_try), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_vanguard", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_vanguard", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_halberdier", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_halberdier", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_pikeman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_pikeman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_pikeman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_pikeman", ":lord_no", ":infantry"),
 					(else_try), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_grunwalder_voulgiers", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_grunwalder_voulgiers", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_vanguard", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_vanguard", ":lord_no", ":infantry"),
 					(else_try), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_veluca_pikeman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_veluca_pikeman", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_footman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_footman", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_trained_militia", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_trained_militia", ":lord_no", ":infantry"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_militia", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_militia", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_militia", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_militia", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_INFANTRY, ":infantry"),
 				(try_end),
@@ -4668,33 +3203,30 @@ scripts = [
 				(try_begin),
 					(ge, ":archers", 1),
 					(try_begin), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_siege_breaker", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_siege_breaker", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_siege_breaker", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_siege_breaker", ":lord_no", ":archers"),
 					(else_try), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jelkalen_balister", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jelkalen_balister", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_siege_commander", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_siege_commander", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_arbalestier", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_arbalestier", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_crossbowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_crossbowman", ":lord_no", ":archers"),
 					(else_try), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_yaleni_dyoken", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_yaleni_dyoken", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_scout", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_scout", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_crossbowman", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_crossbowman", ":lord_no", ":archers"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_militia_archer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_militia_archer", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_militia_archer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_militia_archer", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),
 				# horse archers
 				(try_begin),
 					(ge, ":horse_archers", 1),
-					# (try_begin),
-						# (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_", ":lord_no"),
-						# (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_", ":lord_no", ":horse_archers"),
-					# (try_end),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_rhodok_ranger", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_rhodok_ranger", ":lord_no", ":horse_archers"),
+					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_HORSE_ARCHERS, ":horse_archers"),
 				(try_end),
 				
@@ -4704,72 +3236,60 @@ scripts = [
 				# Cavalry
 				(try_begin),
 					(ge, ":cavalry", 1),
-					(try_begin), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_sipahi", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_sipahi", ":lord_no", ":cavalry"),
-					(else_try),  ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_boluk_bashi", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_boluk_bashi", ":lord_no", ":cavalry"),
-					(else_try),  ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_bariyye_raider", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_bariyye_raider", ":lord_no", ":cavalry"),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_mamluke", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_mamluke", ":lord_no", ":cavalry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_timariot", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_timariot", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_lancer", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_lancer", ":lord_no", ":cavalry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_musellem", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_musellem", ":lord_no", ":cavalry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_manhunter", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_manhunter", ":lord_no", ":cavalry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_CAVALRY, ":cavalry"),
 				(try_end),
 				# infantry
 				(try_begin),
 					(ge, ":infantry", 1),
-					(try_begin), ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sultan_guard", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sultan_guard", ":lord_no", ":infantry"),
-					(else_try),  ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_bashibozuk", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_bashibozuk", ":lord_no", ":infantry"),
-					(else_try),  ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_durquba_javelineer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_durquba_javelineer", ":lord_no", ":infantry"),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_guard", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_guard", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_yaya", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_yaya", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_swordsman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_swordsman", ":lord_no", ":infantry"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_kul", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_kul", ":lord_no", ":infantry"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_spearman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_spearman", ":lord_no", ":infantry"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_slave", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_slave", ":lord_no", ":infantry"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_INFANTRY, ":infantry"),
 				(try_end),
 				# archers
 				(try_begin),
 					(ge, ":archers", 1),
-					(try_begin), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_corbaci", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_corbaci", ":lord_no", ":archers"),
-					(else_try),  ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no", ":archers"),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_skirmisher", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_skirmisher", ":lord_no", ":archers"),
 					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_janissary", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_janissary", ":lord_no", ":archers"),
-					(else_try),
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_azab", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_azab", ":lord_no", ":archers"),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_bowman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_bowman", ":lord_no", ":archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_ARCHERS, ":archers"),
 				(try_end),
 				# horse archers
 				(try_begin),
 					(ge, ":horse_archers", 1),
-					(try_begin), ## AFFILIATED
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sarranid_garip", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sarranid_garip", ":lord_no", ":horse_archers"),
-					(else_try),  ## UNIQUE
-						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no"),
-						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no", ":horse_archers"),
+					(try_begin),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_sipahi", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_sipahi", ":lord_no", ":horse_archers"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_horseman", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_horseman", ":lord_no", ":horse_archers"),
+					(else_try),
+						(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_sarranid_raider", ":lord_no"),
+						(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_sarranid_raider", ":lord_no", ":horse_archers"),
 					(try_end),
 					(call_script, "script_hub_ai_lord_considers_mercenaries", ":lord_no", ":center_no", AI_RECRUIT_HORSE_ARCHERS, ":horse_archers"),
 				(try_end),
@@ -4854,10 +3374,10 @@ scripts = [
 			(assign, ":cavalry",      35),
 		(else_try),
 			(eq, ":faction_no", "fac_kingdom_1"), # Swadia
-			(assign, ":infantry",     35),
-			(assign, ":archers",      30),
+			(assign, ":infantry",     33),
+			(assign, ":archers",      34),
 			(assign, ":horse_archers", 0),
-			(assign, ":cavalry",      35),
+			(assign, ":cavalry",      33),
 		(else_try),
 			(eq, ":faction_no", "fac_kingdom_2"), # Vaegirs
 			(assign, ":infantry",     35),
@@ -4872,8 +3392,8 @@ scripts = [
 			(assign, ":cavalry",      40),
 		(else_try),
 			(eq, ":faction_no", "fac_kingdom_4"), # Nords
-			(assign, ":infantry",     65),
-			(assign, ":archers",      35),
+			(assign, ":infantry",     55),
+			(assign, ":archers",      45),
 			(assign, ":horse_archers", 0),
 			(assign, ":cavalry",       0),
 		(else_try),
@@ -4884,10 +3404,10 @@ scripts = [
 			(assign, ":cavalry",       0),
 		(else_try),
 			(eq, ":faction_no", "fac_kingdom_6"), # Sarranid
-			(assign, ":infantry",     25),
-			(assign, ":archers",      25),
-			(assign, ":horse_archers",20),
-			(assign, ":cavalry",      30),
+			(assign, ":infantry",     0),
+			(assign, ":archers",      20),
+			(assign, ":horse_archers",30),
+			(assign, ":cavalry",      50),
 		(try_end),
 		
 		(try_begin),
@@ -5079,14 +3599,14 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
 				(try_begin), ## AFFILIATED - RHODOK
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_ranger", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_ranger", ":lord_no", ":quantity"),
-				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_cavalry", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_cavalry", ":lord_no", ":quantity"),
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_horseman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_horseman", ":lord_no", ":quantity"),
+				(else_try),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_retainer", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_retainer", ":lord_no", ":quantity"),
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_caravan_guard", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_caravan_guard", ":lord_no", ":quantity"),
@@ -5098,23 +3618,20 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_INFANTRY),
 				(ge, ":quantity", 1),
 				(try_begin), ## NON-AFFILIATED - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_varangian_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_varangian_guard", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_wercheg_guard", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_wercheg_guard", ":lord_no", ":quantity"),
 				(else_try),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_hired_blade", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_hired_blade", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_hired_blade", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_hired_blade", ":lord_no", ":quantity"),
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_swordsman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_swordsman", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED - SWADIA (Primarily an archer, but has strong melee traits and decent armor)
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_mercenary", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_mercenary", ":lord_no", ":quantity"),
 				(else_try), ## NON-AFFILIATED - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_jomsviking", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_jomsviking", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED / BANDIT - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_raider", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_raider", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_retainer", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_retainer", ":lord_no", ":quantity"),
+				(else_try),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_vaegir_spearman", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_vaegir_spearman", ":lord_no", ":quantity"),
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_watchman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_watchman", ":lord_no", ":quantity"),
@@ -5125,13 +3642,7 @@ scripts = [
 			(try_begin),
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
-				(try_begin), ## NON-AFFILIATED - SWADIA
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_mercenary", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_mercenary", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_varangian_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_varangian_archer", ":lord_no", ":quantity"),
-				(else_try),
+				(try_begin),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_crossbowman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_crossbowman", ":lord_no", ":quantity"),
 				(try_end),
@@ -5141,9 +3652,9 @@ scripts = [
 			(try_begin),
 				(eq, ":type", AI_RECRUIT_HORSE_ARCHERS),
 				(ge, ":quantity", 1),
-				(try_begin), ## AFFILIATED - RHODOK
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_ranger", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_ranger", ":lord_no", ":quantity"),
+				(try_begin),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_skirmisher", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_skirmisher", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 
@@ -5172,47 +3683,20 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
 				(try_begin), # SWADIA - C7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_praven_knight", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_praven_knight", ":lord_no", ":quantity"),
-				(else_try),  # KHERGIT - C7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_keshig", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_keshig", ":lord_no", ":quantity"),
-				(else_try),  # NORD - C6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_valkyrie", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_valkyrie", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_swadian_knight", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_swadian_knight", ":lord_no", ":quantity"),
+				(else_try),  # NORD - C4
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_nord_lancer", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_nord_lancer", ":lord_no", ":quantity"),
 				(else_try),  # SWADIA - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_dhirim_captain", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_dhirim_captain", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_dhirim_captain", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_dhirim_captain", ":lord_no", ":quantity"),
 				(else_try),  # VAEGIR - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_boyars_druzhina", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_boyars_druzhina", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_cataphract", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_cataphract", ":lord_no", ":quantity"),
-				(else_try),  # NORD - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_thane", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_thane", ":lord_no", ":quantity"),
-				(else_try),  # KHERGIT - C4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_narcarra", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_narcarra", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_reyvadin_cataphract", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_reyvadin_cataphract", ":lord_no", ":quantity"),
 				(else_try),  # SARRANID - C4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_bariyye_raider", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_bariyye_raider", ":lord_no", ":quantity"),
-				(else_try),  # SWADIA - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_uxkhal_bandit", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_uxkhal_bandit", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_scout", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_scout", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_ergellon_lancer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_ergellon_lancer", ":lord_no", ":quantity"),
-				(else_try),  # NORD - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_jelbegi_lancer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_jelbegi_lancer", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - H3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jamiche_border_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jamiche_border_guard", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_durquba_slave_master", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_durquba_slave_master", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -5221,32 +3705,14 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_INFANTRY),
 				(ge, ":quantity", 1),
 				(try_begin), # SARRANID - I7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sultan_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sultan_guard", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - I6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_veluca_pikeman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_veluca_pikeman", ":lord_no", ":quantity"),
-				(else_try),  # KHERGIT - I6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_noker", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_noker", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - I4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_grunwalder_voulgiers", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_grunwalder_voulgiers", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_wercheg_guard", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_wercheg_guard", ":lord_no", ":quantity"),
 				(else_try),  # SARRANID - I4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_durquba_javelineer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_durquba_javelineer", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_jameyyed_voulgier", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_jameyyed_voulgier", ":lord_no", ":quantity"),
 				(else_try),  # VAEGIR - I4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_varagian", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_varagian", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - I3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_curaw_guardsman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_curaw_guardsman", ":lord_no", ":quantity"),
-				(else_try),  # NORD - I3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_maiden", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_maiden", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - I3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_yaleni_dyoken", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_yaleni_dyoken", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_curaw_guardsman", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_curaw_guardsman", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -5255,17 +3721,11 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin), # SWADIA - A6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_suno_master_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_suno_master_archer", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - A5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jelkalen_balister", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jelkalen_balister", ":lord_no", ":quantity"),
-				(else_try),  # SWADIA - A5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_tilbaut_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_tilbaut_archer", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_suno_master_archer", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_suno_master_archer", ":lord_no", ":quantity"),
 				(else_try),  # SARRANID - A4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_shariz_siegemaster", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_shariz_siegemaster", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -5273,18 +3733,9 @@ scripts = [
 			(try_begin),
 				(eq, ":type", AI_RECRUIT_HORSE_ARCHERS),
 				(ge, ":quantity", 1),
-				(try_begin), # KHERGIT - H4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_orlok", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_orlok", ":lord_no", ":quantity"),
-				(else_try),  # SARRANID - H4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - H3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jamiche_border_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jamiche_border_guard", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - H2
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_khudan_mounted_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_khudan_mounted_archer", ":lord_no", ":quantity"),
+				(try_begin),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_new_huntsman_of_khudan", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_new_huntsman_of_khudan", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 
@@ -5442,6 +3893,23 @@ scripts = [
 				(val_add, ":stable_capacity", ":stable_bonus"),
 			(try_end),
 			
+			## Modify production based on difficulty ##
+			(try_begin),
+				(eq, "$mod_difficulty", GAME_MODE_EASY), ## 4/3 production
+				(store_div, ":stable_modifier", ":stable_growth", 3),
+				(val_add, ":stable_growth", ":stable_modifier"),
+			(else_try),
+				(eq, "$mod_difficulty", GAME_MODE_HARD), ## 2/3 production
+				(store_div, ":stable_modifier", ":stable_growth", 3),
+				(val_sub, ":stable_growth", ":stable_modifier"),
+			(else_try),
+				(eq, "$mod_difficulty", GAME_MODE_VERY_HARD), ## 1/3 production
+				(store_div, ":stable_modifier", ":stable_growth", 6),
+				(val_sub, ":stable_growth", ":stable_modifier"),
+			(try_end),
+
+				
+			
 			## PRODUCE NEW MOUNTS (player)
 			(party_get_slot, ":available_mounts", ":center_no", slot_center_horse_pool_player),
 			(val_add, ":available_mounts", ":stable_growth"),
@@ -5569,157 +4037,47 @@ scripts = [
 			(str_store_party_name, s21, ":center_no"),
 			
 			(try_begin),
-				## DURQUBA JAVELINEER
-				(eq, ":troop_no", "trp_r_durquba_javelineer"),
-				(str_store_string, s22, "@{s21} Javelineer"),
-				(str_store_string, s23, "@{s21} Javelineers"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			## v0.21 UNIQUE TROOPS BEGIN ##
-			(else_try),
-				## UXKHAL BANDIT
-				(eq, ":troop_no", "trp_r_uxkhal_bandit"),
-				(str_store_string, s22, "@{s21} Bandit"),
-				(str_store_string, s23, "@{s21} Bandits"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## TILBAUT ARCHER
-				(eq, ":troop_no", "trp_r_tilbaut_archer"),
-				(str_store_string, s22, "@{s21} Archer"),
-				(str_store_string, s23, "@{s21} Archers"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
 				## DHIRIM CAPTAIN
-				(eq, ":troop_no", "trp_r_dhirim_captain"),
+				(eq, ":troop_no", "trp_new_dhirim_captain"),
 				(str_store_string, s22, "@{s21} Captain"),
 				(str_store_string, s23, "@{s21} Captains"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
 				## SUNO MASTER ARCHER
-				(eq, ":troop_no", "trp_r_suno_master_archer"),
+				(eq, ":troop_no", "trp_new_suno_master_archer"),
 				(str_store_string, s22, "@{s21} Master Archer"),
 				(str_store_string, s23, "@{s21} Master Archers"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
 				## PRAVEN KNIGHT
-				(eq, ":troop_no", "trp_r_praven_knight"),
-				(str_store_string, s22, "@{s21} Knight"),
-				(str_store_string, s23, "@{s21} Knights"),
+				(eq, ":troop_no", "trp_new_swadian_knight"),
+				(str_store_string, s22, "@Swadian Knight"),
+				(str_store_string, s23, "@Swadian Knights"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## ERGELLON LANCER
-				(eq, ":troop_no", "trp_ergellon_lancer"),
-				(str_store_string, s22, "@{s21} Lancer"),
-				(str_store_string, s23, "@{s21} Lancers"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## YALENI DYOKEN
-				(eq, ":troop_no", "trp_yaleni_dyoken"),
-				(str_store_string, s22, "@{s21} Dyoken"),
-				(str_store_string, s23, "@{s21} Dyoken"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## JELKALEN BALISTER
-				(eq, ":troop_no", "trp_jelkalen_balister"),
-				(str_store_string, s22, "@{s21} Balister"),
-				(str_store_string, s23, "@{s21} Balisters"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## JAMICHE BORDER GUARD
-				(eq, ":troop_no", "trp_jamiche_border_guard"),
-				(str_store_string, s22, "@{s21} Border Guard"),
-				(str_store_string, s23, "@{s21} Border Guards"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## VELUCA PIKEMEN
-				(eq, ":troop_no", "trp_veluca_pikeman"),
-				(str_store_string, s22, "@{s21} Pikeman"),
-				(str_store_string, s23, "@{s21} Pikemen"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
-				## GRUNWALDER VOULGIERS
-				(eq, ":troop_no", "trp_grunwalder_voulgiers"),
-				(str_store_string, s22, "@{s21} Voulgier"),
-				(str_store_string, s23, "@{s21} Voulgiers"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			## v0.21 UNIQUE TROOPS END ##
-			## v0.23 UNIQUE TROOPS BEGIN ##
 			(else_try),
 				## CURAW GUARDSMAN
-				(eq, ":troop_no", "trp_curaw_guardsman"),
+				(eq, ":troop_no", "trp_new_curaw_guardsman"),
 				(str_store_string, s22, "@{s21} Guardsman"),
 				(str_store_string, s23, "@{s21} Guardsmen"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
-				## JEIRBE SELLSWORD
-				(eq, ":troop_no", "trp_r_vaegir_varagian"),
-				(str_store_string, s22, "@{s21} Sellsword"),
-				(str_store_string, s23, "@{s21} Sellswords"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
 				## HUNTSMEN OF KHUDAN
-				(eq, ":troop_no", "trp_khudan_mounted_archer"),
+				(eq, ":troop_no", "trp_new_huntsman_of_khudan"),
 				(str_store_string, s22, "@Huntsman of {s21}"),
 				(str_store_string, s23, "@Huntsmen of {s21}"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
-				## OUTRIDER OF NELAG
-				(eq, ":troop_no", "trp_r_vaegir_scout"),
-				(str_store_string, s22, "@Outrider of {s21}"),
-				(str_store_string, s23, "@Outrider of {s21}"),
-				(troop_set_name, ":troop_no", s22),
-				(troop_set_plural_name, ":troop_no", s23),
-			(else_try),
 				## DRUZHINA OF REYVADIN
-				(eq, ":troop_no", "trp_boyars_druzhina"),
-				(str_store_string, s22, "@Druzhina of {s21}"),
-				(str_store_string, s23, "@Druzhina of {s21}"),
+				(eq, ":troop_no", "trp_new_reyvadin_cataphract"),
+				(str_store_string, s22, "@{s21} Cataphract"),
+				(str_store_string, s23, "@{s21} Cataphracts"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
-			## v0.23 UNIQUE TROOPS END ##
-			## v0.24 UNIQUE TROOPS BEGIN ##
-			#(else_try),
-				### MAIDEN OF ADELEN
-				#(eq, ":troop_no", "trp_r_nord_maiden"),
-				#(str_store_string, s22, "@Maiden of {s21}"),
-				#(str_store_string, s23, "@Maidens of {s21}"),
-				#(troop_set_name, ":troop_no", s22),
-				#(troop_set_plural_name, ":troop_no", s23),
-			#(else_try),
-				### JELBEGI LANCER
-				#(eq, ":troop_no", "trp_r_nord_jelbegi_lancer"),
-				#(str_store_string, s22, "@{s21} Lancer"),
-				#(str_store_string, s23, "@{s21} Lancers"),
-				#(troop_set_name, ":troop_no", s22),
-				#(troop_set_plural_name, ":troop_no", s23),
-			#(else_try),
-				### THANE OF SARGOTH
-				#(eq, ":troop_no", "trp_r_nord_thane"),
-				#(str_store_string, s22, "@Thane of {s21}"),
-				#(str_store_string, s23, "@Thanes of {s21}"),
-				#(troop_set_name, ":troop_no", s22),
-				#(troop_set_plural_name, ":troop_no", s23),
-			#(else_try),
-				### VALKYRIE OF TIHR
-				#(eq, ":troop_no", "trp_r_nord_valkyrie"),
-				#(str_store_string, s22, "@Valkyrie of {s21}"),
-				#(str_store_string, s23, "@Valkyries of {s21}"),
-				#(troop_set_name, ":troop_no", s22),
-				#(troop_set_plural_name, ":troop_no", s23),
 			(else_try),
 				(eq, ":troop_no", "trp_new_nord_lancer"),
 				(str_store_string, s22, "@Nord Lancer"),
@@ -5732,9 +4090,6 @@ scripts = [
 				(str_store_string, s23, "@{s21} Guards"),
 				(troop_set_name, ":troop_no", s22),
 				(troop_set_plural_name, ":troop_no", s23),
-			## v0.24 UNIQUE TROOPS END ##
-			## v0.26 UNIQUE TROOPS BEGIN ##
-			## v0.26 UNIQUE TROOPS END ##
 			(try_end),
 			
 		(else_try),

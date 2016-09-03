@@ -37,7 +37,7 @@ scripts = [
 		## NPC4 - Rolf
 		(assign, ":troop_no", "trp_npc4"),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_1, BONUS_HARDY),
-		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_ENDURANCE),
+		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SERGEANT),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_3, BONUS_COMMANDING_PRESENCE),
 		## NPC5 - Baheshtur
 		(assign, ":troop_no", "trp_npc5"),
@@ -57,7 +57,7 @@ scripts = [
 		## NPC8 - Matheld
 		(assign, ":troop_no", "trp_npc8"),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_1, BONUS_BERSERKER),
-		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_BOUNDLESS_ENDURANCE),
+		(troop_set_slot, ":troop_no", slot_troop_requirement_2, BONUS_DRILL_SERGEANT),
 		(troop_set_slot, ":troop_no", slot_troop_requirement_3, BONUS_BLOODLUST),
 		## NPC9 - Alayen
 		(assign, ":troop_no", "trp_npc9"),
@@ -466,6 +466,15 @@ scripts = [
 		(else_try),
 			(eq, ":prereq", PREREQ_LIEGE_RELATION),
 			(str_store_string, s31, "@LIEGE RELATION"),
+		(else_try),
+			(eq, ":prereq", PREREQ_DISREPUTABLE),
+			(str_store_string, s31, "@DISREPUTABLE"),
+		(else_try),
+			(eq, ":prereq", PREREQ_EXPENSIVE),
+			(str_store_string, s31, "@EXPENSIVE"),
+		(else_try),
+			(eq, ":prereq", PREREQ_DOPPELSOLDNER),
+			(str_store_string, s31, "@DOPPELSOLDNER"),
 		(else_try), 
 			### DEFAULT RESPONSE ###
 			(str_store_string, s31, "@UNDEFINED"),
@@ -531,7 +540,8 @@ scripts = [
 									^^Effect #1:\
 									^You increase the morale of your party \
 									^members by +2 for every point of the \
-									^Leadership skill that you possess."),
+									^Leadership skill that you possess. \
+									^Bonus can not exceed +25 morale"),
 		(else_try),
 			(eq, ":ability", BONUS_TAX_COLLECTOR),
 			(str_store_string, s31, "@TAX_COLLECTOR"),
@@ -621,17 +631,12 @@ scripts = [
 			(str_store_string, s1, "@This {s2} flies into a frenzy gaining additional health during combat based on the Ironflesh skill."),
 			(str_store_string, s32, "@Type: Personal Combat\
 									^^Effect #1:\
-									^You gain an +X% health for each rank of\
-									^Ironflesh upon entering combat due to your\
+									^You gain an +X% health for each point of\
+									^Strenght upon entering combat due to your\
 									^frenzied state.  While under the effects of\
 									^this ability you cannot receive any benefits\
 									^from the Volley Commander, Tactician or\
-									^Sharpshooter effects from nearby allies.\
-									^^X% is based upon your mod difficulty setting:\
-									^ * +7% / rank in Easy\
-									^ * +5% / rank in Normal\
-									^ * +4% / rank in Hard\
-									^ * +3% / rank in Very Hard"),
+									^Sharpshooter effects from nearby allies.\ "),
 		(else_try),
 			(eq, ":ability", BONUS_BOUNDLESS_ENDURANCE),
 			(str_store_string, s31, "@BOUNDLESS_ENDURANCE"),
@@ -969,8 +974,8 @@ scripts = [
 			(str_store_string, s1, "@This {s2} has learned to ignore minor wounds through mental discipline."),
 			(str_store_string, s32, "@Type: Boost\
 									^^Effect #1:\
-									^Combat health is increased by 1 for every\
-									^2 points of intelligence you have above 8.\
+									^Combat health is increased by 2 for every\
+									^3 points of intelligence you have.\
 									^This effect cannot combine with the health\
 									^granted by the Berserker ability.\
 									^^Effect #2:\
@@ -979,8 +984,7 @@ scripts = [
 									^When calculating penalties your health is\
 									^considered as 20% higher than it actually is.\
 									^^Synergy Bonus: (Fortitude)\
-									^The minimum requirement of 8 intelligence is\
-									^removed."),
+									^Bonus health is increased by 20%\ "),
 		
 		(else_try),
 			(eq, ":ability", BONUS_STEADY_AIM),
@@ -1114,6 +1118,25 @@ scripts = [
 									^^Synergy (Inspiring):\
 									^Your courage boosting effect is increased by +30%.\
 									^^Note: ^This applies to all ranged weapons."),
+
+		(else_try),
+			(eq, ":ability", BONUS_DRILL_SERGEANT),
+			(str_store_string, s31, "@DRILL SARGEANT"),
+			(str_store_string, s1, "@This {s2} increases friendly troop health on expense of morale"),
+			(str_store_string, s32, "@Type: Personal Combat\
+									^^Effect #1:\
+									^This ability reduces morale by 5 minus\
+									^0.5/leadership point in tradeoff for\
+									^0.20 health/strenght for all troops in party\
+									^^Synergy (Inspiring):\
+									^Morale is reduced by 5 minus 1/leadership point."),
+		(else_try),
+			(eq, ":ability", BONUS_FIELD_SURGEON), 
+			(str_store_string, s31, "@FIELD SURGEON"),
+			(str_store_string, s1, "@This {s2} increases probability of troop surviving a death blow."),
+			(str_store_string, s32, "@Type: Party Benefit\
+									^^Effect #1:\
+									^Your surgery skill is enhanced by 2.\ "),
 		
 		(else_try), 
 			### DEFAULT RESPONSE ### 
@@ -1268,35 +1291,105 @@ scripts = [
 		
 		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
 		(assign, ":troop_count", 0),
-		(assign, ":inspiring_bonus", 0),
-		(assign, reg2, 0), # Value not clamped.
+		(assign, ":inspiring_bonus_party", 0),
+		(assign, reg2, 0), # Value was not clamped.
 		(try_for_range, ":stack_no", 0, ":num_stacks"),
 			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
 			## TROOP EFFECT: BONUS_INSPIRING
+			(assign, ":inspiring_bonus_stack", 0),
 			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
 			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_INSPIRING),
 			(val_add, ":troop_count", ":stack_size"),
-			(assign, ":inspiring_effect", 2),
+			(val_add, ":inspiring_bonus_stack", ":stack_size"),
+			(val_mul, ":inspiring_bonus_stack", 2), ## 2 morale per troop
 			(try_begin),
 				## COMPANIONS
 				(is_between, ":troop_no", companions_begin, companions_end),
-				(store_skill_level, ":inspiring_effect", "skl_leadership", ":troop_no"),
+				(store_skill_level, ":inspiring_bonus_hero", "skl_leadership", ":troop_no"),
 			(else_try),
 				## NON-COMPANION HEROES (Player, Lords)
 				(troop_is_hero, ":troop_no"),
-				(store_skill_level, ":inspiring_effect", "skl_leadership", ":troop_no"),
-				(val_mul, ":inspiring_effect", 2),
+				(store_skill_level, ":inspiring_bonus_hero", "skl_leadership", ":troop_no"),
+				(val_mul, ":inspiring_bonus_hero", 2),
+				(val_add, ":inspiring_bonus_stack", ":inspiring_bonus_hero"),
 			(try_end),
-			(val_add, ":inspiring_bonus", ":inspiring_effect"),
+			(val_add, ":inspiring_bonus_party", ":inspiring_bonus_stack"),
 		(try_end),
+		
 		(try_begin),
-			(neg|is_between, ":inspiring_effect", 1, 26),
+			(neg|is_between, ":inspiring_bonus_party", 1, 26),
 			(assign, reg2, 1),
 		(try_end),
-		(val_clamp, ":inspiring_effect", 0, 26),
-		(assign, reg0, ":inspiring_bonus"),
+		(val_clamp, ":inspiring_bonus_party", 0, 26),
+		(assign, reg0, ":inspiring_bonus_party"),
 		(assign, reg1, ":troop_count"),
 		(assign, "$morale_modifier_inspiring", reg0),
+	]),
+
+# script_ce_drill_sargeant_get_party_penalty
+# EXAMPLE: (call_script, "script_ce_inspiring_get_party_bonus", ":party_no"), # combat_scripts.py - prereq constants in combat_constants.py
+("ce_drill_sargeant_get_party_penalty",
+	[
+		(store_script_param, ":party_no", 1),
+		(try_begin),
+			(lt, ":party_no", 1),
+			(assign, ":party_no", "p_main_party"),
+		(try_end),
+		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
+		(assign, ":troop_count", 0),
+		(assign, ":drill_sargeant_penalty_party", 0),
+		(try_for_range, ":stack_no", 0, ":num_stacks"),
+			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
+			## TROOP EFFECT: BONUS_DRILL_SERGEANT
+			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SERGEANT),
+			(assign, ":drill_sargeant_penalty_stack", 5),
+			(val_add, ":troop_count", ":stack_size"),
+			#(val_mul, ":drill_sargeant_penalty", ":stack_size"),
+			## Substract leadership bonus
+			(try_begin),
+				(store_skill_level, ":leadership_bonus", "skl_leadership", ":troop_no"),
+				(try_begin),
+					(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_INSPIRING), ## SYNERGY: INSPIRING - double leadership bonus
+				(else_try),
+					(val_div, ":leadership_bonus", 2),
+				(try_end),
+			(try_end),
+			(val_sub, ":drill_sargeant_penalty_stack", ":leadership_bonus"),
+			(val_mul, ":drill_sargeant_penalty_stack", ":stack_size"),
+			(val_add, ":drill_sargeant_penalty_party", ":drill_sargeant_penalty_stack"),
+		(try_end),
+		(try_begin),
+			(neg|is_between, ":drill_sargeant_penalty_party", 1, 26),
+			(assign, reg2, 1), ## Value clamped
+		(try_end),
+		(assign, reg0, ":drill_sargeant_penalty_party"),
+		(assign, reg1, ":troop_count"),
+		(assign, "$morale_modifier_drill_sargeant", reg0),
+	]),
+	
+# script_ce_drill_sargeant_get_party_bonus
+# EXAMPLE: (call_script, "script_ce_drill_sargeant_get_party_bonus", ":party_no"), # combat_scripts.py - prereq constants in combat_constants.py
+("ce_drill_sargeant_get_party_bonus",
+	[
+		(store_script_param, ":party_no", 1),
+		(try_begin),
+			(lt, ":party_no", 1),
+			(assign, ":party_no", "p_main_party"),
+		(try_end),
+		(party_get_num_companion_stacks, ":num_stacks",":party_no"),
+		(assign, ":drill_sargeant_bonus_party", 0),
+		(try_for_range, ":stack_no", 0, ":num_stacks"),
+			(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
+			## TROOP EFFECT: BONUS_DRILL_SERGEANT
+			(party_stack_get_troop_id, ":troop_no", ":party_no", ":stack_no"),
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DRILL_SERGEANT),
+			(store_attribute_level, ":drill_sargeant_bonus_stack", ":troop_no", ca_strength),
+			(val_div, ":drill_sargeant_bonus_stack", 5),
+			(val_mul, ":drill_sargeant_bonus_stack", ":stack_size"),
+			(val_add, ":drill_sargeant_bonus_party", ":drill_sargeant_bonus_stack"),
+		(try_end),
+		(assign, reg0, ":drill_sargeant_bonus_party"),
 	]),
 	
 # script_ce_storyteller_get_party_bonus
@@ -1848,54 +1941,46 @@ scripts = [
 		(eq, ":continue", 1),
 	]),
 	
-# script_cf_ce_troop_has_ability
+# script_ce_troop_get_bonus_health
 # EXAMPLE: (call_script, "script_ce_troop_get_bonus_health", ":troop_no"), # combat_scripts.py - ability constants in combat_constants.py
 ("ce_troop_get_bonus_health",
     [
 		(store_script_param, ":troop_no", 1),
+		(store_script_param, ":party_id", 2),
 		
 		(assign, ":extra_health", 0),
+		
 		(try_begin),
 			(eq, "$enable_combat_abilities", 1),
+			(call_script, "script_ce_drill_sargeant_get_party_bonus", ":party_id"),
+			(val_add, ":extra_health", reg0),
 			(try_begin),
 				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_BERSERKER),
-				(store_skill_level, ":extra_health", "skl_ironflesh", ":troop_no"),
-				(try_begin),
-					(neq, ":troop_no", "trp_player"),
-					(neg|is_between, ":troop_no", companions_begin, companions_end),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_EASY),
-				(else_try),
-					(eq, "$mod_difficulty", GAME_MODE_EASY),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_EASY),
-				(else_try),
-					(eq, "$mod_difficulty", GAME_MODE_HARD),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_HARD),
-				(else_try),
-					(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_VERY_HARD),
-				(else_try),
-					(assign, ":difficulty_constant", BERSERKER_BONUS_NORMAL),
-				(try_end),
-				(val_mul, ":extra_health", ":difficulty_constant"),
+				(store_attribute_level, ":health_modifier", ":troop_no", ca_strength),
+				(store_troop_health, ":extra_health", ":troop_no", 1),
+				(val_mul, ":extra_health", ":health_modifier"),
+				(val_div, ":extra_health", 100),
 			(else_try),
 				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_DISCIPLINED),
 				(store_attribute_level, ":extra_health", ":troop_no", ca_intelligence),
-				## TROOP SYNERGY EFFECT: BONUS_FORTITUDE (+8 INT)
+				(val_div, ":extra_health", 3),
+				(val_mul, ":extra_health", 2),
+				(val_max, ":extra_health", 0),
 				(try_begin),
 					(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_FORTITUDE),
-				(else_try),
-					(val_sub, ":extra_health", 8),
+					(val_mul, ":extra_health", 1.20),
+				#(else_try),
+					#(val_sub, ":extra_health", 8),
 				(try_end),
-				(val_div, ":extra_health", 2),
-				(val_max, ":extra_health", 0),
 			(try_end),
 		(try_end),
 		(assign, reg1, ":extra_health"),
-		# (try_begin),
-			# (eq, ":troop_no", "trp_player"),
-			# (str_store_troop_name, s31, "trp_player"),
-			# (display_message, "@DEBUG (CE): {s31}'s health bonus is {reg1}.", gpu_debug),
-		# (try_end),
+		 (try_begin),
+			 (ge, "$debug_mode", 1),
+			 (eq, ":troop_no", "trp_player"),
+			 (str_store_troop_name, s31, "trp_player"),
+			 (display_message, "@DEBUG (CE): {s31}'s health bonus is {reg1}.", gpu_debug),
+		 (try_end),
 	]),
 	
 # script_ce_reset_agent_max_health

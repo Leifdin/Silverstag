@@ -85,6 +85,7 @@ game_menus = [
 			(troop_set_type, "trp_player", 0),
 			(assign, "$show_autoloot_data", 1),
 			(assign, "$cheat_mode", 1),
+			(assign, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			(call_script, "script_hub_initialize"), # hub_scripts.py
 			(change_screen_map),
 			(party_relocate_near_party, "p_main_party", "p_town_4", 2),
@@ -94,7 +95,17 @@ game_menus = [
 			(assign, "$troop_testing_party_is_spawned", 1),
 			(assign, "$troop_testing_party_id", reg(0)),
 			(party_set_morale, "p_main_party", 100),
-			(party_set_morale, "$troop_testing_party_id", 100),			
+			(party_set_morale, "$troop_testing_party_id", 100),
+			(assign, "$mod_difficulty", GAME_MODE_VERY_HARD),
+			(call_script, "script_report_game_difficulty"),
+			(call_script, "script_initialize_faction_troop_types"),
+			(call_script, "script_reset_garrisons"),
+			(party_add_members, "p_main_party", "trp_npc17", 1),
+			(party_add_members, "p_main_party", "trp_npc12", 1),
+			(party_add_members, "p_main_party", "trp_npc10", 1),
+			(party_add_template, "$troop_testing_party_id", "pt_troop_testing_party_1"),
+			(party_add_template, "p_main_party", "pt_troop_testing_party_2"),
+			
 		]),
 		## LEIFDIN-- ##
       
@@ -666,10 +677,10 @@ game_menus = [
 					(call_script, "script_troop_change_relation_with_troop", "trp_player", ":troop_no", ":relation_boost"),
 				]),
 			
-			("add_troops_to_player_party", [], "Add Veteran Nordic Scouts",
-				[
-					(party_add_members, "p_main_party", "trp_r_nord_scout_1", 5),
-				]),
+			#("add_troops_to_player_party", [], "Add Veteran Nordic Scouts",
+				#[
+					#(party_add_members, "p_main_party", "trp_r_nord_scout_1", 5),
+				#]),
 			
 			("reset_fief_names", [], "Reset Fief Names",
 				[
@@ -901,7 +912,7 @@ game_menus = [
 			
 			("action_test_relation", [], "Add prisoners to party.",
 				[
-					(party_add_prisoners, "p_main_party", "trp_r_nord_retainer", 4),
+					(party_add_prisoners, "p_main_party", "trp_new_nord_retainer", 4),
 				]),
 			
 			("return", [], "Return", 
@@ -3748,19 +3759,17 @@ game_menus = [
    [
      ],
     [
-      ("camp_cheat_add_pt", [], "Add party templates to your party",[
-		(jump_to_menu, "mnu_cheat_add_pt"),
-      ]),
-      
-      ("camp_cheat_add_testers", [], "Spawn and add templates to testing party",[
-		(jump_to_menu, "mnu_cheat_add_testing_party"),
-      ]),
+
       
       ("camp_cheat_find_item",[], "Find an item...",
        [
          (jump_to_menu, "mnu_cheat_find_item"),
 	   ]
-       ),	   
+       ),
+       
+      ("camp_cheat_troop_testing", [], "Troop testing utilities", [
+         (jump_to_menu, "mnu_cheat_troop_testing"),
+      ]),
 
       ("camp_cheat_find_item",[], "Change weather..",
        [
@@ -3860,6 +3869,38 @@ game_menus = [
       ]
   ),
 
+	("cheat_troop_testing", 0, "Troop testing utilities", "none", [], [
+		("camp_cheat_add_pt", [], "Add party templates to your party",[
+			(jump_to_menu, "mnu_cheat_add_pt"),
+		]),
+
+		("camp_cheat_add_testers", [], "Spawn and add templates to testing party",[
+			(jump_to_menu, "mnu_cheat_add_testing_party"),
+		]),
+		
+		("camp_cheat_add_veterans", [], "Add five veterans to your party",[
+			(party_add_members, "p_main_party", "trp_new_swadian_billman", 5),
+		]),
+
+		("camp_cheat_add_gold", [], "Add 10K gold to your character",[
+			(troop_add_gold, "trp_player", 10000),
+		]),
+
+		("camp_cheat_add_xp", [], "Add 2K exp to your party", [
+			(party_add_xp, "p_main_party", 2000),
+		]),
+		
+		("resume_travelling", [], "Resume travelling", [
+			(change_screen_return),
+		]),
+		
+		("back_to_cheat_menu", [], "Back to cheat menu", [
+			(jump_to_menu, "mnu_camp_cheat"),
+		]),
+		
+
+	]),
+		
 	("cheat_add_pt", 0, "Current factions", "none", [], [
 	
 		("bandits", [], "{!}Bandits", [
@@ -3895,7 +3936,7 @@ game_menus = [
 		]),
 	
 		("back_to_camp_menu", [], "{!}Go Back", [
-			(jump_to_menu, "mnu_camp_cheat"),
+			(jump_to_menu, "mnu_cheat_troop_testing"),
 		]),
 	]),
 	
@@ -4260,7 +4301,7 @@ game_menus = [
 		]),
 	
 		("back_to_camp_menu", [], "{!}Go Back", [
-			(jump_to_menu, "mnu_camp_cheat"),
+			(jump_to_menu, "mnu_cheat_troop_testing"),
 		]),
 	]),
 	
@@ -5478,21 +5519,34 @@ game_menus = [
 		(check_quest_failed, "qst_denounce_lord"),
         (str_store_string, s11, "str_you_lie_stunned_for_several_minutes_then_stagger_to_your_feet_to_find_your_s10_standing_over_you_you_have_lost_the_duel"),
 	(else_try),
+		(quest_slot_eq, "qst_fight_in_duel", slot_quest_target_troop, "$g_duel_troop"),
+		(check_quest_succeeded, "qst_fight_in_duel"),
+        (str_store_string, s11, "str_s10_lies_in_the_arenas_dust_for_several_minutes_then_staggers_to_his_feet_you_have_won_the_duel"),
+	(else_try),
+		(quest_slot_eq, "qst_fight_in_duel", slot_quest_target_troop, "$g_duel_troop"),
+		(check_quest_failed, "qst_fight_in_duel"),
+        (str_store_string, s11, "str_you_lie_stunned_for_several_minutes_then_stagger_to_your_feet_to_find_your_s10_standing_over_you_you_have_lost_the_duel"),
+	(else_try),
 		(str_store_troop_name, s10, "$g_duel_troop"),
 	(try_end),
    ],
    [
      ("continue",[],"Continue...",
       [
-        (call_script, "script_get_meeting_scene"), (assign, ":meeting_scene", reg0),
-        (modify_visitors_at_site,":meeting_scene"),
-		(reset_visitors),
-        (set_visitor,0,"trp_player"),
-        (set_visitor,17,"$g_duel_troop"),
-        (set_jump_mission,"mt_conversation_encounter"),
-        (jump_to_scene,":meeting_scene"),
-        (assign, "$talk_context", tc_after_duel),
-        (change_screen_map_conversation, "$g_duel_troop"),
+        (try_begin),
+			(check_quest_active, "qst_fight_in_duel"),
+			(change_screen_map),
+		(else_try),
+			(call_script, "script_get_meeting_scene"), (assign, ":meeting_scene", reg0),
+			(modify_visitors_at_site,":meeting_scene"),
+			(reset_visitors),
+			(set_visitor,0,"trp_player"),
+			(set_visitor,17,"$g_duel_troop"),
+			(set_jump_mission,"mt_conversation_encounter"),
+			(jump_to_scene,":meeting_scene"),
+			(assign, "$talk_context", tc_after_duel),
+			(change_screen_map_conversation, "$g_duel_troop"),
+		(try_end),
         ]),
       ]
   ),
@@ -6602,7 +6656,7 @@ game_menus = [
                 (change_screen_return),              
                 
                 ## WINDYPLAINS+ ## - New Troop Revamp (Swadia)
-				(assign, ":best_troop", "trp_r_swadian_crossbowman"),
+				(assign, ":best_troop", "trp_new_swadian_crossbowman"),
 				# (assign, ":best_troop", "trp_swadian_sharpshooter"),
 				## WINDYPLAINS- ##
                 (assign, ":maximum_troop_score", 0),
@@ -11460,10 +11514,10 @@ game_menus = [
              (assign,reg3,":tier_2_troop"),
            (else_try),
 		     ## WINDYPLAINS+ ## - New Troop Revamp (Vaegirs, v0.23)
-             (assign,reg0,"trp_r_vaegir_peltast"), # "trp_vaegir_infantry"),
-             (assign,reg1,"trp_r_vaegir_peltast"), # "trp_vaegir_infantry"),
-             (assign,reg2,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"),
-             (assign,reg3,"trp_r_vaegir_sentry"), # "trp_vaegir_footman"),
+             (assign,reg0,"trp_new_vaegir_retainer"), # "trp_vaegir_infantry"),
+             (assign,reg1,"trp_new_vaegir_militia"), # "trp_vaegir_infantry"),
+             (assign,reg2,"trp_new_vaegir_bowman"), # "trp_vaegir_archer"),
+             (assign,reg3,"trp_new_vaegir_spearman"), # "trp_vaegir_footman"),
 			 ## WINDYPLAINS- ##
            (try_end),
            (shuffle_range,0,4),

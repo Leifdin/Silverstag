@@ -418,30 +418,29 @@ presentations = [
 
       (try_begin),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_1"),
-        ## WINDYPLAINS+ ## - New Troop Revamp (Common)
-		(assign, ":cur_troop", "trp_r_swadian_man_at_arms"),
-        # (assign, ":cur_troop", "trp_swadian_knight"),
+
+		(assign, ":cur_troop", "trp_new_swadian_man_at_arms"),
+
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_2"),
-		(assign, ":cur_troop", "trp_r_vaegir_bogatyr"),
-        # (assign, ":cur_troop", "trp_vaegir_knight"),
+		(assign, ":cur_troop", "trp_new_vaegir_knight"),
+
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_3"),
-        (assign, ":cur_troop", "trp_r_khergit_raider"),
-		# (assign, ":cur_troop", "trp_khergit_veteran_horse_archer"),
+        (assign, ":cur_troop", "trp_new_khergit_raider"),
+
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_4"),
-		(assign, ":cur_troop", "trp_r_nord_berserker"),
-		# (assign, ":cur_troop", "trp_nord_champion"),
+		(assign, ":cur_troop", "trp_new_nord_berserker"),
+
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_5"),
-		(assign, ":cur_troop", "trp_rhodok_pikeman_2"),
-        # (assign, ":cur_troop", "trp_rhodok_sergeant"),
+		(assign, ":cur_troop", "trp_new_rhodok_pikeman"),
+
       (else_try),
         (eq, "$g_quick_battle_team_2_faction", "fac_kingdom_6"),
-		(assign, ":cur_troop", "trp_r_sarranid_boluk_bashi"),
-		# (assign, ":cur_troop", "trp_sarranid_mamluke"),
-		## WINDYPLAINS- ##
+		(assign, ":cur_troop", "trp_new_sarranid_lancer"),
+
       (else_try),
         (assign, ":cur_troop", "trp_taiga_bandit"),
       (try_end),

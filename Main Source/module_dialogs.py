@@ -23496,7 +23496,7 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  You are really as good as they say.\
  Here is your reward: {reg5} denars.\
  I would like to give more but those bandits almost brought me to bankruptcy.",
-   "mayor_friendly_pretalk", [(quest_get_slot, ":quest_gold_reward", "qst_troublesome_bandits", slot_quest_gold_reward),
+   "close_window",           [(quest_get_slot, ":quest_gold_reward", "qst_troublesome_bandits", slot_quest_gold_reward),
                               (call_script, "script_troop_add_gold", "trp_player", ":quest_gold_reward"),
                               (assign, ":xp_reward", ":quest_gold_reward"),
                               (val_mul, ":xp_reward", 2),
@@ -23506,6 +23506,66 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
                               (call_script, "script_end_quest", "qst_troublesome_bandits"),
                               (assign, reg5, ":quest_gold_reward"),
                               ]],
+                              
+  [anyone,"mayor_begin", [(check_quest_active, "qst_fight_in_duel"),
+                          (quest_slot_eq, "qst_fight_in_duel", slot_quest_current_state, 3),
+                          ],
+   "That was an impressive performance. When your opponent heard about it, he decided to resign.\
+ You saved me a lot of trouble. Duels like these always attract unwanted attention.\
+ Here is your reward plus something extra for resolving this without bloodshed.",
+   "close_window",           [(quest_get_slot, ":quest_gold_reward", "qst_fight_in_duel", slot_quest_gold_reward),
+                              (val_mul, ":quest_gold_reward", 2),
+                              (call_script, "script_troop_add_gold", "trp_player", ":quest_gold_reward"),
+                              (assign, ":xp_reward", ":quest_gold_reward"),
+                              (val_mul, ":xp_reward", 2),
+                              (add_xp_as_reward, ":xp_reward"),
+                              (call_script, "script_change_player_relation_with_center", "$current_town", 5),
+                              (call_script, "script_change_troop_renown", "trp_player", 6),
+                              (call_script, "script_end_quest", "qst_fight_in_duel"),
+                              ]],
+  
+  [anyone,"mayor_begin", [(check_quest_active, "qst_fight_in_duel"),
+                          (quest_slot_eq, "qst_fight_in_duel", slot_quest_current_state, 2),
+                          ],
+   "My servant told me about your perfomance. Good. We'll not give our opponents time to prepare and start the duel right now.",
+   "close_window",           [(quest_get_slot, ":duel_troop", "qst_fight_in_duel", slot_quest_target_troop),
+                              (call_script, "script_set_up_duel_with_troop", ":duel_troop"),
+                              (quest_set_slot, "qst_fight_in_duel", slot_quest_current_state, 4),
+                              #(assign, reg5, ":quest_gold_reward"),
+                              ]],
+  
+  [anyone,"mayor_begin", [(check_quest_succeeded, "qst_fight_in_duel"),
+                          ],
+   "What a fight! My merchant will be very happy that you helped to resolve this feud.",
+   "close_window",           [(quest_get_slot, ":quest_gold_reward", "qst_fight_in_duel", slot_quest_gold_reward),
+                              (call_script, "script_troop_add_gold", "trp_player", ":quest_gold_reward"),
+                              (assign, ":xp_reward", ":quest_gold_reward"),
+                              (val_mul, ":xp_reward", 2),
+                              (add_xp_as_reward, ":xp_reward"),
+                              (call_script, "script_change_player_relation_with_center", "$current_town", 2),
+                              (call_script, "script_change_troop_renown", "trp_player", 2),
+                              (call_script, "script_end_quest", "qst_fight_in_duel"),
+                              ]],
+
+  [anyone,"mayor_begin", [(check_quest_failed, "qst_fight_in_duel"),
+                          ],
+   "Well, at least we tried. You can't win them all, can you, eh?",
+   "close_window",           [(quest_get_slot, ":quest_gold_reward", "qst_fight_in_duel", slot_quest_gold_reward),
+                              (val_div, ":quest_gold_reward", 2),
+                              (call_script, "script_troop_add_gold", "trp_player", ":quest_gold_reward"),
+                              (assign, ":xp_reward", ":quest_gold_reward"),
+                              (val_mul, ":xp_reward", 2),
+                              (add_xp_as_reward, ":xp_reward"),
+                              (call_script, "script_change_player_relation_with_center", "$current_town", -2),
+                              (call_script, "script_change_troop_renown", "trp_player", -2),
+                              (call_script, "script_end_quest", "qst_fight_in_duel"),
+                              ]],
+  #[anyone,"mayor_begin", [(check_quest_active, "qst_fight_in_duel"),
+                          #(quest_slot_eq, "qst_fight_in_arena", slot_quest_current_state, 2),
+                          #],
+   #"Good. You are in. Let's start before our opponents have more time to prepare.",
+                              #[(call_script, "set_up_duel_with_troop", "trp_new_geroian_swordsman"),
+                              #]],
 							  
   #destroy lair quest end dialogs taken from here							  							  							  														  
 							  
@@ -23993,6 +24053,9 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 			(else_try),
 				(eq, ":quest_no", "qst_deal_with_night_bandits"),
 				(str_store_string, s21, "@The gate guards mentioned trouble with bandits during the night."),
+			(else_try),
+				(eq, ":quest_no", "qst_fight_in_duel"),
+				(str_store_string, s21, "@I hear you need someone who can handle a blade to fight in a duel."),
 			(else_try),
 				(str_store_quest_name, s21, ":quest_no"),
 			(try_end),
@@ -24880,6 +24943,45 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
 
   [anyone,"move_cattle_herd_quest_taken", [], "Splendid. You can find the herd right outside the town.\
  After you take the animals to {s13}, return back to me and I will give you your pay.", "mayor_pretalk",[]],
+ 
+ # Fight in a duel
+  [anyone, "merchant_quest_requested", 
+  [(eq, "$random_merchant_quest_no", "qst_fight_in_duel")],
+  "Guildmaster needs a hired blade to fight in a duel for one of his merchants.",
+  "merchant_quest_brief",
+  []
+  ],
+  
+  [anyone, "merchant_quest_brief",
+  [(eq, "$random_merchant_quest_no", "qst_fight_in_duel")],
+  "The duel will take place in seven days. However, this is a very sensitive and important matter, so you'll have to prove yourself first.\
+  Come back when you'll have defeated at least ten opponents in an arena fight.",
+  "fight_in_duel_quest_brief",
+  []],
+  
+  [anyone|plyr, "fight_in_duel_quest_brief",
+  [],
+  "Sure. I'll be back soon.",
+  "fight_in_duel_quest_taken",
+  [(str_store_party_name_link, s14, "$g_encountered_party"),
+   (setup_quest_text, "qst_fight_in_duel"),
+   (str_store_string, s2, "@The Guildmaster of {s14} has asked you to prove in arena. Defeat at least ten opponents and come back."),
+   (call_script, "script_start_quest", "qst_fight_in_duel", "$g_talk_troop"),
+   (quest_set_slot, "qst_fight_in_duel", slot_quest_current_state, 1),
+  ]],
+  
+  [anyone|plyr, "fight_in_duel_quest_brief",
+  [],
+  "I am sorry, this is not worth the trouble",
+  "merchant_quest_stall",
+  []],
+  
+  [anyone, "fight_in_duel_quest_taken",
+  [],
+  "Good. Please come back when you have proven yourself",
+  "mayor_pretalk",
+  []],
+
 
 
 ################################################# 
@@ -26128,7 +26230,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  And you earned a prize of {reg10} denars for knocking down {reg8} opponents.", "arena_master_pre_talk",[
      (call_script, "script_troop_add_gold", "trp_player", arena_tier1_prize),
      (add_xp_to_troop,5,"trp_player"),
-     (assign, "$last_training_fight_town", -1)]],
+     (assign, "$last_training_fight_town", -1),
+     ]],
 
   [anyone ,"arena_master_fight_result",
    [
@@ -26142,7 +26245,8 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  And of course, you earned a prize money of {reg10} denars.", "arena_master_pre_talk",[
      (call_script, "script_troop_add_gold", "trp_player", arena_tier2_prize),
      (add_xp_to_troop,10,"trp_player"),
-     (assign, "$last_training_fight_town", -1)]],
+     (assign, "$last_training_fight_town", -1)
+     ]],
 
   [anyone ,"arena_master_fight_result",
    [
@@ -26155,7 +26259,13 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
  Not everyone can knock down {reg8} people in the fights. Of course you deserve a prize with that performance: {reg10} denars. Nice, eh?", "arena_master_pre_talk",[
      (call_script, "script_troop_add_gold", "trp_player", arena_tier3_prize),
      (add_xp_to_troop,10,"trp_player"),
-     (assign, "$last_training_fight_town", -1)]],
+     (assign, "$last_training_fight_town", -1),
+     (try_begin),
+        (check_quest_active, "qst_fight_in_duel"),
+        (quest_slot_eq, "qst_fight_in_duel", slot_quest_current_state, 1),
+        (quest_set_slot, "qst_fight_in_duel", slot_quest_current_state, 2),
+     (try_end),
+     ]],
 
   [anyone ,"arena_master_fight_result",
    [
@@ -26169,13 +26279,24 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
      (call_script, "script_troop_add_gold", "trp_player", arena_tier4_prize),
      (add_xp_to_troop,10,"trp_player"),
      (assign, "$last_training_fight_town", -1),
+     (try_begin),
+        (check_quest_active, "qst_fight_in_duel"),
+        (neq|quest_slot_gt, "qst_fight_in_duel", slot_quest_current_state, 2),
+        (quest_set_slot, "qst_fight_in_duel", slot_quest_current_state, 3),
+     (try_end),
      ]],
 
   [anyone ,"arena_master_fight_result", [(assign, reg10, arena_grand_prize)],
    "Congratulations champion! Your fight there was something to remember! You managed to be the last fighter standing beating down everyone else. And of course you won the grand prize of the fights: {reg10} denars.", "arena_master_pre_talk",[
      (call_script, "script_troop_add_gold", "trp_player", arena_grand_prize),
      (add_xp_to_troop,200,"trp_player"),
-     (assign, "$last_training_fight_town", -1)]],
+     (assign, "$last_training_fight_town", -1),
+     (try_begin),
+        (check_quest_active, "qst_fight_in_duel"),
+        (neq|quest_slot_gt, "qst_fight_in_duel", slot_quest_current_state, 2),
+        (quest_set_slot, "qst_fight_in_duel", slot_quest_current_state, 3),
+     (try_end),
+     ]],
 
 
   [anyone ,"start", [(store_conversation_troop,reg(1)),(is_between,reg(1),arena_masters_begin,arena_masters_end)],
@@ -27587,9 +27708,9 @@ I suppose there are plenty of bounty hunters around to get the job done . . .", 
   [anyone,"merchant_quest_1b", 
   [
   ], 
-  "You won't be able to do this by yourself, though. If you try and take on the whole gang singlehandedly, the hunter will become the hunted, I'll warrant. You'll first want to round up a group of volunteers. There's always a few lads in the villages around here, looking for a bit of work that's more interesting than tilling the soil or hauling water. They'll follow you if you pay. So... Take this purse of 100 denars. Consider it an advance on your reward. Go round to the villages, and use the money to hire some help. I'll reckon that you need at least five men to take on these bandits.", "merchant_quest_1c",
+  "You won't be able to do this by yourself, though. If you try and take on the whole gang singlehandedly, the hunter will become the hunted, I'll warrant. You'll first want to round up a group of volunteers. There's always a few lads in the villages around here, looking for a bit of work that's more interesting than tilling the soil or hauling water. They'll follow you if you pay. So... Take this purse of 500 denars. Consider it an advance on your reward. Go round to the villages, and use the money to hire some help. I'll reckon that you need at least five men to take on these bandits.", "merchant_quest_1c",
   [
-    (call_script, "script_troop_add_gold", "trp_player", 100),
+    (call_script, "script_troop_add_gold", "trp_player", 500),
     
     (str_store_troop_name, s9, "$g_talk_troop"),
     (str_store_party_name, s1, "$g_starting_town"),

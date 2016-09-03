@@ -133,7 +133,7 @@ presentations = [
 		#### STATISTICS ####
 		####################
 		
-		(assign, ":pos_y", 625),
+		(assign, ":pos_y", 650),
 		(assign, ":pos_x", 430),
 		(assign, ":y_step_line", 25),
 		(store_add, ":pos_x_col_2", ":pos_x", 140),
@@ -151,6 +151,17 @@ presentations = [
         (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x", ":pos_y", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		(troop_get_slot, reg21, "$temp", slot_troop_tier),
+		(str_store_string, s21, "@{reg21}"),
+        (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y", 0, gpu_right),
+		(call_script, "script_gpu_resize_object", 0, 75),
+		
+		## OBJ - LABEL - WAGE
+		(val_sub, ":pos_y", ":y_step_line"),
+		(str_store_string, s21, "@Wage:"),
+        (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x", ":pos_y", 0, gpu_left),
+		(call_script, "script_gpu_resize_object", 0, 75),
+		(call_script, "script_game_get_troop_wage", "$temp", "p_main_party"),
+		(assign, reg21, reg0),
 		(str_store_string, s21, "@{reg21}"),
         (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_2", ":pos_y", 0, gpu_right),
 		(call_script, "script_gpu_resize_object", 0, 75),
@@ -480,8 +491,8 @@ presentations = [
 		
 		## OBJ - LABEL - EQUIPMENT:
 		(str_store_string, s21, "@Equipment:"),
-        (call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 625, 0, gpu_left),
-		(call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 625, 0, gpu_left),
+        (call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 650, 0, gpu_left),
+		(call_script, "script_gpu_create_text_label", "str_hub_s21", 790, 650, 0, gpu_left),
 		
 		## OBJ - INVENTORY CONTAINER
 		(call_script, "script_gpu_container_heading", 790, 50, 160, 560, insp_obj_container_inventory),
@@ -617,27 +628,32 @@ presentations = [
 		(assign, ":pos_y_temp", 690),
 		(try_begin),
 			(eq, "$vai_region_value", 1),
-			(str_store_string, s21, "@Faction Design^by Leifdin"),
+			(str_store_string, s21, "@Faction Design: Leifdin^Implementation: Leifdin"),
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_temp", ":pos_y_temp", 0, gpu_right),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(else_try),
 			(eq, "$vai_region_value", 2),
-			(str_store_string, s21, "@Faction Design^by Huillam"),
+			(str_store_string, s21, "@Faction Design: Huillam^Implementation: Leifdin"),
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_temp", ":pos_y_temp", 0, gpu_right),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(else_try),
 			(eq, "$vai_region_value", 3),
-			(str_store_string, s21, "@Faction Design^by Huillam & Leifdin"),
+			(str_store_string, s21, "@Faction Design: Huillam^Implementation: Leifdin"),
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_temp", ":pos_y_temp", 0, gpu_right),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(else_try),
 			(eq, "$vai_region_value", 4),
-			(str_store_string, s21, "@Faction Design^by Leifdin"),
+			(str_store_string, s21, "@Faction Design: Leifdin^Implementation: Leifdin"),
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_temp", ":pos_y_temp", 0, gpu_right),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(else_try),
 			(eq, "$vai_region_value", 5),
-			(str_store_string, s21, "@Faction Design^by Dawg of War"),
+			(str_store_string, s21, "@Faction Design: Dawg of War^Implementation: Leifdin"),
+			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_temp", ":pos_y_temp", 0, gpu_right),
+			(call_script, "script_gpu_resize_object", 0, 75),
+		(else_try),
+			(eq, "$vai_region_value", 6),
+			(str_store_string, s21, "@Faction Design: Leifdin^Implementation: Leifdin"),
 			(call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_temp", ":pos_y_temp", 0, gpu_right),
 			(call_script, "script_gpu_resize_object", 0, 75),
 		(try_end),
@@ -781,6 +797,22 @@ presentations = [
 				(else_try),
 					(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISHONORABLE),
 					(assign, ":color", gpu_dishonorable),
+					(overlay_set_color, reg1, ":color"),
+				(else_try),
+					(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISREPUTABLE),
+					(assign, ":color", gpu_disreputable),
+					(overlay_set_color, reg1, ":color"),
+				(else_try),
+					(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_EXPENSIVE),
+					(assign, ":color", gpu_expensive),
+					(overlay_set_color, reg1, ":color"),
+				(else_try),
+					(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DOPPELSOLDNER),
+					(assign, ":color", gpu_expensive),
+					(overlay_set_color, reg1, ":color"),
+				(else_try),
+					(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_ELITE_MERCENARY),
+					(assign, ":color", gpu_elite_mercenary),
 					(overlay_set_color, reg1, ":color"),
 				(try_end),
 				
@@ -976,104 +1008,7 @@ presentations = [
     ]),
 ]),
  
-("add_troops", 0, mesh_load_window, [
-	(ti_on_presentation_load,[
-		(presentation_set_duration, 999999),
-        (set_fixed_point_multiplier, 1000),
-		
-		(assign, "$gpu_storage", VAT_OBJECTS),
-		(assign, "$gpu_data",    VAT_OBJECTS),
-		
-		## TITLE
-		(str_store_string, s21, "@Add Troops"),
-		(call_script, "script_gpu_create_text_label", "str_hub_s21", 500, 665, ce_obj_main_title, gpu_center), # 680
-		(call_script, "script_gpu_resize_object", ce_obj_main_title, 150),
-		# Doubled for bold effect.
-		(call_script, "script_gpu_create_text_label", "str_hub_s21", 500, 665, ce_obj_main_title, gpu_center), # 680
-		(call_script, "script_gpu_resize_object", ce_obj_main_title, 150),
 
-		
-		
-		## TROOP ID INUT BOX
-		(str_store_string, s21, "@Troop ID"),
-		(call_script, "script_gpu_create_text_label", "str_hub_s21", 200, 580, gpu_center),
-		(call_script, "script_gpu_create_text_box", 540, 570, vat_obj_text_input_troop_id),
-		#(call_script, "script_gpu_resize_object", vat_obj_text_input_troop_id, 150),
-		
-		## TROOP COUNT INPUT BOX
-		(str_store_string, s21, "@Troop Count"),
-		(call_script, "script_gpu_create_text_label", "str_hub_s21", 200, 500, gpu_center),
-		(call_script, "script_gpu_create_number_box", 400, 490, 1, 100, vat_obj_number_box_troop_count, vat_val_troop_count),
-		#(call_script, "script_gpu_resize_object", vat_obj_number_box_troop_count, 150),
-		
-		## ADD TROOPS BUTTONS
-		(str_store_string, s21, "@Add troops to the player"),
-		(call_script, "script_gpu_create_button", "str_hub_s21", 100, 160, vat_obj_button_add_troops_to_player),
-		(str_store_string, s21, "@Add troops to the troop testing party"),
-		(call_script, "script_gpu_create_button", "str_hub_s21", 100, 120, vat_obj_button_add_troops_to_tester),
-		
-		
-		## DONE BUTTON ##
-		(str_store_string, s21, "@Done"),
-		(call_script, "script_gpu_create_game_button", "str_hub_s21", 500, 40, vat_obj_button_done),
-	]),
-	
-	
-	(ti_on_presentation_run, [
-		(try_begin),
-			(key_clicked, key_escape),
-			(presentation_set_duration, 0),
-			(jump_to_menu, "mnu_cheat_reports"),
-		(try_end), 
-	]),
-	
-	(ti_on_presentation_event_state_change, [
-		(store_trigger_param_1, ":object"),
-        #(store_trigger_param_2, ":value"),
-        (assign, ":troop_id", "trp_r_swadian_hunter"),
-        (assign, ":troop_count", 1),
-        (try_begin),
-			### BUTTON - DONE ###
-			(troop_slot_eq, VAT_OBJECTS, vat_obj_button_done, ":object"),
-			(presentation_set_duration, 0),
-			(jump_to_menu, "mnu_cheat_reports"),
-		(else_try),
-			(troop_slot_eq, VAT_OBJECTS, vat_obj_button_add_troops_to_player, ":object"),
-			(troop_get_slot, ":obj_textbox", VAT_OBJECTS, vat_obj_text_input_troop_id),
-			(overlay_obtain_focus, ":obj_textbox"),
-			#(assign, ":troop_id", s0),
-			(str_store_string, s21, s0),
-			(assign, ":troop_id", "str_hub_s21"),
-			(troop_get_slot, ":obj_numbox_amount", VAT_OBJECTS, vat_obj_number_box_troop_count),
-			(overlay_get_val, ":troop_count", ":obj_numbox_amount"),
-			(try_begin),
-				#(is_between, ":troop_id", nord_troops_begin, nord_troops_end),
-				#(party_add_members, "p_main_party", ":troop_id", ":troop_count"),
-				(party_add_template, "p_main_party", ":troop_id"),
-				#(party_set_name, "p_main_party", ":troop_id"),
-			(try_end),
-		(else_try),
-			(troop_slot_eq, VAT_OBJECTS, vat_obj_button_add_troops_to_tester, ":object"),
-			(troop_get_slot, ":obj_textbox", VAT_OBJECTS, vat_obj_text_input_troop_id),
-			(overlay_obtain_focus, ":obj_textbox"),
-			(assign, ":troop_id", s0),
-			(troop_get_slot, ":obj_numbox_amount", VAT_OBJECTS, vat_obj_number_box_troop_count),
-			(overlay_get_val, ":troop_count", ":obj_numbox_amount"),
-			(try_begin),
-				(eq, "$troop_testing_party_is_spawned", 0),
-					(try_begin),
-						(spawn_around_party, "p_main_party", "pt_troop_testing_party_2"),
-						(assign, "$troop_testing_party_is_spawned", 1),
-						(assign, "$troop_testing_party_id", reg(0)),
-						(party_set_morale, "$troop_testing_party_id", 100),
-					(try_end),
-				(party_add_members, "$troop_testing_party_id", ":troop_id", ":troop_count"),
-			(try_end),
-			
-		(try_end),
-	]),
-]),
-  
 ## WINDYPLAINS- ##
 ]
 	

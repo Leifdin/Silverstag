@@ -163,7 +163,7 @@ slot_faction_political_issue_time 						 = 65 #Now is used
 
 
 #slot_faction_deserter_party_template       = 62
-
+slot_faction_bandit_template         = 76
 slot_faction_reinforcements_a        = 77
 slot_faction_reinforcements_b        = 78
 slot_faction_reinforcements_c        = 79
@@ -1396,8 +1396,8 @@ kingdoms_end = "fac_kingdoms_end"
 npc_kingdoms_begin = "fac_kingdom_1"
 npc_kingdoms_end = kingdoms_end
 
-bandits_begin = "trp_bandit"
-bandits_end = "trp_manhunter" # "trp_black_khergit_horseman"
+bandits_begin = "trp_new_looter"
+bandits_end = "trp_new_bandits_end" # "trp_black_khergit_horseman"
 
 kingdom_ladies_begin = "trp_knight_1_1_wife"
 kingdom_ladies_end = "trp_heroes_end"
@@ -1451,7 +1451,7 @@ tavern_travelers_end   = tavern_booksellers_begin
 ransom_brokers_begin = "trp_ransom_broker_1"
 ransom_brokers_end   = tavern_travelers_begin
 
-mercenary_troops_begin = "trp_watchman"
+mercenary_troops_begin = "trp_new_geroian_pikeman"
 mercenary_troops_end = "trp_mercenaries_end"
 
 multiplayer_troops_begin = "trp_swadian_crossbowman_multiplayer"
@@ -1761,14 +1761,14 @@ vba_normal          = 1
 vba_after_training  = 2
 
 arena_tier1_opponents_to_beat = 3
-arena_tier1_prize = 5
+arena_tier1_prize = 15
 arena_tier2_opponents_to_beat = 6
-arena_tier2_prize = 10
+arena_tier2_prize = 75
 arena_tier3_opponents_to_beat = 10
-arena_tier3_prize = 25
+arena_tier3_prize = 200
 arena_tier4_opponents_to_beat = 20
-arena_tier4_prize = 60
-arena_grand_prize = 250
+arena_tier4_prize = 500
+arena_grand_prize = 1000
 
 
 #Additions
@@ -1956,20 +1956,22 @@ bandit_upgrades_begin = "trp_mountain_bandit_1"
 bandit_upgrades_end   = "trp_manhunter"
 
 ### FACTION TROOP DEFINITIONS
-player_troops_begin   = "trp_new_nord_farmhand"
-player_troops_end     = "trp_module_end_troops"  # "trp_player_placeholder_1"
-swadia_troops_begin   = "trp_r_swadian_hunter"
-swadia_troops_end     = "trp_swadia_uniques_end"  # "trp_swadia_troops_end"
-vaegir_troops_begin   = "trp_r_vaegir_militia"
-vaegir_troops_end     = "trp_vaegir_uniques_end"   # "trp_vaegir_troops_end"
-khergit_troops_begin  = "trp_r_khergit_slave"
-khergit_troops_end    = "trp_khergit_uniques_end"  # "trp_khergit_troops_end"
+player_troops_begin   = "trp_new_geroian_pikeman"
+player_troops_end     = "trp_mercenaries_end"  # "trp_player_placeholder_1"
+#player_troops_begin   = "trp_new_swadian_farmer"
+#player_troops_end     = "trp_new_swadian_troops_ends"  # "trp_player_placeholder_1"
+swadia_troops_begin   = "trp_new_swadian_farmer"
+swadia_troops_end     = "trp_new_swadian_uniques_end"  # "trp_swadia_troops_end"
+vaegir_troops_begin   = "trp_new_vaegir_peasant"
+vaegir_troops_end     = "trp_new_vaegir_uniques_end"   # "trp_vaegir_troops_end"
+khergit_troops_begin  = "trp_new_khergit_bowman"
+khergit_troops_end    = "trp_new_khergit_uniques_end"  # "trp_khergit_troops_end"
 nord_troops_begin     = "trp_new_nord_farmhand"
 nord_troops_end       = "trp_new_nord_uniques_end"     # "trp_nord_troops_end"
-rhodok_troops_begin   = "trp_rhodok_militia"
-rhodok_troops_end     = "trp_rhodok_uniques_end"       # "trp_rhodok_troops_end"
-sarranid_troops_begin = "trp_r_sarranid_kul"
-sarranid_troops_end   = "trp_r_sarranid_end_troop" # "trp_durquba_javelineer"
+rhodok_troops_begin   = "trp_new_rhodok_militia"
+rhodok_troops_end     = "trp_new_rhodok_uniques_end"       # "trp_rhodok_troops_end"
+sarranid_troops_begin = "trp_new_sarranid_slave"
+sarranid_troops_end   = "trp_new_sarranid_uniques_end" # "trp_durquba_javelineer"
 
 ### SPECIAL TROOP DEFINITIONS
 unique_troops_begin                    = "trp_jelbegi_xbow_militia"

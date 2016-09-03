@@ -72,7 +72,7 @@ CLASS_CAVALRY                      = 2
 BONUS_UNASSIGNED                   =  0
 BONUS_ADMINISTRATOR                =  1 # Improves several aspects of a Castle Steward or Captain of the Guard's efficiency.
 BONUS_AGILE_RIDER                  =  2 # Prevents falling damage from being taken when a rider is unhorsed.
-BONUS_BERSERKER                    =  3 # Raises the health of an agenty by 7% per point of ironflesh.  Effect is temporary.
+BONUS_BERSERKER                    =  3 # Raises the health of an agenty by 1 per strenght point
 BONUS_BLADEMASTER                  =  4 # This troop gains +2% damage per point of weapon master when wielding a melee cutting weapon.
 BONUS_BLOODLUST                    =  5 # Troop gains +20% damage / -10% accuracy.  Gains more damage and loses more accuracy as health diminishes.
 BONUS_BOUNDLESS_ENDURANCE          =  6 # Combat sprinting is 50% faster and 50% longer in duration. (+125% improvement in sprint distance)
@@ -127,8 +127,9 @@ BONUS_RAPID_RELOAD                 = 54 # Increases the reloading speed of troop
 BONUS_FIRING_CAPTAIN               = 55 # Increases the reloading speed of nearby troops by 4% per point of Leadership.
 BONUS_SAVAGERY                     = 56 # Increases the courage lost by nearby troops when this troop defeats an enemy.
 BONUS_RALLYING_STRIKE              = 57 # Increases the courage gained by nearby troops when this troop defeats an enemy.
-##
-BONUS_END_OF_ABILITIES             = 58
+BONUS_DRILL_SERGEANT               = 58 # Decreases morale by 5. Increases health of all troops by 1 per 5 strenght points. Morale penalty is decreased by 0.5 per Leadership point.
+BONUS_FIELD_SURGEON                = 59 # Increases party leaders surgery by 1 per 5 troops
+BONUS_END_OF_ABILITIES             = 60
 
 
 # Berserker Settings
@@ -149,6 +150,9 @@ PREREQ_AFFILIATED                  = 7  # Requires that you are a part of the sa
 PREREQ_CHARTERED                   = 8  # Not implemented.
 PREREQ_UNIQUE_LOCATION_UPGRADE     = 9  # Used for slot upgrades on uniques to prevent them from being recruitable.
 PREREQ_LIEGE_RELATION              = 10 # Requires that you have a minimum of 50 relation with the leader of this faction.
+PREREQ_EXPENSIVE                   = 11 # Troop is twice as expensive as usually
+PREREQ_DISREPUTABLE                = 12 # Hiring troop may reduce honor
+PREREQ_DOPPELSOLDNER               = 13 # Double wage
 
 troop_prereq_friend_relation       = 10
 troop_prereq_ally_relation         = 25

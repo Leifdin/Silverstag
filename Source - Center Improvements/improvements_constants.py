@@ -71,5 +71,5 @@ castle_patrol_return_home                       = 4
 
 # Mercenary Chapterhouse (409)
 mercenary_chapterhouse_min_troop                = "trp_mercenary_swordsman"
-mercenary_chapterhouse_troop_bonus              = 8
+mercenary_chapterhouse_troop_bonus              = 3
 mercenary_chapterhouse_hiring_discount          = 40 # %

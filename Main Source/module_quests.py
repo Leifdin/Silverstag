@@ -192,6 +192,9 @@ quests = [
  ("deal_with_night_bandits", "Deal with Night Bandits", qf_random_quest,
   "{!}TODO: The Guildmaster of {s14} has asked you to deal with night bandits at {s14}."
   ),
+ ("fight_in_duel", "Fight in a duel for a local merchant", qf_random_quest,
+  "{!}Guildmaster of {s4} has asked you to represent a guild member in a judical duel. You need to prove your skills in arena by defeating at least ten opponents."
+  ),
 
 ############
 # Village Elder quests

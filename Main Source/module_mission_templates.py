@@ -1956,15 +1956,12 @@ mission_templates = [
      (agent_get_troop_id, ":killer_agent_troop_no", ":killer_agent_no"),
                 
      (try_begin), 
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_swadian_prison_guard"),
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_vaegir_prison_guard"),
-       ## LEIFDIN+ ## - New Troop Revamp - Khergits
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_r_khergit_clansman"),
-       #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
-       ## LEIFDIN- ##
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_nord_prison_guard"),
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_rhodok_prison_guard"),
-       (eq, ":dead_agent_troop_no", "trp_sarranid_prison_guard"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_swadian_footman"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_vaegir_sentry"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_khergit_clansman"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_nord_retinue_archer"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_new_rhodok_halberdier"),
+       (eq, ":dead_agent_troop_no", "trp_new_sarranid_guard"),
           
        (eq, ":killer_agent_troop_no", "trp_player"),
           
@@ -3486,15 +3483,12 @@ mission_templates = [
         (agent_get_troop_id, ":killer_agent_troop_no", ":killer_agent_no"),
                 
         (try_begin), 
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_swadian_prison_guard"),
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_vaegir_prison_guard"),
-          ##LEIFDIN+ ## - New Troop Revamp - Khergits
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_r_khergit_clansman"),
-          #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
-          ##Leifdin- ##
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_nord_prison_guard"),
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_rhodok_prison_guard"),
-          (eq, ":dead_agent_troop_no", "trp_sarranid_prison_guard"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_swadian_footman"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_vaegir_sentry"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_khergit_clansman"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_nord_retinue_archer"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_new_rhodok_halberdier"),
+          (eq, ":dead_agent_troop_no", "trp_new_sarranid_guard"),
           
           (eq, ":killer_agent_troop_no", "trp_player"),
           
@@ -4334,8 +4328,8 @@ mission_templates = [
     "duel_with_lord",mtf_arena_fight|mtf_commit_casualties,-1,
     "You enter a melee fight in the arena.",
     [    
-	  (0, mtef_visitor_source|mtef_team_0,af_override_all,aif_start_alarmed,1,[itm_western_arming_sword,itm_arena_tunic_blue]),
-	  (16, mtef_visitor_source|mtef_team_1,af_override_all,aif_start_alarmed,1,[itm_western_arming_sword,itm_arena_tunic_blue]),
+	  (0, mtef_visitor_source|mtef_team_0,af_override_all,aif_start_alarmed,1,[itm_great_sword,itm_arena_tunic_blue]),
+	  (16, mtef_visitor_source|mtef_team_1,af_override_all,aif_start_alarmed,1,[itm_great_sword,itm_arena_tunic_blue]),
     ],
     [
       common_inventory_not_available,
@@ -4388,6 +4382,15 @@ mission_templates = [
 			 (check_quest_active, "qst_denounce_lord"),
 			 (quest_slot_eq, "qst_denounce_lord", slot_quest_target_troop, "$g_duel_troop"),
              (call_script, "script_succeed_quest", "qst_denounce_lord"),
+		   (else_try),	 
+             (main_hero_fallen),
+			 (check_quest_active, "qst_fight_in_duel"),
+			 (quest_slot_eq, "qst_fight_in_duel", slot_quest_target_troop, "$g_duel_troop"),
+             (call_script, "script_fail_quest", "qst_fight_in_duel"),
+           (else_try),
+			 (check_quest_active, "qst_fight_in_duel"),
+			 (quest_slot_eq, "qst_fight_in_duel", slot_quest_target_troop, "$g_duel_troop"),
+             (call_script, "script_succeed_quest", "qst_fight_in_duel"),
 		   (else_try),
 			 (quest_get_slot, ":target_troop", "qst_denounce_lord", slot_quest_target_troop),
 		     (str_store_troop_name, s4, ":target_troop"),
@@ -7799,9 +7802,9 @@ mission_templates = [
                    (modify_visitors_at_site,"scn_tutorial_5"),
                    (reset_visitors),
 				   ## WINDYPLAINS+ ## - New Troop Revamp (Vaegirs)
-                   (set_visitor,5,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"), 
-                   (set_visitor,6,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"), 
-                   (set_visitor,7,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"), 
+                   (set_visitor,5,"trp_new_vaegir_longbowman"), # "trp_vaegir_archer"), 
+                   (set_visitor,6,"trp_new_vaegir_longbowman"), # "trp_vaegir_archer"), 
+                   (set_visitor,7,"trp_new_vaegir_longbowman"), # "trp_vaegir_archer"), 
 				   ## WINDYPLAINS- ##
                    (entry_point_get_position, pos1, 11),
                    (scene_prop_get_instance, ":flag_object", "spr_tutorial_flag_yellow", 0),

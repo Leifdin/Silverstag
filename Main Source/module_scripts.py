@@ -100,11 +100,11 @@ scripts = [
 	  # Cultures:
 	  ## WINDYPLAINS+ ## - New Troop Revamp - Culture Troops (Common)
 	  ## SWADIA - NEW TROOPS
-	  (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_r_swadian_hunter"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_r_swadian_militia"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_r_swadian_footman"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_r_swadian_billman"),
-      (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_r_swadian_sergeant"),
+	  (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_new_swadian_hunter"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_new_swadian_supplyman"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_new_swadian_footman"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_new_swadian_man_at_arms"),
+      (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_new_swadian_sharpshooter"),
 	  ## SWADIA - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_swadian_recruit"),
       # (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_swadian_militia"),
@@ -113,11 +113,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_swadian_knight"),
 	  
       ## VAEGIRS - NEW TROOPS
-	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_r_vaegir_militia"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_r_vaegir_sentry"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_r_vaegir_psiloi"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_r_vaegir_peltast"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_r_vaegir_bogatyr"),
+	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_new_vaegir_peasant"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_new_vaegir_spearman"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_new_vaegir_retainer"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_new_vaegir_skirmisher"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_new_vaegir_sentry"),
 	  ## VAEGIRS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_vaegir_recruit"),
       # (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_vaegir_footman"),
@@ -126,11 +126,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_vaegir_knight"),
 	  
 	  ## KHERGITS - NEW TROOPS
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_r_khergit_slave"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_r_khergit_scout"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_r_khergit_raider"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_r_khergit_lancer"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_r_khergit_parthian"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_new_khergit_bowman"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_new_khergit_outcast"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_new_khergit_hunter"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_new_khergit_raider"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_new_khergit_master_bowman"),
 	  ## KHERGITS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_khergit_tribesman"),
       # (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_khergit_skirmisher"),
@@ -139,11 +139,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_khergit_veteran_horse_archer"),
 	  
       ## NORDS - NEW TROOPS
-	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_r_nord_bondsman"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_r_nord_peasant"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_r_nord_shield_maiden"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_r_nord_berserker"),
+	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_new_nord_farmhand"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_new_nord_bowman"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_new_nord_spearman"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_new_nord_skirmisher"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_new_nord_berserker"),
 	  ## NORDS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_nord_recruit"),
       # (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_nord_footman"),
@@ -152,11 +152,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_nord_veteran"),
 	  
       ## RHODOK - NEW TROOPS
-	  (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_rhodok_militia"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_rhodok_militia_1"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_3_troop, "trp_rhodok_trained_militia"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_4_troop, "trp_rhodok_pikeman"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_rhodok_pikeman_2"),
+	  (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_new_rhodok_militia"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_new_rhodok_militia_archer"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_3_troop, "trp_new_rhodok_footman"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_4_troop, "trp_new_rhodok_crossbowman"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_new_rhodok_halberdier"),
 	  ## RHODOK - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_rhodok_tribesman"),
       # (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_rhodok_spearman"),
@@ -165,11 +165,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_rhodok_sergeant"),
 	  
       ## SARRANID - NEW TROOPS
-	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_r_sarranid_azab"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_r_sarranid_yaya"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_r_sarranid_musellem"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_r_sarranid_timariot"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_r_sarranid_boluk_bashi"),
+	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_new_sarranid_slave"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_new_sarranid_spearman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_new_sarranid_bowman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_new_sarranid_horseman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_new_sarranid_lancer"),
 	  ## SARRANID - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_sarranid_recruit"),
       # (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_sarranid_footman"),
@@ -1077,6 +1077,103 @@ scripts = [
 			(call_script, "script_common_rename_troop", ":troop_no", ":faction_no", SCRT_FIRST),
 		(try_end),
 		## WINDYPLAINS- ##
+		
+		## LEIFDIN ## Add Mercenary Chapterhouse to cities according to difficulty
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY), ## Build mercenary chapterhouse in every capital city
+			(party_set_slot, "p_town_1", slot_center_has_merc_chapterhouse, cis_built), # Sargoth
+			(party_set_slot, "p_town_5", slot_center_has_merc_chapterhouse, cis_built), # Jelkala
+			(party_set_slot, "p_town_6", slot_center_has_merc_chapterhouse, cis_built), # Praven
+			(party_set_slot, "p_town_8", slot_center_has_merc_chapterhouse, cis_built),# Reyvadin
+			(party_set_slot, "p_town_10", slot_center_has_merc_chapterhouse, cis_built),# Tulga
+			(party_set_slot, "p_town_19", slot_center_has_merc_chapterhouse, cis_built),# Shariz
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_NORMAL), ## Build mercenary chapterhouse in a random city in each faction
+			(try_begin), 
+				(store_random_in_range, ":rand", 0, 3),## Swadians
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_4", slot_center_has_merc_chapterhouse, cis_built), # Suno
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_6", slot_center_has_merc_chapterhouse, cis_built), # Praven
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_7", slot_center_has_merc_chapterhouse, cis_built), # Uxkhal
+				(else_try),
+					(party_set_slot, "p_town_16", slot_center_has_merc_chapterhouse, cis_built), # Dhirim
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Vaegirs
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_8", slot_center_has_merc_chapterhouse, cis_built), # Reyvadin
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_9", slot_center_has_merc_chapterhouse, cis_built), # Khudan
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_11", slot_center_has_merc_chapterhouse, cis_built), # Curaw
+				(else_try),
+					(party_set_slot, "p_town_13", slot_center_has_merc_chapterhouse, cis_built), # Rivacheg
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Khergits
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_10", slot_center_has_merc_chapterhouse, cis_built), # Tulga
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_14", slot_center_has_merc_chapterhouse, cis_built), # Halmar
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_17", slot_center_has_merc_chapterhouse, cis_built), # Ichamur
+				(else_try),
+					(party_set_slot, "p_town_18", slot_center_has_merc_chapterhouse, cis_built), # Narra
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 2),## Nords
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_1", slot_center_has_merc_chapterhouse, cis_built), # Saroth
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_2", slot_center_has_merc_chapterhouse, cis_built), # Tihr
+				(else_try),
+					(party_set_slot, "p_town_12", slot_center_has_merc_chapterhouse, cis_built), # Wercheg
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Rhodoks
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_3", slot_center_has_merc_chapterhouse, cis_built), # Veluca
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_5", slot_center_has_merc_chapterhouse, cis_built), # Jelkala
+				(else_try),
+					(party_set_slot, "p_town_15", slot_center_has_merc_chapterhouse, cis_built), # Yalen
+				(try_end),
+				
+				
+				(store_random_in_range, ":rand", 0, 3),## Sarranids
+				(try_begin),
+					(eq, ":rand", 0),
+					(party_set_slot, "p_town_19", slot_center_has_merc_chapterhouse, cis_built), # Shariz
+				(else_try),
+					(eq, ":rand", 1),
+					(party_set_slot, "p_town_20", slot_center_has_merc_chapterhouse, cis_built), # Durquba
+				(else_try),
+					(eq, ":rand", 2),
+					(party_set_slot, "p_town_21", slot_center_has_merc_chapterhouse, cis_built), # Ahmerrad
+				(else_try),
+					(party_set_slot, "p_town_22", slot_center_has_merc_chapterhouse, cis_built), # Bariyye
+				(try_end),
+			(try_end),
+		(try_end),
     ]),
 
   #script_game_get_use_string
@@ -1173,84 +1270,49 @@ scripts = [
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_archer, "trp_taiga_bandit"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_1_cavalry, "trp_steppe_bandit"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_cavalry, "trp_desert_bandit"),
-      ## WINDYPLAINS+ ## - New Troop Revamp - Quick Battle Troops (Common)
-      ## SWADIA
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_r_swadian_footman"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_r_swadian_sergeant"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_r_swadian_hunter"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_r_tilbaut_archer"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_r_swadian_lancer"),
-      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_r_dhirim_captain"),
-	  # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_swadian_footman"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_swadian_infantry"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_swadian_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_swadian_crossbowman"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_swadian_man_at_arms"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_swadian_knight"),
-      ## VAEGIRS
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_r_vaegir_sentry"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_r_vaegir_peltast"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_r_vaegir_skirmisher"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_r_vaegir_longbowman"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_r_vaegir_koursores"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_r_vaegir_bogatyr"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_vaegir_footman"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_vaegir_infantry"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_vaegir_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_vaegir_archer"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_vaegir_horseman"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_vaegir_knight"),
-      ## WINDYPLAINS- ##
+      
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_new_swadian_footman"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_new_swadian_billman"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_new_swadian_crossbowman"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_new_swadian_sargeant"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_new_swadian_man_at_arms"),
+      (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_new_dhirim_captain"),
+      
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_new_vaegir_spearman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_new_vaegir_militia"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_new_vaegir_bowman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_new_vaegir_longbowman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_new_vaegir_retainer"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_new_vaegir_skirmisher"),
+      
       (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_infantry, "trp_khergit_dismounted_lancer_multiplayer_ai"),
       (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_infantry, "trp_khergit_dismounted_lancer_multiplayer_ai"),
-      ## WINDYPLAINS+ ## - New Troop Revamp (Khergits)
-	  (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_r_khergit_scout"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_r_khergit_orlok"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_r_khergit_lancer"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_r_khergit_parthian"),
-	  # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_khergit_horse_archer"),
-      # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_khergit_veteran_horse_archer"),
-      # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_khergit_lancer"),
-      # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_khergit_lancer"),
-	  ## WINDYPLAINS- ## 
-      ## WINDYPLAINS+ ## - New Troop Revamp (Nord)
-	  (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_r_nord_retinue_archer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_r_nord_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_nord_warrior"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_nord_champion"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_nord_archer"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_nord_veteran_archer"),
-      ## WINDYPLAINS- ## 
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_cavalry, "trp_nord_scout_multiplayer_ai"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_cavalry, "trp_nord_scout_multiplayer_ai"),
-	  ## WINDYPLAINS+ ## - New Troop Revamp (Rhodok)
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_rhodok_vanguard"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_rhodok_vanguard"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_archer, "trp_rhodok_militia_archer"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_archer, "trp_rhodok_crossbowman_2"),
-	  # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_rhodok_veteran_spearman"),
-      # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_rhodok_sergeant"),
-      # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_archer, "trp_rhodok_crossbowman"),
-      # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_archer, "trp_rhodok_veteran_crossbowman"),
-	  ## WINDYPLAINS- ##
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_cavalry, "trp_rhodok_scout_multiplayer_ai"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_cavalry, "trp_rhodok_scout_multiplayer_ai"),
-	  ## WINDYPLAINS+ ## - New Troop Revamp (Sarranid)
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_r_sarranid_yaya"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_r_sarranid_bashibozuk"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_r_sarranid_azab"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_r_sarranid_corbaci"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_r_sarranid_timariot"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_r_sarranid_boluk_bashi"),
-	  # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_sarranid_veteran_footman"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_sarranid_infantry"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_sarranid_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_sarranid_archer"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_sarranid_horseman"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_sarranid_mamluke"),
-	  ## WINDYPLAINS- ##
+	  (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_new_khergit_bowman"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_new_khergit_master_bowman"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_new_khergit_scout"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_new_khergit_lancer"),
+      
+	  (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_new_nord_spearman"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_new_nord_retainer"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_new_nord_bowman"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_new_nord_tracker"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_cavalry, "trp_new_nord_scout"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_cavalry, "trp_new_nord_lancer"),
+      
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_new_rhodok_footman"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_new_rhodok_halberdier"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_archer, "trp_new_rhodok_militia_archer"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_archer, "trp_new_rhodok_crossbowman"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_cavalry, "trp_new_rhodok_man_at_arms"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_cavalry, "trp_new_rhodok_ranger"),
+      
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_new_sarranid_spearman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_new_sarranid_swordsman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_new_sarranid_bowman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_new_sarranid_skirmisher"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_new_sarranid_manhunter"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_new_sarranid_lancer"),
+
 
       #for multiplayer mode
       (assign, "$g_multiplayer_selected_map", multiplayer_scenes_begin),
@@ -1557,7 +1619,7 @@ scripts = [
       (item_set_slot, "itm_sarranid_boots_d", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
 	  (item_set_slot, "itm_iron_greaves", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
 	  (item_set_slot, "itm_khergit_leather_boots", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
-	  (item_set_slot, "itm_khergit_guard_boots", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
+	  (item_set_slot, "itm_elite_steppe_boots", slot_item_multiplayer_item_class, multi_item_class_type_light_foot),
 
 	  
 	  
@@ -1573,7 +1635,7 @@ scripts = [
       (item_set_slot, "itm_leather_steppe_cap_b", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
       (item_set_slot, "itm_leather_steppe_cap_a", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
       (item_set_slot, "itm_heavy_conical_helm", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
-      (item_set_slot, "itm_elite_steppe_helmet", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
+#      (item_set_slot, "itm_elite_steppe_helmet", slot_item_multiplayer_item_class, multi_item_class_type_light_helm),
 	  
 	  
 	  
@@ -4310,13 +4372,13 @@ scripts = [
         # (val_div, ":wage", 3),
       # (try_end),
 	  ## WINDYPLAINS- ##
-      (try_begin), #mercenaries cost %50 more than the normal cost
-		## WINDYPLAINS+ ## - Mercenaries cost 50% more than the normal cost.
+      (try_begin), #mercenaries cost %100 more than the normal cost
+		## WINDYPLAINS+ ## - Mercenaries cost 100% more than the normal cost.
 	    (troop_slot_eq, ":troop_id", slot_troop_recruit_type, STRT_MERCENARY),
         # (is_between, ":troop_id", mercenary_troops_begin, mercenary_troops_end),
 		## WINDYPLAINS- ##
-        (val_mul, ":wage", 3),
-        (val_div, ":wage", 2),
+        (val_mul, ":wage", 2),
+        #(val_div, ":wage", 2),
       (try_end),
 	  
       (try_begin),
@@ -4343,7 +4405,19 @@ scripts = [
 		(val_div, ":faction_wage_discount", 100),
 		(val_add, ":wage", ":faction_wage_discount"), # -wage value should be a discount.
 		## WINDYPLAINS- ##
-		
+		(try_begin),
+		## TROOP EFFECT: BONUS_DEVOTED
+			(call_script, "script_cf_ce_troop_has_ability", ":troop_id", BONUS_DEVOTED), # combat_scripts.py - ability constants in combat_constants.py
+			(val_div, ":wage", 2),
+		(try_end),
+		(try_begin),
+			## TROOP EFFECT: PREREQ_DOPPELSOLDNER
+			(call_script, "script_cf_ce_troop_has_requirement", ":troop_id", PREREQ_DOPPELSOLDNER), # combat_scripts.py - ability constants in combat_constants.py
+			(val_mul, ":wage", 2),
+		(try_end),
+	
+	
+	
 	  ## WINDYPLAINS+ ## - SLAVES cost a flat rate to feed them only.
 	  (try_begin),
 		(troop_slot_eq, ":troop_id", slot_troop_recruit_type, STRT_SLAVE),
@@ -6699,14 +6773,14 @@ scripts = [
         (try_begin),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_1"),
       
-          (faction_set_slot, ":faction_no",  slot_faction_deserter_troop, "trp_swadian_deserter"),
+          (faction_set_slot, ":faction_no",  slot_faction_deserter_troop, "trp_new_swadian_militia"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Swadia)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_swadian_sentinel"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_swadian_billman"),
           # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_swadian_sergeant"),
 		  ## WINDYPLAINS- ##
-          (faction_set_slot, ":faction_no",  slot_faction_messenger_troop, "trp_swadian_messenger"),
-          (faction_set_slot, ":faction_no",  slot_faction_prison_guard_troop, "trp_swadian_prison_guard"),
-          (faction_set_slot, ":faction_no",  slot_faction_castle_guard_troop, "trp_swadian_castle_guard"),
+          (faction_set_slot, ":faction_no",  slot_faction_messenger_troop, "trp_new_swadian_lancer"),
+          (faction_set_slot, ":faction_no",  slot_faction_prison_guard_troop, "trp_new_swadian_footman"),
+          (faction_set_slot, ":faction_no",  slot_faction_castle_guard_troop, "trp_new_swadian_sargeant"),
 		  ## WINDYPLAINS+ ## - Support different groupings of reinforcements based on mod difficulty.
 		  (try_begin),
 		      ## GAME_MODE_EASY
@@ -6714,197 +6788,218 @@ scripts = [
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_1_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_1_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_1_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_forest_bandits_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_1_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_1_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_1_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_forest_bandits_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_1_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_1_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_1_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_forest_bandits_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_1_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_1_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_1_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_forest_bandits_very_hard"),
 		  (try_end),
 		  
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_2"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_vaegir_deserter"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_vaegir_outrider"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Vaegir)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_vaegir_vanguard"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_vaegir_militia"),
           # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_vaegir_guard"),
           ## WINDYPLAINS- ##
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_vaegir_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_vaegir_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_vaegir_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_vaegir_retainer"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_vaegir_druzhina"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_vaegir_sentry"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_2_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_2_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_2_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_taiga_bandits_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_2_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_2_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_2_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_taiga_bandits_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_2_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_2_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_2_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_taiga_bandits_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_2_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_2_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_2_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_taiga_bandits_very_hard"),
 		  (try_end),
 
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_3"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_khergit_deserter"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_khergit_outcast"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Vaegir)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_khergit_skirmisher"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_khergit_clansman"),
 		  # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_khergit_horseman"),
 		  ## WINDYPLAINS+ ##
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_khergit_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_khergit_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_khergit_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_khergit_scout"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_khergit_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_khergit_master_bowman"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_3_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_3_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_3_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_steppe_bandits_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_3_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_3_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_3_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_steppe_bandits_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_3_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_3_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_3_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_steppe_bandits_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_3_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_3_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_3_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_steppe_bandits_very_hard"),
 		  (try_end),
 		  
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_4"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_nord_deserter"),
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_nord_retainer"),
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_nord_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_nord_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_nord_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_nord_berserker"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_nord_retainer"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_nord_scout"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_nord_spearman"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_nord_skirmisher"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_4_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_4_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_4_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_sea_raiders_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_4_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_4_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_4_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_sea_raiders_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_4_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_4_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_4_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_sea_raiders_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_4_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_4_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_4_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_sea_raiders_very_hard"),
 		  (try_end),
 		  
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_5"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_rhodok_deserter"),
-		  ## WINDYPLAINS+ ## - New Troop Revamp (Rhodok)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_rhodok_pikeman"),
-          # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_rhodok_veteran_spearman"),
-		  ## WINDYPLAINS- ##
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_rhodok_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_rhodok_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_rhodok_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_rhodok_footman"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_rhodok_vanguard"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_rhodok_scout"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_rhodok_halberdier"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_rhodok_crossbowman"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_5_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_5_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_5_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_mountain_bandits_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_5_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_5_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_5_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_mountain_bandits_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_5_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_5_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_5_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_mountain_bandits_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_5_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_5_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_5_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_mountain_bandits_very_hard"),
 		  (try_end),
 		  
         (else_try),
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_6"),
       
-          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_sarranid_deserter"),
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_sarranid_castle_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_sarranid_messenger"),
-          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_sarranid_prison_guard"),
-          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_sarranid_castle_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_new_sarranid_raider"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_new_sarranid_skirmisher"),
+          (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_new_sarranid_manhunter"),
+          (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_new_sarranid_guard"),
+          (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_new_sarranid_swordsman"),
 		  (try_begin),
 		      ## GAME_MODE_EASY
 			  (eq, "$mod_difficulty", GAME_MODE_EASY),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_6_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_6_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_6_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_desert_bandits_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_6_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_6_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_6_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_desert_bandits_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_6_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_6_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_6_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_desert_bandits_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_6_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_6_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_6_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_desert_bandits_very_hard"),
 		  (try_end),
 		  
 		## WINDYPLAINS+ ## - Enhanced Diplomacy - Setup player culture's troops for reinforcement purposes.
@@ -6922,23 +7017,27 @@ scripts = [
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_0_reinforcements_a"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_0_reinforcements_b"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_0_reinforcements_c"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_looters_easy"),
 		  (else_try),
 		      ## GAME_MODE_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_0_reinforcements_g"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_0_reinforcements_h"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_0_reinforcements_i"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_looters_normal"),
 		  (else_try),
 		      ## GAME_MODE_VERY_HARD
 		      (eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_0_reinforcements_j"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_0_reinforcements_k"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_0_reinforcements_l"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_looters_hard"),
 		  (else_try),
 		      ## GAME_MODE_NORMAL
 		      (faction_set_slot, ":faction_no",  slot_faction_reinforcements_a, "pt_kingdom_0_reinforcements_d"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_b, "pt_kingdom_0_reinforcements_e"),
 			  (faction_set_slot, ":faction_no",  slot_faction_reinforcements_c, "pt_kingdom_0_reinforcements_f"),
+			  (faction_set_slot, ":faction_no",  slot_faction_bandit_template, "pt_looters_very_hard"),
 		  (try_end),
 		## WINDYPLAINS- ##
         (try_end),
@@ -14680,10 +14779,50 @@ scripts = [
 			
 		(else_try),
 			(eq, ":skill_no", "skl_surgery"),
-			(call_script, "script_get_troop_item_amount", ":troop_no", "itm_book_surgery_reference"),
-			(gt, reg0, 0),
-			(val_add, ":modifier_value", 1),
-			
+			(try_begin),
+				(call_script, "script_get_troop_item_amount", ":troop_no", "itm_book_surgery_reference"),
+				(gt, reg0, 0),
+				(val_add, ":modifier_value", 1),
+			(try_end),
+			## Troop effect: FIELD SURGEON
+			(try_begin),
+				(try_begin),
+					(eq, ":troop_no", "trp_player"),
+					(assign, ":party_no", "p_main_party"),
+				(else_try),
+					(troop_get_slot, ":party_no", ":troop_no", slot_troop_leaded_party),
+					(eq, ":party_no", 0),
+					(assign, ":party_no", -2),
+				(try_end),
+				
+				(party_is_active, ":party_no"),
+				
+				(party_get_num_companion_stacks, ":num_stacks",":party_no"),
+				
+				(assign, ":troop_count", 0),
+				(try_for_range, ":stack_no", 1, ":num_stacks"),
+					(party_stack_get_troop_id, ":troop_stack", ":party_no", ":stack_no"),
+					(call_script, "script_cf_ce_troop_has_ability", ":troop_stack", BONUS_FIELD_SURGEON), # combat_scripts.py - ability constants in combat_constants.py
+					(party_stack_get_size, ":stack_size", ":party_no", ":stack_no"),
+					(try_begin),
+						(is_between, ":troop_stack", companions_begin, companions_end),
+						(neq, ":troop_stack", ":troop_no"),
+						(val_add, ":troop_count", 5),
+					(else_try),
+						(neq, ":troop_stack", ":troop_no"),
+						(val_add, ":troop_count", ":stack_size"),
+					(try_end),
+				(try_end),
+				(val_div, ":troop_count", 5),
+				(val_min, ":troop_count", 3),
+				# Check for the player.
+				(try_begin),
+					(eq, ":troop_no", "trp_player"),
+					(call_script, "script_cf_ce_troop_has_ability", "trp_player", BONUS_FIELD_SURGEON),
+					(val_add, ":troop_count", 2),
+				(try_end),
+				(val_add, ":modifier_value", ":troop_count"),
+			(try_end),
 		(else_try),
 			(eq, ":skill_no", "skl_pathfinding"),
 			(try_begin),
@@ -16145,9 +16284,30 @@ scripts = [
 		# (display_message, "@DEBUG (loot): Looting skill of {reg33} = +{reg31} value bonus, {reg32}% factor.", gpu_debug),
 		### DIAGNOSTIC- ###
 		
-		(store_random_in_range, ":base_limit", 30, 45),
+				## LEIFDIN - modify loot amount and quality according to difficulty
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY),
+			(store_random_in_range, ":base_limit", 32, 50),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_NORMAL),
+			(store_random_in_range, ":base_limit", 30, 45),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_HARD),
+			(store_random_in_range, ":base_limit", 28, 40),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
+			(store_random_in_range, ":base_limit", 26, 35),
+		(try_end),
+
+		
+		#(store_random_in_range, ":base_limit", 30, 45),
 		(store_add, ":loot_limit", ":base_limit", ":looting_quantity_bonus"),
 		(val_add, ":loot_limit", ":scavenger_quantity"),
+		
+
+		
+		
+		
         (party_get_num_companion_stacks, ":num_stacks",":enemy_party"),
         (try_for_range, ":stack_no", 0, ":num_stacks"),
 			(lt, ":loot_slot", ":loot_limit"),#Don't overfill loot
@@ -16185,7 +16345,20 @@ scripts = [
 					
 					# Limit what we can loot based on our looting threshold.
 					# (item_get_value, ":item_value", ":item_no"),
-					(store_add, ":value_threshold", 200, ":looting_value_bonus"),
+					
+					(try_begin),
+						(eq, "$mod_difficulty", GAME_MODE_EASY),
+						(store_add, ":value_threshold", 225, ":looting_value_bonus"),
+					(else_try),
+						(eq, "$mod_difficulty", GAME_MODE_NORMAL),
+						(store_add, ":value_threshold", 200, ":looting_value_bonus"),
+					(else_try),
+						(eq, "$mod_difficulty", GAME_MODE_HARD),
+						(store_add, ":value_threshold", 175, ":looting_value_bonus"),
+					(else_try),
+						(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
+						(store_add, ":value_threshold", 150, ":looting_value_bonus"),
+					(try_end),
 					
 					### DIAGNOSTIC+ ###
 					# (assign, reg33, ":item_no"),
@@ -20326,7 +20499,7 @@ scripts = [
 				
 		(assign, ":lair_found", -1),
 		
-		(try_for_range, ":bandit_template", "pt_steppe_bandits", "pt_deserters"),
+		(try_for_range, ":bandit_template", "pt_forest_bandits_easy", "pt_deserters"),
 			(party_template_get_slot, ":bandit_lair", ":bandit_template", slot_party_template_lair_party),
 						
 			#No party is active because bandit lairs are removed as soon as they are attacked, by the player -- but can only be removed by the player. This will reset bandit lair to zero
@@ -22907,13 +23080,38 @@ scripts = [
       (faction_get_slot, ":party_template_b", ":party_faction", slot_faction_reinforcements_b),
       (faction_get_slot, ":party_template_c", ":party_faction", slot_faction_reinforcements_c),
 
+      #(assign, ":party_template", 0),
+      #(store_random_in_range, ":rand", 0, 100),
+      #(try_begin),
+        #(this_or_next|eq, ":party_type", spt_town),
+        #(eq, ":party_type", spt_castle),  #CASTLE OR TOWN
+        #(try_begin),
+          #(lt, ":rand", 65),
+          #(assign, ":party_template", ":party_template_a"),
+        #(else_try),
+          #(assign, ":party_template", ":party_template_b"),
+        #(try_end),
+      #(else_try),
+        #(eq, ":party_type", spt_kingdom_hero_party),
+        #(try_begin),
+          #(lt, ":rand", 50),
+          #(assign, ":party_template", ":party_template_a"),
+        #(else_try),
+          #(lt, ":rand", 75),
+          #(assign, ":party_template", ":party_template_b"),
+        #(else_try),
+          #(assign, ":party_template", ":party_template_c"),
+        #(try_end),
+      #(else_try),
+      #(try_end),
+      ## LEIFDIN ++ CHANGED RECRUITMENT ##
       (assign, ":party_template", 0),
       (store_random_in_range, ":rand", 0, 100),
       (try_begin),
         (this_or_next|eq, ":party_type", spt_town),
         (eq, ":party_type", spt_castle),  #CASTLE OR TOWN
         (try_begin),
-          (lt, ":rand", 65),
+          (lt, ":rand", 50),
           (assign, ":party_template", ":party_template_a"),
         (else_try),
           (assign, ":party_template", ":party_template_b"),
@@ -22921,16 +23119,11 @@ scripts = [
       (else_try),
         (eq, ":party_type", spt_kingdom_hero_party),
         (try_begin),
-          (lt, ":rand", 50),
-          (assign, ":party_template", ":party_template_a"),
-        (else_try),
-          (lt, ":rand", 75),
-          (assign, ":party_template", ":party_template_b"),
-        (else_try),
           (assign, ":party_template", ":party_template_c"),
         (try_end),
       (else_try),
       (try_end),
+      ## LEIFDIN -- ##
 
       (try_begin),
         (gt, ":party_template", 0),
@@ -27824,7 +28017,7 @@ scripts = [
       (try_begin),
         (le, ":guard_troop", 0),
 		## WINDYPLAINS+ ## - New Troop Revamp (Swadia)
-        (assign, ":guard_troop", "trp_r_swadian_sentinel"),
+        (assign, ":guard_troop", "trp_new_swadian_sargeant"),
 		# (assign, ":guard_troop", "trp_swadian_sergeant"),
 		## WINDYPLAINS- ##
       (try_end),
@@ -33831,7 +34024,7 @@ scripts = [
 		(try_end),
 		# (store_random_in_range, ":troop_no", ":mercenaries_begin", mercenary_troops_end),
 		# (party_set_slot, ":town_no", slot_center_mercenary_troop_type, ":troop_no"),
-		(store_random_in_range, ":amount", 3, 8),
+		(store_random_in_range, ":amount", 1, 5),
 		(try_begin),
 			(is_between, ":town_no", castles_begin, castles_end), # Castles gain mercenaries at half the standard rate.
 			(val_div, ":amount", 2),
@@ -33839,6 +34032,21 @@ scripts = [
 			(is_between, ":town_no", villages_begin, villages_end), # Villages gain mercenaries at 1/6th the standard rate.
 			(val_div, ":amount", 6),
 		(try_end),
+		## Difficulty modifier ##
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY), ## 4/3 production
+			(store_div, ":difficulty_modifier", ":amount", 3),
+			(val_add, ":amount", ":difficulty_modifier"),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_HARD), ## 2/3 production
+			(store_div, ":difficulty_modifier", ":amount", 3),
+			(val_sub, ":amount", ":difficulty_modifier"),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_VERY_HARD), ## 1/3 production
+			(store_div, ":difficulty_modifier", ":amount", 6),
+			(val_sub, ":amount", ":difficulty_modifier"),
+		(try_end),
+		
 		(val_add, ":amount", ":bonus"),
 		(party_set_slot, ":town_no", slot_center_mercenary_pool_player, ":amount"),
 		(val_mul, ":amount", 3),
@@ -35644,41 +35852,53 @@ scripts = [
 		(display_message, "@{!}DEBUG : Doing spawn bandit script"),
 	 (try_end),
 	 
-	 (party_template_set_slot, "pt_steppe_bandits", slot_party_template_lair_type, "pt_steppe_bandit_lair"),
-	 (party_template_set_slot, "pt_taiga_bandits", slot_party_template_lair_type, "pt_taiga_bandit_lair"),
-	 (party_template_set_slot, "pt_mountain_bandits", slot_party_template_lair_type, "pt_mountain_bandit_lair"),
-	 (party_template_set_slot, "pt_forest_bandits", slot_party_template_lair_type, "pt_forest_bandit_lair"),
-	 (party_template_set_slot, "pt_sea_raiders", slot_party_template_lair_type, "pt_sea_raider_lair"),
-	 (party_template_set_slot, "pt_desert_bandits", slot_party_template_lair_type, "pt_desert_bandit_lair"),
+	 (faction_get_slot, ":looters", "fac_player_supporters_faction", slot_faction_bandit_template),
+	 (faction_get_slot, ":forest_bandits", "fac_kingdom_1", slot_faction_bandit_template),
+	 (faction_get_slot, ":taiga_bandits", "fac_kingdom_2", slot_faction_bandit_template),
+	 (faction_get_slot, ":steppe_bandits", "fac_kingdom_3", slot_faction_bandit_template),
+	 (faction_get_slot, ":sea_raiders", "fac_kingdom_4", slot_faction_bandit_template),
+	 (faction_get_slot, ":mountain_bandits", "fac_kingdom_5", slot_faction_bandit_template),
+	 (faction_get_slot, ":desert_bandits", "fac_kingdom_6", slot_faction_bandit_template),
+	 
+	 
+	 
+	 
+	 
+	 (party_template_set_slot, ":forest_bandits", slot_party_template_lair_type, "pt_forest_bandit_lair"),
+	 (party_template_set_slot, ":taiga_bandits", slot_party_template_lair_type, "pt_taiga_bandit_lair"),
+	 (party_template_set_slot, ":steppe_bandits", slot_party_template_lair_type, "pt_steppe_bandit_lair"),
+	 (party_template_set_slot, ":sea_raiders", slot_party_template_lair_type, "pt_sea_raider_lair"),
+	 (party_template_set_slot, ":mountain_bandits", slot_party_template_lair_type, "pt_mountain_bandit_lair"),	 
+	 (party_template_set_slot, ":desert_bandits", slot_party_template_lair_type, "pt_desert_bandit_lair"),
 	
-	 (party_template_set_slot, "pt_steppe_bandits", slot_party_template_lair_spawnpoint, "p_steppe_bandit_spawn_point"),
-	 (party_template_set_slot, "pt_taiga_bandits", slot_party_template_lair_spawnpoint, "p_taiga_bandit_spawn_point"),
-	 (party_template_set_slot, "pt_mountain_bandits", slot_party_template_lair_spawnpoint, "p_mountain_bandit_spawn_point"),
-	 (party_template_set_slot, "pt_forest_bandits", slot_party_template_lair_spawnpoint, "p_forest_bandit_spawn_point"),
-	 (party_template_set_slot, "pt_sea_raiders", slot_party_template_lair_spawnpoint, "p_sea_raider_spawn_point_1"),
-	 (party_template_set_slot, "pt_desert_bandits", slot_party_template_lair_spawnpoint, "p_desert_bandit_spawn_point"),
+	 (party_template_set_slot, ":forest_bandits", slot_party_template_lair_spawnpoint, "p_forest_bandit_spawn_point"),
+	 (party_template_set_slot, ":taiga_bandits", slot_party_template_lair_spawnpoint, "p_taiga_bandit_spawn_point"),
+	 (party_template_set_slot, ":steppe_bandits", slot_party_template_lair_spawnpoint, "p_steppe_bandit_spawn_point"),
+	 (party_template_set_slot, ":sea_raiders", slot_party_template_lair_spawnpoint, "p_sea_raider_spawn_point_1"),
+	 (party_template_set_slot, ":mountain_bandits", slot_party_template_lair_spawnpoint, "p_mountain_bandit_spawn_point"),
+	 (party_template_set_slot, ":desert_bandits", slot_party_template_lair_spawnpoint, "p_desert_bandit_spawn_point"),
 		
 	## WINDYPLAINS+ ## - Game Difficulty - Adjusts number of bandits spawning.
 	(try_begin),
 		(eq, "$mod_difficulty", GAME_MODE_EASY),
-		(assign, ":spawn_limit", 8),
-		(assign, ":looter_limit", 34),
-		(assign, ":deserter_limit", 11),
-	(else_try),
-		(eq, "$mod_difficulty", GAME_MODE_HARD),
-		(assign, ":spawn_limit", 20),
-		(assign, ":looter_limit", 50),
-		(assign, ":deserter_limit", 19),
-	(else_try),
-		(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
 		(assign, ":spawn_limit", 26),
 		(assign, ":looter_limit", 58),
 		(assign, ":deserter_limit", 23),
 	(else_try),
+		(eq, "$mod_difficulty", GAME_MODE_HARD),
+		(assign, ":spawn_limit", 14),
+		(assign, ":looter_limit", 42),
+		(assign, ":deserter_limit", 15),
+	(else_try),
+		(eq, "$mod_difficulty", GAME_MODE_VERY_HARD),
+		(assign, ":spawn_limit", 8),
+		(assign, ":looter_limit", 34),
+		(assign, ":deserter_limit", 11),
+	(else_try),
 		# Default - GAME_MODE_NORMAL
-		(assign, ":spawn_limit", 14), # Native = 16
-		(assign, ":looter_limit", 42), # Native = 42
-		(assign, ":deserter_limit", 15), # Native = 15
+		(assign, ":spawn_limit", 20), # Native = 16
+		(assign, ":looter_limit", 40), # Native = 42
+		(assign, ":deserter_limit", 19), # Native = 15
 	(try_end),
 	
      (try_begin),
@@ -35687,60 +35907,60 @@ scripts = [
        (store_random,":spawn_point",num_mountain_bandit_spawn_points),
        (val_add,":spawn_point","p_mountain_bandit_spawn_point"),
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_mountain_bandits"),
+       (spawn_around_party,":spawn_point",":mountain_bandits"),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
      (try_end),
      (try_begin),
-       (store_num_parties_of_template, ":num_parties", "pt_forest_bandits"),
+       (store_num_parties_of_template, ":num_parties", ":forest_bandits"),
        (lt,":num_parties",":spawn_limit"), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_forest_bandit_spawn_points),
        (val_add,":spawn_point","p_forest_bandit_spawn_point"),
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_forest_bandits"),
+       (spawn_around_party,":spawn_point",":forest_bandits"),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
      (try_end),
      (try_begin),
-       (store_num_parties_of_template, ":num_parties", "pt_sea_raiders"),
+       (store_num_parties_of_template, ":num_parties", ":sea_raiders"),
        (lt,":num_parties",":spawn_limit"), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_sea_raider_spawn_points),
        (val_add,":spawn_point","p_sea_raider_spawn_point_1"),
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_sea_raiders"),
+       (spawn_around_party,":spawn_point",":sea_raiders"),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
      (try_end),
      (try_begin),
-       (store_num_parties_of_template, ":num_parties", "pt_steppe_bandits"),
+       (store_num_parties_of_template, ":num_parties", ":steppe_bandits"),
        (lt,":num_parties",":spawn_limit"), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_steppe_bandit_spawn_points),
        (val_add,":spawn_point","p_steppe_bandit_spawn_point"),
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_steppe_bandits"),
+       (spawn_around_party,":spawn_point",":steppe_bandits"),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
      (try_end),
      (try_begin),
-       (store_num_parties_of_template, ":num_parties", "pt_taiga_bandits"),
+       (store_num_parties_of_template, ":num_parties", ":taiga_bandits"),
        (lt,":num_parties",":spawn_limit"), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_taiga_bandit_spawn_points),
        (val_add,":spawn_point","p_taiga_bandit_spawn_point"),
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_taiga_bandits"),
+       (spawn_around_party,":spawn_point",":taiga_bandits"),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
      (try_end),
      (try_begin),
-       (store_num_parties_of_template, ":num_parties", "pt_desert_bandits"),
+       (store_num_parties_of_template, ":num_parties", ":desert_bandits"),
        (lt,":num_parties",":spawn_limit"), #was 14 at mount&blade, 18 in warband, 16 last decision
        (store_random,":spawn_point",num_desert_bandit_spawn_points),
        (val_add,":spawn_point","p_desert_bandit_spawn_point"),
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_desert_bandits"),
+       (spawn_around_party,":spawn_point",":desert_bandits"),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
      (try_end),
      (try_begin),
-       (store_num_parties_of_template, ":num_parties", "pt_looters"),
+       (store_num_parties_of_template, ":num_parties", ":looters"),
        (lt,":num_parties",":looter_limit"), #was 33 at mount&blade, 50 in warband, 42 last decision
        (store_random_in_range,":spawn_point",villages_begin,villages_end), #spawn looters twice to have lots of them at the beginning       
        (set_spawn_radius, 25),
-       (spawn_around_party,":spawn_point","pt_looters"),
+       (spawn_around_party,":spawn_point",":looters"),
        (assign, ":spawned_party_id", reg0),
 	   (party_set_slot, reg0, slot_party_type, spt_raider),
        (try_begin),
@@ -35817,7 +36037,7 @@ scripts = [
 	 
 	 
 	 #Spawn bandit lairs
-	(try_for_range, ":bandit_template", "pt_steppe_bandits", "pt_deserters"),
+	(try_for_range, ":bandit_template", ":forest_bandits", "pt_deserters"),
 		(party_template_get_slot, ":bandit_lair_party", ":bandit_template", slot_party_template_lair_party),
 		(le, ":bandit_lair_party", 1),
 		
@@ -35854,26 +36074,26 @@ scripts = [
 			(remove_party, ":new_camp"),
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, 0),			
 		(else_try),
-			(eq, ":bandit_template", "pt_sea_raiders"),
+			(eq, ":bandit_template", ":sea_raiders"),
 			(eq, ":new_camp_terrain", 3),
 			(map_get_water_position_around_position, pos5, pos4, 4),			
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, ":new_camp"),
 			(party_set_flags, ":new_camp", pf_disabled, 1),			
 		(else_try),	
-			(eq, ":bandit_template", "pt_mountain_bandits"),
+			(eq, ":bandit_template", ":mountain_bandits"),
 			(eq, ":new_camp_terrain", 3),
 			(gt, ":elevation", 250),			
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, ":new_camp"),
 			(party_set_flags, ":new_camp", pf_disabled, 1),			
 		(else_try),
-			(eq, ":bandit_template", "pt_desert_bandits"),
+			(eq, ":bandit_template", ":desert_bandits"),
 			(eq, ":new_camp_terrain", 5),
 			(gt, ":lair_y", -9000),
 			(gt, ":elevation", 125),
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, ":new_camp"),
 			(party_set_flags, ":new_camp", pf_disabled, 1),			
 		(else_try),	
-			(eq, ":bandit_template", "pt_steppe_bandits"),
+			(eq, ":bandit_template", ":steppe_bandits"),
 			(this_or_next|eq, ":new_camp_terrain", 2),
 			(eq, ":new_camp_terrain", 10),
 			(this_or_next|eq, ":new_camp_terrain", 10),
@@ -35881,12 +36101,12 @@ scripts = [
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, ":new_camp"),
 			(party_set_flags, ":new_camp", pf_disabled, 1),			
 		(else_try),	
-			(eq, ":bandit_template", "pt_taiga_bandits"),
+			(eq, ":bandit_template", ":taiga_bandits"),
 			(eq, ":new_camp_terrain", 12),				
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, ":new_camp"),
 			(party_set_flags, ":new_camp", pf_disabled, 1),
 		(else_try),	
-			(eq, ":bandit_template", "pt_forest_bandits"),
+			(eq, ":bandit_template", ":forest_bandits"),
 			(eq, ":new_camp_terrain", 11),				
 			(party_template_set_slot, ":bandit_template", slot_party_template_lair_party, ":new_camp"),
 			(party_set_flags, ":new_camp", pf_disabled, 1),			
@@ -51718,8 +51938,8 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51757,8 +51977,8 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51802,8 +52022,8 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51841,8 +52061,8 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51886,8 +52106,8 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51921,8 +52141,8 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				#(neq, ":troop_prev", "trp_r_sarranid_kul"),
+				#(neq, ":troop_prev", "trp_r_khergit_slave_2"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -52076,17 +52296,6 @@ scripts = [
 			(display_message, "@Warband Script Enhancer v{reg1}.{reg2}.{reg3} is running.", gpu_green),
 		(try_end),
 		
-		# FORCE CERTAIN TROOP FIXES.
-		# Swadian Militia
-		(troop_set_skill, "trp_r_swadian_militia", "skl_ironflesh", 2),
-		(troop_set_skill, "trp_r_swadian_militia", "skl_power_strike", 2),
-		(troop_set_skill, "trp_r_swadian_militia", "skl_shield", 2),
-		# Swadian Hunter
-		(troop_set_proficiency, "trp_r_swadian_hunter", wpt_archery, 75),
-		(troop_set_skill, "trp_r_swadian_hunter", "skl_power_draw", 0),
-		# Huntsman of Khudan (Veteran) - Keeps ending up with a 26 agility otherwise.
-		(troop_set_attribute, "trp_khudan_mounted_archer_1", ca_agility, 16),
-		
 		## Conditional troop re-initialization that should only happen if we're testing them out.
 		(try_begin),
 			(eq, "$show_autoloot_data", 1),         # We're looking at troop data.
@@ -52118,7 +52327,7 @@ scripts = [
 ("initialize_default_settings",
 	[
 		(assign, "$display_extra_xp_prof", 1),           # Show extra xp & weapon proficiency gains.
-		(assign, "$mod_difficulty", GAME_MODE_NORMAL),   # Normal
+		(assign, "$mod_difficulty", GAME_MODE_EASY),   # Normal
 		(assign, "$g_wp_tpe_active", 1),                 # TPE active.
 		(assign, "$killer_regen_mode", 3),               # Player & AI
 		(assign, "$disable_npc_complaints", 0),          # Companions will complain.
@@ -52134,7 +52343,7 @@ scripts = [
 		(assign, "$diplomacy_force_recruit_enabled", 1), # Manadatory conscription will by default influence auto-recruitment.
 		(assign, "$enable_popups", 1),                   # Players will be notified of certain events via a pop-up message.
 		(assign, "$enable_troop_ratio_bar", 1),          # Enable the troop ratio bar by default.
-		(assign, "$cms_minimum_pickup_value", 50),       # Set an initial minimum pickup threshold for quartermasters.
+		(assign, "$cms_minimum_pickup_value", 1),       # Set an initial minimum pickup threshold for quartermasters.
 		(assign, "$cms_mode_jailer", CMS_JAILER_STORE_AND_SELL), # Sets the default behavior of the party gaoler.
 		(assign, "$hub_display_party_members", 1),       # Not really a mod option, but it needed to be initialized at least once.
 		(assign, "$enable_sprinting", 1),                # Sprinting is enabled.
@@ -52142,8 +52351,8 @@ scripts = [
 		(assign, "$enable_fallen_riders", 1),            # Unhorsed riders take damage by default.
 		(assign, "$enable_battle_minimap", 1),           # Enable the overhead battle mini-map by default.
 		(assign, "$enable_combat_abilities", 1),         # Combat abilities are enabled by default.
-		(assign, "$cms_minimum_cash_block", 750),        # Set minimum cash limit for auto-purchasing of food.
-		(assign, "$enable_troop_prefixes", 0),           # Troop prefixes disabled.
+		(assign, "$cms_minimum_cash_block", 3000),        # Set minimum cash limit for auto-purchasing of food.
+		(assign, "$enable_troop_prefixes", 1),           # Troop prefixes disabled.
 		(assign, "$cms_report_mode", CMS_REPORTS_DETAILED), # Sets companion roles to report detailed information to the message log.
 		(assign, "$enable_tutorials", 1),                # Set tutorial quests as on by default.
 		(assign, "$troop_naming_convention", NAME_STYLE_IMMERSIVE), # Establish base naming convention for upgraded troops.
