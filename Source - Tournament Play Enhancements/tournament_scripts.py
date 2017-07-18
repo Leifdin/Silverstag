@@ -3666,7 +3666,7 @@ scripts = [
 			(troop_set_slot, tpe_menu_options, ":appearance_slot", ":selection"),  # Set the menu options.
 			
 			(try_begin),  ### DIAGNOSTIC ###
-				(ge, DEBUG_TPE_DESIGN, 1),
+				#(ge, DEBUG_TPE_DESIGN, 1),
 				(assign, reg21, ":slot"),
 				(assign, reg22, ":appearance_slot"),
 				(str_store_item_name, s21, ":item_no"),

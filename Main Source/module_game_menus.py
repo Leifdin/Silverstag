@@ -3859,7 +3859,22 @@ game_menus = [
          (jump_to_menu, "mnu_camp_cheat"),
         ]
        ),
-	   
+	  ("tpe_is_init", [], "Was TPE initialized?",	
+		[
+		(try_begin),
+			(eq, "$tpe_initialized", 1),
+			(display_message, "@YES", gpu_green),
+		(else_try),
+			(display_message, "@NO", gpu_red),
+		(try_end),
+		]),			
+	  ("tpe_init", [], "Initialize TPE",	
+		[
+		(try_begin),
+			(call_script, "script_tpe_initialize_player_settings"),
+			(display_message, "@TPE INITIALIZED", gpu_green),
+		(try_end),
+		]),	   
 	   
       ("back_to_camp_menu",[],"{!}Back to camp menu.",
        [

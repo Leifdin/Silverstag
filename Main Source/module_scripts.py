@@ -1174,6 +1174,8 @@ scripts = [
 				(try_end),
 			(try_end),
 		(try_end),
+		#force TPE initialization
+		(call_script, "script_tpe_initialize_player_settings"),
     ]),
 
   #script_game_get_use_string

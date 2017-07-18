@@ -80,6 +80,8 @@ scripts = [
 		(call_script, "script_diplomacy_calculate_policy_data_values", TOOLTIP_DIPLOMACY_SUMMARY),
 		(call_script, "script_diplomacy_sync_faction_data", ":kingdom_no", STORE_TO_FACTION),
 		
+		(assign, "$diplomacy_initialized", 1),
+		
 		# Initialize default mod settings.
 		# (assign, "$diplomacy_filter_enabled", 1),        # Disabled by default.
 		# (assign, "$diplomacy_use_alt_morale", 1),        # Default to alternate morale system.
