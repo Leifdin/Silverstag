@@ -582,6 +582,41 @@ scripts = [
 		#####               VAEGIR FACTION               #####
 		######################################################
 		
+		## I1 Vaegir Recruit
+		(troop_set_class, "trp_n_vaegir_recruit", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_vaegir_recruit", slot_troop_purchase_cost, 10),
+		
+		## I2 Vaegir Skrimisher
+		(troop_set_class, "trp_n_vaegir_skirmisher", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_vaegir_skirmisher", slot_troop_purchase_cost, 15),
+		
+		## H3 Vaegir Skrimisher
+		(troop_set_class, "trp_n_vaegir_raider", CLASS_CAVALRY),
+		(troop_set_slot, "trp_n_vaegir_raider", slot_troop_purchase_cost, 50),
+		
+		
+		## A4 Vaegir Bowman
+		(troop_set_class, "trp_n_vaegir_bowman", CLASS_RANGED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_vaegir_bowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_vaegir_bowman", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_vaegir_bowman", slot_troop_purchase_cost, 400),
+		
+		## C5 Vaegir Headhunter
+		(troop_set_class, "trp_n_vaegir_headhunter", CLASS_CAVALRY),
+		(troop_set_slot, "trp_n_vaegir_headhunter", slot_troop_purchase_cost, 900),
+		
+		## I6 Vaegir Guard
+		(troop_set_class, "trp_n_vaegir_guard", CLASS_CAVALRY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_vaegir_guard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_vaegir_guard", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_vaegir_guard", slot_troop_purchase_cost, 1000),
+		
+		## H7 Vaegir Bogatyr
+		(troop_set_class, "trp_n_vaegir_bogatyr", CLASS_CAVALRY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_vaegir_bogatyr", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_vaegir_bogatyr", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_vaegir_bogatyr", slot_troop_purchase_cost, 1750),
+		
 		## I1 - Vaegiran Militia
 		(troop_set_class, "trp_r_vaegir_militia", CLASS_INFANTRY),
 		# +1 tier
