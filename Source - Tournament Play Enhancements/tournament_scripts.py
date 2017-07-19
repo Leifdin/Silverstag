@@ -616,13 +616,21 @@ scripts = [
 			(display_message, "@DEBUG (TPE): {s1} is on team {reg0} and should load at entry {reg1}."),
 		(try_end),
 			
+		
 		# Do they have any gear arranged for them?
 		(try_begin),
 			(this_or_next|troop_slot_eq, ":troop_id", slot_troop_tournament_always_randomize, 1),   # Player set to randomize. # Bugfix #1337, v0.23
 			(eq, "$g_wp_tpe_active", 0),                                                            # TPE 1.2 + If TPE deactivated by player then everyone gets random stuff.
 			(call_script, "script_tpe_equip_troop", ":troop_id"),                                   # gears up the troop.
+			
+			#~ (str_store_troop_name, s1, ":troop_id"),
+			#~ (try_begin),
+				#~ (eq, ":troop_id", "trp_player"),
+				#~ (display_message, "@Equipping troop {s1} with random equipment", gpu_light_blue),
+			#~ (else_try),
+				#~ (display_message, "@Equipping troop {s1} with random equipment", gpu_green),
+			(try_end),
 		(try_end),
-		
 		(str_clear, s1),
 			
 		# Do they get a horse?
@@ -4403,6 +4411,8 @@ scripts = [
 			(call_script, "script_tpe_initialize_default_design_settings", ":center_no"),
 		(try_end),
 		
+		
+		
 		### LORD PRESETS ###
 		(try_for_range, ":troop_no", active_npcs_begin, active_npcs_end),
 			(neg|is_between, ":troop_no", companions_begin, companions_end),
@@ -4421,6 +4431,11 @@ scripts = [
 				(troop_set_slot, ":troop_no", ":slot_no", 0),
 			(try_end),
 		(try_end),
+		
+		## Player
+		(troop_set_slot, "trp_player", slot_troop_tournament_always_randomize, 1),
+		
+		
 		## NPC1 - Borcha
 		(troop_set_slot, "trp_npc1", slot_troop_tournament_twohand, 1),
 		(troop_set_slot, "trp_npc1", slot_troop_tournament_throwing, 1),
