@@ -243,6 +243,11 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_swadian_militia", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_swadian_militia", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
 		
+		## A3 Swadian Crossbowman
+		(troop_set_class, "trp_n_swadian_crossbowman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_purchase_cost, 75),
+		
+		
 		## I2 - Swadia Militia
 		(troop_set_class, "trp_r_swadian_militia", CLASS_INFANTRY),
 		# +1 tier
