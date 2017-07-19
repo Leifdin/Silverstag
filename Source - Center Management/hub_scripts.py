@@ -244,9 +244,19 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_n_swadian_militia", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
 		
 		## A3 Swadian Crossbowman
-		(troop_set_class, "trp_n_swadian_crossbowman", CLASS_INFANTRY),
+		(troop_set_class, "trp_n_swadian_crossbowman", CLASS_RANGED),
 		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_purchase_cost, 75),
 		
+		## C4 Swadian Lancer
+		(troop_set_class, "trp_n_swadian_lancer", CLASS_CAVALRY),
+		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_purchase_cost, 700),
+		
+		## I5 Swadian Sergeant
+		(troop_set_class, "trp_n_swadian_sergeant", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_swadian_sergeant"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_swadian_sergeant", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_swadian_sergeant", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_purchase_cost, 750),
 		
 		## I2 - Swadia Militia
 		(troop_set_class, "trp_r_swadian_militia", CLASS_INFANTRY),
