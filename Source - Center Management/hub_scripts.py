@@ -232,11 +232,16 @@ scripts = [
 		#####               SWADIA FACTION               #####
 		######################################################
 		
-		## I2 Swadian Recruit
+		## I1 Swadian Recruit
 		(troop_set_class, "trp_n_swadian_recruit", CLASS_INFANTRY),
 		(troop_set_slot, "trp_n_swadian_recruit", slot_troop_purchase_cost, 10),
 		
-		
+		## I3 Swadian Militia
+		(troop_set_class, "trp_n_swadian_militia", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_swadian_militia", slot_troop_purchase_cost, 100),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_swadian_militia"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_swadian_militia", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_swadian_militia", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
 		
 		## I2 - Swadia Militia
 		(troop_set_class, "trp_r_swadian_militia", CLASS_INFANTRY),

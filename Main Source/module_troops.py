@@ -454,6 +454,7 @@ troops = [
 
 
 ["n_swadian_recruit",       "Swadian Recruit",             "Swadian Recruits",		tf_guarantee_all_infantry|tf_male,0,0,fac_kingdom_1,[itm_red_gambeson, itm_woolen_hose, itm_blue_hose, itm_pitch_fork],str_13|agi_12|int_6|cha_6|level(4),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(75)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_1|knows_athletics_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
+["n_swadian_militia",       "Swadian Militia",             "Swadian Militia",		tf_guarantee_all_infantry|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_leather_gloves, itm_swadian_gambeson, itm_hose_kneecops_green, itm_cutting_spear],str_18|agi_15|int_12|cha_12|level(12),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(125)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_4|knows_ironflesh_5,swadian_face_younger_1,swadian_face_middle_2],
 
 
 ["swadia_end_troop","Sergeant","Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],def_attrib|level(34),wp_one_handed(225)|wp_two_handed(60)|wp_polearm(225)|wp_archery(60)|wp_crossbow(60)|wp_throwing(60),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
@@ -2908,5 +2909,5 @@ upgrade(troops,"follower_woman","hunter_woman")
 upgrade(troops,"hunter_woman","fighter_woman")
 upgrade(troops,"fighter_woman","sword_sister")
 
-
+upgrade(troops, "n_swadian_recruit", "n_swadian_militia"),
 
