@@ -957,7 +957,49 @@ scripts = [
 		######################################################
 
 		#KHERGITS - STANDARD TROOPS
+		
+		#I1 Khergit Recruit
+		(troop_set_class, "trp_n_khergit_recruit", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_khergit_recruit", slot_troop_purchase_cost, 10),
+		
+		#H2 Khergit Scout
+		(troop_set_class, "trp_n_khergit_scout", CLASS_CAVALRY),
+		(troop_set_slot, "trp_n_khergit_scout", slot_troop_purchase_cost, 35),
  
+		
+		#I3 Khergit Shaman
+		(troop_set_class, "trp_n_khergit_shaman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_shaman"),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_shaman", BONUS_INSPIRING, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_khergit_scout", slot_troop_purchase_cost, 125),
+ 
+		
+		#C3 Khergit Lancer
+		(troop_set_class, "trp_n_khergit_shaman", CLASS_CAVALRY),
+		(troop_set_slot, "trp_n_khergit_scout", slot_troop_purchase_cost, 75),
+ 
+ 		#I4 Khergit Clansman
+		(troop_set_class, "trp_n_khergit_clansman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_clansman"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_clansman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_clansman", BONUS_DEVOTED, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_khergit_clansman", slot_troop_purchase_cost, 225),
+		
+ 		#H5 Khergit Skirmisher
+		(troop_set_class, "trp_n_khergit_skirmisher", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_skirmisher"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_skirmisher", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_skirmisher", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_khergit_skirmisher", slot_troop_purchase_cost, 500),
+		
+ 		#C6 Khergit Keshig
+		(troop_set_class, "trp_n_khergit_keshig", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_keshig"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_keshig", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_keshig", BONUS_TACTICIAN, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_khergit_keshig", slot_troop_purchase_cost, 950),
+		
+		
 		#Khergit Slave I1
 		(troop_set_class, "trp_r_khergit_slave", CLASS_INFANTRY),
 		# +1 tier
