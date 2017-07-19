@@ -629,7 +629,7 @@ scripts = [
 				#~ (display_message, "@Equipping troop {s1} with random equipment", gpu_light_blue),
 			#~ (else_try),
 				#~ (display_message, "@Equipping troop {s1} with random equipment", gpu_green),
-			(try_end),
+			#~ (try_end),
 		(try_end),
 		(str_clear, s1),
 			

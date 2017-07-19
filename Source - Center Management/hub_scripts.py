@@ -232,6 +232,12 @@ scripts = [
 		#####               SWADIA FACTION               #####
 		######################################################
 		
+		## I2 Swadian Recruit
+		(troop_set_class, "trp_n_swadian_recruit", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_swadian_recruit", slot_troop_purchase_cost, 10),
+		
+		
+		
 		## I2 - Swadia Militia
 		(troop_set_class, "trp_r_swadian_militia", CLASS_INFANTRY),
 		# +1 tier
@@ -3591,216 +3597,222 @@ scripts = [
 ("hub_determine_purchase_cost",
 	[
 		(store_script_param_1, ":troop_no"),
-
-		## ATTRIBUTES ## - (STR-10 + AGI-10)*8
-		(store_attribute_level, ":STR", ":troop_no", ca_strength),
-		(val_sub, ":STR", 10),
-		(val_max, ":STR", 1),
-		(store_attribute_level, ":AGI", ":troop_no", ca_agility),
-		(val_sub, ":AGI", 10),
-		(val_max, ":AGI", 1),
-		(store_add, ":rating_attributes", ":STR", ":AGI"),
-		(val_mul, ":rating_attributes", 8),
 		
-		## SKILLS ## - Value 5-10 per point depending on skill.
-		(assign, ":rating_skills", 0),
-		## HORSE ARCHERY - Only applies if troop is mounted & ranged.
-		(try_begin),
-			(troop_is_guarantee_ranged, ":troop_no"),
-			(this_or_next|troop_is_mounted, ":troop_no"),
-			(troop_is_guarantee_horse, ":troop_no"),
-			(store_skill_level, ":skill_horse_archery", "skl_horse_archery", ":troop_no"),
-			(val_mul, ":skill_horse_archery", 6),
-			(val_add, ":rating_skills", ":skill_horse_archery"),
-		(try_end),
-		(try_begin),
-			## RIDING - Only applies if troop is mounted.
-			(this_or_next|troop_is_mounted, ":troop_no"),
-			(troop_is_guarantee_horse, ":troop_no"),
-			(store_skill_level, ":skill_riding", "skl_riding", ":troop_no"),
-			(val_mul, ":skill_riding", 8),
-			(val_add, ":rating_skills", ":skill_riding"),
+		(try_begin), #Do not calculate recruitment cost once it has been determined - this improves performance and allows for static cost determination
+			(troop_get_slot, ":troop_cost", ":troop_no", slot_troop_purchase_cost),
+			(gt, ":troop_cost", 1),
+			(assign, reg1, ":troop_cost"),
 		(else_try),
-			## ATHLETICS - Only applies if troop is not mounted.
-			(store_skill_level, ":skill_athletics", "skl_athletics", ":troop_no"),
-			(val_mul, ":skill_athletics", 5),
-			(val_add, ":rating_skills", ":skill_athletics"),
-		(try_end),
-		## IRONFLESH - Always applicable.
-		(store_skill_level, ":skill_ironflesh", "skl_ironflesh", ":troop_no"),
-		(val_mul, ":skill_ironflesh", 10),
-		(val_add, ":rating_skills", ":skill_ironflesh"),
-		
-		## ARMOR RATING ## - Item Rating * Placement Weight * 25 / 1000
-		(call_script, "script_hub_troop_get_armor_rating", ":troop_no"), # Returns armor rating to reg1
-		(assign, ":rating_armor", reg1),
-		
-		## MELEE ATTACK RATING
-		(call_script, "script_hub_troop_get_melee_rating", ":troop_no"), # Returns melee rating to reg1
-		(assign, ":rating_melee", reg1),
-				
-		## RANGED ATTACK RATING
-		## FORMULA = (Item Rating * 3) + (Proficiency * 2) + (Power Draw/Throw * rating_multiplier_skill)
-		(try_begin),
-			(troop_is_guarantee_ranged, ":troop_no"),
-			(call_script, "script_hub_troop_get_ranged_rating", ":troop_no"), # Returns ranged rating to reg1
-			(assign, ":rating_ranged", reg1),
+			## ATTRIBUTES ## - (STR-10 + AGI-10)*8
+			(store_attribute_level, ":STR", ":troop_no", ca_strength),
+			(val_sub, ":STR", 10),
+			(val_max, ":STR", 1),
+			(store_attribute_level, ":AGI", ":troop_no", ca_agility),
+			(val_sub, ":AGI", 10),
+			(val_max, ":AGI", 1),
+			(store_add, ":rating_attributes", ":STR", ":AGI"),
+			(val_mul, ":rating_attributes", 8),
 			
-			(store_mul, ":discount_ranged", ":rating_ranged", rating_ranged_melee_discount), # -15%
-			(val_div, ":discount_ranged", 100),
-			(store_mul, ":discount_melee", ":rating_melee", rating_ranged_melee_discount), # -15%
-			(val_div, ":discount_melee", 100),
-		(else_try),
-			(assign, ":rating_ranged", 0),
-			(assign, ":discount_ranged", 0),
-			(assign, ":discount_melee", 0),
+			## SKILLS ## - Value 5-10 per point depending on skill.
+			(assign, ":rating_skills", 0),
+			## HORSE ARCHERY - Only applies if troop is mounted & ranged.
+			(try_begin),
+				(troop_is_guarantee_ranged, ":troop_no"),
+				(this_or_next|troop_is_mounted, ":troop_no"),
+				(troop_is_guarantee_horse, ":troop_no"),
+				(store_skill_level, ":skill_horse_archery", "skl_horse_archery", ":troop_no"),
+				(val_mul, ":skill_horse_archery", 6),
+				(val_add, ":rating_skills", ":skill_horse_archery"),
+			(try_end),
+			(try_begin),
+				## RIDING - Only applies if troop is mounted.
+				(this_or_next|troop_is_mounted, ":troop_no"),
+				(troop_is_guarantee_horse, ":troop_no"),
+				(store_skill_level, ":skill_riding", "skl_riding", ":troop_no"),
+				(val_mul, ":skill_riding", 8),
+				(val_add, ":rating_skills", ":skill_riding"),
+			(else_try),
+				## ATHLETICS - Only applies if troop is not mounted.
+				(store_skill_level, ":skill_athletics", "skl_athletics", ":troop_no"),
+				(val_mul, ":skill_athletics", 5),
+				(val_add, ":rating_skills", ":skill_athletics"),
+			(try_end),
+			## IRONFLESH - Always applicable.
+			(store_skill_level, ":skill_ironflesh", "skl_ironflesh", ":troop_no"),
+			(val_mul, ":skill_ironflesh", 10),
+			(val_add, ":rating_skills", ":skill_ironflesh"),
+			
+			## ARMOR RATING ## - Item Rating * Placement Weight * 25 / 1000
+			(call_script, "script_hub_troop_get_armor_rating", ":troop_no"), # Returns armor rating to reg1
+			(assign, ":rating_armor", reg1),
+			
+			## MELEE ATTACK RATING
+			(call_script, "script_hub_troop_get_melee_rating", ":troop_no"), # Returns melee rating to reg1
+			(assign, ":rating_melee", reg1),
+					
+			## RANGED ATTACK RATING
+			## FORMULA = (Item Rating * 3) + (Proficiency * 2) + (Power Draw/Throw * rating_multiplier_skill)
+			(try_begin),
+				(troop_is_guarantee_ranged, ":troop_no"),
+				(call_script, "script_hub_troop_get_ranged_rating", ":troop_no"), # Returns ranged rating to reg1
+				(assign, ":rating_ranged", reg1),
+				
+				(store_mul, ":discount_ranged", ":rating_ranged", rating_ranged_melee_discount), # -15%
+				(val_div, ":discount_ranged", 100),
+				(store_mul, ":discount_melee", ":rating_melee", rating_ranged_melee_discount), # -15%
+				(val_div, ":discount_melee", 100),
+			(else_try),
+				(assign, ":rating_ranged", 0),
+				(assign, ":discount_ranged", 0),
+				(assign, ":discount_melee", 0),
+			(try_end),
+			
+			## PUT IT ALL TOGETHER ##
+			(assign, ":rating_total", ":rating_attributes"),
+			(val_add, ":rating_total", ":rating_skills"),
+			(val_add, ":rating_total", ":rating_armor"),
+			(val_add, ":rating_total", ":rating_melee"),
+			(val_add, ":rating_total", ":rating_ranged"),
+			(val_sub, ":rating_total", ":discount_ranged"),
+			(val_sub, ":rating_total", ":discount_melee"),
+			
+			### DIAGNOSTIC ###
+			(try_begin),
+				(ge, DEBUG_RECRUITMENT, 2),
+				(assign, reg31, ":rating_attributes"),
+				(assign, reg32, ":rating_skills"),
+				(assign, reg33, ":rating_armor"),
+				(assign, reg34, ":rating_melee"),
+				(assign, reg35, ":rating_ranged"),
+				(assign, reg36, ":discount_melee"),
+				(assign, reg37, ":discount_ranged"),
+				(str_store_troop_name, s31, ":troop_no"),
+				(display_message, "@{s31} = Att {reg31} + Skill {reg32} + Armor {reg33} + Melee {reg34}(-{reg36}) + Rng {reg35}(-{reg37}).", gpu_debug),
+			(try_end),
+			
+			## DETERMINE TIER
+			# This is done prior to scaling rating up based on mounted/ranged.  It is a true representation of how strong a unit is.
+			(store_div, ":tier", ":rating_total", 175),
+			(val_max, ":tier", 1),
+			(troop_set_slot, ":troop_no", slot_troop_tier, ":tier"),
+			
+			# Stored for debugging.
+			(assign, reg65, ":rating_total"),
+			
+			## GUARANTEES ## - Mounted (+45%)
+			(assign, ":rating_guarantees", 0),
+			(assign, ":cost_uprate", 0),
+			(try_begin),
+				(this_or_next|troop_is_mounted, ":troop_no"),
+				(troop_is_guarantee_horse, ":troop_no"),
+				(assign, ":cost_uprate", 45),
+			(try_end),
+			(try_begin),
+				(ge, ":cost_uprate", 1),
+				(store_mul, ":rating_boost", ":rating_total", ":cost_uprate"),
+				(val_div, ":rating_boost", 100),
+				(val_add, ":rating_guarantees", ":rating_boost"),
+			(try_end),
+			(val_add, ":rating_total", ":rating_guarantees"),
+			
+			## TIER MULTIPLIER ##
+			(val_add, ":rating_total", ":discount_ranged"),
+			(val_add, ":rating_total", ":discount_melee"),
+			
+			(store_add, ":tier_multiplier", ":tier", 7),
+			(val_mul, ":tier", ":tier_multiplier"),
+			(val_mul, ":rating_total", ":tier"),
+			(val_div, ":rating_total", 100),
+			
+			## Set minimum pricing for mounted troops.
+			(try_begin),
+				(this_or_next|troop_is_mounted, ":troop_no"),
+				(troop_is_guarantee_horse, ":troop_no"),
+				(val_max, ":rating_total", 150),
+			(try_end),
+			
+			## DISHONORABLE TROOPS ## - Reduce price by 60%.
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISHONORABLE),
+				(store_mul, ":discount_dishonorable", ":rating_total", 60),
+				(val_div, ":discount_dishonorable", 100),
+				(val_sub, ":rating_total", ":discount_dishonorable"),
+			(try_end),
+			
+			## CHEAP TROOPS ## - Reduce price by 40%.
+			(try_begin),
+				(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_CHEAP),
+				(store_mul, ":discount_cheap", ":rating_total", 40),
+				(val_div, ":discount_cheap", 100),
+				(val_sub, ":rating_total", ":discount_cheap"),
+			(try_end),
+			
+
+			(troop_set_slot, ":troop_no", slot_troop_purchase_cost, ":rating_total"),
+			(assign, reg1, ":rating_total"),
 		(try_end),
+		]),
 		
-		## PUT IT ALL TOGETHER ##
-		(assign, ":rating_total", ":rating_attributes"),
-		(val_add, ":rating_total", ":rating_skills"),
-		(val_add, ":rating_total", ":rating_armor"),
-		(val_add, ":rating_total", ":rating_melee"),
-		(val_add, ":rating_total", ":rating_ranged"),
-		(val_sub, ":rating_total", ":discount_ranged"),
-		(val_sub, ":rating_total", ":discount_melee"),
-		
-		### DIAGNOSTIC ###
-		(try_begin),
-			(ge, DEBUG_RECRUITMENT, 2),
-			(assign, reg31, ":rating_attributes"),
-			(assign, reg32, ":rating_skills"),
-			(assign, reg33, ":rating_armor"),
-			(assign, reg34, ":rating_melee"),
-			(assign, reg35, ":rating_ranged"),
-			(assign, reg36, ":discount_melee"),
-			(assign, reg37, ":discount_ranged"),
-			(str_store_troop_name, s31, ":troop_no"),
-			(display_message, "@{s31} = Att {reg31} + Skill {reg32} + Armor {reg33} + Melee {reg34}(-{reg36}) + Rng {reg35}(-{reg37}).", gpu_debug),
-		(try_end),
-		
-		## DETERMINE TIER
-		# This is done prior to scaling rating up based on mounted/ranged.  It is a true representation of how strong a unit is.
-		(store_div, ":tier", ":rating_total", 175),
-		(val_max, ":tier", 1),
-		(troop_set_slot, ":troop_no", slot_troop_tier, ":tier"),
-		
-		# Stored for debugging.
-		(assign, reg65, ":rating_total"),
-		
-		## GUARANTEES ## - Mounted (+45%)
-		(assign, ":rating_guarantees", 0),
-		(assign, ":cost_uprate", 0),
-		(try_begin),
-			(this_or_next|troop_is_mounted, ":troop_no"),
-			(troop_is_guarantee_horse, ":troop_no"),
-			(assign, ":cost_uprate", 45),
-		(try_end),
-		(try_begin),
-			(ge, ":cost_uprate", 1),
-			(store_mul, ":rating_boost", ":rating_total", ":cost_uprate"),
-			(val_div, ":rating_boost", 100),
-			(val_add, ":rating_guarantees", ":rating_boost"),
-		(try_end),
-		(val_add, ":rating_total", ":rating_guarantees"),
-		
-		## TIER MULTIPLIER ##
-		(val_add, ":rating_total", ":discount_ranged"),
-		(val_add, ":rating_total", ":discount_melee"),
-		
-		(store_add, ":tier_multiplier", ":tier", 7),
-		(val_mul, ":tier", ":tier_multiplier"),
-		(val_mul, ":rating_total", ":tier"),
-		(val_div, ":rating_total", 100),
-		
-		## Set minimum pricing for mounted troops.
-		(try_begin),
-			(this_or_next|troop_is_mounted, ":troop_no"),
-			(troop_is_guarantee_horse, ":troop_no"),
-			(val_max, ":rating_total", 150),
-		(try_end),
-		
-		## DISHONORABLE TROOPS ## - Reduce price by 60%.
-		(try_begin),
-			(call_script, "script_cf_ce_troop_has_requirement", ":troop_no", PREREQ_DISHONORABLE),
-			(store_mul, ":discount_dishonorable", ":rating_total", 60),
-			(val_div, ":discount_dishonorable", 100),
-			(val_sub, ":rating_total", ":discount_dishonorable"),
-		(try_end),
-		
-		## CHEAP TROOPS ## - Reduce price by 40%.
-		(try_begin),
-			(call_script, "script_cf_ce_troop_has_ability", ":troop_no", BONUS_CHEAP),
-			(store_mul, ":discount_cheap", ":rating_total", 40),
-			(val_div, ":discount_cheap", 100),
-			(val_sub, ":rating_total", ":discount_cheap"),
-		(try_end),
-		
-		(troop_set_slot, ":troop_no", slot_troop_purchase_cost, ":rating_total"),
-		
-		(assign, reg1, ":rating_total"),
-	]),
-	
-# script_hub_troop_get_melee_rating
-# PURPOSE: Return the melee rating of a troop.
-# EXAMPLE: (call_script, "script_hub_troop_get_melee_rating", ":troop_no"), # Returns melee rating to reg1
+	# script_hub_troop_get_melee_rating
+	# PURPOSE: Return the melee rating of a troop.
+	# EXAMPLE: (call_script, "script_hub_troop_get_melee_rating", ":troop_no"), # Returns melee rating to reg1
 ("hub_troop_get_melee_rating",
-    [
-		(store_script_param, ":troop_no", 1),
+	[
+	(store_script_param, ":troop_no", 1),
+	
+	(store_skill_level, ":rating_power_strike", "skl_power_strike", ":troop_no"),
+	(val_mul, ":rating_power_strike", rating_multiplier_skill),
+	
+	## FORMULA = (Item Rating * 3) + (Proficiency * 2) + (Power Strike * rating_multiplier_skill)
+	(assign, ":rating", 0),
+	(assign, ":weapon_count", 0),
+	
+	## ONE-HANDED WEAPONS
+	(call_script, "script_hub_troop_get_average_value_of_item_type", ":troop_no", itp_type_one_handed_wpn),
+	(store_mul, ":item_rating", reg1, 3),
+	(store_proficiency_level, ":prof", ":troop_no", wpt_one_handed_weapon),
+	(val_mul, ":prof", 2),
+	(try_begin),
+		(ge, reg1, 1),
+		(val_add, ":item_rating", ":prof"),
+		(val_add, ":item_rating", ":rating_power_strike"),
+		(val_add, ":weapon_count", 1),
+		(val_add, ":rating", ":item_rating"),
+	(try_end),
+	
+	## TWO-HANDED WEAPONS
+	(call_script, "script_hub_troop_get_average_value_of_item_type", ":troop_no", itp_type_two_handed_wpn),
+	(store_mul, ":item_rating", reg1, 3),
+	(store_proficiency_level, ":prof", ":troop_no", wpt_two_handed_weapon),
+	(val_mul, ":prof", 2),
+	(try_begin),
+		(ge, reg1, 1),
+		(val_add, ":item_rating", ":prof"),
+		(val_add, ":item_rating", ":rating_power_strike"),
+		(val_add, ":weapon_count", 1),
+		(val_add, ":rating", ":item_rating"),
+	(try_end),
+	
+	## POLEARMS
+	(call_script, "script_hub_troop_get_average_value_of_item_type", ":troop_no", itp_type_polearm),
+	(store_mul, ":item_rating", reg1, 3),
+	(store_proficiency_level, ":prof", ":troop_no", wpt_polearm),
+	(val_mul, ":prof", 2),
+	(try_begin),
+		(ge, reg1, 1),
+		(val_add, ":item_rating", ":prof"),
+		(val_add, ":item_rating", ":rating_power_strike"),
+		(val_add, ":weapon_count", 1),
+		(val_add, ":rating", ":item_rating"),
+	(try_end),
+	
+	(val_max, ":weapon_count", 1), # Prevent DIV/0 errors.
+	(store_div, ":rating_melee", ":rating", ":weapon_count"),
+	(val_mul, ":rating_melee", rating_multiplier_weapon), # 40%
+	(val_div, ":rating_melee", 100),
 		
-		(store_skill_level, ":rating_power_strike", "skl_power_strike", ":troop_no"),
-		(val_mul, ":rating_power_strike", rating_multiplier_skill),
-		
-		## FORMULA = (Item Rating * 3) + (Proficiency * 2) + (Power Strike * rating_multiplier_skill)
-		(assign, ":rating", 0),
-		(assign, ":weapon_count", 0),
-		
-		## ONE-HANDED WEAPONS
-		(call_script, "script_hub_troop_get_average_value_of_item_type", ":troop_no", itp_type_one_handed_wpn),
-		(store_mul, ":item_rating", reg1, 3),
-		(store_proficiency_level, ":prof", ":troop_no", wpt_one_handed_weapon),
-		(val_mul, ":prof", 2),
-		(try_begin),
-			(ge, reg1, 1),
-			(val_add, ":item_rating", ":prof"),
-			(val_add, ":item_rating", ":rating_power_strike"),
-			(val_add, ":weapon_count", 1),
-			(val_add, ":rating", ":item_rating"),
-		(try_end),
-		
-		## TWO-HANDED WEAPONS
-		(call_script, "script_hub_troop_get_average_value_of_item_type", ":troop_no", itp_type_two_handed_wpn),
-		(store_mul, ":item_rating", reg1, 3),
-		(store_proficiency_level, ":prof", ":troop_no", wpt_two_handed_weapon),
-		(val_mul, ":prof", 2),
-		(try_begin),
-			(ge, reg1, 1),
-			(val_add, ":item_rating", ":prof"),
-			(val_add, ":item_rating", ":rating_power_strike"),
-			(val_add, ":weapon_count", 1),
-			(val_add, ":rating", ":item_rating"),
-		(try_end),
-		
-		## POLEARMS
-		(call_script, "script_hub_troop_get_average_value_of_item_type", ":troop_no", itp_type_polearm),
-		(store_mul, ":item_rating", reg1, 3),
-		(store_proficiency_level, ":prof", ":troop_no", wpt_polearm),
-		(val_mul, ":prof", 2),
-		(try_begin),
-			(ge, reg1, 1),
-			(val_add, ":item_rating", ":prof"),
-			(val_add, ":item_rating", ":rating_power_strike"),
-			(val_add, ":weapon_count", 1),
-			(val_add, ":rating", ":item_rating"),
-		(try_end),
-		
-		(val_max, ":weapon_count", 1), # Prevent DIV/0 errors.
-		(store_div, ":rating_melee", ":rating", ":weapon_count"),
-		(val_mul, ":rating_melee", rating_multiplier_weapon), # 40%
-		(val_div, ":rating_melee", 100),
-		
-		(assign, reg1, ":rating_melee"),
-	]),
+	(assign, reg1, ":rating_melee"),
+]),
 	
 # script_hub_troop_get_ranged_rating
 # PURPOSE: Return the ranged rating of a troop.
