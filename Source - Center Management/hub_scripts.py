@@ -1349,7 +1349,7 @@ scripts = [
 		
 		## I1 Nordic Recruit
 		(troop_set_class, "trp_n_nordic_recruit", CLASS_INFANTRY),
-		(troop_set_slot, "trp_n_nordic_recruit", slot_troop_purchase_cost, 10),
+		#(troop_set_slot, "trp_n_nordic_recruit", slot_troop_purchase_cost, 10),
 		
 		## I3 Nordic Skald
 		(troop_set_class, "trp_n_nordic_skald", CLASS_INFANTRY),
@@ -1372,7 +1372,7 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_retainer", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_n_nordic_retainer", slot_troop_purchase_cost, 1100),
 		
-		## C6 Nordic Retinue Archer
+		## A6 Nordic Retinue Archer
 		(troop_set_class, "trp_n_nordic_retinue_archer", CLASS_RANGED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_retinue_archer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_retinue_archer", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
@@ -4284,6 +4284,7 @@ scripts = [
 		(try_for_range, ":troop_base", troop_definitions_begin, troop_definitions_end),
 			(troop_get_upgrade_troop, ":upgrade_0", ":troop_base", 0),
 			(troop_get_upgrade_troop, ":upgrade_1", ":troop_base", 1),
+			(eq, ":upgrade_1", -1), # do not remove troops which are actual upgrades, not veteran/elite units
 			(this_or_next|eq, ":upgrade_0", ":troop_recruit"),
 			(eq, ":upgrade_1", ":troop_recruit"),
 			(assign, ":recruitable", 0),
