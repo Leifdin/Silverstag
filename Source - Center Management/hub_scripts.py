@@ -1339,6 +1339,51 @@ scripts = [
 		#####                NORD FACTION                #####
 		######################################################
 		
+		
+		 #H5 Khergit Skirmisher
+		(troop_set_class, "trp_n_khergit_skirmisher", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_skirmisher"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_skirmisher", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_skirmisher", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_khergit_skirmisher", slot_troop_purchase_cost, 500),
+		
+		## I1 Nordic Recruit
+		(troop_set_class, "trp_n_nordic_recruit", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_nordic_recruit", slot_troop_purchase_cost, 10),
+		
+		## I3 Nordic Skald
+		(troop_set_class, "trp_n_nordic_skald", CLASS_INFANTRY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_skald", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_skald", BONUS_STORYTELLER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_nordic_skald", slot_troop_purchase_cost, 45),
+		
+		## A3 Nordic Tracker
+		(troop_set_class, "trp_n_nordic_tracker", CLASS_RANGED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_tracker", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_purchase_cost, 185),
+		
+		## I4 Nordic Spearman
+		(troop_set_class, "trp_n_nordic_spearman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_purchase_cost, 225),
+		
+		## C6 Nordic Retainer
+		(troop_set_class, "trp_n_nordic_retainer", CLASS_CAVALRY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_retainer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_retainer", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_nordic_retainer", slot_troop_purchase_cost, 1100),
+		
+		## C6 Nordic Retinue Archer
+		(troop_set_class, "trp_n_nordic_retinue_archer", CLASS_RANGED),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_retinue_archer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_retinue_archer", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_nordic_retinue_archer", slot_troop_purchase_cost, 850),
+
+		## I7 Nordic Berserker
+		(troop_set_class, "trp_n_nordic_berserker", CLASS_INFANTRY),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_berserker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_berserker", BONUS_BERSERKER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_nordic_berserker", slot_troop_purchase_cost, 2500),
+		
 		## A1 - Nordic Hunter
 		(troop_set_class, "trp_r_nord_hunter", CLASS_RANGED),
 		# +1
