@@ -1744,13 +1744,6 @@ scripts = [
 		#####               RHODOK FACTION               #####
 		######################################################
 		
-		## H5 Khergit Skirmisher
-		(troop_set_class, "trp_n_khergit_skirmisher", CLASS_CAVALRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_skirmisher"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_skirmisher", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_skirmisher", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_khergit_skirmisher", slot_troop_purchase_cost, 500),
-		
 		## I1 Rhodok Recruit
 		(troop_set_class, "trp_n_rhodok_recruit", CLASS_INFANTRY),
 		(troop_set_slot, "trp_n_rhodok_recruit", slot_troop_purchase_cost, 10),
@@ -2180,6 +2173,44 @@ scripts = [
 		######################################################
 		#####              SARRANID FACTION              #####
 		######################################################
+		
+		## I1 Sarranid Recruit
+		(troop_set_class, "trp_n_sarranid_recruit", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_sarranid_recruit", slot_troop_purchase_cost, 10),
+		
+		## I2 Sarranid Fighter
+		(troop_set_class, "trp_n_sarranid_fighter", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_sarranid_fighter", slot_troop_purchase_cost, 50),
+		
+		## H3 Sarranid Tribesman
+		(troop_set_class, "trp_n_sarranid_tribesman", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_sarranid_tribesman"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_sarranid_tribesman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_sarranid_tribesman", BONUS_CHEAP, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_sarranid_tribesman", slot_troop_purchase_cost, 125),
+		
+		## A4 Sarranid Marksman
+		(troop_set_class, "trp_n_sarranid_marksman", CLASS_RANGED),
+		(troop_set_slot, "trp_n_sarranid_marksman", slot_troop_purchase_cost, 750),
+		
+		## H5 Sarranid Skirmisher
+		(troop_set_class, "trp_n_sarranid_skirmisher", CLASS_CAVALRY),
+		(troop_set_slot, "trp_n_sarranid_skirmisher", slot_troop_purchase_cost, 2500),
+		
+		## C6 Sarranid Mamluke
+		(troop_set_class, "trp_n_sarranid_mamluke", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_sarranid_mamluke"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_sarranid_mamluke", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_sarranid_mamluke", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_sarranid_mamluke", slot_troop_purchase_cost, 2500),
+		
+		## I7 Sarranid Guard
+		(troop_set_class, "trp_n_sarranid_guard", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_sarranid_guard"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_sarranid_guard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_sarranid_guard", BONUS_SAVAGERY, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_sarranid_guard", slot_troop_purchase_cost, 4000),
+		
 		
 
 		

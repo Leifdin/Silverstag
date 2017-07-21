@@ -1968,7 +1968,7 @@ nord_troops_begin     = "trp_n_nordic_recruit"
 nord_troops_end       = "trp_nord_end_troop"     # "trp_nord_troops_end"
 rhodok_troops_begin   = "trp_n_rhodok_recruit"
 rhodok_troops_end     = "trp_rhodok_end_troop"       # "trp_rhodok_troops_end"
-sarranid_troops_begin = "trp_r_sarranid_kul"
+sarranid_troops_begin = "trp_n_sarranid_recruit"
 sarranid_troops_end   = "trp_r_sarranid_end_troop" # "trp_durquba_javelineer"
 
 ### SPECIAL TROOP DEFINITIONS
