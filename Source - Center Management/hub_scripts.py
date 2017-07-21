@@ -259,8 +259,8 @@ scripts = [
 		(troop_set_slot, "trp_n_swadian_sergeant", slot_troop_purchase_cost, 750),
 		
 		## A6 Swadian Siege Breaker
-		(troop_set_class, "trp_n_swadian_siege_breaker", CLASS_RANGED),
-		(troop_set_slot, "trp_n_swadian_siege_breaker", slot_troop_purchase_cost, 1250),
+		#(troop_set_class, "trp_n_swadian_siege_breaker", CLASS_RANGED),
+		#(troop_set_slot, "trp_n_swadian_siege_breaker", slot_troop_purchase_cost, 1250),
 		
 		## C7 Swadian Knight
 		(troop_set_class, "trp_n_swadian_knight", CLASS_CAVALRY),
@@ -1339,14 +1339,6 @@ scripts = [
 		#####                NORD FACTION                #####
 		######################################################
 		
-		
-		 #H5 Khergit Skirmisher
-		(troop_set_class, "trp_n_khergit_skirmisher", CLASS_CAVALRY),
-		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_skirmisher"),
-		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_skirmisher", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_skirmisher", BONUS_SCAVENGER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_khergit_skirmisher", slot_troop_purchase_cost, 500),
-		
 		## I1 Nordic Recruit
 		(troop_set_class, "trp_n_nordic_recruit", CLASS_INFANTRY),
 		#(troop_set_slot, "trp_n_nordic_recruit", slot_troop_purchase_cost, 10),
@@ -1751,6 +1743,56 @@ scripts = [
 		######################################################
 		#####               RHODOK FACTION               #####
 		######################################################
+		
+		## H5 Khergit Skirmisher
+		(troop_set_class, "trp_n_khergit_skirmisher", CLASS_CAVALRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_skirmisher"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_skirmisher", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_skirmisher", BONUS_SCAVENGER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_khergit_skirmisher", slot_troop_purchase_cost, 500),
+		
+		## I1 Rhodok Recruit
+		(troop_set_class, "trp_n_rhodok_recruit", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_rhodok_recruit", slot_troop_purchase_cost, 10),
+		
+		## I3 Rhodok Footman
+		(troop_set_class, "trp_n_rhodok_footman", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_rhodok_footman", slot_troop_purchase_cost, 250),
+		
+		## A3 Rhodok Ranger
+		(troop_set_class, "trp_n_rhodok_ranger", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_rhodok_ranger"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_ranger", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_ranger", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_rhodok_ranger", slot_troop_purchase_cost, 250),
+		
+		## I4 Rhodok Halberdier
+		(troop_set_class, "trp_n_rhodok_halberdier", CLASS_INFANTRY),
+		(troop_set_slot, "trp_n_rhodok_halberdier", slot_troop_purchase_cost, 750),
+		
+		## I6 Rhodok Pikeman
+		(troop_set_class, "trp_n_rhodok_pikeman", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_rhodok_pikeman"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_pikeman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_rhodok_pikeman", slot_troop_purchase_cost, 2500),
+		
+		## A6 Rhodok Siege Breaker
+		(troop_set_class, "trp_n_rhodok_siege_breaker", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_rhodok_siege_breaker"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_siege_breaker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_siege_breaker", BONUS_FIRING_CAPTAIN, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_rhodok_siege_breaker", slot_troop_purchase_cost, 2500),
+		
+		## I7 Rhodok Foot Knight
+		(troop_set_class, "trp_n_rhodok_foot_knight", CLASS_INFANTRY),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_rhodok_foot_knight"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_foot_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_siege_breaker", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_rhodok_foot_knight", slot_troop_purchase_cost, 4000),
+		
+		
+		
 		
 		## I1 - Rhodok Militia
 		(troop_set_class, "trp_rhodok_militia", CLASS_INFANTRY),
