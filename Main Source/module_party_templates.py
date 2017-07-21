@@ -128,9 +128,9 @@ party_templates = [
  ## WINDYPLAINS+ ## - Added reinforcement templates for player's culture.
  ### PLAYER CUSTOM CULTURE ###
  # Following data is per script "cf_reinforce_party".
- # Reinforcement A gets added to kingdom_parties (50%) and centers (65%).
- # Reinforcement B gets added to kingdom_parties (25%) and centers (35%).
- # Reinforcement C gets added to kingdom_parties (25%) only .
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry
  # GAME_MODE_EASY
  ("kingdom_0_reinforcements_a", "kingdom_0_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_player_tier_2,16,36),(trp_player_tier_3_infantry,3,7)]),
  ("kingdom_0_reinforcements_b", "kingdom_0_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_player_tier_3_infantry,8,15),(trp_player_tier_3_ranged,6,13)]),

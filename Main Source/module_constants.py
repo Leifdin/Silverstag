@@ -1956,8 +1956,8 @@ bandit_upgrades_begin = "trp_mountain_bandit_1"
 bandit_upgrades_end   = "trp_manhunter"
 
 ### FACTION TROOP DEFINITIONS
-player_troops_begin   = "trp_item_balancing_1h_sword"
-player_troops_end     = "trp_module_end_troops"  # "trp_player_placeholder_1"
+player_troops_begin   = "trp_n_shield_maiden"
+player_troops_end     = "trp_mercenaries_end"  # "trp_player_placeholder_1"
 swadia_troops_begin   = "trp_n_swadian_recruit"
 swadia_troops_end     = "trp_swadia_end_troop"  # "trp_swadia_troops_end"
 vaegir_troops_begin   = "trp_n_vaegir_recruit"

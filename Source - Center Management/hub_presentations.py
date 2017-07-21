@@ -2229,8 +2229,6 @@ presentations = [
 					(try_end),
 					(eq, ":pass", 1),
 					## FILTER- - REMOVE UNIQUES
-					(str_store_troop_name, s31, ":troop_no"),
-					(display_message, "@DEBUG: Considering {s31}", gpu_green),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", "$current_town", ":troop_no", "trp_player"),
 					(val_add, ":pos_y", 1),
 					### DIAGNOSTIC ###
