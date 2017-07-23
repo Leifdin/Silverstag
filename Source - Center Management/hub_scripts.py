@@ -3187,12 +3187,6 @@ scripts = [
 				(else_try),  # NORD - C6
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_valkyrie", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_valkyrie", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_boyars_druzhina", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_boyars_druzhina", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_cataphract", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_cataphract", ":lord_no", ":quantity"),
 				(else_try),  # NORD - C5
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_thane", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_thane", ":lord_no", ":quantity"),
@@ -3202,9 +3196,6 @@ scripts = [
 				(else_try),  # SARRANID - C4
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_bariyye_raider", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_bariyye_raider", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_scout", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_scout", ":lord_no", ":quantity"),
 				(else_try),  # RHODOK - C3
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_ergellon_lancer", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_ergellon_lancer", ":lord_no", ":quantity"),
@@ -3236,12 +3227,6 @@ scripts = [
 				(else_try),  # SARRANID - I4
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_durquba_javelineer", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_durquba_javelineer", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - I4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_varagian", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_varagian", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - I3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_curaw_guardsman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_curaw_guardsman", ":lord_no", ":quantity"),
 				(else_try),  # NORD - I3
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_maiden", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_maiden", ":lord_no", ":quantity"),
@@ -3277,9 +3262,6 @@ scripts = [
 				(else_try),  # RHODOK - H3
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jamiche_border_guard", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jamiche_border_guard", ":lord_no", ":quantity"),
-				(else_try),  # VAEGIR - H2
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_khudan_mounted_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_khudan_mounted_archer", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 

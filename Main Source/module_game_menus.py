@@ -10723,10 +10723,10 @@ game_menus = [
              (assign,reg3,":tier_2_troop"),
            (else_try),
 		     ## WINDYPLAINS+ ## - New Troop Revamp (Vaegirs, v0.23)
-             (assign,reg0,"trp_r_vaegir_peltast"), # "trp_vaegir_infantry"),
-             (assign,reg1,"trp_r_vaegir_peltast"), # "trp_vaegir_infantry"),
-             (assign,reg2,"trp_r_vaegir_longbowman"), # "trp_vaegir_archer"),
-             (assign,reg3,"trp_r_vaegir_sentry"), # "trp_vaegir_footman"),
+             (assign,reg0,"trp_n_vaegir_skirmisher"), # "trp_vaegir_infantry"),
+             (assign,reg1,"trp_n_vaegir_skirmisher"), # "trp_vaegir_infantry"),
+             (assign,reg2,"trp_n_vaegir_bowman"), # "trp_vaegir_archer"),
+             (assign,reg3,"trp_n_vaegir_guard"), # "trp_vaegir_footman"),
 			 ## WINDYPLAINS- ##
            (try_end),
            (shuffle_range,0,4),

@@ -105,45 +105,28 @@ scripts = [
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_n_swadian_crossbowman"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_n_swadian_lancer"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_n_swadian_sergeant"),
-	  ## SWADIA - OLD TROOPS
-	  # (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_swadian_recruit"),
-      # (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_swadian_militia"),
-      # (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_swadian_footman"),
-      # (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_swadian_infantry"),
-      # (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_swadian_knight"),
 	  
       ## VAEGIRS - NEW TROOPS
-	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_r_vaegir_militia"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_r_vaegir_sentry"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_r_vaegir_psiloi"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_r_vaegir_peltast"),
-      (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_r_vaegir_bogatyr"),
-	  ## VAEGIRS - OLD TROOPS
-	  # (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_vaegir_recruit"),
-      # (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_vaegir_footman"),
-      # (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_vaegir_veteran"),
-      # (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_vaegir_infantry"),
-      # (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_vaegir_knight"),
+	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_n_vaegir_recruit"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_n_vaegir_skirmisher"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_n_vaegir_raider"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_n_vaegir_bowman"),
+      (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_n_vaegir_headhunter"),
+
 	  
 	  ## KHERGITS - NEW TROOPS
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_r_khergit_slave"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_r_khergit_scout"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_r_khergit_raider"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_r_khergit_lancer"),
-      (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_r_khergit_parthian"),
-	  ## KHERGITS - OLD TROOPS
-	  # (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_khergit_tribesman"),
-      # (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_khergit_skirmisher"),
-      # (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_khergit_horseman"),
-      # (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_khergit_horse_archer"),
-      # (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_khergit_veteran_horse_archer"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_n_khergit_recruit"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_n_khergit_scout"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_n_khergit_shaman"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_n_khergit_lancer"),
+      (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_n_khergit_skirmisher"),
 	  
       ## NORDS - NEW TROOPS
-	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_r_nord_bondsman"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_r_nord_peasant"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_r_nord_shield_maiden"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_r_nord_retainer"),
-      (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_r_nord_berserker"),
+	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_n_nordic_recruit"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_n_nordic_skald"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_n_nordic_tracker"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_n_nordic_spearman"),
+      (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_n_nordic_berserker"),
 	  ## NORDS - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_nord_recruit"),
       # (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_nord_footman"),
@@ -152,11 +135,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_nord_veteran"),
 	  
       ## RHODOK - NEW TROOPS
-	  (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_rhodok_militia"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_rhodok_militia_1"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_3_troop, "trp_rhodok_trained_militia"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_4_troop, "trp_rhodok_pikeman"),
-      (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_rhodok_pikeman_2"),
+	  (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_n_rhodok_recruit"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_n_rhodok_ranger"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_3_troop, "trp_n_rhodok_footman"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_4_troop, "trp_n_rhodok_halberdier"),
+      (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_n_rhodok_pikeman"),
 	  ## RHODOK - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_rhodok_tribesman"),
       # (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_rhodok_spearman"),
@@ -165,11 +148,11 @@ scripts = [
       # (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_rhodok_sergeant"),
 	  
       ## SARRANID - NEW TROOPS
-	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_r_sarranid_azab"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_r_sarranid_yaya"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_r_sarranid_musellem"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_r_sarranid_timariot"),
-      (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_r_sarranid_boluk_bashi"),
+	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_n_sarranid_recruit"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_n_sarranid_tribesman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_n_sarranid_fighter"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_n_sarranid_marksman"),
+      (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_n_sarranid_mamluke"),
 	  ## SARRANID - OLD TROOPS
 	  # (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_sarranid_recruit"),
       # (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_sarranid_footman"),
@@ -1166,91 +1149,56 @@ scripts = [
       (assign, "$g_quick_battle_team_2_faction", "fac_kingdom_2"),
       (assign, "$g_quick_battle_army_1_size", 25),
       (assign, "$g_quick_battle_army_2_size", 25),
-	##### LEIFDIN - ITEM BALANCING #####
+
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_1_infantry, "trp_mountain_bandit"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_infantry, "trp_sea_raider"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_1_archer, "trp_forest_bandit"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_archer, "trp_taiga_bandit"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_1_cavalry, "trp_steppe_bandit"),
       (faction_set_slot, "fac_outlaws", slot_faction_quick_battle_tier_2_cavalry, "trp_desert_bandit"),
-      ## WINDYPLAINS+ ## - New Troop Revamp - Quick Battle Troops (Common)
-      ## SWADIA
+
       (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_n_swadian_militia"),
       (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_n_swadian_sergeant"),
       (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_n_swadian_crossbowman"),
       (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_n_swadian_crossbowman"),
       (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_n_swadian_lancer"),
       (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_n_swadian_knight"),
-	  # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_infantry, "trp_swadian_footman"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_infantry, "trp_swadian_infantry"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_archer, "trp_swadian_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_archer, "trp_swadian_crossbowman"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_1_cavalry, "trp_swadian_man_at_arms"),
-      # (faction_set_slot, "fac_kingdom_1", slot_faction_quick_battle_tier_2_cavalry, "trp_swadian_knight"),
-      ## VAEGIRS
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_r_vaegir_sentry"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_r_vaegir_peltast"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_r_vaegir_skirmisher"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_r_vaegir_longbowman"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_r_vaegir_koursores"),
-      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_r_vaegir_bogatyr"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_vaegir_footman"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_vaegir_infantry"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_vaegir_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_vaegir_archer"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_vaegir_horseman"),
-      # (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_vaegir_knight"),
-      ## WINDYPLAINS- ##
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_infantry, "trp_khergit_dismounted_lancer_multiplayer_ai"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_infantry, "trp_khergit_dismounted_lancer_multiplayer_ai"),
-      ## WINDYPLAINS+ ## - New Troop Revamp (Khergits)
-	  (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_r_khergit_scout"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_r_khergit_orlok"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_r_khergit_lancer"),
-      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_r_khergit_parthian"),
-	  # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_khergit_horse_archer"),
-      # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_khergit_veteran_horse_archer"),
-      # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_khergit_lancer"),
-      # (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_khergit_lancer"),
-	  ## WINDYPLAINS- ## 
-      ## WINDYPLAINS+ ## - New Troop Revamp (Nord)
-	  (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_item_balancing_1h_sword"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_item_balancing_1h_sword"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_r_nord_retinue_archer"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_r_nord_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_nord_warrior"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_nord_champion"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_nord_archer"),
-      # (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_nord_veteran_archer"),
-      ## WINDYPLAINS- ## 
+
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_infantry, "trp_n_vaegir_skirmisher"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_infantry, "trp_n_vaegir_guard"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_archer, "trp_n_vaegir_bowman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_archer, "trp_n_vaegir_bowman"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_1_cavalry, "trp_n_vaegir_raider"),
+      (faction_set_slot, "fac_kingdom_2", slot_faction_quick_battle_tier_2_cavalry, "trp_n_vaegir_bogatyr"),
+
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_infantry, "trp_n_khergit_shaman"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_infantry, "trp_n_khergit_clansman"),
+	  (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_archer, "trp_n_khergit_scout"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_archer, "trp_n_khergit_skirmisher"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_1_cavalry, "trp_n_khergit_lancer"),
+      (faction_set_slot, "fac_kingdom_3", slot_faction_quick_battle_tier_2_cavalry, "trp_n_khergit_keshig"),
+
+	  (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_infantry, "trp_n_nordic_skald"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_infantry, "trp_n_nordic_berserker"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_archer, "trp_n_nordic_tracker"),
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_archer, "trp_n_nordic_retinue_archer"),
       (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_1_cavalry, "trp_nord_scout_multiplayer_ai"),
-      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_cavalry, "trp_nord_scout_multiplayer_ai"),
-	  ## WINDYPLAINS+ ## - New Troop Revamp (Rhodok)
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_item_balancing_spear"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_item_balancing_spear"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_archer, "trp_rhodok_militia_archer"),
-      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_archer, "trp_rhodok_crossbowman_2"),
-	  # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_rhodok_veteran_spearman"),
-      # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_rhodok_sergeant"),
-      # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_archer, "trp_rhodok_crossbowman"),
-      # (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_archer, "trp_rhodok_veteran_crossbowman"),
-	  ## WINDYPLAINS- ##
+      (faction_set_slot, "fac_kingdom_4", slot_faction_quick_battle_tier_2_cavalry, "trp_n_nordic_retainer"),
+
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_infantry, "trp_n_rhodok_footman"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_infantry, "trp_n_rhodok_pikeman"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_archer, "trp_n_rhodok_ranger"),
+      (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_archer, "trp_n_rhodok_siege_breaker"),
       (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_1_cavalry, "trp_rhodok_scout_multiplayer_ai"),
       (faction_set_slot, "fac_kingdom_5", slot_faction_quick_battle_tier_2_cavalry, "trp_rhodok_scout_multiplayer_ai"),
-	  ## WINDYPLAINS+ ## - New Troop Revamp (Sarranid)
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_r_sarranid_yaya"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_r_sarranid_bashibozuk"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_r_sarranid_azab"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_r_sarranid_corbaci"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_r_sarranid_timariot"),
-      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_r_sarranid_boluk_bashi"),
-	  # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_sarranid_veteran_footman"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_sarranid_infantry"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_sarranid_skirmisher"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_sarranid_archer"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_sarranid_horseman"),
-      # (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_sarranid_mamluke"),
-	  ## WINDYPLAINS- ##
+
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_infantry, "trp_n_sarranid_fighter"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_infantry, "trp_n_sarranid_guard"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_archer, "trp_n_sarranid_marksman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_archer, "trp_n_sarranid_skirmisher"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_1_cavalry, "trp_n_sarranid_tribesman"),
+      (faction_set_slot, "fac_kingdom_6", slot_faction_quick_battle_tier_2_cavalry, "trp_n_sarranid_mamluke"),
+
 
       #for multiplayer mode
       (assign, "$g_multiplayer_selected_map", multiplayer_scenes_begin),
@@ -6738,7 +6686,7 @@ scripts = [
       
           (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_vaegir_deserter"),
           ## WINDYPLAINS+ ## - New Troop Revamp (Vaegir)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_vaegir_vanguard"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_n_vaegir_guard"),
           # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_vaegir_guard"),
           ## WINDYPLAINS- ##
           (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_vaegir_messenger"),
