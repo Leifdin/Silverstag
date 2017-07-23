@@ -95,42 +95,14 @@ party_templates = [
 
   ("kingdom_hero_party","War Party",icon_flagbearer_a|pf_show_faction|pf_default_behavior,0,fac_commoners,soldier_personality,[]),
   
-# Reinforcements
-  # each faction includes three party templates. One is less-modernised, one is med-modernised and one is high-modernised
-  # less-modernised templates are generally includes 7-14 troops in total, 
-  # med-modernised templates are generally includes 5-10 troops in total, 
-  # high-modernised templates are generally includes 3-5 troops in total
-
-  # ("kingdom_1_reinforcements_a", "{!}kingdom_1_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_swadian_recruit,5,10),(trp_swadian_militia,2,4)]),
-  # ("kingdom_1_reinforcements_b", "{!}kingdom_1_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_swadian_footman,3,6),(trp_swadian_skirmisher,2,4)]),
-  # ("kingdom_1_reinforcements_c", "{!}kingdom_1_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_swadian_man_at_arms,2,4),(trp_swadian_crossbowman,1,2)]), #Swadians are a bit less-powered thats why they have a bit more troops in their modernised party template (3-6, others 3-5)
-
-  # ("kingdom_2_reinforcements_a", "{!}kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_vaegir_recruit,5,10),(trp_vaegir_footman,2,4)]),
-  # ("kingdom_2_reinforcements_b", "{!}kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_vaegir_veteran,2,4),(trp_vaegir_skirmisher,2,4),(trp_vaegir_footman,1,2)]),
-  # ("kingdom_2_reinforcements_c", "{!}kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_vaegir_horseman,2,3),(trp_vaegir_infantry,1,2)]),
-
-  # ("kingdom_3_reinforcements_a", "{!}kingdom_3_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_khergit_tribesman,3,5),(trp_khergit_skirmisher,4,9)]), #Khergits are a bit less-powered thats why they have a bit more 2nd upgraded(trp_khergit_skirmisher) than non-upgraded one(trp_khergit_tribesman).
-  # ("kingdom_3_reinforcements_b", "{!}kingdom_3_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_khergit_horseman,2,4),(trp_khergit_horse_archer,2,4),(trp_khergit_skirmisher,1,2)]),
-  # ("kingdom_3_reinforcements_c", "{!}kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_khergit_horseman,2,4),(trp_khergit_veteran_horse_archer,2,3)]), #Khergits are a bit less-powered thats why they have a bit more troops in their modernised party template (4-7, others 3-5)
-
-  # ("kingdom_4_reinforcements_a", "{!}kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_nord_footman,5,10),(trp_nord_recruit,2,4)]),
-  # ("kingdom_4_reinforcements_b", "{!}kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_nord_huntsman,2,5),(trp_nord_archer,2,3),(trp_nord_footman,1,2)]),
-  # ("kingdom_4_reinforcements_c", "{!}kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_nord_warrior,3,5)]),
-
-  # ("kingdom_5_reinforcements_a", "{!}kingdom_5_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_rhodok_tribesman,5,10),(trp_rhodok_spearman,2,4)]),
-  # ("kingdom_5_reinforcements_b", "{!}kingdom_5_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_rhodok_crossbowman,3,6),(trp_rhodok_trained_crossbowman,2,4)]),
-  # ("kingdom_5_reinforcements_c", "{!}kingdom_5_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_rhodok_veteran_spearman,2,3),(trp_rhodok_veteran_crossbowman,1,2)]), 
-
-  # ("kingdom_6_reinforcements_a", "{!}kingdom_6_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sarranid_recruit,5,10),(trp_sarranid_footman,2,4)]),
-  # ("kingdom_6_reinforcements_b", "{!}kingdom_6_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sarranid_skirmisher,2,4),(trp_sarranid_veteran_footman,2,3),(trp_sarranid_footman,1,3)]),
-  # ("kingdom_6_reinforcements_c", "{!}kingdom_6_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sarranid_horseman,3,5)]),
+ ## REINFORCEMENTS
   
  ## WINDYPLAINS+ ## - Added reinforcement templates for player's culture.
  ### PLAYER CUSTOM CULTURE ###
  # Following data is per script "cf_reinforce_party".
- # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry
- # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers
- # Reinforcement C gets added to kingdom_parties (25%) only - cavalry
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry, Easy 5-10, Normal 7-14, Hard 14-15, Very Hard 20-20
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 3-7, Normal 5-10, Hard 10-11. Very Hard 14-14
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 1-3, Normal 3-5, Hard 5-6, Very Hard 9-9
  # GAME_MODE_EASY
  ("kingdom_0_reinforcements_a", "kingdom_0_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_player_tier_2,16,36),(trp_player_tier_3_infantry,3,7)]),
  ("kingdom_0_reinforcements_b", "kingdom_0_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_player_tier_3_infantry,8,15),(trp_player_tier_3_ranged,6,13)]),
@@ -149,134 +121,143 @@ party_templates = [
  ("kingdom_0_reinforcements_l", "kingdom_0_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_player_tier_5_infantry,2,3),(trp_player_tier_5_ranged,2,3),(trp_player_tier_5_mounted,2,10)]),
  
  ### SWADIA ### - NEW TROOPS
+ # Following data is per script "cf_reinforce_party".
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry, Easy 5-10, Normal 7-14, Hard 14-15, Very Hard 20-20
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 3-7, Normal 5-10, Hard 10-11. Very Hard 14-14
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 1-3, Normal 3-5, Hard 5-6, Very Hard 9-9
  # GAME_MODE_EASY
- ("kingdom_1_reinforcements_a", "kingdom_1_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_swadian_militia,16,36),(trp_r_swadian_footman,3,7)]),
- ("kingdom_1_reinforcements_b", "kingdom_1_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_swadian_footman,8,15),(trp_r_swadian_hunter,6,13)]),
- ("kingdom_1_reinforcements_c", "kingdom_1_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_swadian_billman,2,5),(trp_r_swadian_crossbowman,2,5),(trp_r_swadian_lancer,2,6), (trp_r_swadian_man_at_arms, 1,3)]),
+ ("kingdom_1_reinforcements_a", "kingdom_1_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_n_swadian_recruit, 3, 6), (trp_n_swadian_militia, 2, 4)]),
+ ("kingdom_1_reinforcements_b", "kingdom_1_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_n_swadian_crossbowman, 3, 7)]),
+ ("kingdom_1_reinforcements_c", "kingdom_1_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_n_swadian_lancer, 1, 3)]),
  # GAME_MODE_NORMAL
- ("kingdom_1_reinforcements_d", "kingdom_1_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_swadian_militia,11,26),(trp_r_swadian_footman,3,7),(trp_r_swadian_hunter,5,10)]),
- ("kingdom_1_reinforcements_e", "kingdom_1_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_swadian_billman,8,15),(trp_r_swadian_crossbowman,5,13)]),
- ("kingdom_1_reinforcements_f", "kingdom_1_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_swadian_man_at_arms,2,6),(trp_r_swadian_sergeant,2,5),(trp_r_swadian_mercenary,2,5), (trp_r_swadian_man_at_arms, 2,7)]),
+ ("kingdom_1_reinforcements_d", "kingdom_1_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_n_swadian_recruit, 2, 4), (trp_n_swadian_militia, 5, 8), (trp_n_swadian_sergeant, 0, 1)]),
+ ("kingdom_1_reinforcements_e", "kingdom_1_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_n_swadian_crossbowman, 5, 10)]),
+ ("kingdom_1_reinforcements_f", "kingdom_1_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_n_swadian_lancer, 3, 4), (trp_n_swadian_knight, 0, 1)]),
   # GAME_MODE_HARD
- ("kingdom_1_reinforcements_g", "kingdom_1_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_swadian_footman,8,20),(trp_r_swadian_hunter,6,13),]),
- ("kingdom_1_reinforcements_h", "kingdom_1_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_swadian_billman,5,10),(trp_r_swadian_crossbowman,3,8),(trp_r_swadian_lancer,5,10)]),
- ("kingdom_1_reinforcements_i", "kingdom_1_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_swadian_sergeant,2,5),(trp_r_swadian_mercenary,2,5),(trp_r_swadian_man_at_arms,3,10)]),
+ ("kingdom_1_reinforcements_g", "kingdom_1_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_n_swadian_militia, 12, 12), (trp_n_swadian_sergeant, 2, 3)]),
+ ("kingdom_1_reinforcements_h", "kingdom_1_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_n_swadian_crossbowman, 10, 11)]),
+ ("kingdom_1_reinforcements_i", "kingdom_1_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_n_swadian_lancer, 4, 4), (trp_n_swadian_knight, 1, 2)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_1_reinforcements_j", "kingdom_1_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_swadian_hunter,2,4),(trp_r_swadian_billman,3,8),(trp_r_swadian_crossbowman,3,6),(trp_r_swadian_lancer,6,15)]),
- ("kingdom_1_reinforcements_k", "kingdom_1_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_swadian_billman,1,4),(trp_r_swadian_crossbowman,1,3),(trp_r_swadian_lancer,8,13),(trp_r_swadian_sergeant,2,4),(trp_r_swadian_mercenary,1,4)]),
- ("kingdom_1_reinforcements_l", "kingdom_1_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_swadian_sergeant,2,3),(trp_r_swadian_mercenary,2,3),(trp_r_swadian_man_at_arms,5,15)]),
+ ("kingdom_1_reinforcements_j", "kingdom_1_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_n_swadian_militia, 16, 16), (trp_n_swadian_sergeant, 4, 4)]),
+ ("kingdom_1_reinforcements_k", "kingdom_1_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_n_swadian_crossbowman, 14, 14)]),
+ ("kingdom_1_reinforcements_l", "kingdom_1_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_n_swadian_lancer, 5, 5), (trp_n_swadian_knight, 4, 4)]),
  
 
  ### VAEGIRS ### - NEW TROOPS
+ # Following data is per script "cf_reinforce_party".
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry, Easy 3-5, Normal 5-7, Hard 8-9. Very Hard 11-11
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 5-10, Normal 7-14, Hard 14-15, Very Hard 20-20
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 2-6, Normal 6-8, Hard 9-10, Very Hard 14-14
  # GAME_MODE_EASY
- ("kingdom_2_reinforcements_a", "kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_vaegir_sentry,16,36),(trp_r_vaegir_psiloi,3,7)]),
- ("kingdom_2_reinforcements_b", "kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_vaegir_psiloi,8,15),(trp_r_vaegir_skirmisher,6,13)]),
- ("kingdom_2_reinforcements_c", "kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,2,5),(trp_r_vaegir_longbowman,2,5),(trp_r_vaegir_koursores,1,3),(trp_r_vaegir_pecheneg,1,3)]),
+ ("kingdom_2_reinforcements_a", "kingdom_2_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_n_vaegir_recruit, 1, 2), (trp_n_vaegir_skirmisher, 2, 3)]),
+ ("kingdom_2_reinforcements_b", "kingdom_2_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_n_vaegir_bowman, 5, 10)]),
+ ("kingdom_2_reinforcements_c", "kingdom_2_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_n_vaegir_raider, 2, 4), (trp_n_vaegir_headhunter, 0, 2)]),
  # GAME_MODE_NORMAL
- ("kingdom_2_reinforcements_d", "kingdom_2_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_vaegir_sentry,11,26),(trp_r_vaegir_psiloi,3,7),(trp_r_vaegir_skirmisher,5,10)]),
- ("kingdom_2_reinforcements_e", "kingdom_2_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,8,15),(trp_r_vaegir_longbowman,5,13)]),
- ("kingdom_2_reinforcements_f", "kingdom_2_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_vaegir_cavalrycaptain,1,3),(trp_r_vaegir_bogatyr,1,3),(trp_r_vaegir_vanguard,2,5),(trp_r_vaegir_marksman,2,5)]),
+ ("kingdom_2_reinforcements_d", "kingdom_2_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_n_vaegir_recruit, 1, 1), (trp_n_vaegir_skirmisher, 4, 5), (trp_n_vaegir_guard, 0, 1)]),
+ ("kingdom_2_reinforcements_e", "kingdom_2_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_n_vaegir_bowman, 7, 14)]),
+ ("kingdom_2_reinforcements_f", "kingdom_2_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_n_vaegir_raider, 3, 4), (trp_n_vaegir_headhunter, 3, 3), (trp_n_vaegir_bogatyr, 0, 1)]),
  # GAME_MODE_HARD
- ("kingdom_2_reinforcements_g", "kingdom_2_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_vaegir_psiloi,8,20),(trp_r_vaegir_skirmisher,6,13),]),
- ("kingdom_2_reinforcements_h", "kingdom_2_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,5,10),(trp_r_vaegir_longbowman,3,8),(trp_r_vaegir_koursores,2,5),(trp_r_vaegir_pecheneg,3,5)]),
- ("kingdom_2_reinforcements_i", "kingdom_2_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_vaegir_vanguard,2,5),(trp_r_vaegir_marksman,2,5),(trp_r_vaegir_cavalrycaptain,1,3),(trp_r_vaegir_bogatyr,1,3)]),
+ ("kingdom_2_reinforcements_g", "kingdom_2_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_n_vaegir_skirmisher, 7, 7), (trp_n_vaegir_guard, 1, 2)]),
+ ("kingdom_2_reinforcements_h", "kingdom_2_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_n_vaegir_bowman, 14, 15)]),
+ ("kingdom_2_reinforcements_i", "kingdom_2_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_n_vaegir_raider, 3, 3), (trp_n_vaegir_headhunter, 5, 5), (trp_n_vaegir_bogatyr, 1, 2)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_2_reinforcements_j", "kingdom_2_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_vaegir_skirmisher,2,4),(trp_r_vaegir_peltast,3,8),(trp_r_vaegir_longbowman,3,6),(trp_r_vaegir_koursores,3,7),(trp_r_vaegir_pecheneg,3,8)]),
- ("kingdom_2_reinforcements_k", "kingdom_2_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_vaegir_peltast,1,4),(trp_r_vaegir_longbowman,1,3),(trp_r_vaegir_koursores,4,6),(trp_r_vaegir_pecheneg,4,7),(trp_r_vaegir_vanguard,2,4),(trp_r_vaegir_marksman,1,4)]),
- ("kingdom_2_reinforcements_l", "kingdom_2_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_vaegir_vanguard,2,3),(trp_r_vaegir_marksman,2,3),(trp_r_vaegir_cavalrycaptain,1,5),(trp_r_vaegir_bogatyr,1,5)]),
+ ("kingdom_2_reinforcements_j", "kingdom_2_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_n_vaegir_skirmisher, 7, 7), (trp_n_vaegir_guard, 4, 4)]),
+ ("kingdom_2_reinforcements_k", "kingdom_2_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_n_vaegir_bowman, 20, 20)]),
+ ("kingdom_2_reinforcements_l", "kingdom_2_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_n_vaegir_raider, 3, 3), (trp_n_vaegir_headhunter, 6, 6), (trp_n_vaegir_bogatyr, 5, 5)]),
  
 
- ### KHERGITS ### - NEW TROOPS
+ ### KHERGITS ### - NEW TROOPS - a lot of cavalry, bigger, less elite parties = slower
+ # Following data is per script "cf_reinforce_party".
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry Easy 2-6, Normal 6-8, Hard 9-10, Very Hard 14-14
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 5-10, Normal 7-14, Hard 14-15, Very Hard 20-20
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 3-5, Normal 5-7, Hard 8-9. Very Hard 11-11
  # GAME_MODE_EASY
- ("kingdom_3_reinforcements_a", "kingdom_3_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_khergit_slave,16,36),(trp_r_khergit_outcast, 5, 10), (trp_r_khergit_surcin, 10, 15)]), 
- ("kingdom_3_reinforcements_b", "kingdom_3_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_khergit_scout, 25, 35)]), 
- ("kingdom_3_reinforcements_c", "kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 1, 2), (trp_r_khergit_morici, 1, 6), (trp_r_khergit_abaci, 1, 5) ]), 
+ ("kingdom_3_reinforcements_a", "kingdom_3_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_n_khergit_recruit, 2, 6)]), 
+ ("kingdom_3_reinforcements_b", "kingdom_3_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_n_khergit_scout, 5, 9), (trp_n_khergit_skirmisher, 0, 1)]), 
+ ("kingdom_3_reinforcements_c", "kingdom_3_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_n_khergit_lancer, 3, 5)]), 
  # GAME_MODE_NORMAL
- ("kingdom_3_reinforcements_d", "kingdom_3_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_khergit_asud, 5, 10), (trp_r_khergit_kharvaach, 8, 15)]), 
- ("kingdom_3_reinforcements_e", "kingdom_3_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 3, 8), (trp_r_khergit_scout, 10, 15), (trp_r_khergit_morici, 5, 8), (trp_r_khergit_abaci, 8, 12), (trp_r_khergit_skirmisher, 10, 13)]), #
- ("kingdom_3_reinforcements_f", "kingdom_3_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_khergit_parthian, 6, 16)]), #
+ ("kingdom_3_reinforcements_d", "kingdom_3_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_n_khergit_recruit, 2, 3), (trp_n_khergit_shaman, 2, 2), (trp_n_khergit_clansman, 2, 3)]), 
+ ("kingdom_3_reinforcements_e", "kingdom_3_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_n_khergit_scout, 5, 11), (trp_n_khergit_skirmisher, 2, 3)]), #
+ ("kingdom_3_reinforcements_f", "kingdom_3_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_n_khergit_lancer, 4, 5), (trp_n_khergit_keshig, 1, 2)]), #
  # GAME_MODE_HARD
- ("kingdom_3_reinforcements_g", "kingdom_3_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_khergit_skirmisher, 14, 33), (trp_r_khergit_raider, 12, 15)]), 
- ("kingdom_3_reinforcements_h", "kingdom_3_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 8, 15), (trp_r_khergit_parthian, 5, 13)]), 
- ("kingdom_3_reinforcements_i", "kingdom_3_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_khergit_skirmisher, 6, 16), (trp_r_khergit_noyan, 1, 3)]), 
+ ("kingdom_3_reinforcements_g", "kingdom_3_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_n_khergit_shaman, 4, 5), (trp_n_khergit_clansman, 5, 5)]), 
+ ("kingdom_3_reinforcements_h", "kingdom_3_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_n_khergit_scout, 10, 11), (trp_n_khergit_skirmisher, 4, 4)]), 
+ ("kingdom_3_reinforcements_i", "kingdom_3_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_n_khergit_lancer, 5, 5), (trp_n_khergit_keshig, 3, 4)]), 
  # GAME_MODE_VERY_HARD
- ("kingdom_3_reinforcements_j", "kingdom_3_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_khergit_torguu,2,4), (trp_r_khergit_lancer, 6, 16), (trp_r_khergit_skirmisher, 6, 13)]), 
- ("kingdom_3_reinforcements_k", "kingdom_3_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_khergit_lancer, 5, 11), (trp_r_khergit_skirmisher, 5, 9), (trp_r_khergit_torguu, 3, 8), (trp_r_khergit_noyan, 1, 3)]), #
- ("kingdom_3_reinforcements_l", "kingdom_3_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_khergit_bahatur, 1, 2), (trp_r_khergit_noker, 1, 3), (trp_r_khergit_raider, 15, 25), (trp_r_khergit_parthian, 15, 20)]), 
+ ("kingdom_3_reinforcements_j", "kingdom_3_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_n_khergit_shaman, 6, 6), (trp_n_khergit_clansman, 8, 8)]), 
+ ("kingdom_3_reinforcements_k", "kingdom_3_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_n_khergit_scout, 13, 13), (trp_n_khergit_skirmisher, 7, 7)]), #
+ ("kingdom_3_reinforcements_l", "kingdom_3_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_n_khergit_lancer, 6, 6), (trp_n_khergit_keshig, 5, 5)]), 
  
  
- ### NORDS ### - NEW TROOPS
+ ### NORDS ### - NEW TROOPS - smaller elite parties = faster
+ # Following data is per script "cf_reinforce_party".
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry, Easy 3-8, Normal 5-10, Hard 9-10, Very Hard 13-13
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 3-4, Normal 4-6, Hard 6-7. Very Hard 9-9
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 0, 1, Normal 2-3, Hard 3-4, Very Hard 4-5
  # GAME_MODE_EASY
- ("kingdom_4_reinforcements_a", "kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_nord_peasant,8,18),(trp_r_nord_hunter,8,18),(trp_r_nord_shield_maiden,1,2),(trp_r_nord_skald,2,5)]),
- ("kingdom_4_reinforcements_b", "kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_nord_shield_maiden,2,5),(trp_r_nord_skald,6,10),(trp_r_nord_retinue_archer,6,13)]),
- ("kingdom_4_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,2,6),(trp_r_nord_spearman,2,3),(trp_r_nord_skirmisher,3,8)]),
+ ("kingdom_4_reinforcements_a", "kingdom_4_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_n_nordic_recruit, 1, 3), (trp_n_nordic_skald, 1, 3), (trp_n_nordic_spearman, 1, 2)]),
+ ("kingdom_4_reinforcements_b", "kingdom_4_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_n_nordic_tracker, 3, 4)]),
+ ("kingdom_4_reinforcements_c", "kingdom_4_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_n_nordic_berserker, 0, 1)]),
  # GAME_MODE_NORMAL
- ("kingdom_4_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_nord_peasant,6,13),(trp_r_nord_hunter,5,13),(trp_r_nord_shield_maiden,1,2),(trp_r_nord_skald,2,5),(trp_r_nord_retinue_archer,5,10)]),
- ("kingdom_4_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,5,10),(trp_r_nord_spearman,3,5),(trp_r_nord_skirmisher,5,13)]),
- ("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_nord_berserker,2,6),(trp_r_nord_huscarl,2,8),(trp_r_nord_godi,2,3)]),
+ ("kingdom_4_reinforcements_d", "kingdom_4_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_n_nordic_recruit, 0, 1), (trp_n_nordic_skald, 3, 5), (trp_n_nordic_spearman, 2, 4), (trp_n_nordic_berserker, 0, 1)]),
+ ("kingdom_4_reinforcements_e", "kingdom_4_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_n_nordic_tracker, 4, 5), (trp_n_nordic_retinue_archer, 0, 1)]),
+ ("kingdom_4_reinforcements_f", "kingdom_4_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_n_nordic_berserker, 2, 3)]),
  # GAME_MODE_HARD
- ("kingdom_4_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_nord_shield_maiden,2,5),(trp_r_nord_skald,6,15),(trp_r_nord_retinue_archer,6,13),]),
- ("kingdom_4_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,3,7),(trp_r_nord_spearman,2,3),(trp_r_nord_skirmisher,3,8),(trp_r_nord_berserker,5,10)]),
- ("kingdom_4_reinforcements_i", "kingdom_4_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_nord_berserker,3,8),(trp_r_nord_huscarl,3,8)]),
+ ("kingdom_4_reinforcements_g", "kingdom_4_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_n_nordic_skald, 3, 3), (trp_n_nordic_spearman, 4, 4), (trp_n_nordic_berserker, 2, 3),]),
+ ("kingdom_4_reinforcements_h", "kingdom_4_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_n_nordic_tracker, 4, 5), (trp_n_nordic_retinue_archer, 2, 2)]),
+ ("kingdom_4_reinforcements_i", "kingdom_4_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_n_nordic_berserker, 3, 4)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_4_reinforcements_j", "kingdom_4_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_nord_retinue_archer,2,4),(trp_r_nord_retainer,2,6),(trp_r_nord_spearman,2,3),(trp_r_nord_skirmisher,3,6),(trp_r_nord_berserker,6,15)]),
- ("kingdom_4_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_nord_retainer,1,4),(trp_r_nord_skirmisher,1,3),(trp_r_nord_berserker,11,21)]),
- ("kingdom_4_reinforcements_l", "kingdom_4_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_nord_berserker,4,6),(trp_r_nord_huscarl,2,7),(trp_r_nord_godi,1,3)]),
+ ("kingdom_4_reinforcements_j", "kingdom_4_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_n_nordic_skald, 4, 4), (trp_n_nordic_spearman, 5, 5), (trp_n_nordic_berserker, 4, 4)]),
+ ("kingdom_4_reinforcements_k", "kingdom_4_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_n_nordic_tracker, 5, 5), (trp_n_nordic_retinue_archer, 4, 4)]),
+ ("kingdom_4_reinforcements_l", "kingdom_4_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_n_nordic_berserker, 4, 5)]),
  
  
  ### RHODOKS ### - NEW TROOPS
+ # Following data is per script "cf_reinforce_party".
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry, Easy 3-5, Normal 4-8, Hard 7-8, Very Hard 11-11
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 3-4, Normal 4-6, Hard 6-7. Very Hard 9-9
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 2-3, Normal 4-5, Hard 5-6, Very Hard 7-8
  # GAME_MODE_EASY
- ("kingdom_5_reinforcements_a", "kingdom_5_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_rhodok_militia,8,18),(trp_rhodok_trained_militia,8,18),(trp_rhodok_trained_militia,3,7)]),
- ("kingdom_5_reinforcements_b", "kingdom_5_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_rhodok_trained_militia,8,15),(trp_rhodok_crossbowman,6,13)]),
- ("kingdom_5_reinforcements_c", "kingdom_5_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,3,8),(trp_rhodok_crossbowman_2,3,8),(trp_rhodok_arbalestier,2,5)]),
+ ("kingdom_5_reinforcements_a", "kingdom_5_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_n_rhodok_recruit, 1, 2), (trp_n_rhodok_footman, 1, 2), (trp_n_rhodok_halberdier, 1, 1)]),
+ ("kingdom_5_reinforcements_b", "kingdom_5_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_n_rhodok_ranger, 3, 4)]),
+ ("kingdom_5_reinforcements_c", "kingdom_5_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_n_rhodok_pikeman, 2, 3)]),
  # GAME_MODE_NORMAL
- ("kingdom_5_reinforcements_d", "kingdom_5_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_rhodok_militia,6,13),(trp_rhodok_trained_militia,4,11),(trp_rhodok_crossbowman,7,12)]),
- ("kingdom_5_reinforcements_e", "kingdom_5_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,8,15),(trp_rhodok_crossbowman_2,2,8),(trp_rhodok_arbalestier,4,10)]),
- ("kingdom_5_reinforcements_f", "kingdom_5_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman_2,3,8),(trp_rhodok_arbalestier,3,8),(trp_rhodok_siege_commander,1,3),(trp_rhodok_mercenary_captain,0,2)]),
+ ("kingdom_5_reinforcements_d", "kingdom_5_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_n_rhodok_recruit, 1, 1), (trp_n_rhodok_footman, 1, 4), (trp_n_rhodok_halberdier, 1, 2), (trp_n_rhodok_foot_knight, 0, 1)]),
+ ("kingdom_5_reinforcements_e", "kingdom_5_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_n_rhodok_ranger, 4, 5), (trp_n_rhodok_siege_breaker, 0, 1)]),
+ ("kingdom_5_reinforcements_f", "kingdom_5_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_n_rhodok_pikeman, 4, 5)]),
  # GAME_MODE_HARD
- ("kingdom_5_reinforcements_g", "kingdom_5_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_rhodok_trained_militia,8,20),(trp_rhodok_crossbowman,6,13)]),
- ("kingdom_5_reinforcements_h", "kingdom_5_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,7,15),(trp_rhodok_crossbowman_2,6,13),(trp_rhodok_arbalestier,4,10),(trp_rhodok_highland_pikeman,2,6)]),
- ("kingdom_5_reinforcements_i", "kingdom_5_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman_2,3,8),(trp_rhodok_arbalestier,3,8),(trp_rhodok_hedge_knight,1,4),(trp_rhodok_siege_commander,1,2),(trp_rhodok_mercenary_captain,1,1)]),
+ ("kingdom_5_reinforcements_g", "kingdom_5_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_n_rhodok_footman, 4, 4), (trp_n_rhodok_halberdier, 2, 2), (trp_n_rhodok_foot_knight, 1, 2)]),
+ ("kingdom_5_reinforcements_h", "kingdom_5_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_n_rhodok_ranger, 5, 5), (trp_n_rhodok_siege_breaker, 1, 2)]),
+ ("kingdom_5_reinforcements_i", "kingdom_5_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_n_rhodok_pikeman, 5, 6)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_5_reinforcements_j", "kingdom_5_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_rhodok_crossbowman,2,4),(trp_rhodok_pikeman,6,15),(trp_rhodok_crossbowman_2,6,14)]),
- ("kingdom_5_reinforcements_k", "kingdom_5_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_rhodok_pikeman,5,11),(trp_rhodok_crossbowman_2,2,5),(trp_rhodok_pikeman_2,3,8),(trp_rhodok_arbalestier,4,10),(trp_rhodok_siege_commander,2,5)]),
- ("kingdom_5_reinforcements_l", "kingdom_5_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_rhodok_arbalestier,3,8),(trp_rhodok_hedge_knight,1,4),(trp_rhodok_siege_commander,1,3),(trp_rhodok_mercenary_captain,1,3),(trp_rhodok_siege_breaker,1,4)]),
+ ("kingdom_5_reinforcements_j", "kingdom_5_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_n_rhodok_footman, 3, 3), (trp_n_rhodok_halberdier, 6, 6), (trp_n_rhodok_foot_knight, 2, 2)]),
+ ("kingdom_5_reinforcements_k", "kingdom_5_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_n_rhodok_ranger, 5, 5), (trp_n_rhodok_siege_breaker, 4, 4)]),
+ ("kingdom_5_reinforcements_l", "kingdom_5_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_n_rhodok_pikeman, 7, 8)]),
  
  
  ### SARRANID ### - NEW TROOPS
+ # Following data is per script "cf_reinforce_party".
+ # Reinforcement A gets added to kingdom_parties (50%) and centers (65%) - infantry,Easy 3-7, Normal 5-10, Hard 10-11. Very Hard 14-14 
+ # Reinforcement B gets added to kingdom_parties (25%) and centers (35%) - archers Easy 5-10, Normal 7-14, Hard 14-15, Very Hard 20-20
+ # Reinforcement C gets added to kingdom_parties (25%) only - cavalry and pikemen Easy 1-3, Normal 3-5, Hard 5-6, Very Hard 9-9
  # GAME_MODE_EASY
- ("kingdom_6_reinforcements_a", "kingdom_6_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 12, 18), (trp_r_sarranid_yaya, 5, 12), (trp_r_sarranid_janissary, 3, 5)]),
- ("kingdom_6_reinforcements_b", "kingdom_6_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 1, 4), (trp_r_sarranid_musellem, 4, 5), (trp_r_sarranid_janissary, 4, 8), (trp_r_sarranid_timariot, 2, 5)]),
- ("kingdom_6_reinforcements_c", "kingdom_6_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi,1,4),(trp_r_sarranid_timariot,5,8),(trp_r_sarranid_musellem,4,5),(trp_r_sarranid_sipahi,0,2)]),
+ ("kingdom_6_reinforcements_a", "kingdom_6_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_n_sarranid_recruit, 2, 5), (trp_n_sarranid_fighter, 1, 2)]),
+ ("kingdom_6_reinforcements_b", "kingdom_6_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_n_sarranid_marksman, 5, 9), (trp_n_sarranid_skirmisher, 0, 1)]),
+ ("kingdom_6_reinforcements_c", "kingdom_6_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_n_sarranid_tribesman, 1, 3)]),
  # GAME_MODE_NORMAL
- ("kingdom_6_reinforcements_d", "kingdom_6_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 2, 5), (trp_r_sarranid_yaya, 6, 14), (trp_r_sarranid_janissary, 5, 12)]),
- ("kingdom_6_reinforcements_e", "kingdom_6_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 2, 5), (trp_r_sarranid_musellem, 4, 5), (trp_r_sarranid_janissary, 4, 8), (trp_r_sarranid_timariot, 3, 7), (trp_r_sarranid_bashibozuk, 2, 6)]),
- ("kingdom_6_reinforcements_f", "kingdom_6_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi, 3, 6), (trp_r_sarranid_timariot, 8, 12), (trp_r_sarranid_musellem, 4, 8), (trp_r_sarranid_sipahi, 1, 4), (trp_r_sarranid_garip, 1, 2)]),
+ ("kingdom_6_reinforcements_d", "kingdom_6_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_n_sarranid_recruit, 2, 5), (trp_n_sarranid_fighter, 3, 4), (trp_n_sarranid_guard, 0, 1)]),
+ ("kingdom_6_reinforcements_e", "kingdom_6_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_n_sarranid_marksman, 6, 11), (trp_n_sarranid_skirmisher, 1, 3)]),
+ ("kingdom_6_reinforcements_f", "kingdom_6_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_n_sarranid_tribesman, 1, 2), (trp_n_sarranid_mamluke, 2, 2), (trp_n_sarranid_skirmisher, 0, 1)]),
  # GAME_MODE_HARD
- ("kingdom_6_reinforcements_g", "kingdom_6_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 2, 5), (trp_r_sarranid_yaya, 2, 8), (trp_r_sarranid_janissary, 7, 18)]),
- ("kingdom_6_reinforcements_h", "kingdom_6_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 3, 8), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_janissary, 2, 6), (trp_r_sarranid_timariot, 5, 10), (trp_r_sarranid_bashibozuk, 4, 8), (trp_r_sarranid_sipahi, 3,5)]),
- ("kingdom_6_reinforcements_i", "kingdom_6_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi, 3, 6), (trp_r_sarranid_timariot, 2, 4), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_sipahi, 3, 6), (trp_r_sarranid_garip, 2, 4)]),
+ ("kingdom_6_reinforcements_g", "kingdom_6_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_n_sarranid_fighter, 9, 9), (trp_n_sarranid_guard, 1, 2)]),
+ ("kingdom_6_reinforcements_h", "kingdom_6_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_n_sarranid_marksman, 10, 11), (trp_n_sarranid_skirmisher, 4, 4)]),
+ ("kingdom_6_reinforcements_i", "kingdom_6_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_n_sarranid_tribesman, 1, 2), (trp_n_sarranid_mamluke, 3, 3), (trp_n_sarranid_skirmisher, 1, 2)]),
  # GAME_MODE_VERY_HARD
- ("kingdom_6_reinforcements_j", "kingdom_6_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_r_sarranid_azab, 1, 4), (trp_r_sarranid_yaya, 2, 8), (trp_r_sarranid_janissary, 12, 24)]),
- ("kingdom_6_reinforcements_k", "kingdom_6_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_r_sarranid_corbaci, 6, 10), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_janissary, 2, 6), (trp_r_sarranid_timariot, 3, 5), (trp_r_sarranid_bashibozuk, 6, 10), (trp_r_sarranid_sipahi, 3,8)]),
- ("kingdom_6_reinforcements_l", "kingdom_6_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_r_sarranid_boluk_bashi, 5, 10), (trp_r_sarranid_timariot, 2, 4), (trp_r_sarranid_musellem, 2, 4), (trp_r_sarranid_sipahi, 8, 10), (trp_r_sarranid_garip, 2, 10)]),
- ## LEIFDIN--
- # GAME_MODE_EASY
- #("kingdom_6_reinforcements_a", "kingdom_6_reinforcements_a", 0, 0, fac_commoners, 0, [(trp_sarranid_footman,16,36),(trp_sarranid_veteran_footman,3,7)]),
- #("kingdom_6_reinforcements_b", "kingdom_6_reinforcements_b", 0, 0, fac_commoners, 0, [(trp_sarranid_veteran_footman,8,15),(trp_sarranid_skirmisher,6,13)]),
- #("kingdom_6_reinforcements_c", "kingdom_6_reinforcements_c", 0, 0, fac_commoners, 0, [(trp_sarranid_infantry,2,5),(trp_sarranid_archer,2,5),(trp_sarranid_horseman,2,6)]),
- # GAME_MODE_NORMAL
- #("kingdom_6_reinforcements_d", "kingdom_6_reinforcements_d", 0, 0, fac_commoners, 0, [(trp_sarranid_footman,11,26),(trp_sarranid_veteran_footman,3,7),(trp_sarranid_skirmisher,5,10)]),
- #("kingdom_6_reinforcements_e", "kingdom_6_reinforcements_e", 0, 0, fac_commoners, 0, [(trp_sarranid_infantry,8,15),(trp_sarranid_archer,5,13)]),
- #("kingdom_6_reinforcements_f", "kingdom_6_reinforcements_f", 0, 0, fac_commoners, 0, [(trp_sarranid_mamluke,2,6),(trp_sarranid_guard,2,5),(trp_sarranid_master_archer,2,5)]),
- # GAME_MODE_HARD
- #("kingdom_6_reinforcements_g", "kingdom_6_reinforcements_g", 0, 0, fac_commoners, 0, [(trp_sarranid_veteran_footman,8,20),(trp_sarranid_skirmisher,6,13),]),
- #("kingdom_6_reinforcements_h", "kingdom_6_reinforcements_h", 0, 0, fac_commoners, 0, [(trp_sarranid_infantry,5,10),(trp_sarranid_archer,3,8),(trp_sarranid_horseman,5,10)]),
- #("kingdom_6_reinforcements_i", "kingdom_6_reinforcements_i", 0, 0, fac_commoners, 0, [(trp_sarranid_guard,2,5),(trp_sarranid_master_archer,2,5),(trp_sarranid_mamluke,2,6)]),
- # GAME_MODE_VERY_HARD
- #("kingdom_6_reinforcements_j", "kingdom_6_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_sarranid_skirmisher,2,4),(trp_sarranid_infantry,3,8),(trp_sarranid_archer,3,6),(trp_sarranid_horseman,6,15)]),
- #("kingdom_6_reinforcements_k", "kingdom_6_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_sarranid_infantry,1,4),(trp_sarranid_archer,1,3),(trp_sarranid_horseman,8,13),(trp_sarranid_guard,2,4),(trp_sarranid_master_archer,1,4)]),
- #("kingdom_6_reinforcements_l", "kingdom_6_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_sarranid_guard,2,3),(trp_sarranid_master_archer,2,3),(trp_sarranid_mamluke,2,10)]),
+ ("kingdom_6_reinforcements_j", "kingdom_6_reinforcements_j", 0, 0, fac_commoners, 0, [(trp_n_sarranid_fighter, 11, 11), (trp_n_sarranid_guard, 3, 3)]),
+ ("kingdom_6_reinforcements_k", "kingdom_6_reinforcements_k", 0, 0, fac_commoners, 0, [(trp_n_sarranid_marksman, 13, 13), (trp_n_sarranid_skirmisher, 7, 7)]),
+ ("kingdom_6_reinforcements_l", "kingdom_6_reinforcements_l", 0, 0, fac_commoners, 0, [(trp_n_sarranid_tribesman, 3, 3), (trp_n_sarranid_mamluke, 4, 4), (trp_n_sarranid_skirmisher, 2, 2)]),
+
+
   ("steppe_bandit_lair" ,"Steppe Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_steppe_bandit,15,58)]),
   ("taiga_bandit_lair","Tundra Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_taiga_bandit,15,58)]),
   ("desert_bandit_lair" ,"Desert Bandit Lair",icon_bandit_lair|carries_goods(2)|pf_is_static|pf_hide_defenders,0,fac_neutral,bandit_personality,[(trp_desert_bandit,15,58)]),
