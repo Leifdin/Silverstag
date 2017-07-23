@@ -3095,9 +3095,6 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
 				(try_begin), ## AFFILIATED - RHODOK
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_ranger", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_ranger", ":lord_no", ":quantity"),
-				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_cavalry", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_cavalry", ":lord_no", ":quantity"),
 				(else_try),
@@ -3114,20 +3111,11 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_INFANTRY),
 				(ge, ":quantity", 1),
 				(try_begin), ## NON-AFFILIATED - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_varangian_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_varangian_guard", ":lord_no", ":quantity"),
-				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_hired_blade", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_hired_blade", ":lord_no", ":quantity"),
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_swordsman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_swordsman", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_jomsviking", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_jomsviking", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED / BANDIT - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_raider", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_raider", ":lord_no", ":quantity"),
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_watchman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_watchman", ":lord_no", ":quantity"),
@@ -3139,9 +3127,6 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_varangian_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_varangian_archer", ":lord_no", ":quantity"),
-				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_crossbowman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_crossbowman", ":lord_no", ":quantity"),
 				(try_end),
@@ -3152,8 +3137,8 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_HORSE_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin), ## AFFILIATED - RHODOK
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_ranger", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_ranger", ":lord_no", ":quantity"),
+					#~ (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_rhodok_ranger", ":lord_no"),
+					#~ (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_rhodok_ranger", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 

@@ -6754,7 +6754,7 @@ scripts = [
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_4"),
       
           (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_nord_deserter"),
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_nord_retainer"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_n_nordic_retinue_archer"),
           (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_nord_messenger"),
           (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_nord_prison_guard"),
           (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_nord_castle_guard"),

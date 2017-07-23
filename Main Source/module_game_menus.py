@@ -898,7 +898,7 @@ game_menus = [
 			
 			("action_test_relation", [], "Add prisoners to party.",
 				[
-					(party_add_prisoners, "p_main_party", "trp_r_nord_retainer", 4),
+					(party_add_prisoners, "p_main_party", "trp_n_nord_retainer", 4),
 				]),
 			
 			("return", [], "Return", 
