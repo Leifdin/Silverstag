@@ -394,60 +394,60 @@ troops = [
 ## KINGDOM OF SWADIA (FACTION 1) ##
 ###################################
 # Initial design by Leifdin
-["r_swadian_hunter",        "Swadian Hunter",              "Swadian Hunters",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hood_a,itm_short_aketon,itm_leather_gloves,itm_woolen_hose,itm_long_knife,itm_short_bow,itm_arrows],str_10|agi_12|int_6|cha_6|level(4),wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(75)|wp_crossbow(0)|wp_throwing(0),knows_athletics_1,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_supplyman",     "Swadian Supplyman",           "Swadian Supplymen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_padded_coif,itm_padded_coat_a,itm_leather_gloves,itm_woolen_hose,itm_dagger,itm_war_darts],str_9|agi_9|int_6|cha_6|level(4),wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_athletics_1|knows_power_throw_1,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_militia",       "Swadian Militia",             "Swadian Militia",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_short_aketon,itm_leather_gloves,itm_leather_boots,itm_kite_shield_a,itm_falchion,itm_pitch_fork],str_13|agi_12|int_6|cha_6|level(8),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(100)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_1|knows_athletics_2|knows_shield_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_crossbowman",   "Swadian Crossbowman",         "Swadian Crossbowmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_blue_gambeson,itm_leather_gloves,itm_hose_kneecops_green,itm_falchion,itm_heavy_crossbow,itm_bolts],str_12|agi_12|int_6|cha_6|level(12),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(150)|wp_throwing(0),knows_athletics_3|knows_ironflesh_2|knows_power_strike_2,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_lancer",        "Swadian Lancer",              "Swadian Lancers",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_courser,itm_kettle_helm_a,itm_mail_shirt,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_western_arming_sword,itm_simple_lance],str_14|agi_14|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(125)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_athletics_2|knows_shield_1|knows_riding_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_footman",       "Swadian Footman",             "Swadian Footmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver],str_16|agi_14|int_6|cha_6|level(16),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_3|knows_ironflesh_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_billman",       "Swadian Billman",             "Swadian Billmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_northern_helmet, itm_light_brigantine_c,itm_mail_mittens,itm_sarranid_boots_b,itm_kite_shield_a,itm_glaive,itm_bill],str_19|agi_14|level(16),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_3|knows_shield_4|knows_ironflesh_4,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_mercenary",     "Swadian Mercenary",           "Swadian Mercenaries",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_heavy_swadian_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_13|agi_12|int_12|cha_10|level(16),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_4|knows_ironflesh_3|knows_power_draw_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_man_at_arms",   "Swadian Man-at-Arms",         "Swadian Men-at-Arms",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_arming_sword,itm_simple_lance],str_17|agi_12|int_6|cha_6|level(16),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_2|knows_shield_2|knows_ironflesh_1|knows_riding_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_sentinel",      "Swadian Sentinel",            "Swadian Sentinels",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_d,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_a,itm_long_war_axe],str_17|agi_16|int_12|cha_10|level(20),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_ironflesh_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_sergeant",      "Swadian Sergeant",            "Swadian Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],str_18|agi_16|int_10|cha_12|level(20),meleeprof(6),knows_power_strike_5|knows_athletics_4|knows_shield_3|knows_ironflesh_4|knows_tactics_4,swadian_face_younger_1,swadian_face_middle_2],
-# ["swadia_troops_end",       "Placeholder",                 "Placeholder",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],def_attrib|level(34),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
-## Uniques Begin
-["r_uxkhal_bandit",         "Uxkhal Bandit",               "Uxkhal Bandits",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hunter,itm_padded_coif,itm_red_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_winged_mace,itm_crossbow,itm_bolts],str_14|agi_14|int_4|cha_4|level(12),wp_one_handed(125)|wp_two_handed(125)|wp_polearm(125)|wp_archery(0)|wp_crossbow(125)|wp_throwing(0),knows_horse_archery_3|knows_power_strike_2|knows_athletics_3|knows_ironflesh_2|knows_riding_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_tilbaut_archer",        "Tilbaut Archer",              "Tilbaut Archers",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_coif,itm_heraldic_mail_with_tunic,itm_leather_gloves,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_18|agi_14|int_10|cha_10|level(20),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(175)|wp_crossbow(0)|wp_throwing(0),knows_athletics_2|knows_power_strike_2|knows_power_draw_4|knows_shield_2|knows_weapon_master_4,swadian_face_younger_1,swadian_face_middle_2],
-["r_dhirim_captain",        "Dhirim Captain",              "Dhirim Captain",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_with_surcoat_b,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_d,itm_spiked_mace],str_18|agi_16|cha_18|int_12|level(20),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_3|knows_shield_4|knows_ironflesh_5|knows_riding_6|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_suno_master_archer",    "Suno Master Archer",          "Suno Master Archer",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_a, itm_swadian_gambeson_with_chainmail, itm_leather_gloves,itm_mail_chausses,itm_falchion,itm_war_bow,itm_bodkin_arrows,itm_bodkin_arrows],str_16|agi_16|int_10|cha_15|level(24),wp_one_handed(175)|wp_two_handed(100)|wp_polearm(100)|wp_archery(225)|wp_crossbow(0)|wp_throwing(0),knows_athletics_5|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_6|knows_weapon_master_6|knows_tactics_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_praven_knight",         "Praven Knight",               "Praven Knights",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_wse_charger,itm_bascinet_with_visor,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_g,itm_long_sword,itm_lance],str_19|agi_17|int_16|cha_12|level(28),meleeprof(9),knows_power_strike_8|knows_athletics_5|knows_shield_7|knows_ironflesh_7|knows_riding_6,swadian_face_younger_1,swadian_face_middle_2],
-["swadia_uniques_end",      "Placeholder",                 "Placeholder",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],def_attrib|level(34),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_hunter",        "Swadian Hunter",              "Swadian Hunters",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hood_a,itm_short_aketon,itm_leather_gloves,itm_woolen_hose,itm_long_knife,itm_short_bow,itm_arrows],str_10|agi_12|int_6|cha_6|level(4),wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(75)|wp_crossbow(0)|wp_throwing(0),knows_athletics_1,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_supplyman",     "Swadian Supplyman",           "Swadian Supplymen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_padded_coif,itm_padded_coat_a,itm_leather_gloves,itm_woolen_hose,itm_dagger,itm_war_darts],str_9|agi_9|int_6|cha_6|level(4),wp_one_handed(50)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(75),knows_athletics_1|knows_power_throw_1,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_militia",       "Swadian Militia",             "Swadian Militia",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_short_aketon,itm_leather_gloves,itm_leather_boots,itm_kite_shield_a,itm_falchion,itm_pitch_fork],str_13|agi_12|int_6|cha_6|level(8),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(100)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_1|knows_athletics_2|knows_shield_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_crossbowman",   "Swadian Crossbowman",         "Swadian Crossbowmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_blue_gambeson,itm_leather_gloves,itm_hose_kneecops_green,itm_falchion,itm_heavy_crossbow,itm_bolts],str_12|agi_12|int_6|cha_6|level(12),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(150)|wp_throwing(0),knows_athletics_3|knows_ironflesh_2|knows_power_strike_2,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_lancer",        "Swadian Lancer",              "Swadian Lancers",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_courser,itm_kettle_helm_a,itm_mail_shirt,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_western_arming_sword,itm_simple_lance],str_14|agi_14|int_6|cha_6|level(12),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(125)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_2|knows_athletics_2|knows_shield_1|knows_riding_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_footman",       "Swadian Footman",             "Swadian Footmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver],str_16|agi_14|int_6|cha_6|level(16),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_3|knows_ironflesh_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_billman",       "Swadian Billman",             "Swadian Billmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_northern_helmet, itm_light_brigantine_c,itm_mail_mittens,itm_sarranid_boots_b,itm_kite_shield_a,itm_glaive,itm_bill],str_19|agi_14|level(16),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_3|knows_shield_4|knows_ironflesh_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_mercenary",     "Swadian Mercenary",           "Swadian Mercenaries",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_heavy_swadian_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_13|agi_12|int_12|cha_10|level(16),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_4|knows_ironflesh_3|knows_power_draw_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_man_at_arms",   "Swadian Man-at-Arms",         "Swadian Men-at-Arms",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_arming_sword,itm_simple_lance],str_17|agi_12|int_6|cha_6|level(16),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_2|knows_shield_2|knows_ironflesh_1|knows_riding_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_sentinel",      "Swadian Sentinel",            "Swadian Sentinels",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_d,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_a,itm_long_war_axe],str_17|agi_16|int_12|cha_10|level(20),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_ironflesh_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_sergeant",      "Swadian Sergeant",            "Swadian Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],str_18|agi_16|int_10|cha_12|level(20),meleeprof(6),knows_power_strike_5|knows_athletics_4|knows_shield_3|knows_ironflesh_4|knows_tactics_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ # ["swadia_troops_end",       "Placeholder",                 "Placeholder",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],def_attrib|level(34),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ## Uniques Begin
+#~ ["r_uxkhal_bandit",         "Uxkhal Bandit",               "Uxkhal Bandits",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hunter,itm_padded_coif,itm_red_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_winged_mace,itm_crossbow,itm_bolts],str_14|agi_14|int_4|cha_4|level(12),wp_one_handed(125)|wp_two_handed(125)|wp_polearm(125)|wp_archery(0)|wp_crossbow(125)|wp_throwing(0),knows_horse_archery_3|knows_power_strike_2|knows_athletics_3|knows_ironflesh_2|knows_riding_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_tilbaut_archer",        "Tilbaut Archer",              "Tilbaut Archers",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_coif,itm_heraldic_mail_with_tunic,itm_leather_gloves,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_18|agi_14|int_10|cha_10|level(20),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(175)|wp_crossbow(0)|wp_throwing(0),knows_athletics_2|knows_power_strike_2|knows_power_draw_4|knows_shield_2|knows_weapon_master_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_dhirim_captain",        "Dhirim Captain",              "Dhirim Captain",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_with_surcoat_b,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_d,itm_spiked_mace],str_18|agi_16|cha_18|int_12|level(20),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_3|knows_shield_4|knows_ironflesh_5|knows_riding_6|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_suno_master_archer",    "Suno Master Archer",          "Suno Master Archer",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_a, itm_swadian_gambeson_with_chainmail, itm_leather_gloves,itm_mail_chausses,itm_falchion,itm_war_bow,itm_bodkin_arrows,itm_bodkin_arrows],str_16|agi_16|int_10|cha_15|level(24),wp_one_handed(175)|wp_two_handed(100)|wp_polearm(100)|wp_archery(225)|wp_crossbow(0)|wp_throwing(0),knows_athletics_5|knows_ironflesh_4|knows_power_strike_4|knows_power_draw_6|knows_weapon_master_6|knows_tactics_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_praven_knight",         "Praven Knight",               "Praven Knights",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_wse_charger,itm_bascinet_with_visor,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_g,itm_long_sword,itm_lance],str_19|agi_17|int_16|cha_12|level(28),meleeprof(9),knows_power_strike_8|knows_athletics_5|knows_shield_7|knows_ironflesh_7|knows_riding_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["swadia_uniques_end",      "Placeholder",                 "Placeholder",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],def_attrib|level(34),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(225)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
 
-# UPGRADE TIER +1 / +6 levels
-["r_swadian_hunter_1",      "Veteran Swadian Hunter",      "Veteran Swadian Hunters",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hood_a,itm_short_aketon,itm_leather_gloves,itm_woolen_hose,itm_long_knife,itm_short_bow,itm_arrows],str_14|agi_14|int_6|cha_6|level(10),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(125)|wp_crossbow(0)|wp_throwing(0),knows_athletics_2|knows_power_draw_2,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_supplyman_1",   "Veteran Swadian Supplyman",   "Veteran Swadian Supplymen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_padded_coif,itm_padded_coat_a,itm_leather_gloves,itm_woolen_hose,itm_dagger,itm_war_darts],str_13|agi_13|int_6|cha_6|level(10),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_ironflesh_1|knows_athletics_3|knows_power_throw_2,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_militia_1",     "Veteran Swadian Militia",     "Veteran Swadian Militia",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_short_aketon,itm_leather_gloves,itm_leather_boots,itm_kite_shield_a,itm_falchion,itm_pitch_fork],str_17|agi_17|int_6|cha_6|level(14),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_crossbowman_1", "Veteran Swadian Crossbowman", "Veteran Swadian Crossbowmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_blue_gambeson,itm_leather_gloves,itm_hose_kneecops_green,itm_falchion,itm_heavy_crossbow,itm_bolts],str_15|agi_15|int_6|cha_6|level(18),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(175)|wp_throwing(0),knows_athletics_4|knows_ironflesh_3|knows_power_strike_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_lancer_1",      "Veteran Swadian Lancer",      "Veteran Swadian Lancers",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_courser,itm_kettle_helm_a,itm_mail_shirt,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_western_arming_sword,itm_simple_lance],str_18|agi_17|int_6|cha_6|level(18),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_riding_4,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_footman_1",     "Veteran Swadian Footman",     "Veteran Swadian Footmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver],str_20|agi_18|int_6|cha_6|level(22),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_4|knows_shield_4|knows_ironflesh_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_billman_1",     "Veteran Swadian Billman",     "Veteran Swadian Billmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_northern_helmet,itm_light_brigantine_c,itm_mail_mittens,itm_sarranid_boots_b,itm_kite_shield_a,itm_glaive,itm_bill],str_23|agi_17|level(22),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_4|knows_shield_5|knows_ironflesh_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_mercenary_1",   "Veteran Swadian Mercenary",   "Veteran Swadian Mercenaries",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_heavy_swadian_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_17|agi_15|int_12|cha_10|level(22),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(175)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_5|knows_ironflesh_3|knows_power_draw_4,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_man_at_arms_1", "Veteran Swadian Man-at-Arms", "Veteran Swadian Men-at-Arms",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_arming_sword,itm_simple_lance],str_20|agi_17|int_6|cha_6|level(22),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(200)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_3|knows_shield_4|knows_ironflesh_3|knows_riding_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_sentinel_1",    "Veteran Swadian Sentinel",    "Veteran Swadian Sentinels",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_d,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_a,itm_long_war_axe],str_20|agi_18|int_12|cha_10|level(26),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_4|knows_shield_6|knows_ironflesh_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_sergeant_1",    "Veteran Swadian Sergeant",    "Veteran Swadian Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],str_22|agi_20|int_10|cha_12|level(26),meleeprof(7),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_uxkhal_bandit_1",       "Veteran Uxkhal Bandit",       "Veteran Uxkhal Bandits",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hunter,itm_padded_coif,itm_red_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_winged_mace,itm_crossbow,itm_bolts],str_18|agi_18|int_4|cha_4|level(18),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(175)|wp_throwing(0),knows_horse_archery_4|knows_power_strike_3|knows_athletics_3|knows_ironflesh_3|knows_riding_4,swadian_face_younger_1,swadian_face_middle_2],
-["r_tilbaut_archer_1",      "Veteran Tilbaut Archer",      "Veteran Tilbaut Archers",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_coif,itm_heraldic_mail_with_tunic,itm_leather_gloves,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_20|agi_16|int_10|cha_10|level(26),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(200)|wp_crossbow(0)|wp_throwing(0),knows_athletics_3|knows_power_strike_3|knows_power_draw_5|knows_shield_2|knows_weapon_master_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_dhirim_captain_1",      "Veteran Dhirim Captain",      "Veteran Dhirim Captain",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_with_surcoat_b,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_d,itm_spiked_mace],str_22|agi_19|cha_18|int_12|level(26),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_4|knows_shield_5|knows_ironflesh_6|knows_riding_6|knows_tactics_7,swadian_face_younger_1,swadian_face_middle_2],
-["r_suno_master_archer_1",  "Veteran Suno Master Archer",  "Veteran Suno Master Archer",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_a, itm_swadian_gambeson_with_chainmail,itm_leather_gloves,itm_mail_chausses,itm_falchion,itm_war_bow,itm_bodkin_arrows,itm_bodkin_arrows],str_19|agi_19|int_10|cha_15|level(30),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(0)|wp_archery(250)|wp_crossbow(0)|wp_throwing(0),knows_athletics_6|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_weapon_master_7|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_praven_knight_1",       "Veteran Praven Knight",       "Veteran Praven Knights",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_wse_charger,itm_bascinet_with_visor,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_g,itm_long_sword,itm_lance],str_24|agi_22|int_18|cha_12|level(34),meleeprof(10),knows_power_strike_9|knows_athletics_5|knows_shield_8|knows_ironflesh_8|knows_riding_7,swadian_face_younger_1,swadian_face_middle_2],
-# UPGRADE TIER +2 / +12 levels
-["r_swadian_hunter_2",      "Elite Swadian Hunter",        "Elite Swadian Hunters",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hood_a,itm_short_aketon,itm_leather_gloves,itm_woolen_hose,itm_long_knife,itm_short_bow,itm_arrows],str_16|agi_16|int_6|cha_6|level(16),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_athletics_3|knows_power_strike_1|knows_power_draw_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_supplyman_2",   "Elite Swadian Supplyman",     "Elite Swadian Supplymen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_padded_coif,itm_padded_coat_a,itm_leather_gloves,itm_woolen_hose,itm_dagger,itm_war_darts],str_17|agi_17|int_6|cha_6|level(16),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(125),knows_ironflesh_2|knows_athletics_5|knows_power_strike_1|knows_power_throw_3,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_militia_2",     "Elite Swadian Militia",       "Elite Swadian Militia",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_short_aketon,itm_leather_gloves,itm_leather_boots,itm_kite_shield_a,itm_falchion,itm_pitch_fork],str_20|agi_20|int_6|cha_6|level(20),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_3|knows_shield_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_crossbowman_2", "Elite Swadian Crossbowman",   "Elite Swadian Crossbowmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_blue_gambeson,itm_leather_gloves,itm_hose_kneecops_green,itm_falchion,itm_heavy_crossbow,itm_bolts],str_18|agi_18|int_6|cha_6|level(18),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(200)|wp_throwing(0),knows_athletics_4|knows_ironflesh_4|knows_power_strike_4,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_lancer_2",      "Elite Swadian Lancer",        "Elite Swadian Lancers",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_courser,itm_kettle_helm_a,itm_mail_shirt,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_western_arming_sword,itm_simple_lance],str_22|agi_20|int_6|cha_6|level(24),meleeprof(6),knows_power_strike_5|knows_athletics_3|knows_shield_3|knows_riding_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_footman_2",     "Elite Swadian Footman",       "Elite Swadian Footmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver],str_24|agi_22|int_6|cha_6|level(28),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_billman_2",     "Elite Swadian Billman",       "Elite Swadian Billmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_northern_helmet,itm_light_brigantine_c,itm_mail_mittens,itm_sarranid_boots_b,itm_kite_shield_a,itm_glaive,itm_bill],str_27|agi_20|level(28),meleeprof(6),knows_power_strike_5|knows_athletics_6|knows_shield_6|knows_ironflesh_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_mercenary_2",   "Elite Swadian Mercenary",     "Elite Swadian Mercenaries",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_heavy_swadian_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_21|agi_18|int_12|cha_10|level(28),meleeprof(6)|rangedprof(6),knows_power_strike_5|knows_athletics_6|knows_ironflesh_4|knows_power_draw_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_man_at_arms_2", "Elite Swadian Man-at-Arms",   "Elite Swadian Men-at-Arms",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_arming_sword,itm_simple_lance],str_23|agi_19|int_6|cha_6|level(28),meleeprof(7),knows_power_strike_6|knows_athletics_4|knows_shield_5|knows_ironflesh_4|knows_riding_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_sentinel_2",    "Elite Swadian Sentinel",      "Elite Swadian Sentinels",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_d,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_a,itm_long_war_axe],str_24|agi_20|int_12|cha_10|level(26),meleeprof(7),knows_power_strike_6|knows_athletics_5|knows_shield_6|knows_ironflesh_7,swadian_face_younger_1,swadian_face_middle_2],
-["r_swadian_sergeant_2",    "Elite Swadian Sergeant",      "Elite Swadian Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],str_27|agi_26|int_10|cha_12|level(32),meleeprof(8),knows_power_strike_7|knows_athletics_7|knows_shield_7|knows_ironflesh_8|knows_tactics_7,swadian_face_younger_1,swadian_face_middle_2],
-["r_uxkhal_bandit_2",       "Elite Uxkhal Bandit",         "Elite Uxkhal Bandits",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hunter,itm_padded_coif,itm_red_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_winged_mace,itm_crossbow,itm_bolts],str_22|agi_22|int_4|cha_4|level(24),meleeprof(5)|rangedprof(6),knows_horse_archery_5|knows_power_strike_4|knows_athletics_4|knows_ironflesh_4|knows_riding_5,swadian_face_younger_1,swadian_face_middle_2],
-["r_tilbaut_archer_2",      "Elite Tilbaut Archer",        "Elite Tilbaut Archers",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_coif,itm_heraldic_mail_with_tunic,itm_leather_gloves,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_24|agi_18|int_10|cha_10|level(32),meleeprof(5)|rangedprof(7),knows_athletics_5|knows_power_strike_4|knows_power_draw_6|knows_shield_4|knows_weapon_master_6,swadian_face_younger_1,swadian_face_middle_2],
-["r_dhirim_captain_2",      "Elite Dhirim Captain",        "Elite Dhirim Captain",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_with_surcoat_b,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_d,itm_spiked_mace],str_22|agi_22|cha_18|int_12|level(32),meleeprof(8),knows_power_strike_7|knows_athletics_4|knows_shield_6|knows_ironflesh_7|knows_riding_7|knows_tactics_8,swadian_face_younger_1,swadian_face_middle_2],
-["r_suno_master_archer_2",  "Elite Suno Master Archer",    "Elite Suno Master Archer",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_a, itm_swadian_gambeson_with_chainmail,itm_leather_gloves,itm_mail_chausses,itm_falchion,itm_war_bow,itm_bodkin_arrows,itm_bodkin_arrows],str_22|agi_22|int_10|cha_15|level(36),meleeprof(7)|rangedprof(9),knows_athletics_6|knows_ironflesh_4|knows_power_strike_6|knows_power_draw_8|knows_weapon_master_8|knows_tactics_7,swadian_face_younger_1,swadian_face_middle_2],
-["r_praven_knight_2",       "Elite Praven Knight",         "Elite Praven Knights",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_wse_charger,itm_bascinet_with_visor,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_g,itm_long_sword,itm_lance],str_29|agi_27|int_20|cha_12|level(40),meleeprof(11),knows_power_strike_10|knows_athletics_5|knows_shield_9|knows_ironflesh_9|knows_riding_8,swadian_face_younger_1,swadian_face_middle_2],
+#~ # UPGRADE TIER +1 / +6 levels
+#~ ["r_swadian_hunter_1",      "Veteran Swadian Hunter",      "Veteran Swadian Hunters",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hood_a,itm_short_aketon,itm_leather_gloves,itm_woolen_hose,itm_long_knife,itm_short_bow,itm_arrows],str_14|agi_14|int_6|cha_6|level(10),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(125)|wp_crossbow(0)|wp_throwing(0),knows_athletics_2|knows_power_draw_2,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_supplyman_1",   "Veteran Swadian Supplyman",   "Veteran Swadian Supplymen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_padded_coif,itm_padded_coat_a,itm_leather_gloves,itm_woolen_hose,itm_dagger,itm_war_darts],str_13|agi_13|int_6|cha_6|level(10),wp_one_handed(75)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(100),knows_ironflesh_1|knows_athletics_3|knows_power_throw_2,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_militia_1",     "Veteran Swadian Militia",     "Veteran Swadian Militia",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_short_aketon,itm_leather_gloves,itm_leather_boots,itm_kite_shield_a,itm_falchion,itm_pitch_fork],str_17|agi_17|int_6|cha_6|level(14),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_crossbowman_1", "Veteran Swadian Crossbowman", "Veteran Swadian Crossbowmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_blue_gambeson,itm_leather_gloves,itm_hose_kneecops_green,itm_falchion,itm_heavy_crossbow,itm_bolts],str_15|agi_15|int_6|cha_6|level(18),wp_one_handed(125)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(175)|wp_throwing(0),knows_athletics_4|knows_ironflesh_3|knows_power_strike_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_lancer_1",      "Veteran Swadian Lancer",      "Veteran Swadian Lancers",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_courser,itm_kettle_helm_a,itm_mail_shirt,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_western_arming_sword,itm_simple_lance],str_18|agi_17|int_6|cha_6|level(18),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(150)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_3|knows_athletics_2|knows_shield_2|knows_riding_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_footman_1",     "Veteran Swadian Footman",     "Veteran Swadian Footmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver],str_20|agi_18|int_6|cha_6|level(22),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_4|knows_shield_4|knows_ironflesh_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_billman_1",     "Veteran Swadian Billman",     "Veteran Swadian Billmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_northern_helmet,itm_light_brigantine_c,itm_mail_mittens,itm_sarranid_boots_b,itm_kite_shield_a,itm_glaive,itm_bill],str_23|agi_17|level(22),wp_one_handed(0)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_4|knows_shield_5|knows_ironflesh_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_mercenary_1",   "Veteran Swadian Mercenary",   "Veteran Swadian Mercenaries",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_heavy_swadian_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_17|agi_15|int_12|cha_10|level(22),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(0)|wp_archery(175)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_5|knows_ironflesh_3|knows_power_draw_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_man_at_arms_1", "Veteran Swadian Man-at-Arms", "Veteran Swadian Men-at-Arms",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_arming_sword,itm_simple_lance],str_20|agi_17|int_6|cha_6|level(22),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(200)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_3|knows_shield_4|knows_ironflesh_3|knows_riding_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_sentinel_1",    "Veteran Swadian Sentinel",    "Veteran Swadian Sentinels",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_d,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_a,itm_long_war_axe],str_20|agi_18|int_12|cha_10|level(26),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_5|knows_athletics_4|knows_shield_6|knows_ironflesh_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_sergeant_1",    "Veteran Swadian Sergeant",    "Veteran Swadian Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],str_22|agi_20|int_10|cha_12|level(26),meleeprof(7),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_5|knows_tactics_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_uxkhal_bandit_1",       "Veteran Uxkhal Bandit",       "Veteran Uxkhal Bandits",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hunter,itm_padded_coif,itm_red_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_winged_mace,itm_crossbow,itm_bolts],str_18|agi_18|int_4|cha_4|level(18),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(175)|wp_throwing(0),knows_horse_archery_4|knows_power_strike_3|knows_athletics_3|knows_ironflesh_3|knows_riding_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_tilbaut_archer_1",      "Veteran Tilbaut Archer",      "Veteran Tilbaut Archers",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_coif,itm_heraldic_mail_with_tunic,itm_leather_gloves,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_20|agi_16|int_10|cha_10|level(26),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(200)|wp_crossbow(0)|wp_throwing(0),knows_athletics_3|knows_power_strike_3|knows_power_draw_5|knows_shield_2|knows_weapon_master_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_dhirim_captain_1",      "Veteran Dhirim Captain",      "Veteran Dhirim Captain",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_with_surcoat_b,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_d,itm_spiked_mace],str_22|agi_19|cha_18|int_12|level(26),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_4|knows_shield_5|knows_ironflesh_6|knows_riding_6|knows_tactics_7,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_suno_master_archer_1",  "Veteran Suno Master Archer",  "Veteran Suno Master Archer",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_a, itm_swadian_gambeson_with_chainmail,itm_leather_gloves,itm_mail_chausses,itm_falchion,itm_war_bow,itm_bodkin_arrows,itm_bodkin_arrows],str_19|agi_19|int_10|cha_15|level(30),wp_one_handed(200)|wp_two_handed(0)|wp_polearm(0)|wp_archery(250)|wp_crossbow(0)|wp_throwing(0),knows_athletics_6|knows_ironflesh_4|knows_power_strike_5|knows_power_draw_7|knows_weapon_master_7|knows_tactics_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_praven_knight_1",       "Veteran Praven Knight",       "Veteran Praven Knights",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_wse_charger,itm_bascinet_with_visor,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_g,itm_long_sword,itm_lance],str_24|agi_22|int_18|cha_12|level(34),meleeprof(10),knows_power_strike_9|knows_athletics_5|knows_shield_8|knows_ironflesh_8|knows_riding_7,swadian_face_younger_1,swadian_face_middle_2],
+#~ # UPGRADE TIER +2 / +12 levels
+#~ ["r_swadian_hunter_2",      "Elite Swadian Hunter",        "Elite Swadian Hunters",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hood_a,itm_short_aketon,itm_leather_gloves,itm_woolen_hose,itm_long_knife,itm_short_bow,itm_arrows],str_16|agi_16|int_6|cha_6|level(16),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(150)|wp_crossbow(0)|wp_throwing(0),knows_athletics_3|knows_power_strike_1|knows_power_draw_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_supplyman_2",   "Elite Swadian Supplyman",     "Elite Swadian Supplymen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_padded_coif,itm_padded_coat_a,itm_leather_gloves,itm_woolen_hose,itm_dagger,itm_war_darts],str_17|agi_17|int_6|cha_6|level(16),wp_one_handed(100)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(125),knows_ironflesh_2|knows_athletics_5|knows_power_strike_1|knows_power_throw_3,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_militia_2",     "Elite Swadian Militia",       "Elite Swadian Militia",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_short_aketon,itm_leather_gloves,itm_leather_boots,itm_kite_shield_a,itm_falchion,itm_pitch_fork],str_20|agi_20|int_6|cha_6|level(20),wp_one_handed(175)|wp_two_handed(0)|wp_polearm(175)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_4|knows_athletics_3|knows_shield_2|knows_ironflesh_2,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_crossbowman_2", "Elite Swadian Crossbowman",   "Elite Swadian Crossbowmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_blue_gambeson,itm_leather_gloves,itm_hose_kneecops_green,itm_falchion,itm_heavy_crossbow,itm_bolts],str_18|agi_18|int_6|cha_6|level(18),wp_one_handed(150)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(200)|wp_throwing(0),knows_athletics_4|knows_ironflesh_4|knows_power_strike_4,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_lancer_2",      "Elite Swadian Lancer",        "Elite Swadian Lancers",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_courser,itm_kettle_helm_a,itm_mail_shirt,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_western_arming_sword,itm_simple_lance],str_22|agi_20|int_6|cha_6|level(24),meleeprof(6),knows_power_strike_5|knows_athletics_3|knows_shield_3|knows_riding_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_footman_2",     "Elite Swadian Footman",       "Elite Swadian Footmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_mail_coif,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver],str_24|agi_22|int_6|cha_6|level(28),wp_one_handed(225)|wp_two_handed(0)|wp_polearm(0)|wp_archery(0)|wp_crossbow(0)|wp_throwing(0),knows_power_strike_6|knows_athletics_6|knows_shield_5|knows_ironflesh_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_billman_2",     "Elite Swadian Billman",       "Elite Swadian Billmen",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_northern_helmet,itm_light_brigantine_c,itm_mail_mittens,itm_sarranid_boots_b,itm_kite_shield_a,itm_glaive,itm_bill],str_27|agi_20|level(28),meleeprof(6),knows_power_strike_5|knows_athletics_6|knows_shield_6|knows_ironflesh_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_mercenary_2",   "Elite Swadian Mercenary",     "Elite Swadian Mercenaries",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_mail_coif, itm_heavy_swadian_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_21|agi_18|int_12|cha_10|level(28),meleeprof(6)|rangedprof(6),knows_power_strike_5|knows_athletics_6|knows_ironflesh_4|knows_power_draw_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_man_at_arms_2", "Elite Swadian Man-at-Arms",   "Elite Swadian Men-at-Arms",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_arming_sword,itm_simple_lance],str_23|agi_19|int_6|cha_6|level(28),meleeprof(7),knows_power_strike_6|knows_athletics_4|knows_shield_5|knows_ironflesh_4|knows_riding_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_sentinel_2",    "Elite Swadian Sentinel",      "Elite Swadian Sentinels",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_d,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_a,itm_long_war_axe],str_24|agi_20|int_12|cha_10|level(26),meleeprof(7),knows_power_strike_6|knows_athletics_5|knows_shield_6|knows_ironflesh_7,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_swadian_sergeant_2",    "Elite Swadian Sergeant",      "Elite Swadian Sergeant",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_b,itm_mail_hauberk,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_poleaxe],str_27|agi_26|int_10|cha_12|level(32),meleeprof(8),knows_power_strike_7|knows_athletics_7|knows_shield_7|knows_ironflesh_8|knows_tactics_7,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_uxkhal_bandit_2",       "Elite Uxkhal Bandit",         "Elite Uxkhal Bandits",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_hunter,itm_padded_coif,itm_red_gambeson,itm_leather_gloves,itm_sarranid_boots_b,itm_winged_mace,itm_crossbow,itm_bolts],str_22|agi_22|int_4|cha_4|level(24),meleeprof(5)|rangedprof(6),knows_horse_archery_5|knows_power_strike_4|knows_athletics_4|knows_ironflesh_4|knows_riding_5,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_tilbaut_archer_2",      "Elite Tilbaut Archer",        "Elite Tilbaut Archers",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_coif,itm_heraldic_mail_with_tunic,itm_leather_gloves,itm_mail_chausses,itm_kite_shield_a,itm_cheap_cleaver,itm_long_bow,itm_bodkin_arrows],str_24|agi_18|int_10|cha_10|level(32),meleeprof(5)|rangedprof(7),knows_athletics_5|knows_power_strike_4|knows_power_draw_6|knows_shield_4|knows_weapon_master_6,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_dhirim_captain_2",      "Elite Dhirim Captain",        "Elite Dhirim Captain",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_warhorse,itm_chapel_de_fer_c,itm_mail_with_surcoat_b,itm_mail_mittens,itm_mail_chausses,itm_kite_shield_d,itm_spiked_mace],str_22|agi_22|cha_18|int_12|level(32),meleeprof(8),knows_power_strike_7|knows_athletics_4|knows_shield_6|knows_ironflesh_7|knows_riding_7|knows_tactics_8,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_suno_master_archer_2",  "Elite Suno Master Archer",    "Elite Suno Master Archer",tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_gloves|tf_guarantee_boots|tf_guarantee_ranged|tf_male,0,0,fac_kingdom_1,[itm_chapel_de_fer_a, itm_swadian_gambeson_with_chainmail,itm_leather_gloves,itm_mail_chausses,itm_falchion,itm_war_bow,itm_bodkin_arrows,itm_bodkin_arrows],str_22|agi_22|int_10|cha_15|level(36),meleeprof(7)|rangedprof(9),knows_athletics_6|knows_ironflesh_4|knows_power_strike_6|knows_power_draw_8|knows_weapon_master_8|knows_tactics_7,swadian_face_younger_1,swadian_face_middle_2],
+#~ ["r_praven_knight_2",       "Elite Praven Knight",         "Elite Praven Knights",tf_mounted|tf_guarantee_horse|tf_guarantee_armor|tf_guarantee_helmet|tf_guarantee_shield|tf_guarantee_gloves|tf_guarantee_boots|tf_male,0,0,fac_kingdom_1,[itm_wse_charger,itm_bascinet_with_visor,itm_heraldic_mail_and_plate,itm_gauntlets,itm_mail_boots_lord,itm_kite_shield_g,itm_long_sword,itm_lance],str_29|agi_27|int_20|cha_12|level(40),meleeprof(11),knows_power_strike_10|knows_athletics_5|knows_shield_9|knows_ironflesh_9|knows_riding_8,swadian_face_younger_1,swadian_face_middle_2],
 
 
 
@@ -2648,261 +2648,261 @@ troops = [
 ## WINDYPLAINS+ ##
 ## VAEGIRS
 ## +1 Tier / +6 levels
-upgrade(troops, "r_vaegir_militia",          "r_vaegir_militia_1")
-upgrade(troops, "r_vaegir_sentry",           "r_vaegir_sentry_1")
-upgrade(troops, "r_vaegir_skirmisher",       "r_vaegir_skirmisher_1")
-upgrade(troops, "r_vaegir_psiloi",           "r_vaegir_psiloi_1")
-upgrade(troops, "r_vaegir_peltast",          "r_vaegir_peltast_1")
-upgrade(troops, "r_vaegir_koursores",        "r_vaegir_koursores_1")
-upgrade(troops, "r_vaegir_pecheneg",         "r_vaegir_pecheneg_1")
-upgrade(troops, "r_vaegir_cavalrycaptain",   "r_vaegir_cavalrycaptain_1")
-upgrade(troops, "r_vaegir_vanguard",         "r_vaegir_vanguard_1")
-upgrade(troops, "r_vaegir_longbowman",       "r_vaegir_longbowman_1")
-upgrade(troops, "r_vaegir_bogatyr",          "r_vaegir_bogatyr_1")
-upgrade(troops, "r_vaegir_marksman",         "r_vaegir_marksman_1")
-upgrade(troops, "r_vaegir_scout",            "r_vaegir_scout_1")
-upgrade(troops, "r_vaegir_varagian",         "r_vaegir_varagian_1")
-upgrade(troops, "r_vaegir_cataphract",       "r_vaegir_cataphract_1")
-upgrade(troops, "khudan_mounted_archer",     "khudan_mounted_archer_1")
-upgrade(troops, "curaw_guardsman",           "curaw_guardsman_1")
-upgrade(troops, "boyars_druzhina",           "boyars_druzhina_1")
-## +2 Tiers / +12 levels
-upgrade(troops, "r_vaegir_militia_1",        "r_vaegir_militia_2")
-upgrade(troops, "r_vaegir_sentry_1",         "r_vaegir_sentry_2")
-upgrade(troops, "r_vaegir_skirmisher_1",     "r_vaegir_skirmisher_2")
-upgrade(troops, "r_vaegir_psiloi_1",         "r_vaegir_psiloi_2")
-upgrade(troops, "r_vaegir_peltast_1",        "r_vaegir_peltast_2")
-upgrade(troops, "r_vaegir_koursores_1",      "r_vaegir_koursores_2")
-upgrade(troops, "r_vaegir_pecheneg_1",       "r_vaegir_pecheneg_2")
-upgrade(troops, "r_vaegir_cavalrycaptain_1", "r_vaegir_cavalrycaptain_2")
-upgrade(troops, "r_vaegir_vanguard_1",       "r_vaegir_vanguard_2")
-upgrade(troops, "r_vaegir_longbowman_1",     "r_vaegir_longbowman_2")
-upgrade(troops, "r_vaegir_bogatyr_1",        "r_vaegir_bogatyr_2")
-upgrade(troops, "r_vaegir_marksman_1",       "r_vaegir_marksman_2")
-upgrade(troops, "r_vaegir_scout_1",          "r_vaegir_scout_2")
-upgrade(troops, "r_vaegir_varagian_1",       "r_vaegir_varagian_2")
-upgrade(troops, "r_vaegir_cataphract_1",     "r_vaegir_cataphract_2")
-upgrade(troops, "khudan_mounted_archer_1",   "khudan_mounted_archer_2")
-upgrade(troops, "curaw_guardsman_1",         "curaw_guardsman_2")
-upgrade(troops, "boyars_druzhina_1",         "boyars_druzhina_2")
-## WINDYPLAINS- ##
+#~ upgrade(troops, "r_vaegir_militia",          "r_vaegir_militia_1")
+#~ upgrade(troops, "r_vaegir_sentry",           "r_vaegir_sentry_1")
+#~ upgrade(troops, "r_vaegir_skirmisher",       "r_vaegir_skirmisher_1")
+#~ upgrade(troops, "r_vaegir_psiloi",           "r_vaegir_psiloi_1")
+#~ upgrade(troops, "r_vaegir_peltast",          "r_vaegir_peltast_1")
+#~ upgrade(troops, "r_vaegir_koursores",        "r_vaegir_koursores_1")
+#~ upgrade(troops, "r_vaegir_pecheneg",         "r_vaegir_pecheneg_1")
+#~ upgrade(troops, "r_vaegir_cavalrycaptain",   "r_vaegir_cavalrycaptain_1")
+#~ upgrade(troops, "r_vaegir_vanguard",         "r_vaegir_vanguard_1")
+#~ upgrade(troops, "r_vaegir_longbowman",       "r_vaegir_longbowman_1")
+#~ upgrade(troops, "r_vaegir_bogatyr",          "r_vaegir_bogatyr_1")
+#~ upgrade(troops, "r_vaegir_marksman",         "r_vaegir_marksman_1")
+#~ upgrade(troops, "r_vaegir_scout",            "r_vaegir_scout_1")
+#~ upgrade(troops, "r_vaegir_varagian",         "r_vaegir_varagian_1")
+#~ upgrade(troops, "r_vaegir_cataphract",       "r_vaegir_cataphract_1")
+#~ upgrade(troops, "khudan_mounted_archer",     "khudan_mounted_archer_1")
+#~ upgrade(troops, "curaw_guardsman",           "curaw_guardsman_1")
+#~ upgrade(troops, "boyars_druzhina",           "boyars_druzhina_1")
+#~ ## +2 Tiers / +12 levels
+#~ upgrade(troops, "r_vaegir_militia_1",        "r_vaegir_militia_2")
+#~ upgrade(troops, "r_vaegir_sentry_1",         "r_vaegir_sentry_2")
+#~ upgrade(troops, "r_vaegir_skirmisher_1",     "r_vaegir_skirmisher_2")
+#~ upgrade(troops, "r_vaegir_psiloi_1",         "r_vaegir_psiloi_2")
+#~ upgrade(troops, "r_vaegir_peltast_1",        "r_vaegir_peltast_2")
+#~ upgrade(troops, "r_vaegir_koursores_1",      "r_vaegir_koursores_2")
+#~ upgrade(troops, "r_vaegir_pecheneg_1",       "r_vaegir_pecheneg_2")
+#~ upgrade(troops, "r_vaegir_cavalrycaptain_1", "r_vaegir_cavalrycaptain_2")
+#~ upgrade(troops, "r_vaegir_vanguard_1",       "r_vaegir_vanguard_2")
+#~ upgrade(troops, "r_vaegir_longbowman_1",     "r_vaegir_longbowman_2")
+#~ upgrade(troops, "r_vaegir_bogatyr_1",        "r_vaegir_bogatyr_2")
+#~ upgrade(troops, "r_vaegir_marksman_1",       "r_vaegir_marksman_2")
+#~ upgrade(troops, "r_vaegir_scout_1",          "r_vaegir_scout_2")
+#~ upgrade(troops, "r_vaegir_varagian_1",       "r_vaegir_varagian_2")
+#~ upgrade(troops, "r_vaegir_cataphract_1",     "r_vaegir_cataphract_2")
+#~ upgrade(troops, "khudan_mounted_archer_1",   "khudan_mounted_archer_2")
+#~ upgrade(troops, "curaw_guardsman_1",         "curaw_guardsman_2")
+#~ upgrade(troops, "boyars_druzhina_1",         "boyars_druzhina_2")
+#~ ## WINDYPLAINS- ##
 
-## WINDYPLAINS+ ##
-## SWADIA
-## +1 Tier / +6 levels
-upgrade(troops, "r_swadian_hunter",        "r_swadian_hunter_1")
-upgrade(troops, "r_swadian_supplyman",     "r_swadian_supplyman_1")
-upgrade(troops, "r_swadian_militia",       "r_swadian_militia_1")
-upgrade(troops, "r_swadian_crossbowman",   "r_swadian_crossbowman_1")
-upgrade(troops, "r_uxkhal_bandit",         "r_uxkhal_bandit_1")
-upgrade(troops, "r_swadian_lancer",        "r_swadian_lancer_1")
-upgrade(troops, "r_swadian_footman",       "r_swadian_footman_1")
-upgrade(troops, "r_swadian_billman",       "r_swadian_billman_1")
-upgrade(troops, "r_swadian_mercenary",     "r_swadian_mercenary_1")
-upgrade(troops, "r_swadian_man_at_arms",   "r_swadian_man_at_arms_1")
-upgrade(troops, "r_tilbaut_archer",        "r_tilbaut_archer_1")
-upgrade(troops, "r_swadian_sentinel",      "r_swadian_sentinel_1")
-upgrade(troops, "r_swadian_sergeant",      "r_swadian_sergeant_1")
-upgrade(troops, "r_dhirim_captain",        "r_dhirim_captain_1")
-upgrade(troops, "r_suno_master_archer",    "r_suno_master_archer_1")
-upgrade(troops, "r_praven_knight",         "r_praven_knight_1")
-## +2 Tiers / +12 levels
-upgrade(troops, "r_swadian_hunter_1",      "r_swadian_hunter_2")
-upgrade(troops, "r_swadian_supplyman_1",   "r_swadian_supplyman_2")
-upgrade(troops, "r_swadian_militia_1",     "r_swadian_militia_2")
-upgrade(troops, "r_swadian_crossbowman_1", "r_swadian_crossbowman_2")
-upgrade(troops, "r_uxkhal_bandit_1",       "r_uxkhal_bandit_2")
-upgrade(troops, "r_swadian_lancer_1",      "r_swadian_lancer_2")
-upgrade(troops, "r_swadian_footman_1",     "r_swadian_footman_2")
-upgrade(troops, "r_swadian_billman_1",     "r_swadian_billman_2")
-upgrade(troops, "r_swadian_mercenary_1",   "r_swadian_mercenary_2")
-upgrade(troops, "r_swadian_man_at_arms_1", "r_swadian_man_at_arms_2")
-upgrade(troops, "r_tilbaut_archer_1",      "r_tilbaut_archer_2")
-upgrade(troops, "r_swadian_sentinel_1",    "r_swadian_sentinel_2")
-upgrade(troops, "r_swadian_sergeant_1",    "r_swadian_sergeant_2")
-upgrade(troops, "r_dhirim_captain_1",      "r_dhirim_captain_2")
-upgrade(troops, "r_suno_master_archer_1",  "r_suno_master_archer_2")
-upgrade(troops, "r_praven_knight_1",       "r_praven_knight_2")
-## WINDYPLAINS- ##
+#~ ## WINDYPLAINS+ ##
+#~ ## SWADIA
+#~ ## +1 Tier / +6 levels
+#~ upgrade(troops, "r_swadian_hunter",        "r_swadian_hunter_1")
+#~ upgrade(troops, "r_swadian_supplyman",     "r_swadian_supplyman_1")
+#~ upgrade(troops, "r_swadian_militia",       "r_swadian_militia_1")
+#~ upgrade(troops, "r_swadian_crossbowman",   "r_swadian_crossbowman_1")
+#~ upgrade(troops, "r_uxkhal_bandit",         "r_uxkhal_bandit_1")
+#~ upgrade(troops, "r_swadian_lancer",        "r_swadian_lancer_1")
+#~ upgrade(troops, "r_swadian_footman",       "r_swadian_footman_1")
+#~ upgrade(troops, "r_swadian_billman",       "r_swadian_billman_1")
+#~ upgrade(troops, "r_swadian_mercenary",     "r_swadian_mercenary_1")
+#~ upgrade(troops, "r_swadian_man_at_arms",   "r_swadian_man_at_arms_1")
+#~ upgrade(troops, "r_tilbaut_archer",        "r_tilbaut_archer_1")
+#~ upgrade(troops, "r_swadian_sentinel",      "r_swadian_sentinel_1")
+#~ upgrade(troops, "r_swadian_sergeant",      "r_swadian_sergeant_1")
+#~ upgrade(troops, "r_dhirim_captain",        "r_dhirim_captain_1")
+#~ upgrade(troops, "r_suno_master_archer",    "r_suno_master_archer_1")
+#~ upgrade(troops, "r_praven_knight",         "r_praven_knight_1")
+#~ ## +2 Tiers / +12 levels
+#~ upgrade(troops, "r_swadian_hunter_1",      "r_swadian_hunter_2")
+#~ upgrade(troops, "r_swadian_supplyman_1",   "r_swadian_supplyman_2")
+#~ upgrade(troops, "r_swadian_militia_1",     "r_swadian_militia_2")
+#~ upgrade(troops, "r_swadian_crossbowman_1", "r_swadian_crossbowman_2")
+#~ upgrade(troops, "r_uxkhal_bandit_1",       "r_uxkhal_bandit_2")
+#~ upgrade(troops, "r_swadian_lancer_1",      "r_swadian_lancer_2")
+#~ upgrade(troops, "r_swadian_footman_1",     "r_swadian_footman_2")
+#~ upgrade(troops, "r_swadian_billman_1",     "r_swadian_billman_2")
+#~ upgrade(troops, "r_swadian_mercenary_1",   "r_swadian_mercenary_2")
+#~ upgrade(troops, "r_swadian_man_at_arms_1", "r_swadian_man_at_arms_2")
+#~ upgrade(troops, "r_tilbaut_archer_1",      "r_tilbaut_archer_2")
+#~ upgrade(troops, "r_swadian_sentinel_1",    "r_swadian_sentinel_2")
+#~ upgrade(troops, "r_swadian_sergeant_1",    "r_swadian_sergeant_2")
+#~ upgrade(troops, "r_dhirim_captain_1",      "r_dhirim_captain_2")
+#~ upgrade(troops, "r_suno_master_archer_1",  "r_suno_master_archer_2")
+#~ upgrade(troops, "r_praven_knight_1",       "r_praven_knight_2")
+#~ ## WINDYPLAINS- ##
 
-## WINDYPLAINS+ ##
-## RHODOKS
-## +1 Tier / +6 levels
-upgrade(troops, "rhodok_militia",          "rhodok_militia_1")
-upgrade(troops, "rhodok_militia_archer",   "rhodok_militia_archer_1")
-upgrade(troops, "rhodok_trained_militia",  "rhodok_trained_militia_1")
-upgrade(troops, "rhodok_pikeman",          "rhodok_pikeman_1")
-upgrade(troops, "rhodok_vanguard",         "rhodok_vanguard_1")
-upgrade(troops, "rhodok_crossbowman",      "rhodok_crossbowman_1")
-upgrade(troops, "rhodok_arbalestier",      "rhodok_arbalestier_1")
-upgrade(troops, "rhodok_ranger",           "rhodok_ranger_1")
-upgrade(troops, "rhodok_siege_breaker",    "rhodok_siege_breaker_1")
-upgrade(troops, "rhodok_hedge_knight",     "rhodok_hedge_knight_1")
-upgrade(troops, "rhodok_highland_pikeman", "rhodok_highland_pikeman_1")
-upgrade(troops, "rhodok_siege_commander",  "rhodok_siege_commander_1")
-upgrade(troops, "rhodok_mercenary_captain","rhodok_mercenary_captain_1")
-upgrade(troops, "ergellon_lancer",         "ergellon_lancer_1")
-upgrade(troops, "yaleni_dyoken",           "yaleni_dyoken_1")
-upgrade(troops, "jelkalen_balister",       "jelkalen_balister_1")
-upgrade(troops, "jamiche_border_guard",    "jamiche_border_guard_1")
-upgrade(troops, "veluca_pikeman",          "veluca_pikeman_1")
-upgrade(troops, "grunwalder_voulgiers",    "grunwalder_voulgiers_1")
-## +2 Tiers / +12 levels
-upgrade(troops, "rhodok_militia_1",          "rhodok_militia_2")
-upgrade(troops, "rhodok_militia_archer_1",   "rhodok_militia_archer_2")
-upgrade(troops, "rhodok_trained_militia_1",  "rhodok_trained_militia_2")
-upgrade(troops, "rhodok_pikeman_1",          "rhodok_pikeman_2")
-upgrade(troops, "rhodok_vanguard_1",         "rhodok_vanguard_2")
-upgrade(troops, "rhodok_crossbowman_1",      "rhodok_crossbowman_2")
-upgrade(troops, "rhodok_arbalestier_1",      "rhodok_arbalestier_2")
-upgrade(troops, "rhodok_ranger_1",           "rhodok_ranger_2")
-upgrade(troops, "rhodok_siege_breaker_1",    "rhodok_siege_breaker_2")
-upgrade(troops, "rhodok_hedge_knight_1",     "rhodok_hedge_knight_2")
-upgrade(troops, "rhodok_highland_pikeman_1", "rhodok_highland_pikeman_2")
-upgrade(troops, "rhodok_siege_commander_1",  "rhodok_siege_commander_2")
-upgrade(troops, "rhodok_mercenary_captain_1","rhodok_mercenary_captain_2")
-upgrade(troops, "ergellon_lancer_1",         "ergellon_lancer_2")
-upgrade(troops, "yaleni_dyoken_1",           "yaleni_dyoken_2")
-upgrade(troops, "jelkalen_balister_1",       "jelkalen_balister_2")
-upgrade(troops, "jamiche_border_guard_1",    "jamiche_border_guard_2")
-upgrade(troops, "veluca_pikeman_1",          "veluca_pikeman_2")
-upgrade(troops, "grunwalder_voulgiers_1",    "grunwalder_voulgiers_2")
-# Crossover Troops
-# upgrade(troops, "rhodok_pikeman_2",          "rhodok_highland_pikeman")
-## WINDYPLAINS- ##
+#~ ## WINDYPLAINS+ ##
+#~ ## RHODOKS
+#~ ## +1 Tier / +6 levels
+#~ upgrade(troops, "rhodok_militia",          "rhodok_militia_1")
+#~ upgrade(troops, "rhodok_militia_archer",   "rhodok_militia_archer_1")
+#~ upgrade(troops, "rhodok_trained_militia",  "rhodok_trained_militia_1")
+#~ upgrade(troops, "rhodok_pikeman",          "rhodok_pikeman_1")
+#~ upgrade(troops, "rhodok_vanguard",         "rhodok_vanguard_1")
+#~ upgrade(troops, "rhodok_crossbowman",      "rhodok_crossbowman_1")
+#~ upgrade(troops, "rhodok_arbalestier",      "rhodok_arbalestier_1")
+#~ upgrade(troops, "rhodok_ranger",           "rhodok_ranger_1")
+#~ upgrade(troops, "rhodok_siege_breaker",    "rhodok_siege_breaker_1")
+#~ upgrade(troops, "rhodok_hedge_knight",     "rhodok_hedge_knight_1")
+#~ upgrade(troops, "rhodok_highland_pikeman", "rhodok_highland_pikeman_1")
+#~ upgrade(troops, "rhodok_siege_commander",  "rhodok_siege_commander_1")
+#~ upgrade(troops, "rhodok_mercenary_captain","rhodok_mercenary_captain_1")
+#~ upgrade(troops, "ergellon_lancer",         "ergellon_lancer_1")
+#~ upgrade(troops, "yaleni_dyoken",           "yaleni_dyoken_1")
+#~ upgrade(troops, "jelkalen_balister",       "jelkalen_balister_1")
+#~ upgrade(troops, "jamiche_border_guard",    "jamiche_border_guard_1")
+#~ upgrade(troops, "veluca_pikeman",          "veluca_pikeman_1")
+#~ upgrade(troops, "grunwalder_voulgiers",    "grunwalder_voulgiers_1")
+#~ ## +2 Tiers / +12 levels
+#~ upgrade(troops, "rhodok_militia_1",          "rhodok_militia_2")
+#~ upgrade(troops, "rhodok_militia_archer_1",   "rhodok_militia_archer_2")
+#~ upgrade(troops, "rhodok_trained_militia_1",  "rhodok_trained_militia_2")
+#~ upgrade(troops, "rhodok_pikeman_1",          "rhodok_pikeman_2")
+#~ upgrade(troops, "rhodok_vanguard_1",         "rhodok_vanguard_2")
+#~ upgrade(troops, "rhodok_crossbowman_1",      "rhodok_crossbowman_2")
+#~ upgrade(troops, "rhodok_arbalestier_1",      "rhodok_arbalestier_2")
+#~ upgrade(troops, "rhodok_ranger_1",           "rhodok_ranger_2")
+#~ upgrade(troops, "rhodok_siege_breaker_1",    "rhodok_siege_breaker_2")
+#~ upgrade(troops, "rhodok_hedge_knight_1",     "rhodok_hedge_knight_2")
+#~ upgrade(troops, "rhodok_highland_pikeman_1", "rhodok_highland_pikeman_2")
+#~ upgrade(troops, "rhodok_siege_commander_1",  "rhodok_siege_commander_2")
+#~ upgrade(troops, "rhodok_mercenary_captain_1","rhodok_mercenary_captain_2")
+#~ upgrade(troops, "ergellon_lancer_1",         "ergellon_lancer_2")
+#~ upgrade(troops, "yaleni_dyoken_1",           "yaleni_dyoken_2")
+#~ upgrade(troops, "jelkalen_balister_1",       "jelkalen_balister_2")
+#~ upgrade(troops, "jamiche_border_guard_1",    "jamiche_border_guard_2")
+#~ upgrade(troops, "veluca_pikeman_1",          "veluca_pikeman_2")
+#~ upgrade(troops, "grunwalder_voulgiers_1",    "grunwalder_voulgiers_2")
+#~ # Crossover Troops
+#~ # upgrade(troops, "rhodok_pikeman_2",          "rhodok_highland_pikeman")
+#~ ## WINDYPLAINS- ##
 
-## LEIFDIN+ ##
-## NORDS
-## +1 tier
-upgrade(troops, "r_nord_bondsman", "r_nord_bondsman_1")
-upgrade(troops, "r_nord_hunter", "r_nord_hunter_1")
-upgrade(troops, "r_nord_peasant", "r_nord_peasant_1")
-upgrade(troops, "r_nord_retinue_archer", "r_nord_retinue_archer_1")
-upgrade(troops, "r_nord_retainer", "r_nord_retainer_1")
-upgrade(troops, "r_nord_spearman", "r_nord_spearman_1")
-upgrade(troops, "r_nord_skirmisher", "r_nord_skirmisher_1")
-upgrade(troops, "r_nord_varangian_archer", "r_nord_varangian_archer_1")
-upgrade(troops, "r_nord_hirdmadr", "r_nord_hirdmadr_1")
-upgrade(troops, "r_nord_raider", "r_nord_raider_1")
-upgrade(troops, "r_nord_berserker", "r_nord_berserker_1")
-upgrade(troops, "r_nord_jomsviking", "r_nord_jomsviking_1")
-upgrade(troops, "r_nord_varangian_guard", "r_nord_varangian_guard_1")
-upgrade(troops, "r_nord_scout", "r_nord_scout_1")
-upgrade(troops, "r_nord_skald", "r_nord_skald_1")
-upgrade(troops, "r_nord_godi", "r_nord_godi_1")
-upgrade(troops, "r_nord_huscarl", "r_nord_huscarl_1")
-upgrade(troops, "r_nord_shield_maiden", "r_nord_shield_maiden_1")
-upgrade(troops, "r_nord_jelbegi_lancer", "r_nord_jelbegi_lancer_1")
-upgrade(troops, "r_nord_thane", "r_nord_thane_1")
-upgrade(troops, "r_nord_valkyrie", "r_nord_valkyrie_1")
-upgrade(troops, "r_nord_maiden", "r_nord_maiden_1")
-## +2 tier
-upgrade(troops, "r_nord_bondsman_1", "r_nord_bondsman_2")
-upgrade(troops, "r_nord_hunter_1", "r_nord_hunter_2")
-upgrade(troops, "r_nord_peasant_1", "r_nord_peasant_2")
-upgrade(troops, "r_nord_retinue_archer_1", "r_nord_retinue_archer_2")
-upgrade(troops, "r_nord_retainer_1", "r_nord_retainer_2")
-upgrade(troops, "r_nord_spearman_1", "r_nord_spearman_2")
-upgrade(troops, "r_nord_skirmisher_1", "r_nord_skirmisher_2")
-upgrade(troops, "r_nord_varangian_archer_1", "r_nord_varangian_archer_2")
-upgrade(troops, "r_nord_hirdmadr_1", "r_nord_hirdmadr_2")
-upgrade(troops, "r_nord_raider_1", "r_nord_raider_2")
-upgrade(troops, "r_nord_berserker_1", "r_nord_berserker_2")
-upgrade(troops, "r_nord_jomsviking_1", "r_nord_jomsviking_2")
-upgrade(troops, "r_nord_varangian_guard_1", "r_nord_varangian_guard_2")
-upgrade(troops, "r_nord_scout_1", "r_nord_scout_2")
-upgrade(troops, "r_nord_skald_1", "r_nord_skald_2")
-upgrade(troops, "r_nord_godi_1", "r_nord_godi_2")
-upgrade(troops, "r_nord_huscarl_1", "r_nord_huscarl_2")
-upgrade(troops, "r_nord_shield_maiden_1", "r_nord_shield_maiden_2")
-upgrade(troops, "r_nord_jelbegi_lancer_1", "r_nord_jelbegi_lancer_2")
-upgrade(troops, "r_nord_thane_1", "r_nord_thane_2")
-upgrade(troops, "r_nord_valkyrie_1", "r_nord_valkyrie_2")
-upgrade(troops, "r_nord_maiden_1", "r_nord_maiden_2")
+#~ ## LEIFDIN+ ##
+#~ ## NORDS
+#~ ## +1 tier
+#~ upgrade(troops, "r_nord_bondsman", "r_nord_bondsman_1")
+#~ upgrade(troops, "r_nord_hunter", "r_nord_hunter_1")
+#~ upgrade(troops, "r_nord_peasant", "r_nord_peasant_1")
+#~ upgrade(troops, "r_nord_retinue_archer", "r_nord_retinue_archer_1")
+#~ upgrade(troops, "r_nord_retainer", "r_nord_retainer_1")
+#~ upgrade(troops, "r_nord_spearman", "r_nord_spearman_1")
+#~ upgrade(troops, "r_nord_skirmisher", "r_nord_skirmisher_1")
+#~ upgrade(troops, "r_nord_varangian_archer", "r_nord_varangian_archer_1")
+#~ upgrade(troops, "r_nord_hirdmadr", "r_nord_hirdmadr_1")
+#~ upgrade(troops, "r_nord_raider", "r_nord_raider_1")
+#~ upgrade(troops, "r_nord_berserker", "r_nord_berserker_1")
+#~ upgrade(troops, "r_nord_jomsviking", "r_nord_jomsviking_1")
+#~ upgrade(troops, "r_nord_varangian_guard", "r_nord_varangian_guard_1")
+#~ upgrade(troops, "r_nord_scout", "r_nord_scout_1")
+#~ upgrade(troops, "r_nord_skald", "r_nord_skald_1")
+#~ upgrade(troops, "r_nord_godi", "r_nord_godi_1")
+#~ upgrade(troops, "r_nord_huscarl", "r_nord_huscarl_1")
+#~ upgrade(troops, "r_nord_shield_maiden", "r_nord_shield_maiden_1")
+#~ upgrade(troops, "r_nord_jelbegi_lancer", "r_nord_jelbegi_lancer_1")
+#~ upgrade(troops, "r_nord_thane", "r_nord_thane_1")
+#~ upgrade(troops, "r_nord_valkyrie", "r_nord_valkyrie_1")
+#~ upgrade(troops, "r_nord_maiden", "r_nord_maiden_1")
+#~ ## +2 tier
+#~ upgrade(troops, "r_nord_bondsman_1", "r_nord_bondsman_2")
+#~ upgrade(troops, "r_nord_hunter_1", "r_nord_hunter_2")
+#~ upgrade(troops, "r_nord_peasant_1", "r_nord_peasant_2")
+#~ upgrade(troops, "r_nord_retinue_archer_1", "r_nord_retinue_archer_2")
+#~ upgrade(troops, "r_nord_retainer_1", "r_nord_retainer_2")
+#~ upgrade(troops, "r_nord_spearman_1", "r_nord_spearman_2")
+#~ upgrade(troops, "r_nord_skirmisher_1", "r_nord_skirmisher_2")
+#~ upgrade(troops, "r_nord_varangian_archer_1", "r_nord_varangian_archer_2")
+#~ upgrade(troops, "r_nord_hirdmadr_1", "r_nord_hirdmadr_2")
+#~ upgrade(troops, "r_nord_raider_1", "r_nord_raider_2")
+#~ upgrade(troops, "r_nord_berserker_1", "r_nord_berserker_2")
+#~ upgrade(troops, "r_nord_jomsviking_1", "r_nord_jomsviking_2")
+#~ upgrade(troops, "r_nord_varangian_guard_1", "r_nord_varangian_guard_2")
+#~ upgrade(troops, "r_nord_scout_1", "r_nord_scout_2")
+#~ upgrade(troops, "r_nord_skald_1", "r_nord_skald_2")
+#~ upgrade(troops, "r_nord_godi_1", "r_nord_godi_2")
+#~ upgrade(troops, "r_nord_huscarl_1", "r_nord_huscarl_2")
+#~ upgrade(troops, "r_nord_shield_maiden_1", "r_nord_shield_maiden_2")
+#~ upgrade(troops, "r_nord_jelbegi_lancer_1", "r_nord_jelbegi_lancer_2")
+#~ upgrade(troops, "r_nord_thane_1", "r_nord_thane_2")
+#~ upgrade(troops, "r_nord_valkyrie_1", "r_nord_valkyrie_2")
+#~ upgrade(troops, "r_nord_maiden_1", "r_nord_maiden_2")
 
-## KHERGITS +1
-upgrade(troops, "r_khergit_slave", "r_khergit_slave_1")
-upgrade(troops, "r_khergit_outcast", "r_khergit_outcast_1")
-upgrade(troops, "r_khergit_surcin", "r_khergit_surcin_1")
-upgrade(troops, "r_khergit_scout", "r_khergit_scout_1")
-upgrade(troops, "r_khergit_asud", "r_khergit_asud_1")
-upgrade(troops, "r_khergit_kharvaach", "r_khergit_kharvaach_1")
-upgrade(troops, "r_khergit_morici", "r_khergit_morici_1")
-upgrade(troops, "r_khergit_abaci", "r_khergit_abaci_1")
-upgrade(troops, "r_khergit_skirmisher", "r_khergit_skirmisher_1")
-upgrade(troops, "r_khergit_lancer", "r_khergit_lancer_1")
-upgrade(troops, "r_khergit_torguu", "r_khergit_torguu_1")
-upgrade(troops, "r_khergit_parthian", "r_khergit_parthian_1")
-upgrade(troops, "r_khergit_shaman", "r_khergit_shaman_1")
-upgrade(troops, "r_khergit_raider", "r_khergit_raider_1")
-upgrade(troops, "r_khergit_clansman", "r_khergit_clansman_1")
-upgrade(troops, "r_khergit_noyan", "r_khergit_noyan_1")
-upgrade(troops, "r_khergit_bahatur", "r_khergit_bahatur_1")
-upgrade(troops, "r_khergit_orlok", "r_khergit_orlok_1")
-upgrade(troops, "r_khergit_narcarra", "r_khergit_narcarra_1")
-upgrade(troops, "r_khergit_noker", "r_khergit_noker_1")
-upgrade(troops, "r_khergit_keshig", "r_khergit_keshig_1")
-## KHERGITS +2
-upgrade(troops, "r_khergit_slave_1", "r_khergit_slave_2")
-upgrade(troops, "r_khergit_outcast_1", "r_khergit_outcast_2")
-upgrade(troops, "r_khergit_surcin_1", "r_khergit_surcin_2")
-upgrade(troops, "r_khergit_scout_1", "r_khergit_scout_2")
-upgrade(troops, "r_khergit_asud_1", "r_khergit_asud_2")
-upgrade(troops, "r_khergit_kharvaach_1", "r_khergit_kharvaach_2")
-upgrade(troops, "r_khergit_morici_1", "r_khergit_morici_2")
-upgrade(troops, "r_khergit_abaci_1", "r_khergit_abaci_2")
-upgrade(troops, "r_khergit_skirmisher_1", "r_khergit_skirmisher_2")
-upgrade(troops, "r_khergit_lancer_1", "r_khergit_lancer_2")
-upgrade(troops, "r_khergit_torguu_1", "r_khergit_torguu_2")
-upgrade(troops, "r_khergit_parthian_1", "r_khergit_parthian_2")
-upgrade(troops, "r_khergit_shaman_1", "r_khergit_shaman_2")
-upgrade(troops, "r_khergit_raider_1", "r_khergit_raider_2")
-upgrade(troops, "r_khergit_clansman_1", "r_khergit_clansman_2")
-upgrade(troops, "r_khergit_noyan_1", "r_khergit_noyan_2")
-upgrade(troops, "r_khergit_bahatur_1", "r_khergit_bahatur_2")
-upgrade(troops, "r_khergit_orlok_1", "r_khergit_orlok_2")
-upgrade(troops, "r_khergit_narcarra_1", "r_khergit_narcarra_2")
-upgrade(troops, "r_khergit_noker_1", "r_khergit_noker_2")
-upgrade(troops, "r_khergit_keshig_1", "r_khergit_keshig_2")
-##Special
-upgrade(troops, "r_khergit_slave_2", "r_khergit_clansman")
-# upgrade(troops, "r_khergit_outcast_2", "r_khergit_morici")
+#~ ## KHERGITS +1
+#~ upgrade(troops, "r_khergit_slave", "r_khergit_slave_1")
+#~ upgrade(troops, "r_khergit_outcast", "r_khergit_outcast_1")
+#~ upgrade(troops, "r_khergit_surcin", "r_khergit_surcin_1")
+#~ upgrade(troops, "r_khergit_scout", "r_khergit_scout_1")
+#~ upgrade(troops, "r_khergit_asud", "r_khergit_asud_1")
+#~ upgrade(troops, "r_khergit_kharvaach", "r_khergit_kharvaach_1")
+#~ upgrade(troops, "r_khergit_morici", "r_khergit_morici_1")
+#~ upgrade(troops, "r_khergit_abaci", "r_khergit_abaci_1")
+#~ upgrade(troops, "r_khergit_skirmisher", "r_khergit_skirmisher_1")
+#~ upgrade(troops, "r_khergit_lancer", "r_khergit_lancer_1")
+#~ upgrade(troops, "r_khergit_torguu", "r_khergit_torguu_1")
+#~ upgrade(troops, "r_khergit_parthian", "r_khergit_parthian_1")
+#~ upgrade(troops, "r_khergit_shaman", "r_khergit_shaman_1")
+#~ upgrade(troops, "r_khergit_raider", "r_khergit_raider_1")
+#~ upgrade(troops, "r_khergit_clansman", "r_khergit_clansman_1")
+#~ upgrade(troops, "r_khergit_noyan", "r_khergit_noyan_1")
+#~ upgrade(troops, "r_khergit_bahatur", "r_khergit_bahatur_1")
+#~ upgrade(troops, "r_khergit_orlok", "r_khergit_orlok_1")
+#~ upgrade(troops, "r_khergit_narcarra", "r_khergit_narcarra_1")
+#~ upgrade(troops, "r_khergit_noker", "r_khergit_noker_1")
+#~ upgrade(troops, "r_khergit_keshig", "r_khergit_keshig_1")
+#~ ## KHERGITS +2
+#~ upgrade(troops, "r_khergit_slave_1", "r_khergit_slave_2")
+#~ upgrade(troops, "r_khergit_outcast_1", "r_khergit_outcast_2")
+#~ upgrade(troops, "r_khergit_surcin_1", "r_khergit_surcin_2")
+#~ upgrade(troops, "r_khergit_scout_1", "r_khergit_scout_2")
+#~ upgrade(troops, "r_khergit_asud_1", "r_khergit_asud_2")
+#~ upgrade(troops, "r_khergit_kharvaach_1", "r_khergit_kharvaach_2")
+#~ upgrade(troops, "r_khergit_morici_1", "r_khergit_morici_2")
+#~ upgrade(troops, "r_khergit_abaci_1", "r_khergit_abaci_2")
+#~ upgrade(troops, "r_khergit_skirmisher_1", "r_khergit_skirmisher_2")
+#~ upgrade(troops, "r_khergit_lancer_1", "r_khergit_lancer_2")
+#~ upgrade(troops, "r_khergit_torguu_1", "r_khergit_torguu_2")
+#~ upgrade(troops, "r_khergit_parthian_1", "r_khergit_parthian_2")
+#~ upgrade(troops, "r_khergit_shaman_1", "r_khergit_shaman_2")
+#~ upgrade(troops, "r_khergit_raider_1", "r_khergit_raider_2")
+#~ upgrade(troops, "r_khergit_clansman_1", "r_khergit_clansman_2")
+#~ upgrade(troops, "r_khergit_noyan_1", "r_khergit_noyan_2")
+#~ upgrade(troops, "r_khergit_bahatur_1", "r_khergit_bahatur_2")
+#~ upgrade(troops, "r_khergit_orlok_1", "r_khergit_orlok_2")
+#~ upgrade(troops, "r_khergit_narcarra_1", "r_khergit_narcarra_2")
+#~ upgrade(troops, "r_khergit_noker_1", "r_khergit_noker_2")
+#~ upgrade(troops, "r_khergit_keshig_1", "r_khergit_keshig_2")
+#~ ##Special
+#~ upgrade(troops, "r_khergit_slave_2", "r_khergit_clansman")
+#~ # upgrade(troops, "r_khergit_outcast_2", "r_khergit_morici")
 
-#LEIFDIN - SARRANID TROOPS REVAMP
-## SARRANID +1
-upgrade(troops, "r_sarranid_kul",					"r_sarranid_azab")
-upgrade(troops, "r_sarranid_azab",					"r_sarranid_azab_1")
-upgrade(troops, "r_sarranid_yaya",					"r_sarranid_yaya_1")
-upgrade(troops, "r_sarranid_janissary",				"r_sarranid_janissary_1")
-upgrade(troops, "r_sarranid_musellem",				"r_sarranid_musellem_1")
-upgrade(troops, "r_sarranid_timariot",				"r_sarranid_timariot_1")
-upgrade(troops, "r_sarranid_bashibozuk",			"r_sarranid_bashibozuk_1")
-upgrade(troops, "r_sarranid_corbaci",				"r_sarranid_corbaci_1")
-upgrade(troops, "r_sarranid_boluk_bashi",			"r_sarranid_boluk_bashi_1")
-upgrade(troops, "r_sarranid_sipahi",				"r_sarranid_sipahi_1")
-upgrade(troops, "r_sarranid_garip",					"r_sarranid_garip_1")
-upgrade(troops, "r_bariyye_raider",					"r_bariyye_raider_1")
-upgrade(troops, "r_shariz_siegemaster_xbow",		"r_shariz_siegemaster_xbow_1")
-upgrade(troops, "r_durquba_javelineer",				"r_durquba_javelineer_1")
-upgrade(troops, "r_mamluke_mounted_archer",			"r_mamluke_mounted_archer_1")
-upgrade(troops, "r_sultan_guard",					"r_sultan_guard_1")
-## SARRANID +2
-#upgrade(troops, "r_sarranid_kul_1",					"r_sarranid_kul_2")
-upgrade(troops, "r_sarranid_azab_1",					"r_sarranid_azab_2")
-upgrade(troops, "r_sarranid_yaya_1",					"r_sarranid_yaya_2")
-upgrade(troops, "r_sarranid_janissary_1",				"r_sarranid_janissary_2")
-upgrade(troops, "r_sarranid_musellem_1",				"r_sarranid_musellem_2")
-upgrade(troops, "r_sarranid_timariot_1",				"r_sarranid_timariot_2")
-upgrade(troops, "r_sarranid_bashibozuk_1",				"r_sarranid_bashibozuk_2")
-upgrade(troops, "r_sarranid_corbaci_1",					"r_sarranid_corbaci_2")
-upgrade(troops, "r_sarranid_boluk_bashi_1",				"r_sarranid_boluk_bashi_2")
-upgrade(troops, "r_sarranid_sipahi_1",					"r_sarranid_sipahi_2")
-upgrade(troops, "r_sarranid_garip_1",					"r_sarranid_garip_2")
-upgrade(troops, "r_bariyye_raider_1",					"r_bariyye_raider_2")
-upgrade(troops, "r_shariz_siegemaster_xbow_1",			"r_shariz_siegemaster_xbow_2")
-upgrade(troops, "r_durquba_javelineer_1",				"r_durquba_javelineer_2")
-upgrade(troops, "r_mamluke_mounted_archer_1",			"r_mamluke_mounted_archer_2")
-upgrade(troops, "r_sultan_guard_1",						"r_sultan_guard_2")
+#~ #LEIFDIN - SARRANID TROOPS REVAMP
+#~ ## SARRANID +1
+#~ upgrade(troops, "r_sarranid_kul",					"r_sarranid_azab")
+#~ upgrade(troops, "r_sarranid_azab",					"r_sarranid_azab_1")
+#~ upgrade(troops, "r_sarranid_yaya",					"r_sarranid_yaya_1")
+#~ upgrade(troops, "r_sarranid_janissary",				"r_sarranid_janissary_1")
+#~ upgrade(troops, "r_sarranid_musellem",				"r_sarranid_musellem_1")
+#~ upgrade(troops, "r_sarranid_timariot",				"r_sarranid_timariot_1")
+#~ upgrade(troops, "r_sarranid_bashibozuk",			"r_sarranid_bashibozuk_1")
+#~ upgrade(troops, "r_sarranid_corbaci",				"r_sarranid_corbaci_1")
+#~ upgrade(troops, "r_sarranid_boluk_bashi",			"r_sarranid_boluk_bashi_1")
+#~ upgrade(troops, "r_sarranid_sipahi",				"r_sarranid_sipahi_1")
+#~ upgrade(troops, "r_sarranid_garip",					"r_sarranid_garip_1")
+#~ upgrade(troops, "r_bariyye_raider",					"r_bariyye_raider_1")
+#~ upgrade(troops, "r_shariz_siegemaster_xbow",		"r_shariz_siegemaster_xbow_1")
+#~ upgrade(troops, "r_durquba_javelineer",				"r_durquba_javelineer_1")
+#~ upgrade(troops, "r_mamluke_mounted_archer",			"r_mamluke_mounted_archer_1")
+#~ upgrade(troops, "r_sultan_guard",					"r_sultan_guard_1")
+#~ ## SARRANID +2
+#~ #upgrade(troops, "r_sarranid_kul_1",					"r_sarranid_kul_2")
+#~ upgrade(troops, "r_sarranid_azab_1",					"r_sarranid_azab_2")
+#~ upgrade(troops, "r_sarranid_yaya_1",					"r_sarranid_yaya_2")
+#~ upgrade(troops, "r_sarranid_janissary_1",				"r_sarranid_janissary_2")
+#~ upgrade(troops, "r_sarranid_musellem_1",				"r_sarranid_musellem_2")
+#~ upgrade(troops, "r_sarranid_timariot_1",				"r_sarranid_timariot_2")
+#~ upgrade(troops, "r_sarranid_bashibozuk_1",				"r_sarranid_bashibozuk_2")
+#~ upgrade(troops, "r_sarranid_corbaci_1",					"r_sarranid_corbaci_2")
+#~ upgrade(troops, "r_sarranid_boluk_bashi_1",				"r_sarranid_boluk_bashi_2")
+#~ upgrade(troops, "r_sarranid_sipahi_1",					"r_sarranid_sipahi_2")
+#~ upgrade(troops, "r_sarranid_garip_1",					"r_sarranid_garip_2")
+#~ upgrade(troops, "r_bariyye_raider_1",					"r_bariyye_raider_2")
+#~ upgrade(troops, "r_shariz_siegemaster_xbow_1",			"r_shariz_siegemaster_xbow_2")
+#~ upgrade(troops, "r_durquba_javelineer_1",				"r_durquba_javelineer_2")
+#~ upgrade(troops, "r_mamluke_mounted_archer_1",			"r_mamluke_mounted_archer_2")
+#~ upgrade(troops, "r_sultan_guard_1",						"r_sultan_guard_2")
 ## LEIFDIN- ##
 
 ## BANDITS

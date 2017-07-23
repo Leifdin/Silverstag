@@ -3122,9 +3122,6 @@ scripts = [
 				(else_try),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_swordsman", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_swordsman", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED - SWADIA (Primarily an archer, but has strong melee traits and decent armor)
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_mercenary", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_mercenary", ":lord_no", ":quantity"),
 				(else_try), ## NON-AFFILIATED - NORDS
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_jomsviking", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_jomsviking", ":lord_no", ":quantity"),
@@ -3141,10 +3138,7 @@ scripts = [
 			(try_begin),
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
-				(try_begin), ## NON-AFFILIATED - SWADIA
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_swadian_mercenary", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_swadian_mercenary", ":lord_no", ":quantity"),
-				(else_try), ## NON-AFFILIATED - NORDS
+				(try_begin),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_varangian_archer", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_varangian_archer", ":lord_no", ":quantity"),
 				(else_try),
@@ -3188,17 +3182,11 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
 				(try_begin), # SWADIA - C7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_praven_knight", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_praven_knight", ":lord_no", ":quantity"),
-				(else_try),  # KHERGIT - C7
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_keshig", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_keshig", ":lord_no", ":quantity"),
 				(else_try),  # NORD - C6
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_valkyrie", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_valkyrie", ":lord_no", ":quantity"),
-				(else_try),  # SWADIA - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_dhirim_captain", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_dhirim_captain", ":lord_no", ":quantity"),
 				(else_try),  # VAEGIR - C5
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_boyars_druzhina", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_boyars_druzhina", ":lord_no", ":quantity"),
@@ -3214,9 +3202,6 @@ scripts = [
 				(else_try),  # SARRANID - C4
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_bariyye_raider", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_bariyye_raider", ":lord_no", ":quantity"),
-				(else_try),  # SWADIA - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_uxkhal_bandit", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_uxkhal_bandit", ":lord_no", ":quantity"),
 				(else_try),  # VAEGIR - C3
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_vaegir_scout", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_vaegir_scout", ":lord_no", ":quantity"),
@@ -3271,14 +3256,8 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin), # SWADIA - A6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_suno_master_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_suno_master_archer", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - A5
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jelkalen_balister", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jelkalen_balister", ":lord_no", ":quantity"),
-				(else_try),  # SWADIA - A5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_tilbaut_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_tilbaut_archer", ":lord_no", ":quantity"),
 				(else_try),  # SARRANID - A4
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no", ":quantity"),
