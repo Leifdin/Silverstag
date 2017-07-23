@@ -3182,29 +3182,8 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
 				(try_begin), # SWADIA - C7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_keshig", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_keshig", ":lord_no", ":quantity"),
-				(else_try),  # NORD - C6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_valkyrie", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_valkyrie", ":lord_no", ":quantity"),
-				(else_try),  # NORD - C5
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_thane", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_thane", ":lord_no", ":quantity"),
-				(else_try),  # KHERGIT - C4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_narcarra", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_narcarra", ":lord_no", ":quantity"),
-				(else_try),  # SARRANID - C4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_bariyye_raider", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_bariyye_raider", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_ergellon_lancer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_ergellon_lancer", ":lord_no", ":quantity"),
-				(else_try),  # NORD - C3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_jelbegi_lancer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_jelbegi_lancer", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - H3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jamiche_border_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jamiche_border_guard", ":lord_no", ":quantity"),
+					#~ (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_valkyrie", ":lord_no"),
+					#~ (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_valkyrie", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -3213,26 +3192,8 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_INFANTRY),
 				(ge, ":quantity", 1),
 				(try_begin), # SARRANID - I7
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sultan_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sultan_guard", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - I6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_veluca_pikeman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_veluca_pikeman", ":lord_no", ":quantity"),
-				(else_try),  # KHERGIT - I6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_noker", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_noker", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - I4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_grunwalder_voulgiers", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_grunwalder_voulgiers", ":lord_no", ":quantity"),
-				(else_try),  # SARRANID - I4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_durquba_javelineer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_durquba_javelineer", ":lord_no", ":quantity"),
-				(else_try),  # NORD - I3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_nord_maiden", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_nord_maiden", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - I3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_yaleni_dyoken", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_yaleni_dyoken", ":lord_no", ":quantity"),
+					#~ (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_sultan_guard", ":lord_no"),
+					#~ (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_sultan_guard", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -3241,11 +3202,8 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin), # SWADIA - A6
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jelkalen_balister", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jelkalen_balister", ":lord_no", ":quantity"),
-				(else_try),  # SARRANID - A4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_shariz_siegemaster_xbow", ":lord_no", ":quantity"),
+					#~ (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jelkalen_balister", ":lord_no"),
+					#~ (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jelkalen_balister", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -3254,14 +3212,9 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_HORSE_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin), # KHERGIT - H4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_khergit_orlok", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_khergit_orlok", ":lord_no", ":quantity"),
-				(else_try),  # SARRANID - H4
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no", ":quantity"),
-				(else_try),  # RHODOK - H3
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_jamiche_border_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_jamiche_border_guard", ":lord_no", ":quantity"),
+
+					#~ (call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no"),
+					#~ (call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_r_mamluke_mounted_archer", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 

@@ -6721,10 +6721,7 @@ scripts = [
           (faction_slot_eq, ":faction_no", slot_faction_culture, "fac_culture_3"),
       
           (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_khergit_deserter"),
-          ## WINDYPLAINS+ ## - New Troop Revamp (Vaegir)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_r_khergit_skirmisher"),
-		  # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_khergit_horseman"),
-		  ## WINDYPLAINS+ ##
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_n_khergit_clansman"),
           (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_khergit_messenger"),
           (faction_set_slot, ":faction_no", slot_faction_prison_guard_troop, "trp_khergit_prison_guard"),
           (faction_set_slot, ":faction_no", slot_faction_castle_guard_troop, "trp_khergit_castle_guard"),
@@ -51666,8 +51663,12 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				(neq, ":troop_prev", "trp_n_swadian_recruit"),
+				(neq, ":troop_prev", "trp_n_vaegir_recruit"),
+				(neq, ":troop_prev", "trp_n_khergit_recruit"),
+				(neq, ":troop_prev", "trp_n_nordic_recruit"),
+				(neq, ":troop_prev", "trp_n_rhodok_recruit"),
+				(neq, ":troop_prev", "trp_n_sarranid_recruit"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51705,8 +51706,12 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				(neq, ":troop_prev", "trp_n_swadian_recruit"),
+				(neq, ":troop_prev", "trp_n_vaegir_recruit"),
+				(neq, ":troop_prev", "trp_n_khergit_recruit"),
+				(neq, ":troop_prev", "trp_n_nordic_recruit"),
+				(neq, ":troop_prev", "trp_n_rhodok_recruit"),
+				(neq, ":troop_prev", "trp_n_sarranid_recruit"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51750,8 +51755,12 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				(neq, ":troop_prev", "trp_n_swadian_recruit"),
+				(neq, ":troop_prev", "trp_n_vaegir_recruit"),
+				(neq, ":troop_prev", "trp_n_khergit_recruit"),
+				(neq, ":troop_prev", "trp_n_nordic_recruit"),
+				(neq, ":troop_prev", "trp_n_rhodok_recruit"),
+				(neq, ":troop_prev", "trp_n_sarranid_recruit"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51789,8 +51798,12 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				(neq, ":troop_prev", "trp_n_swadian_recruit"),
+				(neq, ":troop_prev", "trp_n_vaegir_recruit"),
+				(neq, ":troop_prev", "trp_n_khergit_recruit"),
+				(neq, ":troop_prev", "trp_n_nordic_recruit"),
+				(neq, ":troop_prev", "trp_n_rhodok_recruit"),
+				(neq, ":troop_prev", "trp_n_sarranid_recruit"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51834,8 +51847,12 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				(neq, ":troop_prev", "trp_n_swadian_recruit"),
+				(neq, ":troop_prev", "trp_n_vaegir_recruit"),
+				(neq, ":troop_prev", "trp_n_khergit_recruit"),
+				(neq, ":troop_prev", "trp_n_nordic_recruit"),
+				(neq, ":troop_prev", "trp_n_rhodok_recruit"),
+				(neq, ":troop_prev", "trp_n_sarranid_recruit"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.
@@ -51869,8 +51886,12 @@ scripts = [
 			(assign, ":troop_prev", ":troop_no"),
 			(try_for_range, ":upgrades", 0, 3),
 				# FILTER - Prevent looking at troops that have an unconvential upgrade path.
-				(neq, ":troop_prev", "trp_r_sarranid_kul"),
-				(neq, ":troop_prev", "trp_r_khergit_slave_2"),
+				(neq, ":troop_prev", "trp_n_swadian_recruit"),
+				(neq, ":troop_prev", "trp_n_vaegir_recruit"),
+				(neq, ":troop_prev", "trp_n_khergit_recruit"),
+				(neq, ":troop_prev", "trp_n_nordic_recruit"),
+				(neq, ":troop_prev", "trp_n_rhodok_recruit"),
+				(neq, ":troop_prev", "trp_n_sarranid_recruit"),
 				(troop_get_upgrade_troop, ":troop_next", ":troop_prev", 0),
 				(ge, ":troop_next", 1),
 				## Filter - Don't alter the same troop twice due to upgrade paths.

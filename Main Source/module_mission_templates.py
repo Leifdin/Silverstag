@@ -1959,7 +1959,7 @@ mission_templates = [
        (this_or_next|eq, ":dead_agent_troop_no", "trp_swadian_prison_guard"),
        (this_or_next|eq, ":dead_agent_troop_no", "trp_vaegir_prison_guard"),
        ## LEIFDIN+ ## - New Troop Revamp - Khergits
-       (this_or_next|eq, ":dead_agent_troop_no", "trp_r_khergit_clansman"),
+       (this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
        #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
        ## LEIFDIN- ##
        (this_or_next|eq, ":dead_agent_troop_no", "trp_nord_prison_guard"),
@@ -3489,7 +3489,7 @@ mission_templates = [
           (this_or_next|eq, ":dead_agent_troop_no", "trp_swadian_prison_guard"),
           (this_or_next|eq, ":dead_agent_troop_no", "trp_vaegir_prison_guard"),
           ##LEIFDIN+ ## - New Troop Revamp - Khergits
-          (this_or_next|eq, ":dead_agent_troop_no", "trp_r_khergit_clansman"),
+          (this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
           #(this_or_next|eq, ":dead_agent_troop_no", "trp_khergit_prison_guard"),
           ##Leifdin- ##
           (this_or_next|eq, ":dead_agent_troop_no", "trp_nord_prison_guard"),
