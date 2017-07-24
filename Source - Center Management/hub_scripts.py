@@ -509,7 +509,6 @@ scripts = [
 		(troop_set_class, "trp_n_hunter", CLASS_RANGED),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_hunter"),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_hunter", BONUS_HUNTER, BONUS_UNASSIGNED),
-		(call_script, "script_ce_assign_troop_ability", "trp_n_hunter", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_n_hunter", slot_troop_purchase_cost, 85),
 		(troop_set_slot, "trp_n_hunter", slot_troop_recruit_type, STRT_MERCENARY),
 		
@@ -519,13 +518,21 @@ scripts = [
 		(call_script, "script_ce_assign_troop_ability", "trp_n_lancer", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
 		(troop_set_slot, "trp_n_lancer", slot_troop_purchase_cost, 425),
 		(troop_set_slot, "trp_n_lancer", slot_troop_recruit_type, STRT_MERCENARY),
+
+		## A5 Pathfinder
+		(troop_set_class, "trp_n_pathfinder", CLASS_RANGED),
+		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_pathfinder"),
+		(call_script, "script_ce_assign_troop_requirement", "trp_n_pathfinder", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
+		(call_script, "script_ce_assign_troop_ability", "trp_n_pathfinder", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
+		(troop_set_slot, "trp_n_pathfinder", slot_troop_purchase_cost, 2000),
+		(troop_set_slot, "trp_n_pathfinder", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## C5 Heavy Cavalry
 		(troop_set_class, "trp_n_heavy_cavalry", CLASS_CAVALRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_heavy_cavalry"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_heavy_cavalry", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_heavy_cavalry", BONUS_CHARGING_STRIKE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_heavy_cavalry", slot_troop_purchase_cost, 85),
+		(troop_set_slot, "trp_n_heavy_cavalry", slot_troop_purchase_cost, 2750),
 		(troop_set_slot, "trp_n_heavy_cavalry", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		
@@ -3095,14 +3102,11 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
 				(try_begin),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_cavalry", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_cavalry", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_n_heavy_cavalry", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_n_heavy_cavalry", ":lord_no", ":quantity"),
 				(else_try),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_horseman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_horseman", ":lord_no", ":quantity"),
-				(else_try),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_caravan_guard", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_caravan_guard", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_n_lancer", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_n_lancer", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -3111,14 +3115,11 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_INFANTRY),
 				(ge, ":quantity", 1),
 				(try_begin), ## NON-AFFILIATED - NORDS
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_hired_blade", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_hired_blade", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_n_shield_maiden", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_n_shield_maiden", ":lord_no", ":quantity"),
 				(else_try),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_swordsman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_swordsman", ":lord_no", ":quantity"),
-				(else_try),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_watchman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_watchman", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_n_swordsman", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_n_swordsman", ":lord_no", ":quantity"),
 				(try_end),
 			(try_end),
 			
@@ -3127,8 +3128,12 @@ scripts = [
 				(eq, ":type", AI_RECRUIT_ARCHERS),
 				(ge, ":quantity", 1),
 				(try_begin),
-					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_crossbowman", ":lord_no"),
-					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_crossbowman", ":lord_no", ":quantity"),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_n_pathfinder", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_n_pathfinder", ":lord_no", ":quantity"),
+				(else_try),
+					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_n_hunter", ":lord_no"),
+					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_n_hunter", ":lord_no", ":quantity"),
+				
 				(try_end),
 			(try_end),
 			
