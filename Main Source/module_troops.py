@@ -2275,9 +2275,9 @@ upgrade(troops,"follower_woman","hunter_woman")
 upgrade(troops,"hunter_woman","fighter_woman")
 upgrade(troops,"fighter_woman","sword_sister")
 
-upgrade2(troops, "n_swadian_recruit", "n_swadian_militia", "n_swadian_crossbowman"),
-upgrade2(troops, "n_vaegir_recruit", "n_vaegir_skirmisher", "n_vaegir_raider"),
-upgrade2(troops, "n_khergit_recruit", "n_khergit_scout", "n_khergit_shaman"),
-upgrade2(troops, "n_nordic_recruit", "n_nordic_skald", "n_nordic_tracker"),
-upgrade2(troops, "n_rhodok_recruit", "n_rhodok_ranger", "n_rhodok_footman"),
+#~ upgrade2(troops, "n_swadian_recruit", "n_swadian_militia", "n_swadian_crossbowman"),
+#~ upgrade2(troops, "n_vaegir_recruit", "n_vaegir_skirmisher", "n_vaegir_raider"),
+#~ upgrade2(troops, "n_khergit_recruit", "n_khergit_scout", "n_khergit_shaman"),
+#~ upgrade2(troops, "n_nordic_recruit", "n_nordic_skald", "n_nordic_tracker"),
+#~ upgrade2(troops, "n_rhodok_recruit", "n_rhodok_ranger", "n_rhodok_footman"),
 
