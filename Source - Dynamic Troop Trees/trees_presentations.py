@@ -230,7 +230,20 @@ presentations = [
         (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_3", ":pos_y", 0, gpu_left),
 		(call_script, "script_gpu_resize_object", 0, 75),
 		(call_script, "script_hub_troop_get_melee_rating", "$temp"), # Returns melee rating to reg1
-		(troop_get_slot, reg21, "$temp", slot_troop_purchase_cost),
+		(troop_get_slot, ":cost", "$temp", slot_troop_purchase_cost),
+		## Factor in difficulty
+		(try_begin),
+			(eq, "$mod_difficulty", GAME_MODE_EASY), ## 75%
+			(val_mul, ":cost", 3),
+			(val_div, ":cost", 4),
+		(else_try),
+			(eq, "$mod_difficulty", GAME_MODE_HARD), ## 150%
+			(val_mul, ":cost", 3),
+			(val_div, ":cost", 2),
+		(else_try), ## 200% for GAME_MODE_VERY_HARD
+			(val_mul, ":cost", 2),
+		(try_end),
+		(assign, reg21, ":cost"),
 		(str_store_string, s21, "@{reg21}"),
         (call_script, "script_gpu_create_text_label", "str_hub_s21", ":pos_x_col_4", ":pos_y", 0, gpu_right),
 		(call_script, "script_gpu_resize_object", 0, 75),
