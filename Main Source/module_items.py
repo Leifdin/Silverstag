@@ -993,10 +993,10 @@ items = [
 
 ########## Bandit ##########
 
-["bandit_tunic", "Bandit Tunic", [("dethertir_armor_b",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 150, weight(5)|abundance(100)|head_armor(0)|body_armor(18)|leg_armor(5)|difficulty(0), imodbits_cloth ],
-["bandit_gambeson_t1", "Bandit Gambeson", [("dethertir_armor_f",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 250, weight(10)|abundance(100)|head_armor(0)|body_armor(28)|leg_armor(7)|difficulty(0), imodbits_cloth ],
-["bandit_gambeson_t2", "Bandit Gambeson", [("dethertir_armor_c",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 350, weight(12)|abundance(100)|head_armor(0)|body_armor(36)|leg_armor(7)|difficulty(0), imodbits_cloth ],
-["bandit_chainmail", "Bandit Chainmail", [("dethertir_armor_a",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 450, weight(15)|abundance(100)|head_armor(0)|body_armor(42)|leg_armor(9)|difficulty(0), imodbits_armor ],
+["bandit_tunic", "Bandit Tunic", [("dethertir_armor_b",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 250, weight(5)|abundance(100)|head_armor(0)|body_armor(18)|leg_armor(5)|difficulty(0), imodbits_cloth ],
+["bandit_gambeson_t1", "Bandit Gambeson", [("dethertir_armor_f",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 350, weight(12)|abundance(100)|head_armor(0)|body_armor(28)|leg_armor(7)|difficulty(0), imodbits_cloth ],
+["bandit_gambeson_t2", "Bandit Gambeson", [("dethertir_armor_c",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 450, weight(18)|abundance(100)|head_armor(0)|body_armor(36)|leg_armor(7)|difficulty(0), imodbits_cloth ],
+["bandit_chainmail", "Bandit Chainmail", [("dethertir_armor_a",0)], itp_type_body_armor|itp_merchandise|itp_covers_legs, 0, 1500, weight(22)|abundance(100)|head_armor(0)|body_armor(42)|leg_armor(9)|difficulty(0), imodbits_armor ],
 
 
 ####################
