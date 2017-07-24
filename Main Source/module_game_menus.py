@@ -663,9 +663,9 @@ game_menus = [
 					(call_script, "script_troop_change_relation_with_troop", "trp_player", ":troop_no", ":relation_boost"),
 				]),
 			
-			("add_troops_to_player_party", [], "Add Veteran Nordic Scouts",
+			("add_troops_to_player_party", [], "Add Veteran Nordic Berserkers",
 				[
-					(party_add_members, "p_main_party", "trp_r_nord_scout_1", 5),
+					(party_add_members, "p_main_party", "trp_n_nordic_berserker", 5),
 				]),
 			
 			("reset_fief_names", [], "Reset Fief Names",
@@ -898,7 +898,7 @@ game_menus = [
 			
 			("action_test_relation", [], "Add prisoners to party.",
 				[
-					(party_add_prisoners, "p_main_party", "trp_n_nord_retainer", 4),
+					(party_add_prisoners, "p_main_party", "trp_n_nordic_retainer", 4),
 				]),
 			
 			("return", [], "Return", 

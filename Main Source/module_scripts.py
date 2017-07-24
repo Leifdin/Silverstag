@@ -98,68 +98,41 @@ scripts = [
       (try_end),
 	  
 	  # Cultures:
-	  ## WINDYPLAINS+ ## - New Troop Revamp - Culture Troops (Common)
-	  ## SWADIA - NEW TROOPS
 	  (faction_set_slot, "fac_culture_1",  slot_faction_tier_1_troop, "trp_n_swadian_recruit"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_2_troop, "trp_n_swadian_militia"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_3_troop, "trp_n_swadian_crossbowman"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_4_troop, "trp_n_swadian_lancer"),
       (faction_set_slot, "fac_culture_1",  slot_faction_tier_5_troop, "trp_n_swadian_sergeant"),
 	  
-      ## VAEGIRS - NEW TROOPS
 	  (faction_set_slot, "fac_culture_2", slot_faction_tier_1_troop, "trp_n_vaegir_recruit"),
       (faction_set_slot, "fac_culture_2", slot_faction_tier_2_troop, "trp_n_vaegir_skirmisher"),
       (faction_set_slot, "fac_culture_2", slot_faction_tier_3_troop, "trp_n_vaegir_raider"),
       (faction_set_slot, "fac_culture_2", slot_faction_tier_4_troop, "trp_n_vaegir_bowman"),
       (faction_set_slot, "fac_culture_2", slot_faction_tier_5_troop, "trp_n_vaegir_headhunter"),
 
-	  
-	  ## KHERGITS - NEW TROOPS
       (faction_set_slot, "fac_culture_3", slot_faction_tier_1_troop, "trp_n_khergit_recruit"),
       (faction_set_slot, "fac_culture_3", slot_faction_tier_2_troop, "trp_n_khergit_scout"),
       (faction_set_slot, "fac_culture_3", slot_faction_tier_3_troop, "trp_n_khergit_shaman"),
       (faction_set_slot, "fac_culture_3", slot_faction_tier_4_troop, "trp_n_khergit_lancer"),
       (faction_set_slot, "fac_culture_3", slot_faction_tier_5_troop, "trp_n_khergit_skirmisher"),
-	  
-      ## NORDS - NEW TROOPS
+
 	  (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_n_nordic_recruit"),
       (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_n_nordic_skald"),
       (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_n_nordic_tracker"),
       (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_n_nordic_spearman"),
       (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_n_nordic_berserker"),
-	  ## NORDS - OLD TROOPS
-	  # (faction_set_slot, "fac_culture_4", slot_faction_tier_1_troop, "trp_nord_recruit"),
-      # (faction_set_slot, "fac_culture_4", slot_faction_tier_2_troop, "trp_nord_footman"),
-      # (faction_set_slot, "fac_culture_4", slot_faction_tier_3_troop, "trp_nord_trained_footman"),
-      # (faction_set_slot, "fac_culture_4", slot_faction_tier_4_troop, "trp_nord_warrior"),
-      # (faction_set_slot, "fac_culture_4", slot_faction_tier_5_troop, "trp_nord_veteran"),
 	  
-      ## RHODOK - NEW TROOPS
 	  (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_n_rhodok_recruit"),
       (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_n_rhodok_ranger"),
       (faction_set_slot, "fac_culture_5", slot_faction_tier_3_troop, "trp_n_rhodok_footman"),
       (faction_set_slot, "fac_culture_5", slot_faction_tier_4_troop, "trp_n_rhodok_halberdier"),
       (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_n_rhodok_pikeman"),
-	  ## RHODOK - OLD TROOPS
-	  # (faction_set_slot, "fac_culture_5", slot_faction_tier_1_troop, "trp_rhodok_tribesman"),
-      # (faction_set_slot, "fac_culture_5", slot_faction_tier_2_troop, "trp_rhodok_spearman"),
-      # (faction_set_slot, "fac_culture_5", slot_faction_tier_3_troop, "trp_rhodok_trained_spearman"),
-      # (faction_set_slot, "fac_culture_5", slot_faction_tier_4_troop, "trp_rhodok_veteran_spearman"),
-      # (faction_set_slot, "fac_culture_5", slot_faction_tier_5_troop, "trp_rhodok_sergeant"),
-	  
-      ## SARRANID - NEW TROOPS
+
 	  (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_n_sarranid_recruit"),
       (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_n_sarranid_tribesman"),
       (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_n_sarranid_fighter"),
       (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_n_sarranid_marksman"),
       (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_n_sarranid_mamluke"),
-	  ## SARRANID - OLD TROOPS
-	  # (faction_set_slot, "fac_culture_6", slot_faction_tier_1_troop, "trp_sarranid_recruit"),
-      # (faction_set_slot, "fac_culture_6", slot_faction_tier_2_troop, "trp_sarranid_footman"),
-      # (faction_set_slot, "fac_culture_6", slot_faction_tier_3_troop, "trp_sarranid_archer"),
-      # (faction_set_slot, "fac_culture_6", slot_faction_tier_4_troop, "trp_sarranid_horseman"),
-      # (faction_set_slot, "fac_culture_6", slot_faction_tier_5_troop, "trp_sarranid_mamluke"),
-	  ## WINDYPLAINS- ##
 
       (faction_set_slot, "fac_culture_1", slot_faction_town_walker_male_troop, "trp_town_walker_1"),
       (faction_set_slot, "fac_culture_1", slot_faction_town_walker_female_troop, "trp_town_walker_2"),
@@ -6788,7 +6761,7 @@ scripts = [
       
           (faction_set_slot, ":faction_no", slot_faction_deserter_troop, "trp_rhodok_deserter"),
 		  ## WINDYPLAINS+ ## - New Troop Revamp (Rhodok)
-          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_rhodok_pikeman"),
+          (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_n_rhodok_pikeman"),
           # (faction_set_slot, ":faction_no", slot_faction_guard_troop, "trp_rhodok_veteran_spearman"),
 		  ## WINDYPLAINS- ##
           (faction_set_slot, ":faction_no", slot_faction_messenger_troop, "trp_rhodok_messenger"),

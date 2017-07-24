@@ -3094,7 +3094,7 @@ scripts = [
 			(try_begin),
 				(eq, ":type", AI_RECRUIT_CAVALRY),
 				(ge, ":quantity", 1),
-				(try_begin), ## AFFILIATED - RHODOK
+				(try_begin),
 					(call_script, "script_cf_hub_troop_can_be_recruited_here", ":center_no", "trp_mercenary_cavalry", ":lord_no"),
 					(call_script, "script_cf_hub_ai_lord_wants_to_purchase_troop", ":center_no", "trp_mercenary_cavalry", ":lord_no", ":quantity"),
 				(else_try),
