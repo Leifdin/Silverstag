@@ -3337,8 +3337,10 @@ scripts = [
 			(val_add, ":factor", 25),
 		(try_end),
 		
-		# Difficulty factor
 		(try_begin),
+			(neq, ":buyer_troop", "trp_player"),
+			(val_div, ":cost", 2),
+		(else_try), # Difficulty factor - for player only
 			(eq, "$mod_difficulty", GAME_MODE_EASY), ## 75%
 			(val_mul, ":cost", 3),
 			(val_div, ":cost", 4),
@@ -3356,10 +3358,7 @@ scripts = [
 		(val_sub, ":cost", ":discount"),
 		
 		# Is this a lord?
-		(try_begin),
-			(neq, ":buyer_troop", "trp_player"),
-			(val_div, ":cost", 2),
-		(try_end),
+		
 		
 		(assign, reg1, ":cost"),
 		(assign, reg2, ":factor"),
