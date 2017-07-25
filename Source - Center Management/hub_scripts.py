@@ -239,7 +239,7 @@ scripts = [
 		
 		## I3 Swadian Militia
 		(troop_set_class, "trp_n_swadian_militia", CLASS_INFANTRY),
-		(troop_set_slot, "trp_n_swadian_militia", slot_troop_purchase_cost, 250),
+		(troop_set_slot, "trp_n_swadian_militia", slot_troop_purchase_cost, 125),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_swadian_militia"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_swadian_militia", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_swadian_militia", BONUS_DISCIPLINED, BONUS_UNASSIGNED),
@@ -247,12 +247,12 @@ scripts = [
 		
 		## A3 Swadian Crossbowman
 		(troop_set_class, "trp_n_swadian_crossbowman", CLASS_RANGED),
-		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_purchase_cost, 250),
+		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_purchase_cost, 135),
 		(troop_set_slot, "trp_n_swadian_crossbowman", slot_troop_recruit_type, STRT_PEASANT),
 		
 		## C4 Swadian Lancer
 		(troop_set_class, "trp_n_swadian_lancer", CLASS_CAVALRY),
-		(troop_set_slot, "trp_n_swadian_lancer", slot_troop_purchase_cost, 1500),
+		(troop_set_slot, "trp_n_swadian_lancer", slot_troop_purchase_cost, 1000),
 		(troop_set_slot, "trp_n_swadian_lancer", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## I5 Swadian Sergeant
@@ -272,8 +272,8 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_swadian_knight"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_swadian_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_swadian_knight", BONUS_FORTITUDE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_swadian_knight", slot_troop_purchase_cost, 5500),
-		(troop_set_slot, "trp_n_swadian_knight", slot_troop_recruit_type, STRT_MERCENARY),
+		(troop_set_slot, "trp_n_swadian_knight", slot_troop_purchase_cost, 4000),
+		(troop_set_slot, "trp_n_swadian_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		######################################################
 		#####               VAEGIR FACTION               #####
@@ -289,7 +289,7 @@ scripts = [
 		(troop_set_slot, "trp_n_vaegir_skirmisher", slot_troop_purchase_cost, 25),
 		(troop_set_slot, "trp_n_vaegir_skirmisher", slot_troop_recruit_type, STRT_PEASANT),
 		
-		## H3 Vaegir Skrimisher
+		## H3 Vaegir Raider
 		(troop_set_class, "trp_n_vaegir_raider", CLASS_CAVALRY),
 		(troop_set_slot, "trp_n_vaegir_raider", slot_troop_purchase_cost, 200),
 		(troop_set_slot, "trp_n_vaegir_raider", slot_troop_recruit_type, STRT_PEASANT),
@@ -299,7 +299,7 @@ scripts = [
 		(troop_set_class, "trp_n_vaegir_bowman", CLASS_RANGED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_vaegir_bowman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_vaegir_bowman", BONUS_SHARPSHOOTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_vaegir_bowman", slot_troop_purchase_cost, 650),
+		(troop_set_slot, "trp_n_vaegir_bowman", slot_troop_purchase_cost, 450),
 		(troop_set_slot, "trp_n_vaegir_bowman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## C5 Vaegir Headhunter
@@ -344,13 +344,13 @@ scripts = [
 		(troop_set_class, "trp_n_khergit_shaman", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_shaman"),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_shaman", BONUS_INSPIRING, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_khergit_scout", slot_troop_purchase_cost, 400),
+		(troop_set_slot, "trp_n_khergit_scout", slot_troop_purchase_cost, 200),
 		(troop_set_slot, "trp_n_khergit_shaman", slot_troop_recruit_type, STRT_PEASANT),
  
 		
 		## C3 Khergit Lancer
 		(troop_set_class, "trp_n_khergit_lancer", CLASS_CAVALRY),
-		(troop_set_slot, "trp_n_khergit_lancer", slot_troop_purchase_cost, 400),
+		(troop_set_slot, "trp_n_khergit_lancer", slot_troop_purchase_cost, 175),
 		(troop_set_slot, "trp_n_khergit_lancer", slot_troop_recruit_type, STRT_PEASANT),
  
  		## I4 Khergit Clansman
@@ -358,7 +358,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_khergit_clansman"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_khergit_clansman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_khergit_clansman", BONUS_DEVOTED, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_khergit_clansman", slot_troop_purchase_cost, 500),
+		(troop_set_slot, "trp_n_khergit_clansman", slot_troop_purchase_cost, 400),
 		(troop_set_slot, "trp_n_khergit_clansman", slot_troop_recruit_type, STRT_MERCENARY),
 		
  		## H5 Khergit Skirmisher
@@ -391,25 +391,25 @@ scripts = [
 		(troop_set_class, "trp_n_nordic_skald", CLASS_INFANTRY),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_skald", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_skald", BONUS_STORYTELLER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_nordic_skald", slot_troop_purchase_cost, 300),
+		(troop_set_slot, "trp_n_nordic_skald", slot_troop_purchase_cost, 120),
 		(troop_set_slot, "trp_n_nordic_skald", slot_troop_recruit_type, STRT_PEASANT),
 		
 		## A3 Nordic Tracker
 		(troop_set_class, "trp_n_nordic_tracker", CLASS_RANGED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_tracker", BONUS_TRAILBLAZER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_purchase_cost, 350),
+		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_purchase_cost, 250),
 		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_recruit_type, STRT_PEASANT),
 		
 		## I4 Nordic Spearman
 		(troop_set_class, "trp_n_nordic_spearman", CLASS_INFANTRY),
-		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_purchase_cost, 800),
+		(troop_set_slot, "trp_n_nordic_tracker", slot_troop_purchase_cost, 350),
 		(troop_set_slot, "trp_n_nordic_spearman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## C6 Nordic Retainer
 		(troop_set_class, "trp_n_nordic_retainer", CLASS_CAVALRY),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_retainer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_retainer", BONUS_COMMANDING_PRESENCE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_nordic_retainer", slot_troop_purchase_cost, 3500),
+		(troop_set_slot, "trp_n_nordic_retainer", slot_troop_purchase_cost, 2150),
 		(troop_set_slot, "trp_n_nordic_retainer", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		## A6 Nordic Retinue Archer
@@ -417,14 +417,14 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_retinue_archer", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_retinue_archer", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_retinue_archer", BONUS_MASTER_BOWMAN, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_nordic_retinue_archer", slot_troop_purchase_cost, 2750),
+		(troop_set_slot, "trp_n_nordic_retinue_archer", slot_troop_purchase_cost, 1750),
 		(troop_set_slot, "trp_n_nordic_retinue_archer", slot_troop_recruit_type, STRT_MERCENARY),
 
 		## I7 Nordic Berserker
 		(troop_set_class, "trp_n_nordic_berserker", CLASS_INFANTRY),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_nordic_berserker", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_nordic_berserker", BONUS_BERSERKER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_nordic_berserker", slot_troop_purchase_cost, 4500),
+		(troop_set_slot, "trp_n_nordic_berserker", slot_troop_purchase_cost, 2250),
 		(troop_set_slot, "trp_n_nordic_berserker", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		
@@ -439,7 +439,7 @@ scripts = [
 		
 		## I3 Rhodok Footman
 		(troop_set_class, "trp_n_rhodok_footman", CLASS_INFANTRY),
-		(troop_set_slot, "trp_n_rhodok_footman", slot_troop_purchase_cost, 275),
+		(troop_set_slot, "trp_n_rhodok_footman", slot_troop_purchase_cost, 150),
 		(troop_set_slot, "trp_n_rhodok_footman", slot_troop_recruit_type, STRT_PEASANT),
 		
 		## A3 Rhodok Ranger
@@ -447,12 +447,12 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_rhodok_ranger"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_ranger", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_ranger", BONUS_RAPID_RELOAD, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_rhodok_ranger", slot_troop_purchase_cost, 300),
+		(troop_set_slot, "trp_n_rhodok_ranger", slot_troop_purchase_cost, 130),
 		(troop_set_slot, "trp_n_rhodok_ranger", slot_troop_recruit_type, STRT_PEASANT),
 		
 		## I4 Rhodok Halberdier
 		(troop_set_class, "trp_n_rhodok_halberdier", CLASS_INFANTRY),
-		(troop_set_slot, "trp_n_rhodok_halberdier", slot_troop_purchase_cost, 1000),
+		(troop_set_slot, "trp_n_rhodok_halberdier", slot_troop_purchase_cost, 500),
 		(troop_set_slot, "trp_n_rhodok_halberdier", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## I6 Rhodok Pikeman
@@ -461,7 +461,7 @@ scripts = [
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_pikeman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_pikeman", PREREQ_ELITE_MERCENARY, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_pikeman", BONUS_TIGHT_FORMATION, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_rhodok_pikeman", slot_troop_purchase_cost, 3500),
+		(troop_set_slot, "trp_n_rhodok_pikeman", slot_troop_purchase_cost, 2500),
 		(troop_set_slot, "trp_n_rhodok_pikeman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## A6 Rhodok Siege Breaker
@@ -478,7 +478,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_rhodok_foot_knight"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_rhodok_foot_knight", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_rhodok_siege_breaker", BONUS_RALLYING_STRIKE, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_rhodok_foot_knight", slot_troop_purchase_cost, 4250),
+		(troop_set_slot, "trp_n_rhodok_foot_knight", slot_troop_purchase_cost, 3500),
 		(troop_set_slot, "trp_n_rhodok_foot_knight", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		
@@ -502,12 +502,12 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_sarranid_tribesman"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_sarranid_tribesman", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_sarranid_tribesman", BONUS_CHEAP, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_sarranid_tribesman", slot_troop_purchase_cost, 125),
+		(troop_set_slot, "trp_n_sarranid_tribesman", slot_troop_purchase_cost, 195),
 		(troop_set_slot, "trp_n_sarranid_tribesman", slot_troop_recruit_type, STRT_PEASANT),
 		
 		## A4 Sarranid Marksman
 		(troop_set_class, "trp_n_sarranid_marksman", CLASS_RANGED),
-		(troop_set_slot, "trp_n_sarranid_marksman", slot_troop_purchase_cost, 850),
+		(troop_set_slot, "trp_n_sarranid_marksman", slot_troop_purchase_cost, 450),
 		(troop_set_slot, "trp_n_sarranid_marksman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## H7 Sarranid Skirmisher
@@ -520,7 +520,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_sarranid_mamluke"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_sarranid_mamluke", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_sarranid_mamluke", BONUS_AGILE_RIDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_sarranid_mamluke", slot_troop_purchase_cost, 3000),
+		(troop_set_slot, "trp_n_sarranid_mamluke", slot_troop_purchase_cost, 2500),
 		(troop_set_slot, "trp_n_sarranid_mamluke", slot_troop_recruit_type, STRT_NOBLEMAN),
 		
 		## I6 Sarranid Guard
@@ -528,7 +528,7 @@ scripts = [
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_sarranid_guard"),
 		(call_script, "script_ce_assign_troop_requirement", "trp_n_sarranid_guard", PREREQ_AFFILIATED, PREREQ_UNASSIGNED),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_sarranid_guard", BONUS_SAVAGERY, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_sarranid_guard", slot_troop_purchase_cost, 3250),
+		(troop_set_slot, "trp_n_sarranid_guard", slot_troop_purchase_cost, 1750),
 		(troop_set_slot, "trp_n_sarranid_guard", slot_troop_recruit_type, STRT_NOBLEMAN),
 
 
@@ -540,14 +540,14 @@ scripts = [
 		(troop_set_class, "trp_n_shield_maiden", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_shield_maiden"),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_shield_maiden", BONUS_SHIELD_BASHER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_shield_maiden", slot_troop_purchase_cost, 350),
+		(troop_set_slot, "trp_n_shield_maiden", slot_troop_purchase_cost, 150),
 		(troop_set_slot, "trp_n_shield_maiden", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## I4 Swordsman
 		(troop_set_class, "trp_n_swordsman", CLASS_INFANTRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_swordsman"),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_swordsman", BONUS_BLADEMASTER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_swordsman", slot_troop_purchase_cost, 950),
+		(troop_set_slot, "trp_n_swordsman", slot_troop_purchase_cost, 600),
 		(troop_set_slot, "trp_n_swordsman", slot_troop_recruit_type, STRT_MERCENARY),
 		
 		## A2 Hunter
@@ -561,7 +561,7 @@ scripts = [
 		(troop_set_class, "trp_n_lancer", CLASS_CAVALRY),
 		(call_script, "script_ce_wipe_troop_prerequisies_and_abilities", "trp_n_lancer"),
 		(call_script, "script_ce_assign_troop_ability", "trp_n_lancer", BONUS_GRACEFUL_RIDER, BONUS_UNASSIGNED),
-		(troop_set_slot, "trp_n_lancer", slot_troop_purchase_cost, 425),
+		(troop_set_slot, "trp_n_lancer", slot_troop_purchase_cost, 285),
 		(troop_set_slot, "trp_n_lancer", slot_troop_recruit_type, STRT_MERCENARY),
 
 		## A5 Pathfinder
@@ -3337,6 +3337,7 @@ scripts = [
 			(val_add, ":factor", 25),
 		(try_end),
 		
+		# Is this a lord?
 		(try_begin),
 			(neq, ":buyer_troop", "trp_player"),
 			(val_div, ":cost", 2),
@@ -3357,7 +3358,7 @@ scripts = [
 		(val_div, ":discount", 100),
 		(val_sub, ":cost", ":discount"),
 		
-		# Is this a lord?
+		
 		
 		
 		(assign, reg1, ":cost"),
